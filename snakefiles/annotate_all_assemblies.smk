@@ -12,13 +12,13 @@ rule all:
     input:
         analysis_dir + "/reports/multiQC/multiqc_report.html",
         expand(analysis_dir+"/assemblies/pacbio/annotation/{pb_sample}/{pb_sample}.gff3",pb_sample=pacbio_samples),
-        expand(analysis_dir+"/reports/quast/pacbio/{pb_sample}/quast/report.txt",pb_sample=pacbio_samples),
+        expand(analysis_dir+"/reports/quast/pacbio/quast/{pb_sample}/report.txt",pb_sample=pacbio_samples),
         expand(analysis_dir+"/assemblies/nanopore/annotation/{ont_sample}/{ont_sample}.gff3",ont_sample=nanopore_samples),
-        expand(analysis_dir+"/reports/quast/nanopore/{ont_sample}/quast/report.txt",ont_sample=nanopore_samples),
+        expand(analysis_dir+"/reports/quast/nanopore/quast/{ont_sample}/report.txt",ont_sample=nanopore_samples),
         expand(analysis_dir+"/assemblies/hybrid/annotation/{hy_sample}/{hy_sample}.gff3",hy_sample=hybrid_samples),
-        expand(analysis_dir+"/reports/quast/hybrid/{hy_sample}/quast/report.txt",hy_sample=hybrid_samples),
+        expand(analysis_dir+"/reports/quast/hybrid/quast/{hy_sample}/report.txt",hy_sample=hybrid_samples),
         expand(analysis_dir+"/assemblies/illumina/annotation/{il_sample}/{il_sample}.gff3",il_sample=illumina_samples),
-        expand(analysis_dir+"/reports/quast/illumina/{il_sample}/quast/report.txt",il_sample=illumina_samples)
+        expand(analysis_dir+"/reports/quast/illumina/quast/{il_sample}/report.txt",il_sample=illumina_samples)
 
 rule Quast:
     input:
