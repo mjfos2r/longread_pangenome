@@ -22,17 +22,17 @@ rule all:
 
 rule Quast:
     input:
-        analysis_dir + "/assemblies/pacbio/contigs/{sample}.fasta"
+        analysis_dir + "/assemblies/illumina/contigs/{sample}.fasta"
     output:
-        outdir = directory(analysis_dir+"/reports/quast/pacbio/{sample}"),
-        report = analysis_dir+"/reports/quast/pacbio/{sample}/report.txt",
-        checkpoint = touch(analysis_dir + "/checkpoints/pacbio/.{sample}_quast_finished")
+        outdir = directory(analysis_dir+"/reports/quast/illumina/{sample}"),
+        report = analysis_dir+"/reports/quast/illumina/{sample}/report.txt",
+        checkpoint = touch(analysis_dir + "/checkpoints/illumina/.{sample}_quast_finished")
     params:
         quast_params = config['quast_params'],
         ref_gff = config['reference_gff'],
         ref_fa = config['reference_fa']
     threads: 60
-    log: analysis_dir + "/logs/pacbio/{sample}.quast.log"
+    log: analysis_dir + "/logs/{method}/{sample}.quast.log"
     #conda: "quast"
     message:
         "Running Quast for {wildcards.method}, sample: {wildcards.sample}"
