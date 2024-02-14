@@ -29,12 +29,13 @@ rule Quast:
         ref_gff = config['reference_gff'],
         ref_fa = config['reference_fa']
     threads: 60
+    log: analysis_dir + "/reports/quast/{method}/{sample}.quast.log"
     conda: "quast"
     message:
         "Running Quast for all samples"
     shell:
         "quast -t {threads} {input.assembly} -r {params.ref_fa} -g {params.ref_gff} {params.quast_params[mode]} {params.quast_params[options]} "
-        "-o {output.outdir}"
+        "-o {output.outdir} 2>{log}"
 
 def all_quast_reps_exist(wildcards):
     method_files = glob.glob(analysis_dir + "/assemblies/*/contigs/*.fasta")
