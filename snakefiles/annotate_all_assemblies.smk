@@ -22,7 +22,7 @@ rule all:
 
 rule Quast:
     input:
-        input_assembly = analysis_dir + "/assemblies/{method}/contigs/{sample}.fasta"
+        input_assembly = analysis_dir + "/assemblies/{{method}}/contigs/{sample}.fasta"
     output:
         outdir = directory(analysis_dir+"/reports/quast/{method}/quast/{sample}/"),
         report = analysis_dir+"/reports/quast/{method}/quast/{sample}/report.txt",
