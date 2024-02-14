@@ -11,7 +11,7 @@ hybrid_samples = [u.split("/")[-1].replace(".fasta", "") for u in glob.glob(anal
 rule all:
     input:
         expand(analysis_dir+"/assemblies/illumina/annotation/{sample}/{sample}.gff3",sample=illumina_samples),
-        expand(analysis_dir+"/reports/quast/illumina/quast/{sample}/report.txt",sample=illumina_samples)
+        expand(analysis_dir+"/reports/quast/illumina/quast/{sample}/report.txt",sample=illumina_samples),
         analysis_dir + "/reports/multiQC/multiqc_report.html",
         expand(analysis_dir+"/assemblies/pacbio/annotation/{sample}/{sample}.gff3",sample=pacbio_samples),
         expand(analysis_dir+"/reports/quast/pacbio/quast/{sample}/report.txt",sample=pacbio_samples),
