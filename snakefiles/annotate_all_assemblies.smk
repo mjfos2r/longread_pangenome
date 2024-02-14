@@ -13,16 +13,16 @@ rule all:
         expand(analysis_dir+"/assemblies/pacbio/annotation/{sample}/{sample}.gff3",sample=pacbio_samples),
         expand(analysis_dir+"/assemblies/nanopore/annotation/{sample}/{sample}.gff3",sample=nanopore_samples),
         expand(analysis_dir+"/assemblies/hybrid/annotation/{sample}/{sample}.gff3",sample=hybrid_samples),
-        expand(analysis_dir+"/assemblies/pacbio/annotation/{sample}/report.html",sample=pacbio_samples),
-        expand(analysis_dir+"/assemblies/nanopore/annotation/{sample}/report.html",sample=nanopore_samples),
-        expand(analysis_dir+"/assemblies/hybrid/annotation/{sample}/report.html",sample=hybrid_samples)
+        expand(analysis_dir+"/reports/annotation/pacbio/quast/{sample}/report.html",sample=pacbio_samples),
+        expand(analysis_dir+"/reports/annotation/nanopore/quast/{sample}/report.html",sample=nanopore_samples),
+        expand(analysis_dir+"/reports/annotation/hybrid/quast/{sample}/report.html",sample=hybrid_samples)
 
 rule Quast:
     input:
         assembly = analysis_dir + "/assemblies/{method}/contigs/{sample}.fasta"
     output:
         outdir = directory(analysis_dir+"/reports/annotation/{method}/{sample}"),
-        report = analysis_dir+"/reports/annotation/{method}/{sample}/report.html",
+        report = analysis_dir+"/reports/annotation/{method}/quast/{sample}/report.html",
         checkpoint = touch(analysis_dir + "/checkpoints/{method}/.{sample}_quast_finished")
     params:
         quast_params = config['quast_params'],
