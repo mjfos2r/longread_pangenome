@@ -32,7 +32,7 @@ rule Quast:
         ref_gff = config['reference_gff'],
         ref_fa = config['reference_fa']
     threads: 60
-    log: analysis_dir + "/logs/{method}/{sample}.quast.log"
+    log: analysis_dir + "/logs/pacbio/{sample}.quast.log"
     #conda: "quast"
     message:
         "Running Quast for {wildcards.method}, sample: {wildcards.sample}"
