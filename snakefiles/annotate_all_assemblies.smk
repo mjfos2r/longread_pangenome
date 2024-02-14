@@ -17,8 +17,8 @@ rule all:
         expand(analysis_dir+"/reports/quast/nanopore/{sample}/report.txt",sample=nanopore_samples),
         expand(analysis_dir+"/assemblies/hybrid/annotation/{sample}/{sample}.gff3",sample=hybrid_samples),
         expand(analysis_dir+"/reports/quast/hybrid/{sample}/report.txt",sample=hybrid_samples),
-        expand(analysis_dir+"/reports/quast/illumina/{sample}/report.txt",sample=illumina_samples),
         expand(analysis_dir+"/assemblies/illumina/annotation/{sample}/{sample}.gff3",sample=illumina_samples)
+        expand(analysis_dir+"/reports/quast/illumina/{sample}/report.txt",sample=illumina_samples),
 
 rule Quast:
     input:
