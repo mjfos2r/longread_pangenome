@@ -11,9 +11,9 @@ samples = {"illumina" : [v.split("/")[-1].split(".")[0] for v in glob.glob(analy
 all_input = []
 for key,values in samples.items():
     for value in values:
-        annotations_out = analysis_dir + "/assemblies/{key}/annotation/{value}/{value}.gff3"
+        annotations_out = analysis_dir + f"/assemblies/{key}/annotation/{value}/{value}.gff3"
         all_input.append(annotations_out)
-        quast_out = analysis_dir+"/reports/quast/{key}}/{value}/report.txt"
+        quast_out = analysis_dir+ f"/reports/quast/{key}/{value}/report.txt"
         all_input.append(quast_out)
 
 rule all:
@@ -45,7 +45,7 @@ def all_quast_reps_exist(wildcards):
     all_reps = []
     for key,values in samples.items():
         for value in values:
-            checkpoint_file = analysis_dir + "/checkpoints/{key}/.{value}_quast_finished"
+            checkpoint_file = analysis_dir + f"/checkpoints/{key}/.{value}_quast_finished"
             all_reps.append(checkpoint_file)
     return all_reps
 
