@@ -33,7 +33,7 @@ rule Quast:
         ref_fa = config['reference_fa']
     threads: 60
     log: analysis_dir + "/logs/{method}/{sample}.quast.log"
-    conda: "quast"
+    #conda: "quast"
     message:
         "Running Quast for {wildcards.method}, sample: {wildcards.sample}"
     run: print(wildcards.method, wildcards.sample, {input})
