@@ -33,13 +33,12 @@ rule Quast:
         ref_fa = config['reference_fa']
     threads: 60
     log: analysis_dir + "/logs/{method}/{sample}.quast.log"
-    #conda: "quast"
+    conda: "quast"
     message:
         "Running Quast for {wildcards.method}, sample: {wildcards.sample}"
-    run: print(wildcards.method, wildcards.sample, input.input_assembly)
-    #shell:
-    #    "quast -t {threads} {input.input_assembly} -r {params.ref_fa} -g {params.ref_gff} {params.quast_params[mode]} {params.quast_params[options]} "
-    #    "-o {output.outdir} 2>&1 >{log}"
+    shell:
+        "quast -t {threads} {input.input_assembly} -r {params.ref_fa} -g {params.ref_gff} {params.quast_params[mode]} {params.quast_params[options]} "
+        "-o {output.outdir} 2>&1 >{log}"
 
 def all_quast_reps_exist(wildcards):
     method_files = glob.glob(analysis_dir + "/assemblies/*/contigs/*.fasta")
