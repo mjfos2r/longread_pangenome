@@ -4,25 +4,28 @@ configfile: "configs/annotate_all_assemblies.yaml"
 analysis_dir = config['analysis_dir']
 
 pacbio_samples = [s.split("/")[-1].split(".")[0] for s in glob.glob(analysis_dir + "/assemblies/pacbio/contigs/*.fasta")]
-nanopore_samples = [s.split("/")[-1].split(".")[0] for s in glob.glob(analysis_dir + "/assemblies/nanopore/contigs/*.fasta")]
-hybrid_samples = [s.split("/")[-1].replace(".fasta", "") for s in glob.glob(analysis_dir + "/assemblies/hybrid/contigs/*.fasta")]
+nanopore_samples = [t.split("/")[-1].split(".")[0] for t in glob.glob(analysis_dir + "/assemblies/nanopore/contigs/*.fasta")]
+hybrid_samples = [u.split("/")[-1].replace(".fasta", "") for u in glob.glob(analysis_dir + "/assemblies/hybrid/contigs/*.fasta")]
+illumina_samples = [v.split("/")[-1].split(".")[0] for v in glob.glob(analysis_dir + "/assemblies/illumina/contigs/*.fasta")]
 
 rule all:
     input:
         analysis_dir + "/reports/multiQC/multiqc_report.html",
-        expand(analysis_dir+"/assemblies/pacbio/annotation/{sample}/{sample}.gff3",sample=pacbio_samples),
-        expand(analysis_dir+"/assemblies/nanopore/annotation/{sample}/{sample}.gff3",sample=nanopore_samples),
-        expand(analysis_dir+"/assemblies/hybrid/annotation/{sample}/{sample}.gff3",sample=hybrid_samples),
-        expand(analysis_dir+"/reports/quast/pacbio/quast/{sample}/report.txt",sample=pacbio_samples),
-        expand(analysis_dir+"/reports/quast/nanopore/quast/{sample}/report.txt",sample=nanopore_samples),
-        expand(analysis_dir+"/reports/quast/hybrid/quast/{sample}/report.txt",sample=hybrid_samples)
+        expand(analysis_dir+"/assemblies/pacbio/annotation/{pb_sample}/{pb_sample}.gff3",pb_sample=pacbio_samples),
+        expand(analysis_dir+"/reports/quast/pacbio/{pb_sample}/report.txt",pb_sample=pacbio_samples),
+        expand(analysis_dir+"/assemblies/nanopore/annotation/{ont_sample}/{ont_sample}.gff3",ont_sample=nanopore_samples),
+        expand(analysis_dir+"/reports/quast/nanopore/{ont_sample}/report.txt",ont_sample=nanopore_samples),
+        expand(analysis_dir+"/assemblies/hybrid/annotation/{hy_sample}/{hy_sample}.gff3",hy_sample=hybrid_samples),
+        expand(analysis_dir+"/reports/quast/hybrid/{hy_sample}/report.txt",hy_sample=hybrid_samples),
+        expand(analysis_dir+"/assemblies/illumina/annotation/{il_sample}/{il_sample}.gff3",il_sample=illumina_samples),
+        expand(analysis_dir+"/reports/quast/illumina/{il_sample}/report.txt",il_sample=illumina_samples)
 
 rule Quast:
     input:
-        assembly = analysis_dir + "/assemblies/{method}/contigs/{sample}.fasta",
+        analysis_dir + "/assemblies/{method}/contigs/{sample}.fasta",
     output:
-        outdir = directory(analysis_dir+"/reports/quast/{method}/quast/{sample}"),
-        report = analysis_dir+"/reports/quast/{method}/quast/{sample}/report.txt",
+        outdir = directory(analysis_dir+"/reports/quast/{method}/{sample}"),
+        report = analysis_dir+"/reports/quast/{method}/{sample}/report.txt",
         checkpoint = touch(analysis_dir + "/checkpoints/{method}/.{sample}_quast_finished")
     params:
         quast_params = config['quast_params'],
@@ -34,7 +37,7 @@ rule Quast:
     message:
         "Running Quast for all samples"
     shell:
-        "quast -t {threads} {input.assembly} -r {params.ref_fa} -g {params.ref_gff} {params.quast_params[mode]} {params.quast_params[options]} "
+        "quast -t {threads} {input} -r {params.ref_fa} -g {params.ref_gff} {params.quast_params[mode]} {params.quast_params[options]} "
         "-o {output.outdir} 2>&1 >{log}"
 
 def all_quast_reps_exist(wildcards):
@@ -65,7 +68,7 @@ rule bakta:
     params:
         bakta_params = config['bakta_params']
     threads: 60
-    log: analysis_dir + "/log/{method}/{sample}.bakta.log"
+    log: analysis_dir + "/logs/{method}/{sample}.bakta.log"
     conda: "bakta"
     message:
         "Running bakta for sample {wildcards.sample}"
@@ -125,5 +128,4 @@ rule MultiQC:
         ignore = "--ignore '*.conf' --ignore '*/tmp/*'"
     message: "Running MultiQC to compile all reports into a single html document!"
     shell:
-        "multiqc --interactive --dirs {params.reports} --outdir {output.outdir} {params.reports} {params.ignore}"
-
+        "multiqc --interactive {params.reports} --outdir {output.outdir} {params.reports} {params.ignore}"
