@@ -6,7 +6,7 @@ analysis_dir = config['analysis_dir']
 pacbio_samples = [s.split("/")[-1].split(".")[0] for s in glob.glob(analysis_dir + "/assemblies/pacbio/contigs/*.fasta")]
 nanopore_samples = [s.split("/")[-1].split(".")[0] for s in glob.glob(analysis_dir + "/assemblies/nanopore/contigs/*.fasta")]
 hybrid_samples = [s.split("/")[-1].replace(".fasta", "") for s in glob.glob(analysis_dir + "/assemblies/hybrid/contigs/*.fasta")]
-illumina_samples = [s.split("/")[-1].split(".")[0] for s in glob.glob(analysis_dir + "/assemblies/illumina/contigs/*.fasta")]
+#illumina_samples = [s.split("/")[-1].split(".")[0] for s in glob.glob(analysis_dir + "/assemblies/illumina/contigs/*.fasta")]
 
 rule all:
     input:
@@ -17,8 +17,8 @@ rule all:
         expand(analysis_dir+"/reports/quast/nanopore/{sample}/report.txt",sample=nanopore_samples),
         expand(analysis_dir+"/assemblies/hybrid/annotation/{sample}/{sample}.gff3",sample=hybrid_samples),
         expand(analysis_dir+"/reports/quast/hybrid/{sample}/report.txt",sample=hybrid_samples),
-        expand(analysis_dir+"/assemblies/illumina/annotation/{sample}/{sample}.gff3",sample=illumina_samples),
-        expand(analysis_dir+"/reports/quast/illumina/{sample}/report.txt",sample=illumina_samples)
+        #expand(analysis_dir+"/assemblies/illumina/annotation/{sample}/{sample}.gff3",sample=illumina_samples),
+        #expand(analysis_dir+"/reports/quast/illumina/{sample}/report.txt",sample=illumina_samples)
 
 rule Quast:
     input:
