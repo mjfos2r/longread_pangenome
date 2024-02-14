@@ -45,8 +45,8 @@ def all_quast_reps_exist(wildcards):
     all_reps = []
     for key,values in samples.items():
         for value in values:
-            checkpoint = analysis_dir + "/checkpoints/{key}/.{value}_quast_finished"
-            all_reps.append(checkpoint)
+            checkpoint_file = analysis_dir + "/checkpoints/{key}/.{value}_quast_finished"
+            all_reps.append(checkpoint_file)
     return all_reps
 
 # Checkpoint rule to ensure all files exist
