@@ -12,20 +12,20 @@ rule all:
     input:
         analysis_dir + "/reports/multiQC/multiqc_report.html",
         expand(analysis_dir+"/assemblies/pacbio/annotation/{sample}/{sample}.gff3",sample=pacbio_samples),
-        expand(analysis_dir+"/reports/quast/pacbio/quast/{sample}/report.txt",sample=pacbio_samples),
+        expand(analysis_dir+"/reports/quast/pacbio/{sample}/report.txt",sample=pacbio_samples),
         expand(analysis_dir+"/assemblies/nanopore/annotation/{sample}/{sample}.gff3",sample=nanopore_samples),
-        expand(analysis_dir+"/reports/quast/nanopore/quast/{sample}/report.txt",sample=nanopore_samples),
+        expand(analysis_dir+"/reports/quast/nanopore/{sample}/report.txt",sample=nanopore_samples),
         expand(analysis_dir+"/assemblies/hybrid/annotation/{sample}/{sample}.gff3",sample=hybrid_samples),
-        expand(analysis_dir+"/reports/quast/hybrid/quast/{sample}/report.txt",sample=hybrid_samples),
-        expand(analysis_dir+"/reports/quast/illumina/quast/{sample}/report.txt",sample=illumina_samples),
+        expand(analysis_dir+"/reports/quast/hybrid/{sample}/report.txt",sample=hybrid_samples),
+        expand(analysis_dir+"/reports/quast/illumina/{sample}/report.txt",sample=illumina_samples),
         expand(analysis_dir+"/assemblies/illumina/annotation/{sample}/{sample}.gff3",sample=illumina_samples)
 
 rule Quast:
     input:
         assembly = analysis_dir + "/assemblies/{method}/contigs/{sample}.fasta",
     output:
-        outdir = directory(analysis_dir+"/reports/quast/{method}/quast/{sample}"),
-        report = analysis_dir+"/reports/quast/{method}/quast/{sample}/report.txt",
+        outdir = directory(analysis_dir+"/reports/quast/{method}/{sample}"),
+        report = analysis_dir+"/reports/quast/{method}/{sample}/report.txt",
         checkpoint = touch(analysis_dir + "/checkpoints/{method}/.{sample}_quast_finished")
     params:
         quast_params = config['quast_params'],
@@ -128,5 +128,5 @@ rule MultiQC:
         ignore = "--ignore '*.conf' --ignore '*/tmp/*'"
     message: "Running MultiQC to compile all reports into a single html document!"
     shell:
-        "multiqc --interactive --dirs {params.reports} --outdir {output.outdir} {params.reports} {params.ignore}"
+        "multiqc --interactive {params.reports} --outdir {output.outdir} {params.reports} {params.ignore}"
 
