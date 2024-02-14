@@ -12,20 +12,20 @@ rule all:
     input:
         analysis_dir + "/reports/multiQC/multiqc_report.html",
         expand(analysis_dir+"/assemblies/pacbio/annotation/{pb_sample}/{pb_sample}.gff3",pb_sample=pacbio_samples),
-        expand(analysis_dir+"/reports/quast/pacbio/{pb_sample}/report.txt",pb_sample=pacbio_samples),
+        expand(analysis_dir+"/reports/quast/pacbio/{pb_sample}/quast/report.txt",pb_sample=pacbio_samples),
         expand(analysis_dir+"/assemblies/nanopore/annotation/{ont_sample}/{ont_sample}.gff3",ont_sample=nanopore_samples),
-        expand(analysis_dir+"/reports/quast/nanopore/{ont_sample}/report.txt",ont_sample=nanopore_samples),
+        expand(analysis_dir+"/reports/quast/nanopore/{ont_sample}/quast/report.txt",ont_sample=nanopore_samples),
         expand(analysis_dir+"/assemblies/hybrid/annotation/{hy_sample}/{hy_sample}.gff3",hy_sample=hybrid_samples),
-        expand(analysis_dir+"/reports/quast/hybrid/{hy_sample}/report.txt",hy_sample=hybrid_samples),
+        expand(analysis_dir+"/reports/quast/hybrid/{hy_sample}/quast/report.txt",hy_sample=hybrid_samples),
         expand(analysis_dir+"/assemblies/illumina/annotation/{il_sample}/{il_sample}.gff3",il_sample=illumina_samples),
-        expand(analysis_dir+"/reports/quast/illumina/{il_sample}/report.txt",il_sample=illumina_samples)
+        expand(analysis_dir+"/reports/quast/illumina/{il_sample}/quast/report.txt",il_sample=illumina_samples)
 
 rule Quast:
     input:
         input_assembly = analysis_dir + "/assemblies/{method}/contigs/{sample}.fasta"
     output:
-        outdir = directory(analysis_dir+"/reports/quast/{method}/{sample}"),
-        report = analysis_dir+"/reports/quast/{method}/{sample}/report.txt",
+        outdir = directory(analysis_dir+"/reports/quast/{method}/quast/{sample}/"),
+        report = analysis_dir+"/reports/quast/{method}/quast/{sample}/report.txt",
         checkpoint = touch(analysis_dir + "/checkpoints/{method}/.{sample}_quast_finished")
     params:
         quast_params = config['quast_params'],
