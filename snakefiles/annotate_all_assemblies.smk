@@ -21,7 +21,7 @@ rule Quast:
     input:
         assembly = analysis_dir + "/assemblies/{method}/contigs/{sample}.fasta"
     output:
-        outdir = directory(analysis_dir+"/reports/annotation/{method}/{sample}"),
+        outdir = directory(analysis_dir+"/reports/annotation/{method}/quast/{sample}"),
         report = analysis_dir+"/reports/annotation/{method}/quast/{sample}/report.txt",
         checkpoint = touch(analysis_dir + "/checkpoints/{method}/.{sample}_quast_finished")
     params:
