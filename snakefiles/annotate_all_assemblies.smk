@@ -19,7 +19,7 @@ rule all:
 
 rule Quast:
     input:
-        assembly = analysis_dir + "/assemblies/{method}/contigs/{sample}.fasta"
+        assembly = analysis_dir + "/assemblies/{method}/contigs/{sample}.fasta",
     output:
         outdir = directory(analysis_dir+"/reports/quast/{method}/quast/{sample}"),
         report = analysis_dir+"/reports/quast/{method}/quast/{sample}/report.txt",
@@ -122,7 +122,7 @@ rule MultiQC:
     threads: 360
     params: 
         reports = analysis_dir,
-        ignore = "--ignore '*.conf'"
+        ignore = "--ignore '*.conf' --ignore '*/tmp/*"
     message: "Running MultiQC to compile all reports into a single html document!"
     shell:
         "multiqc --interactive --dirs {params.reports} --outdir {output.outdir} {params.reports} {params.ignore}"
