@@ -13,23 +13,23 @@ rule all:
         expand(analysis_dir+"/assemblies/pacbio/annotation/{sample}/{sample}.gff3",sample=pacbio_samples),
         expand(analysis_dir+"/assemblies/nanopore/annotation/{sample}/{sample}.gff3",sample=nanopore_samples),
         expand(analysis_dir+"/assemblies/hybrid/annotation/{sample}/{sample}.gff3",sample=hybrid_samples),
-        expand(analysis_dir+"/reports/annotation/pacbio/quast/{sample}/report.txt",sample=pacbio_samples),
-        expand(analysis_dir+"/reports/annotation/nanopore/quast/{sample}/report.txt",sample=nanopore_samples),
-        expand(analysis_dir+"/reports/annotation/hybrid/quast/{sample}/report.txt",sample=hybrid_samples)
+        expand(analysis_dir+"/reports/quast/pacbio/quast/{sample}/report.txt",sample=pacbio_samples),
+        expand(analysis_dir+"/reports/quast/nanopore/quast/{sample}/report.txt",sample=nanopore_samples),
+        expand(analysis_dir+"/reports/quast/hybrid/quast/{sample}/report.txt",sample=hybrid_samples)
 
 rule Quast:
     input:
         assembly = analysis_dir + "/assemblies/{method}/contigs/{sample}.fasta"
     output:
-        outdir = directory(analysis_dir+"/reports/annotation/{method}/quast/{sample}"),
-        report = analysis_dir+"/reports/annotation/{method}/quast/{sample}/report.txt",
+        outdir = directory(analysis_dir+"/reports/quast/{method}/quast/{sample}"),
+        report = analysis_dir+"/reports/quast/{method}/quast/{sample}/report.txt",
         checkpoint = touch(analysis_dir + "/checkpoints/{method}/.{sample}_quast_finished")
     params:
         quast_params = config['quast_params'],
         ref_gff = config['reference_gff'],
         ref_fa = config['reference_fa']
     threads: 60
-    log: analysis_dir + "/reports/quast/{method}/{sample}.quast.log"
+    log: analysis_dir + "/logs/{method}/{sample}.quast.log"
     conda: "quast"
     message:
         "Running Quast for all samples"
@@ -65,7 +65,7 @@ rule bakta:
     params:
         bakta_params = config['bakta_params']
     threads: 60
-    log: analysis_dir + "/reports/annotation/{method}/{sample}.bakta.log"
+    log: analysis_dir + "/log/{method}/{sample}.bakta.log"
     conda: "bakta"
     message:
         "Running bakta for sample {wildcards.sample}"
@@ -120,8 +120,10 @@ rule MultiQC:
         outfiles = analysis_dir + "/reports/multiQC/multiqc_report.html"
     conda: "multiqc"
     threads: 360
-    params: reports = analysis_dir
+    params: 
+        reports = analysis_dir,
+        ignore = "--ignore "*.conf"
     message: "Running MultiQC to compile all reports into a single html document!"
     shell:
-        "multiqc --interactive --dirs {params.reports} --outdir {output.outdir} {params.reports}"
+        "multiqc --interactive --dirs {params.reports} --outdir {output.outdir} {params.reports} {params.ignore}"
 
