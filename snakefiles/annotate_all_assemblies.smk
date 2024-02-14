@@ -4,9 +4,9 @@ configfile: "configs/annotate_all_assemblies.yaml"
 analysis_dir = config['analysis_dir']
 
 pacbio_samples = [s.split("/")[-1].split(".")[0] for s in glob.glob(analysis_dir + "/assemblies/pacbio/contigs/*.fasta")]
-nanopore_samples = [s.split("/")[-1].split(".")[0] for s in glob.glob(analysis_dir + "/assemblies/nanopore/contigs/*.fasta")]
-hybrid_samples = [s.split("/")[-1].replace(".fasta", "") for s in glob.glob(analysis_dir + "/assemblies/hybrid/contigs/*.fasta")]
-illumina_samples = [s.split("/")[-1].split(".")[0] for s in glob.glob(analysis_dir + "/assemblies/illumina/contigs/*.fasta")]
+nanopore_samples = [t.split("/")[-1].split(".")[0] for t in glob.glob(analysis_dir + "/assemblies/nanopore/contigs/*.fasta")]
+hybrid_samples = [u.split("/")[-1].replace(".fasta", "") for u in glob.glob(analysis_dir + "/assemblies/hybrid/contigs/*.fasta")]
+illumina_samples = [v.split("/")[-1].split(".")[0] for v in glob.glob(analysis_dir + "/assemblies/illumina/contigs/*.fasta")]
 
 rule all:
     input:
