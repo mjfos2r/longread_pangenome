@@ -18,8 +18,8 @@ for key,values in samples.items():
 
 rule all:
     input:
-        all_input
-        analysis_dir + "/reports/multiQC/multiqc_report.html",
+        all_input,
+        analysis_dir + "/reports/multiQC/multiqc_report.html"
 
 rule Quast:
     input:
