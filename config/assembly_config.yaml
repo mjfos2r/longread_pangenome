@@ -1,0 +1,91 @@
+# snakemake config file for assembly jobs using canu + ???
+
+# define analysis directory 
+analysis_dir: "pipeline_test_run1"
+reference_fa: "ref/GCF_000008685.2_ASM868v2_genomic.fna"
+reference_gff: "ref/GCF_000008685.2_ASM868v2_genomic.gff"
+
+# define path to sample sheet
+sample_sheet: "configs/sample_sheet.csv"
+
+# define canu parameters
+canu_params:
+  # DONT set up threads and memory for meryl
+  #merylThreads: "merylThreads=64"
+  #merylMem: "merylMemory=200"
+  # set up executive job threads and memory
+  executiveMemory: "executiveMemory=16g"
+  executiveThreads: "executiveThreads=10"
+  # define gnuplot path
+  gnuplot: "gnuplot=gnuplot" # this should be in the conda env
+  gnuplotImageFormat: "gnuplotImageFormat='png'"
+  
+  # trimmed/untrimmed reads? (this refers to canu's trimming)
+  trimStatus: "-untrimmed"
+  maxInput: "maxInputCoverage=1000" 
+  batOptions: "'batOptions=-eg 0.10 -sb 0.01 -dg 2 -db 1 -dr 3'"
+  # define preset
+  preset: "-pacbio-hifi"
+  # set expected genome size, we will include 1.5m here as that is around the expected B31 genome
+  genomeSize: "genomeSize=1.5m"
+  ####
+  # nanopore R10.3 specific settings:
+  # -untrimmed correctedErrorRate=0.12 maxInputCoverage=100 'batOptions=-eg 0.10 -sb 0.01 -dg 2 -db 1 -dr 3' -pacbio-hifi {input}
+  ####
+  # Raw and Corrected Error Rates:
+  #rawErrorRate: "rawErrorRate=.03" # need to reflect the Q20 min read qual cutoff
+  correctedErrorRate: "correctedErrorRate=0.035" # see nanopore R10.3 settings, may need to roll this back for Q20 data
+  # minRead and minOvlp length (defaults are 1000, 500)
+  # minRead ≥ minOverlapLength
+  minRead: "minReadLength=1000"
+  minOverlapLength: "minOverlapLength=500"
+  # Fast mode, it is apparently recommended for genomes < 1Gbp
+  fast: "-fast"
+  ####
+  # correction stage params
+  ####
+  # Datasets with uneven coverage or small plasmids can fail to generate enough corrected reads to give enough coverage for assembly, 
+  # resulting in gaps in the genome or even no reads for small plasmids. Set corOutCoverage=1000 (or any value > total input coverage) to correct all input data.
+  #corOutCoverage: "corOutCoverage=2000" # we got some beefy coverage over here.
+  corMinCoverage: "corMinCoverage=4" # this is default I believe for 30x expected coverage
+  
+  ####
+  # assembly stage params
+  ####
+  # set overlap algorithm
+  #overlapper: "Overlapper='mhap/ovl/minimap" # default is mhap for cor, ovl for obt/utg
+  
+  # set overlap hash size (Width 22=1gb, 23=2gb, 24=4gb, 25=8gb)
+  ovlHashBits: "OvlHashBits=24"
+  #ovlErrorRate: "OvlErrorRate=.6"
+  # change overlap kmer distinct frequency threshold, "least frequent fraction of distinct mers can seed overlaps"
+  #ovlMerDistinct: "OvlMerDistinct=1000?" #idk what works for this, need to calc
+  #ovlMerThreshold: "OvlMerThreshold=1000?" # see above
+  # set Mhap sensitivity, (low: cov > 60x, normal: 60x > cov >30x, high: cov < 30x)
+  mhapSensitivity: "MhapSensitivity='normal'"
+  # set the memory for overlap store construction.
+  ovsMemory: "ovsMemory=8g"
+
+MUMmer_params:
+  nucmer_options: "-maxmatch -nosimplify"
+  show_coords: "show-coords"
+  show_coords_opts: "-lrcTH"
+
+quast_params:
+  mode: "--gene-finding"
+  reads_ref_aln: "--ref-bam"
+  reads_asm_aln: "--bam"
+  options: "--circos"
+
+# define minimap2 parameters
+minimap2_params:
+  outSam: "-a"
+  preset: map-hifi
+  minimizer_window: "-w10"
+  hpcomp: "-H"
+
+# define bakta params
+bakta_params:
+  db: "db/bakta"
+  gram: "--gram -"
+  opts: "--verbose"

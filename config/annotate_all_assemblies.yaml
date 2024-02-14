@@ -1,0 +1,23 @@
+# define analysis directory 
+analysis_dir: "longread_analysis"
+reference_fa: "ref/GCF_000008685.2_ASM868v2_genomic.fna"
+reference_gff: "ref/GCF_000008685.2_ASM868v2_genomic.gff"
+
+quast_params:
+  mode: "--gene-finding"
+  reads_ref_aln: "--ref-bam"
+  reads_asm_aln: "--bam"
+  options: "--circos"
+
+# define minimap2 parameters
+minimap2_params:
+  outSam: "-a"
+  preset: map-hifi
+  minimizer_window: "-w10"
+  hpcomp: "-H"
+
+# define bakta params
+bakta_params:
+  db: "db/bakta"
+  gram: "--gram -"
+  opts: "--verbose"
