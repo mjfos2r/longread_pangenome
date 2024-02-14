@@ -10,6 +10,8 @@ hybrid_samples = [u.split("/")[-1].replace(".fasta", "") for u in glob.glob(anal
 
 rule all:
     input:
+        expand(analysis_dir+"/assemblies/illumina/annotation/{sample}/{sample}.gff3",sample=illumina_samples),
+        expand(analysis_dir+"/reports/quast/illumina/quast/{sample}/report.txt",sample=illumina_samples)
         analysis_dir + "/reports/multiQC/multiqc_report.html",
         expand(analysis_dir+"/assemblies/pacbio/annotation/{sample}/{sample}.gff3",sample=pacbio_samples),
         expand(analysis_dir+"/reports/quast/pacbio/quast/{sample}/report.txt",sample=pacbio_samples),
@@ -17,26 +19,24 @@ rule all:
         expand(analysis_dir+"/reports/quast/nanopore/quast/{sample}/report.txt",sample=nanopore_samples),
         expand(analysis_dir+"/assemblies/hybrid/annotation/{sample}/{sample}.gff3",sample=hybrid_samples),
         expand(analysis_dir+"/reports/quast/hybrid/quast/{sample}/report.txt",sample=hybrid_samples),
-        expand(analysis_dir+"/assemblies/illumina/annotation/{sample}/{sample}.gff3",sample=illumina_samples),
-        expand(analysis_dir+"/reports/quast/illumina/quast/{sample}/report.txt",sample=illumina_samples)
 
 rule Quast:
     input:
-        input_assembly = analysis_dir + "/assemblies/{method}/contigs/"
+        input_assembly = analysis_dir + "/assemblies/{method}/contigs/{sample}.fasta"
     output:
-        outdir = directory(analysis_dir+"/reports/quast/{method}/quast/"),
-        report = analysis_dir+"/reports/quast/{method}/quast/report.txt",
-        checkpoint = touch(analysis_dir + "/checkpoints/{method}/._quast_finished")
+        outdir = directory(analysis_dir+"/reports/quast/{method}/quast/{sample}/"),
+        report = analysis_dir+"/reports/quast/{method}/quast/{sample}/report.txt",
+        checkpoint = touch(analysis_dir + "/checkpoints/{method}/.{sample}_quast_finished")
     params:
         quast_params = config['quast_params'],
         ref_gff = config['reference_gff'],
         ref_fa = config['reference_fa']
     threads: 60
-    log: analysis_dir + "/logs/{method}/.quast.log"
+    log: analysis_dir + "/logs/{method}/{sample}.quast.log"
     #conda: "quast"
     message:
         "Running Quast for {wildcards.method}, sample: {wildcards.sample}"
-    run: print(wildcards.method, input.input_assembly)
+    run: print(wildcards.method, wildcards.sample, input.input_assembly)
     #shell:
     #    "quast -t {threads} {input.input_assembly} -r {params.ref_fa} -g {params.ref_gff} {params.quast_params[mode]} {params.quast_params[options]} "
     #    "-o {output.outdir} 2>&1 >{log}"
