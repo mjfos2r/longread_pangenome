@@ -22,11 +22,11 @@ rule all:
 
 rule Quast:
     input:
-        analysis_dir + "/assemblies/{method}/contigs/{sample}.fasta"
+        analysis_dir + "/assemblies/pacbio/contigs/{sample}.fasta"
     output:
-        outdir = directory(analysis_dir+"/reports/quast/{method}/{sample}"),
-        report = analysis_dir+"/reports/quast/{method}/{sample}/report.txt",
-        checkpoint = touch(analysis_dir + "/checkpoints/{method}/.{sample}_quast_finished")
+        outdir = directory(analysis_dir+"/reports/quast/pacbio/{sample}"),
+        report = analysis_dir+"/reports/quast/pacbio/{sample}/report.txt",
+        checkpoint = touch(analysis_dir + "/checkpoints/pacbio/.{sample}_quast_finished")
     params:
         quast_params = config['quast_params'],
         ref_gff = config['reference_gff'],
