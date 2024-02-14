@@ -8,18 +8,25 @@ samples = {"illumina" : [v.split("/")[-1].split(".")[0] for v in glob.glob(analy
            "nanopore" : [t.split("/")[-1].split(".")[0] for t in glob.glob(analysis_dir + "/assemblies/nanopore/contigs/*.fasta")],
              "hybrid" : [u.split("/")[-1].replace(".fasta", "") for u in glob.glob(analysis_dir + "/assemblies/hybrid/contigs/*.fasta")]}
 
+all_input = []
+for key,values in samples.items():
+    for value in values:
+        annotations_out = analysis_dir + "/assemblies/{key}/annotation/{value}/{value}.gff3"
+        all_input.append(annotations_out)
+        quast_out = analysis_dir+"/reports/quast/{key}}/{value}/report.txt"
+        all_input.append(quast_out)
+
 rule all:
     input:
         analysis_dir + "/reports/multiQC/multiqc_report.html",
-        expand(analysis_dir+"/assemblies/{method}/annotation/{sample}/{sample}.gff3", method = samples.keys(), sample=samples[method]),
-        expand(analysis_dir+"/reports/quast/{method}/quast/{sample}/report.txt", method = samples.keys(), sample=samples[method])
+
 
 rule Quast:
     input:
         input_assembly = analysis_dir + "/assemblies/{method}/contigs/{sample}.fasta"
     output:
-        outdir = directory(analysis_dir+"/reports/quast/{method}/quast/{sample}/"),
-        report = analysis_dir+"/reports/quast/{method}/quast/{sample}/report.txt",
+        outdir = directory(analysis_dir+"/reports/quast/{method}/{sample}/"),
+        report = analysis_dir+"/reports/quast/{method}/{sample}/report.txt",
         checkpoint = touch(analysis_dir + "/checkpoints/{method}/.{sample}_quast_finished")
     params:
         quast_params = config['quast_params'],
@@ -35,11 +42,12 @@ rule Quast:
         "-o {output.outdir} 2>&1 >{log}"
 
 def all_quast_reps_exist(wildcards):
-    method_files = glob.glob(analysis_dir + "/assemblies/*/contigs/*.fasta")
-    methods = [m.split("/")[-3] for m in method_files]
-    samples = [m.split("/")[-1].replace(".fasta", "") for m in method_files]
-    return expand(analysis_dir + "/checkpoints/{method}/.{sample}_quast_finished", method=methods, sample=samples)
-
+    all_reps = []
+    for key,values in samples.items():
+        for value in values:
+            checkpoint = analysis_dir + "/checkpoints/{key}/.{value}_quast_finished"
+            all_reps.append(checkpoint)
+    return all_reps
 
 # Checkpoint rule to ensure all files exist
 checkpoint all_quast_reps_exist:
