@@ -84,12 +84,13 @@ def all_annotations_exist(wildcards):
     samples = [m.split("/")[-1].replace(".fasta", "") for m in method_files]
     return expand(analysis_dir + "/checkpoints/{method}/.{sample}_bakta_finished", method=methods, sample=samples)
 
-# Checkpoint rule to ensure all files exist
-checkpoint all_annotations_exist:
-    input:
-        all_annotations_exist
-    output:
-        touch(analysis_dir + "/checkpoints/.all_annotations_exist")
+def all_quast_reps_exist(wildcards):
+    all_reps = []
+    for key,values in samples.items():
+        for value in values:
+            checkpoint_file = analysis_dir + f"/checkpoints/{key}/.{value}_bakta_finished"
+            all_reps.append(checkpoint_file)
+    return all_reps
 
 
 rule agat_basic_stats:
