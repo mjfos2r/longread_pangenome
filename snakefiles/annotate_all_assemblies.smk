@@ -3,26 +3,20 @@ import glob
 configfile: "configs/annotate_all_assemblies.yaml"
 analysis_dir = config['analysis_dir']
 
-illumina_samples = [v.split("/")[-1].split(".")[0] for v in glob.glob(analysis_dir + "/assemblies/illumina/contigs/*.fasta")]
-pacbio_samples = [s.split("/")[-1].split(".")[0] for s in glob.glob(analysis_dir + "/assemblies/pacbio/contigs/*.fasta")]
-nanopore_samples = [t.split("/")[-1].split(".")[0] for t in glob.glob(analysis_dir + "/assemblies/nanopore/contigs/*.fasta")]
-hybrid_samples = [u.split("/")[-1].replace(".fasta", "") for u in glob.glob(analysis_dir + "/assemblies/hybrid/contigs/*.fasta")]
+samples = {"illumina" : [v.split("/")[-1].split(".")[0] for v in glob.glob(analysis_dir + "/assemblies/illumina/contigs/*.fasta")],
+             "pacbio" : [s.split("/")[-1].split(".")[0] for s in glob.glob(analysis_dir + "/assemblies/pacbio/contigs/*.fasta")],
+           "nanopore" : [t.split("/")[-1].split(".")[0] for t in glob.glob(analysis_dir + "/assemblies/nanopore/contigs/*.fasta")],
+             "hybrid" : [u.split("/")[-1].replace(".fasta", "") for u in glob.glob(analysis_dir + "/assemblies/hybrid/contigs/*.fasta")]}
 
 rule all:
     input:
         analysis_dir + "/reports/multiQC/multiqc_report.html",
-        expand(analysis_dir+"/assemblies/pacbio/annotation/{sample}/{sample}.gff3",sample=pacbio_samples),
-        expand(analysis_dir+"/reports/quast/pacbio/quast/{sample}/report.txt",sample=pacbio_samples),
-        expand(analysis_dir+"/assemblies/nanopore/annotation/{sample}/{sample}.gff3",sample=nanopore_samples),
-        expand(analysis_dir+"/reports/quast/nanopore/quast/{sample}/report.txt",sample=nanopore_samples),
-        expand(analysis_dir+"/assemblies/hybrid/annotation/{sample}/{sample}.gff3",sample=hybrid_samples),
-        expand(analysis_dir+"/reports/quast/hybrid/quast/{sample}/report.txt",sample=hybrid_samples),
-        expand(analysis_dir+"/assemblies/illumina/annotation/{sample}/{sample}.gff3",sample=illumina_samples),
-        expand(analysis_dir+"/reports/quast/illumina/quast/{sample}/report.txt",sample=illumina_samples)
+        expand(analysis_dir+"/assemblies/{method}/annotation/{sample}/{sample}.gff3", method = samples.keys(), sample=samples[method]),
+        expand(analysis_dir+"/reports/quast/{method}/quast/{sample}/report.txt", method = samples.keys(), sample=samples[method])
 
 rule Quast:
     input:
-        input_assembly = analysis_dir + "/assemblies/{{method}}/contigs/{{sample}}.fasta"
+        input_assembly = analysis_dir + "/assemblies/{method}/contigs/{sample}.fasta"
     output:
         outdir = directory(analysis_dir+"/reports/quast/{method}/quast/{sample}/"),
         report = analysis_dir+"/reports/quast/{method}/quast/{sample}/report.txt",
