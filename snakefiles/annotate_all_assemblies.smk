@@ -3,10 +3,10 @@ import glob
 configfile: "configs/annotate_all_assemblies.yaml"
 analysis_dir = config['analysis_dir']
 
+illumina_samples = [v.split("/")[-1].split(".")[0] for v in glob.glob(analysis_dir + "/assemblies/illumina/contigs/*.fasta")]
 pacbio_samples = [s.split("/")[-1].split(".")[0] for s in glob.glob(analysis_dir + "/assemblies/pacbio/contigs/*.fasta")]
 nanopore_samples = [t.split("/")[-1].split(".")[0] for t in glob.glob(analysis_dir + "/assemblies/nanopore/contigs/*.fasta")]
 hybrid_samples = [u.split("/")[-1].replace(".fasta", "") for u in glob.glob(analysis_dir + "/assemblies/hybrid/contigs/*.fasta")]
-illumina_samples = [v.split("/")[-1].split(".")[0] for v in glob.glob(analysis_dir + "/assemblies/illumina/contigs/*.fasta")]
 
 rule all:
     input:
@@ -22,7 +22,7 @@ rule all:
 
 rule Quast:
     input:
-        analysis_dir + "/assemblies/{method}/contigs/{sample}.fasta",
+        analysis_dir + "/assemblies/{method}/contigs/{sample}.fasta"
     output:
         outdir = directory(analysis_dir+"/reports/quast/{method}/{sample}"),
         report = analysis_dir+"/reports/quast/{method}/{sample}/report.txt",
@@ -35,10 +35,11 @@ rule Quast:
     log: analysis_dir + "/logs/{method}/{sample}.quast.log"
     conda: "quast"
     message:
-        "Running Quast for all samples"
-    shell:
-        "quast -t {threads} {input} -r {params.ref_fa} -g {params.ref_gff} {params.quast_params[mode]} {params.quast_params[options]} "
-        "-o {output.outdir} 2>&1 >{log}"
+        "Running Quast for {wildcards.method}, sample: {wildcards.sample}"
+    run: print(wildcards.method, wildcards.sample, {input})
+    #shell:
+    #    "quast -t {threads} {input} -r {params.ref_fa} -g {params.ref_gff} {params.quast_params[mode]} {params.quast_params[options]} "
+    #    "-o {output.outdir} 2>&1 >{log}"
 
 def all_quast_reps_exist(wildcards):
     method_files = glob.glob(analysis_dir + "/assemblies/*/contigs/*.fasta")
