@@ -22,7 +22,7 @@ rule all:
 
 rule Quast:
     input:
-        assembly = analysis_dir + "/assemblies/{method}/contigs/{sample}.fasta",
+        analysis_dir + "/assemblies/{method}/contigs/{sample}.fasta",
     output:
         outdir = directory(analysis_dir+"/reports/quast/{method}/{sample}"),
         report = analysis_dir+"/reports/quast/{method}/{sample}/report.txt",
@@ -37,7 +37,7 @@ rule Quast:
     message:
         "Running Quast for all samples"
     shell:
-        "quast -t {threads} {input.assembly} -r {params.ref_fa} -g {params.ref_gff} {params.quast_params[mode]} {params.quast_params[options]} "
+        "quast -t {threads} {input} -r {params.ref_fa} -g {params.ref_gff} {params.quast_params[mode]} {params.quast_params[options]} "
         "-o {output.outdir} 2>&1 >{log}"
 
 def all_quast_reps_exist(wildcards):
