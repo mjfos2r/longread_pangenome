@@ -119,8 +119,8 @@ rule MultiQC:
         outfiles = analysis_dir + "/reports/multiQC/multiqc_report.html"
     conda: "multiqc"
     threads: 360
-    params: reports = analysis_dir + "/reports/"
+    params: reports = analysis_dir
     message: "Running MultiQC to compile all reports into a single html document!"
     shell:
-        "multiqc --interactive --dirs {params.reports} --outdir {output.outdir} "
+        "multiqc --interactive --dirs {params.reports} --outdir {output.outdir} {params.reports}"
 
