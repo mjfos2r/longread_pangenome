@@ -11,14 +11,14 @@ illumina_samples = [v.split("/")[-1].split(".")[0] for v in glob.glob(analysis_d
 rule all:
     input:
         analysis_dir + "/reports/multiQC/multiqc_report.html",
-        expand(analysis_dir+"/assemblies/pacbio/annotation/{sample}/{sample}.gff3",sample=pacbio_samples),
-        expand(analysis_dir+"/reports/quast/pacbio/{sample}/report.txt",sample=pacbio_samples),
-        expand(analysis_dir+"/assemblies/nanopore/annotation/{sample}/{sample}.gff3",sample=nanopore_samples),
-        expand(analysis_dir+"/reports/quast/nanopore/{sample}/report.txt",sample=nanopore_samples),
-        expand(analysis_dir+"/assemblies/hybrid/annotation/{sample}/{sample}.gff3",sample=hybrid_samples),
-        expand(analysis_dir+"/reports/quast/hybrid/{sample}/report.txt",sample=hybrid_samples),
-        expand(analysis_dir+"/assemblies/illumina/annotation/{sample}/{sample}.gff3",sample=illumina_samples),
-        expand(analysis_dir+"/reports/quast/illumina/{sample}/report.txt",sample=illumina_samples)
+        expand(analysis_dir+"/assemblies/pacbio/annotation/{pb_sample}/{pb_sample}.gff3",pb_sample=pacbio_samples),
+        expand(analysis_dir+"/reports/quast/pacbio/{pb_sample}/report.txt",pb_sample=pacbio_samples),
+        expand(analysis_dir+"/assemblies/nanopore/annotation/{ont_sample}/{ont_sample}.gff3",ont_sample=nanopore_samples),
+        expand(analysis_dir+"/reports/quast/nanopore/{ont_sample}/report.txt",ont_sample=nanopore_samples),
+        expand(analysis_dir+"/assemblies/hybrid/annotation/{hy_sample}/{hy_sample}.gff3",hy_sample=hybrid_samples),
+        expand(analysis_dir+"/reports/quast/hybrid/{hy_sample}/report.txt",hy_sample=hybrid_samples),
+        expand(analysis_dir+"/assemblies/illumina/annotation/{il_sample}/{il_sample}.gff3",il_sample=illumina_samples),
+        expand(analysis_dir+"/reports/quast/illumina/{il_sample}/report.txt",il_sample=illumina_samples)
 
 rule Quast:
     input:
