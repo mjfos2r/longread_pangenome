@@ -68,7 +68,7 @@ rule bakta:
     params:
         bakta_params = config['bakta_params']
     threads: 60
-    log: analysis_dir + "/log/{method}/{sample}.bakta.log"
+    log: analysis_dir + "/logs/{method}/{sample}.bakta.log"
     conda: "bakta"
     message:
         "Running bakta for sample {wildcards.sample}"
@@ -129,4 +129,3 @@ rule MultiQC:
     message: "Running MultiQC to compile all reports into a single html document!"
     shell:
         "multiqc --interactive {params.reports} --outdir {output.outdir} {params.reports} {params.ignore}"
-
