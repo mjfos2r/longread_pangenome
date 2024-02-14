@@ -122,7 +122,7 @@ rule MultiQC:
     threads: 360
     params: 
         reports = analysis_dir,
-        ignore = "--ignore '*.conf' --ignore '*/tmp/*"
+        ignore = "--ignore '*.conf' --ignore '*/tmp/*'"
     message: "Running MultiQC to compile all reports into a single html document!"
     shell:
         "multiqc --interactive --dirs {params.reports} --outdir {output.outdir} {params.reports} {params.ignore}"
