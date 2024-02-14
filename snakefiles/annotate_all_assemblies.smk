@@ -22,23 +22,23 @@ rule all:
 
 rule Quast:
     input:
-        analysis_dir + "/assemblies/illumina/contigs/{sample}.fasta"
+        input_assembly = analysis_dir + "/assemblies/{method}/contigs/{sample}.fasta"
     output:
-        outdir = directory(analysis_dir+"/reports/quast/illumina/{sample}"),
-        report = analysis_dir+"/reports/quast/illumina/{sample}/report.txt",
-        checkpoint = touch(analysis_dir + "/checkpoints/illumina/.{sample}_quast_finished")
+        outdir = directory(analysis_dir+"/reports/quast/{method}/{sample}"),
+        report = analysis_dir+"/reports/quast/{method}/{sample}/report.txt",
+        checkpoint = touch(analysis_dir + "/checkpoints/{method}/.{sample}_quast_finished")
     params:
         quast_params = config['quast_params'],
         ref_gff = config['reference_gff'],
         ref_fa = config['reference_fa']
     threads: 60
-    log: analysis_dir + "/logs/illumina/{sample}.quast.log"
+    log: analysis_dir + "/logs/{method}/{sample}.quast.log"
     #conda: "quast"
     message:
         "Running Quast for {wildcards.method}, sample: {wildcards.sample}"
-    run: print(wildcards.method, wildcards.sample, {input})
+    run: print(wildcards.method, wildcards.sample, input.input_assembly)
     #shell:
-    #    "quast -t {threads} {input} -r {params.ref_fa} -g {params.ref_gff} {params.quast_params[mode]} {params.quast_params[options]} "
+    #    "quast -t {threads} {input.input_assembly} -r {params.ref_fa} -g {params.ref_gff} {params.quast_params[mode]} {params.quast_params[options]} "
     #    "-o {output.outdir} 2>&1 >{log}"
 
 def all_quast_reps_exist(wildcards):
