@@ -12,7 +12,10 @@ rule all:
         analysis_dir + "/reports/multiQC/multiqc_report.html",
         expand(analysis_dir+"/assemblies/pacbio/annotation/{sample}/{sample}.gff3",sample=pacbio_samples),
         expand(analysis_dir+"/assemblies/nanopore/annotation/{sample}/{sample}.gff3",sample=nanopore_samples),
-        expand(analysis_dir+"/assemblies/hybrid/annotation/{sample}/{sample}.gff3",sample=hybrid_samples)
+        expand(analysis_dir+"/assemblies/hybrid/annotation/{sample}/{sample}.gff3",sample=hybrid_samples),
+        expand(analysis_dir+"/assemblies/pacbio/annotation/{sample}/report.html",sample=pacbio_samples),
+        expand(analysis_dir+"/assemblies/nanopore/annotation/{sample}/report.html",sample=nanopore_samples),
+        expand(analysis_dir+"/assemblies/hybrid/annotation/{sample}/report.html",sample=hybrid_samples)
 
 rule Quast:
     input:
