@@ -9,11 +9,9 @@ rule all:
         analysis_dir + "/pangenome/roary/pan_genome_reference.fa",
         analysis_dir + "/pangenome/tree/core_gene_alignment.newick"
 
-assemblies = glob.glob(analysis_dir +"/assemblies/*/annotations/*/*.gff3")
-
 rule Roary:
     input:
-        [f"{assembly}" for assembly in assemblies]
+        glob.glob(analysis_dir +"/assemblies/*/annotation/*/*.gff3")
     output:
         outdir = directory(analysis_dir +"/pangenome/roary/"),
         outfile = analysis_dir + "/pangenome/roary/pan_genome_reference.fa",
