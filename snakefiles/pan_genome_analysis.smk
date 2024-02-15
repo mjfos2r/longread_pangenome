@@ -16,6 +16,7 @@ rule Roary:
     output:
         outdir = directory(analysis_dir +"/pangenome/roary/"),
         outfile = analysis_dir + "/pangenome/roary/pan_genome_reference.fa"
+        outalign = analysis_dir + "/pangenome/roary/core_gene_alignment.aln"
     threads: 360
     conda: "roary"
     message: "running roary on all of our annotations!"
