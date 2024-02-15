@@ -1,3 +1,5 @@
+import glob
+
 configfile: 'configs/pangenome_analysis.yaml'
 
 analysis_dir = config['analysis_dir']
