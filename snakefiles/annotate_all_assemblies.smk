@@ -1,6 +1,6 @@
 import glob
 
-configfile: "configs/annotate_all_assemblies.yaml"
+configfile: "configs/pangenome_analysis.yaml"
 analysis_dir = config['analysis_dir']
 
 samples = {"illumina" : [v.split("/")[-1].split(".")[0] for v in glob.glob(analysis_dir + "/assemblies/illumina/contigs/*.fasta")],

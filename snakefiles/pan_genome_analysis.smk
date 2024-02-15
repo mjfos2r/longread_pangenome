@@ -1,4 +1,6 @@
-configfile: 'pangenome_analysis.yaml'
+configfile: 'configs/pangenome_analysis.yaml'
+
+analysis_dir = config['analysis_dir']
 
 rule all:
     input:
@@ -14,13 +16,11 @@ rule Roary:
         outfile = analysis_dir + "/pangenome/roary/pan_genome_reference.fa"
     threads: 360
     conda: "roary"
-    params:
-        krakendb = "db/kraken"
     message: "running roary on all of our annotations!"
     log: analysis_dir + "/logs/pangenome/roary.txt"
     shell:
-        "echo 'roary -p 360 -f {output.ourdir} -qc -k {params.krakendb} {input} 2>&1 >{log}' "
-        "roary -p 360 -f {output.ourdir} -qc -k {params.krakendb} {input} 2>&1 >{log}"
+        "echo 'roary -p 360 -f {output.ourdir} {input} 2>&1 >{log}' "
+        "roary -p 360 -f {output.ourdir} {input} 2>&1 >{log}"
 
 rule FastTree:
     input:
