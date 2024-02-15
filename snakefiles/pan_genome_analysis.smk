@@ -28,7 +28,7 @@ rule FastTree:
     output:
         analysis_dir + "/pangenome/tree/core_gene_alignment.newick"
     threads: "360"
-    conda: "fasttree"
+    conda: "roary"
     message: "creating a newick tree from the output core gene alignment"
     log: analysis_dir + "/logs/pangenome/fasttree.txt"
     shell:
