@@ -9,17 +9,9 @@ rule all:
         analysis_dir + "/pangenome/roary/pan_genome_reference.fa",
         analysis_dir + "/pangenome/tree/core_gene_alignment.newick"
 
-rule Move2Temp:
-    input:
-        glob.glob(analysis_dir +"/assemblies/*/annotation/*/*.gff3")
-    output:
-        temp(directory(analysis_dir + "/temp/"))
-    shell:
-        "for i in {input}; do cp $i {output}; done"
-        
 rule Roary:
     input:
-        analysis_dir + "/temp/"
+        glob.glob(analysis_dir +"/assemblies/*/annotation/*/*.gff3")
     output:
         outdir = directory(analysis_dir +"/pangenome/roary/"),
         outfile = analysis_dir + "/pangenome/roary/pan_genome_reference.fa",
