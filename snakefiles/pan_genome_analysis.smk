@@ -9,9 +9,17 @@ rule all:
         analysis_dir + "/pangenome/roary/pan_genome_reference.fa",
         analysis_dir + "/pangenome/tree/core_gene_alignment.newick"
 
-rule Roary:
+rule Move2Temp:
     input:
         glob.glob(analysis_dir +"/assemblies/*/annotation/*/*.gff3")
+    output:
+        temp(directory(analysis_dir + "/temp/"))
+    shell:
+        "for i in {input}; do cp $i {output}; done"
+        
+rule Roary:
+    input:
+        analysis_dir + "/temp/"
     output:
         outdir = directory(analysis_dir +"/pangenome/roary/"),
         outfile = analysis_dir + "/pangenome/roary/pan_genome_reference.fa",
@@ -19,9 +27,9 @@ rule Roary:
     threads: 360
     message: "running roary on all of our annotations! : \n roary -p 360 -f {output.outdir} {input} 2>&1 >{log}"
     log: analysis_dir + "/logs/pangenome/roary.txt"
+    conda: "roary"
     shell:
-        "apptainer run containers/roary "
-        "roary -p 360 -f {output.outdir} {input} >{log}"
+        "roary -e -p 360 -f {output.outdir} {input} >{log}"
 
 rule FastTree:
     input:
