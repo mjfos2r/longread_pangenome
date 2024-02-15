@@ -20,7 +20,8 @@ rule Roary:
     message: "running roary on all of our annotations! : \n roary -p 360 -f {output.outdir} {input} 2>&1 >{log}"
     log: analysis_dir + "/logs/pangenome/roary.txt"
     shell:
-        "roary -p 360 -f {output.outdir} {input} 2>&1 >{log}"
+        "apptainer run containers/roary "
+        "roary -p 360 -f {output.outdir} {input} >{log}"
 
 rule FastTree:
     input:
