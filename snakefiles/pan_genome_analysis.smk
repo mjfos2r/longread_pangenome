@@ -15,7 +15,7 @@ rule Roary:
         glob.glob(analysis_dir +"/assemblies/*/annotations/*/*.gff3")
     output:
         outdir = directory(analysis_dir +"/pangenome/roary/"),
-        outfile = analysis_dir + "/pangenome/roary/pan_genome_reference.fa"
+        outfile = analysis_dir + "/pangenome/roary/pan_genome_reference.fa",
         outalign = analysis_dir + "/pangenome/roary/core_gene_alignment.aln"
     threads: 360
     conda: "roary"
