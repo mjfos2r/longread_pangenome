@@ -9,10 +9,9 @@ rule all:
         analysis_dir + "/pangenome/roary/pan_genome_reference.fa",
         analysis_dir + "/pangenome/tree/core_gene_alignment.newick"
 
-glob.glob(analysis_dir +"/assemblies/*/annotations/*/*.gff3")
 rule Roary:
     input:
-        expand(glob.glob(analysis_dir +"/assemblies/*/annotations/*/*.gff3"))
+        [file for file in glob.glob(analysis_dir +"/assemblies/*/annotations/*/*.gff3")]
     output:
         outdir = directory(analysis_dir +"/pangenome/roary/"),
         outfile = analysis_dir + "/pangenome/roary/pan_genome_reference.fa",
