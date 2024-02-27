@@ -5,6 +5,11 @@ import mjf.tools as mjf
 configfile: local("configs/singularity_config.yaml")
 analysis_dir = config['analysis_dir']
 
+samples = {"illumina" : [v.split("/")[-1].split(".")[0] for v in glob.glob(analysis_dir + "/assemblies/illumina/contigs/*.fasta")],
+             "pacbio" : [s.split("/")[-1].split(".")[0] for s in glob.glob(analysis_dir + "/assemblies/pacbio/contigs/*.fasta")],
+           "nanopore" : [t.split("/")[-1].split(".")[0] for t in glob.glob(analysis_dir + "/assemblies/nanopore/contigs/*.fasta")],
+             "hybrid" : [u.split("/")[-1].replace(".fasta", "") for u in glob.glob(analysis_dir + "/assemblies/hybrid/contigs/*.fasta")]}
+
 rule all:
     input:
         analysis_dir+"/reports/mlst/mlst_results.allele.csv"
@@ -13,8 +18,14 @@ rule all:
 # MLST Type each assembly!
 ## 
 
+all_input = []
+for key,values in samples.items():
+    for value in values:
+        all_contigs = analysis_dir + f"/assemblies/{key}/contigs/{value}.fasta"
+        all_input.append(all_contigs)
+
 rule getMLST_type:
-    input: glob.glob(analysis_dir + "/assemblies/*/contigs/*.fasta")
+    input: all_input
     output:
         outdir = directory(analysis_dir+"/reports/mlst/"),
         final_out = analysis_dir+"/reports/mlst/mlst_results.allele.csv"
