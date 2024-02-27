@@ -1,5 +1,5 @@
 # define analysis directory 
-analysis_dir: "pipeline_run_3"
+analysis_dir: "longread_GWAS"
 reference_fa: "ref/GCF_000008685.2_ASM868v2_genomic.fna"
 reference_gff: "ref/GCF_000008685.2_ASM868v2_genomic.gff"
 # define path to sample sheet
@@ -7,8 +7,8 @@ sample_sheet: "configs/sample_sheet.csv"
 
 # Singularity stuff, WIP. {{TODO}}
 ## singularity
-#use-singularity: True
-singularity-args: "--bind pipeline_run_3/:/home"
+use-singularity: True
+singularity-args: "--bind /mnt/disk/nanopore-assembly/longread_GWAS/longread_analysis/"
 ## Job resources
 set-resources:
   - getMLST_type:mem_mb=1000000
