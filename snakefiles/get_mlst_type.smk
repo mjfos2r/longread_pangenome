@@ -29,4 +29,4 @@ rule getMLST_type:
     message: "getting MLST type for {wildcards.assembler} generated assemblies!"
     shell:
         "export MLST_DATABASES=/home/db/mlst/ &&"
-        "get_sequence_type -s \"Borrelia_spp\" {input}"
+        "get_sequence_type -s 'Borrelia' {input}"
