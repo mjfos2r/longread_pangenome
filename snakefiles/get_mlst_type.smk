@@ -24,7 +24,7 @@ for key,values in samples.items():
 ## 
 
 rule getMLST_type:
-    input: all_input
+    input: expand(f"{analysis_dir}/assemblies/{method}/contigs/{sample}.fasta", analysis_dir=analysis_dir, method=samples.keys(), sample=samples.items())
     output:
         outdir = directory(analysis_dir+"/reports/mlst/"),
         final_out = analysis_dir+"/reports/mlst/mlst_results.allele.csv"
