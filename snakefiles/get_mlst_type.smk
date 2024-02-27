@@ -32,5 +32,6 @@ rule getMLST_type:
     params:
         singularity_out =  analysis_dir+"/singularity_output/",
     threads: 360
+    message: "{input}"
     shell:
         "get_sequence_type -d {threads} -s 'Borrelia' -o {output.outdir} {input}"
