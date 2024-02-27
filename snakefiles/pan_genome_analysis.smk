@@ -14,14 +14,21 @@ rule Roary:
         glob.glob(analysis_dir +"/assemblies/*/annotation/*/*.gff3")
     output:
         outdir = directory(analysis_dir +"/pangenome/roary/"),
-        outfile = analysis_dir + "/pangenome/roary/pan_genome_reference.fa",
-        outalign = analysis_dir + "/pangenome/roary/core_gene_alignment.aln"
     threads: 360
     message: "running roary on all of our annotations! : \n roary -p 360 -f {output.outdir} {input} 2>&1 >{log}"
-    log: analysis_dir + "/logs/pangenome/roary.txt"
+    log: analysis_dir + "/logs/pangenome/roary_log.txt"
     conda: "roary"
     shell:
-        "roary -e -p 360 -f {output.outdir} {input} >{log}"
+        "roary -e -p 360 -f {output.outdir} {input} &2>1 >{log}"
+
+rule GetAlignmentFiles:
+    input:analysis_dir +"/pangenome/roary/"
+    output:
+    threads:
+    message:
+    log:
+    conda:
+    shell:
 
 rule FastTree:
     input:
