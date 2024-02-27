@@ -17,8 +17,7 @@ samples = {"illumina" : [v.split("/")[-1].split(".")[0] for v in glob.glob(analy
 all_input = []
 for key,values in samples.items():
     for value in values:
-        annotation_out = analysis_dir + f"/assemblies/{method}/contigs/{sample}.fasta"
-        all_input.append(annotations_out)
+        all_input.append(f"{analysis_dir}/assemblies/{method}/contigs/{sample}.fasta")
 
 ##
 # MLST Type each assembly!
