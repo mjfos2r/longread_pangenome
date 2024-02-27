@@ -1,0 +1,25 @@
+# define analysis directory 
+analysis_dir: "pipeline_run_3"
+reference_fa: "ref/GCF_000008685.2_ASM868v2_genomic.fna"
+reference_gff: "ref/GCF_000008685.2_ASM868v2_genomic.gff"
+# define path to sample sheet
+sample_sheet: "configs/sample_sheet.csv"
+
+# Singularity stuff, WIP. {{TODO}}
+## singularity
+#use-singularity: True
+singularity-args: "--bind pipeline_run_3/:/home"
+## Job resources
+set-resources:
+  - getMLST_type:mem_mb=1000000
+
+set-threads:
+  - getMLST_type=360
+## For some reasons time needs quotes to be read by snakemake
+#default-resources:
+  
+#  - runtime="00:01:00"
+## Define the number of threads used by rules
+#set-threads:
+#  - canu:
+#  - flye:
