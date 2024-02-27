@@ -14,7 +14,7 @@ rule all:
 ## 
 
 rule getMLST_type:
-    input: glob.glob(analysis_dir + "/assemblies/*/contigs/*.fasta",sample=SAMPLES)
+    input: glob.glob(analysis_dir + "/assemblies/*/contigs/*.fasta")
     output:
         outdir = directory(analysis_dir+"/reports/mlst/"),
         final_out = analysis_dir+"/reports/mlst/mlst_results.allele.csv"
