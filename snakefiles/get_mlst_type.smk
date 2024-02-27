@@ -1,5 +1,7 @@
 import pandas
+import glob
 import mjf.tools as mjf
+
 configfile: local("configs/singularity_config.yaml")
 analysis_dir = config['analysis_dir']
 
