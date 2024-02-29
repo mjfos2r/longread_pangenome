@@ -7,8 +7,9 @@ analysis_dir = config['analysis_dir']
 rule all:
     input:
         analysis_dir + "/pangenome/roary_v2/core_gene_alignment.aln",
-        analysis_dir + "/pangenome/tree_v2/fasttree_roary_core_v2.newick",
-        analysis_dir + "/pangenome/tree_v2/RAxML_bestTree_roary_v2_gtrgam"
+        analysis_dir + "/pangenome/tree/v2/fasttree_roary_core_v2.newick",
+        analysis_dir + "/pangenome/tree/v2/RAxML_bestTree_roary_v2_gtrgam",
+        analysis_dir+"/pangenome/bakta_v2/roary_core_v2.gff3"
 
 rule Roary:
     input:
@@ -27,7 +28,7 @@ rule FastTree:
     input:
         analysis_dir + "/pangenome/roary_v2/core_gene_alignment.aln"
     output:
-        analysis_dir + "/pangenome/tree_v2/fasttree_roary_core_v2.newick"
+        analysis_dir + "/pangenome/tree/v2/fasttree_roary_core_v2.newick"
     threads: 360
     conda: "roary"
     message: "running fasttree on the roary output ==>> {input}"
@@ -39,8 +40,8 @@ rule RAxML:
     input:
         analysis_dir + "/pangenome/roary_v2/core_gene_alignment.aln"
     output:
-        outdir = directory(analysis_dir + "/pangenome/tree_v2/"),
-        outfile = analysis_dir + "/pangenome/tree_v2/RAxML_bestTree_roary_v2_gtrgam"
+        outdir = directory(analysis_dir + "/pangenome/tree/v2/"),
+        outfile = analysis_dir + "/pangenome/tree/v2/RAxML_bestTree_roary_v2_gtrgam"
     threads: 360
     conda: "raxml"
     message: "running RAxML on the roary output ==>> {input}"
