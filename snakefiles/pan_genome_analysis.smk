@@ -15,6 +15,7 @@ rule Roary:
         glob.glob(analysis_dir +"/assemblies/*/annotation/*/*.gff3")
     output:
         outdir = directory(analysis_dir +"/pangenome/roary_v2/"),
+        outfile = analysis_dir + "/pangenome/roary_v2/core_gene_alignment.aln"
     threads: 360
     message: "running roary on all of our annotations! : \n roary -p 360 -f {output.outdir} {input} 2>&1 >{log}"
     log: analysis_dir + "/logs/pangenome/roary_log.txt"
