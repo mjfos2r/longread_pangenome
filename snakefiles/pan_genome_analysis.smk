@@ -21,7 +21,7 @@ rule Roary:
     log: analysis_dir + "/logs/pangenome/roary_log.txt"
     conda: "roary"
     shell:
-        "roary -e -p 360 -f {output.outdir} {input} 2>&1 >{log}"
+        "roary -e -p 360 -f {output.outdir} {input} >{log} 2>&1"
 
 rule FastTree:
     input:
@@ -45,7 +45,7 @@ rule RAxML:
     message: "running RAxML on the roary output ==>> {input}"
     log: analysis_dir + "/logs/pangenome/RAxML_log.txt"
     shell:
-        "raxmlHPC -m GTRGAMMA -p 02155 -s {input} -n roary_v2_gtrgam 2>&1 >{log}"
+        "raxmlHPC -m GTRGAMMA -p 02155 -s {input} -n roary_v2_gtrgam >{log} 2>&1"
 
 #rule Group2ID:
 #    input:
