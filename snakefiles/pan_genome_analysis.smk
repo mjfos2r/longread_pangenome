@@ -6,7 +6,7 @@ analysis_dir = config['analysis_dir']
 
 rule all:
     input:
-        analysis_dir + "/pangenome/roary/pan_genome_reference.fa",
+        analysis_dir + "/pangenome/roary_v2/pan_genome_reference.fa",
         analysis_dir + "/pangenome/tree/fasttree_roary_core_v2.newick",
         analysis_dir + "/pangenome/tree/RAxML_bestTree_roary_v2_gtrgam"
 
@@ -14,7 +14,7 @@ rule Roary:
     input:
         glob.glob(analysis_dir +"/assemblies/*/annotation/*/*.gff3")
     output:
-        outdir = directory(analysis_dir +"/pangenome/roary/"),
+        outdir = directory(analysis_dir +"/pangenome/roary_v2/"),
     threads: 360
     message: "running roary on all of our annotations! : \n roary -p 360 -f {output.outdir} {input} 2>&1 >{log}"
     log: analysis_dir + "/logs/pangenome/roary_log.txt"
@@ -24,7 +24,7 @@ rule Roary:
 
 rule FastTree:
     input:
-        analysis_dir + "/pangenome/roary/core_gene_alignment.aln"
+        analysis_dir + "/pangenome/roary_v2/core_gene_alignment.aln"
     output:
         analysis_dir + "/pangenome/tree/fasttree_roary_core_v2.newick"
     threads: 360
@@ -36,7 +36,7 @@ rule FastTree:
 
 rule RAxML:
     input:
-        analysis_dir + "/pangenome/roary/core_gene_alignment.aln"
+        analysis_dir + "/pangenome/roary_v2/core_gene_alignment.aln"
     output:
         analysis_dir + "/pangenome/tree/RAxML_bestTree_roary_v2_gtrgam"
     threads: 360
