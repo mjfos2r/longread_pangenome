@@ -7,8 +7,8 @@ analysis_dir = config['analysis_dir']
 rule all:
     input:
         analysis_dir + "/pangenome/roary_v2/core_gene_alignment.aln",
-        analysis_dir + "/pangenome/tree/fasttree_roary_core_v2.newick",
-        analysis_dir + "/pangenome/tree/RAxML_bestTree_roary_v2_gtrgam"
+        analysis_dir + "/pangenome/tree_v2/fasttree_roary_core_v2.newick",
+        analysis_dir + "/pangenome/tree_v2/RAxML_bestTree_roary_v2_gtrgam"
 
 rule Roary:
     input:
