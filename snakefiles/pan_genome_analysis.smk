@@ -21,7 +21,7 @@ rule Roary:
     log: analysis_dir + "/logs/pangenome/roary_log.txt"
     conda: "roary"
     shell:
-        "roary -e -p 360 -f {output.outdir} {input} >{log} 2>&1"
+        "roary -e --mafft -p 360 -f {output.outdir} {input} >{log} 2>&1"
 
 rule FastTree:
     input:
