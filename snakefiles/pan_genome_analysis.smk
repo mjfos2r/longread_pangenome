@@ -19,28 +19,31 @@ rule Roary:
     log: analysis_dir + "/logs/pangenome/roary_log.txt"
     conda: "roary"
     shell:
-        "roary -e -p 360 -f {output.outdir} {input} &2>1 >{log}"
-
-rule GetAlignmentFiles:
-    input:analysis_dir +"/pangenome/roary/"
-    output:
-    threads:
-    message:
-    log:
-    conda:
-    shell:
+        "roary -e -p 360 -f {output.outdir} {input} 2>&1 >{log}"
 
 rule FastTree:
     input:
         analysis_dir + "/pangenome/roary/core_gene_alignment.aln"
     output:
-        analysis_dir + "/pangenome/tree/core_gene_alignment.newick"
+        analysis_dir + "/pangenome/tree/fasttree_roary_core_v2.newick"
     threads: 360
     conda: "roary"
-    message: "creating a newick tree from the output core gene alignment"
+    message: "running fasttree on the roary output ==>> {input}"
     log: analysis_dir + "/logs/pangenome/fasttree.txt"
     shell:
-        "FastTree -gamma -nt -gtr {input} > {output}"
+        "FastTree -gamma -nt -gtr {input} > {output} 2>{log}"
+
+rule RAxML:
+    input:
+        analysis_dir + "/pangenome/roary/core_gene_alignment.aln"
+    output:
+        analysis_dir + "/pangenome/tree/RAxML_bestTree_roary_v2_gtrgam"
+    threads: 360
+    conda: "raxml"
+    message: "running RAxML on the roary output ==>> {input}"
+    log: analysis_dir + "/logs/pangenome/RAxML_log.txt"
+    shell:
+        "raxmlHPC -m GTRGAMMA -p 02155 -s {input} -n roary_v2_gtrgam 2>&1 >{log}"
 
 #rule Group2ID:
 #    input:
