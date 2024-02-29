@@ -33,7 +33,7 @@ rule FastTree:
     message: "running fasttree on the roary output ==>> {input}"
     log: analysis_dir + "/logs/pangenome/fasttree.txt"
     shell:
-        "FastTree -gamma -nt -gtr {input} > {output} 2>{log}"
+        "FastTreeMP -gamma -nt -gtr {input} > {output} 2>{log}"
 
 rule RAxML:
     input:
