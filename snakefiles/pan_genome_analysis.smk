@@ -55,3 +55,17 @@ rule RAxML:
 #    message:
 #    log:
 #    shell:
+
+rule bakta:
+    input: analysis_dir + "/pangenome/roary_v2/pan_genome_reference.fa"
+    output:
+        outdir = directory(analysis_dir+"/pangenome/roary_v2/bakta/"),
+        outgff = analysis_dir+"/pangenome/roary_v2/bakta/roary_core_v2.gff3",
+    params: bakta_params = config['bakta_params']
+    threads: 360
+    log: analysis_dir + "/logs/pangenome/bakta_v2.log"
+    conda: "bakta"
+    message:
+        "Running bakta to annotate the pangenome reference at ==>> {input}"
+    shell:
+        "bakta --db {params.bakta_params[db]} {params.bakta_params[gram]} --threads {threads} {params.bakta_params[opts]} --force --output {output.outdir} --prefix roary_core_v2 {input} 2>&1 >{log}"
