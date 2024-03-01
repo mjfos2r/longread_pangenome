@@ -70,4 +70,4 @@ rule bakta:
     message:
         "Running bakta to annotate the pangenome reference at ==>> {input}"
     shell:
-        "bakta --db {params.bakta_params[db]} {params.bakta_params[gram]} --threads {threads} {params.bakta_params[opts]} --force --output {output.outdir} --prefix roary_pangene_v2 {input} 2>&1 >{log}"
+        "bakta --db {params.bakta_params[db]} {params.bakta_params[gram]} --skip-trna --keep-contig-headers --genus Borrelia --species burgdorferi --strain pan-sensu-stricto --threads {threads} {params.bakta_params[opts]} --skip--force --output {output.outdir} --prefix roary_pangene_v2 {input} 2>&1 >{log}"
