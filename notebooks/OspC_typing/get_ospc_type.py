@@ -37,16 +37,15 @@ def parse_blast_results(blast_results : str) -> dict:
 #################################################
 #                Set up ArgParse                #
 #################################################
+#{{TO-DO}} 
+# # Need to finish setting up argparse so that I can run it from the commandline
+# # OR from snakemake directly using the inputs and outputs!
+def initialize_args():
 parser = argparse.ArgumentParser(description='Process command line arguments.')
-parser.add_argument('--get_reference_seqs', action='store_true', help='Retrieve reference sequences from NCBI.')
-parser.add_argument('--fix_reference_seqs', action='store_true', help='Extract ospc gene from plasmid sequences.')
-parser.add_argument('--write_ref_seqs', action='store_true', help='Write reference OspC sequences to file.')
-parser.add_argument('--make_blastdb', action='store_true', help='Create local blast database.')
-parser.add_argument('--write_genes', action='store_true', help='Write ospC genes to file.')
-parser.add_argument('--run_blast', action='store_true', help='Run blast against local blast database.')
-parser.add_argument('--parse_blast_results', action='store_true', help='Parse blast results and add ospc type to metadata.')
-parser.add_argument('--merge_results', action='store_true', help='Merge known types and new types tables.')
-parser.add_argument('--finalize_and_write_metadata', action='store_true', help='Finalize and write metadata.')
+parser.add_argument('--assembly', action='store_true', help='directory containing assemblies')
+parser.add_argument('--metadata', action='store_true', help='metadata file')
+parser.add_argument('--blastdbs', action='store_true', help='path to blast databases')
+parser.add_argument('--output-metadata', action='store_true', help='path to output metadata')
 
 args = parser.parse_args()
 
@@ -65,35 +64,33 @@ known_types = input_metadata[['Isolate', 'OspC_Type']]
 # Then parse the blast results and add the type to the metadata table.
 #################################################
 # OspC List from Ira and Hanincova et al.
-ospc_genotype_to_ref = {
-     'A' : 'X69596',   'Ba' : 'EF537413',
-    'Bb' : 'NC_011724', 'C' : 'DQ437462',
-    'Da' : 'AF029863', 'Db' : 'GQ478283',
-     'E' : 'AY275221', 'Fa' : 'AY275225',
-    'Fb' : 'EF537433', 'Fc' : 'GQ478285',
-     'G' : 'AY275223', 'Ha' : 'EU377781',
-    'Hb' : 'GQ478286', 'Ia' : 'AY275219',
-    'Ib' : 'EU377752',  'J' : 'CP001535',
-     'K' : 'AY275214',  'L' : 'EU375832',
-     'M' : 'CP001550',  'N' : 'EU377775',
-     'O' : 'FJ997281',  'T' : 'AY275222',
-    'Ua' : 'EU377769', 'Ub' : 'GQ478287',
-    'A3' : 'EF592541', 'B3' : 'EF592542',
-    'C3' : 'EF592543', 'D3' : 'EF592544',
-    'E3' : 'EF592545', 'F3' : 'EF592547',
-    'H3' : 'FJ932733', 'I3' : 'FJ932734',}
+ospc_genotype_to_ref = { 'A' : 'X69596',   'Ba' : 'EF537413',
+                        'Bb' : 'NC_011724', 'C' : 'DQ437462',
+                        'Da' : 'AF029863', 'Db' : 'GQ478283',
+                         'E' : 'AY275221', 'Fa' : 'AY275225',
+                        'Fb' : 'EF537433', 'Fc' : 'GQ478285',
+                         'G' : 'AY275223', 'Ha' : 'EU377781',
+                        'Hb' : 'GQ478286', 'Ia' : 'AY275219',
+                        'Ib' : 'EU377752',  'J' : 'CP001535',
+                         'K' : 'AY275214',  'L' : 'EU375832',
+                         'M' : 'CP001550',  'N' : 'EU377775',
+                         'O' : 'FJ997281',  'T' : 'AY275222',
+                        'Ua' : 'EU377769', 'Ub' : 'GQ478287',
+                        'A3' : 'EF592541', 'B3' : 'EF592542',
+                        'C3' : 'EF592543', 'D3' : 'EF592544',
+                        'E3' : 'EF592545', 'F3' : 'EF592547',
+                        'H3' : 'FJ932733', 'I3' : 'FJ932734' }
 
 # OspC AT list from file provided by Ira
-ospc_AT_to_ref = {
-   'AT1' : 'EU482041', 'AT2' : 'EU482042',
-   'AT3' : 'EU482043', 'AT4' : 'EU482044',
-   'AT5' : 'EU482045', 'AT6' : 'EU482046',
-   'AT7' : 'EU482047', 'AT8' : 'EU482048',
-   'AT9' : 'EU482049', 'AT10' : 'EU482050',
-  'AT11' : 'EU482051', 'AT12' : 'EU482052',
-  'AT13' : 'EU482053', 'AT14' : 'EU482054',
-  'AT15' : 'EU482055', 'AT16' : 'EU482056', 
-  'B.bissettii_25015' : 'U04282'}
+ospc_AT_to_ref = { 'AT1' : 'EU482041', 'AT2' : 'EU482042',
+                   'AT3' : 'EU482043', 'AT4' : 'EU482044',
+                   'AT5' : 'EU482045', 'AT6' : 'EU482046',
+                   'AT7' : 'EU482047', 'AT8' : 'EU482048',
+                   'AT9' : 'EU482049', 'AT10' : 'EU482050',
+                  'AT11' : 'EU482051', 'AT12' : 'EU482052',
+                  'AT13' : 'EU482053', 'AT14' : 'EU482054',
+                  'AT15' : 'EU482055', 'AT16' : 'EU482056', 
+                  'B.bissettii_25015' : 'U04282' }
 
 #################################################
 
