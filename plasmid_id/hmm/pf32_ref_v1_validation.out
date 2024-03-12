@@ -1,0 +1,866 @@
+# hmmsearch :: search profile(s) against a sequence database
+# HMMER 3.4 (Aug 2023); http://hmmer.org/
+# Copyright (C) 2023 Howard Hughes Medical Institute.
+# Freely distributed under the BSD open source license.
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+# query HMM file:                  pf32_ref_v1.hmm
+# target sequence database:        Minimal-PF32-testor-set-March2021.faa
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
+Query:       pf32_ref_v1  [M=249]
+Scores for complete sequences (score includes all domains):
+   --- full sequence ---   --- best 1 domain ---    -#dom-
+    E-value  score  bias    E-value  score  bias    exp  N  Sequence                             Description
+    ------- ------ -----    ------- ------ -----   ---- --  --------                             -----------
+   4.2e-111  361.2  18.2   5.1e-111  361.0  18.2    1.0  1  297_cp32-12                           
+   2.7e-110  358.6  15.9     3e-110  358.4  15.9    1.0  1  JD1_cp32-8                            
+   4.3e-109  354.6  17.4   5.4e-109  354.3  17.4    1.0  1  B31_cp32-10                           
+   9.1e-108  350.3  17.4     1e-107  350.2  17.4    1.0  1  B31_cp32-3                            
+     8e-107  347.2  22.0   9.4e-107  347.0  22.0    1.0  1  B31_cp32-7                            
+     5e-106  344.6  14.3     6e-106  344.4  14.3    1.0  1  B31_cp32-5                            
+   1.3e-105  343.2  18.2   1.6e-105  342.9  18.2    1.0  1  B31_lp54                              
+   1.4e-104  339.9  14.5   1.5e-104  339.7  14.5    1.0  1  B31_cp32-1                            
+     1e-103  337.0  13.5   1.2e-103  336.9  13.5    1.0  1  JD1_cp32-6                            
+   3.7e-103  335.2  18.9   4.1e-103  335.1  18.9    1.0  1  DN127_cp9                             
+   1.1e-102  333.7  18.8   1.2e-102  333.6  18.8    1.0  1  B31_lp28-3                            
+     7e-102  331.0  21.9   7.8e-102  330.9  21.9    1.0  1  JD1_lp28-6                            
+   2.3e-101  329.3  13.9   2.9e-101  329.0  13.9    1.0  1  B31_lp25                              
+     3e-101  329.0  20.6   3.3e-101  328.8  20.6    1.0  1  B31_lp36                              
+   5.1e-101  328.2  19.8   5.6e-101  328.1  19.8    1.0  1  118a_cp32-13                          
+   1.6e-100  326.6  19.9   1.8e-100  326.4  19.9    1.0  1  Y501_unitig_2_lp28-12                 
+   1.8e-100  326.4  15.7     2e-100  326.2  15.7    1.0  1  HO14_NovelPFam32_DatabaseShortContig  
+   7.2e-100  324.4  17.1     8e-100  324.3  17.1    1.0  1  Bol26_lp28-9                          
+    1.6e-99  323.3  22.6    1.8e-99  323.2  22.6    1.0  1  B31_cp32-4                            
+    2.6e-99  322.6  15.4    3.1e-99  322.4  15.4    1.0  1  N4>JD1_cp32-11                        
+      3e-99  322.4  21.0    3.3e-99  322.3  21.0    1.0  1  WI91-23_lp56                          
+    5.1e-99  321.7  15.3    6.2e-99  321.4  15.3    1.0  1  B31_lp21                              
+    4.6e-98  318.5  17.2    5.1e-98  318.4  17.2    1.0  1  B31_lp28-1                            
+    5.2e-98  318.3  18.3    5.8e-98  318.2  18.3    1.0  1  B31_lp38                              
+    6.7e-98  318.0  13.7    8.2e-98  317.7  13.7    1.0  1  CA_28_91_lp28-8                       
+    1.1e-97  317.3  18.9    1.2e-97  317.1  18.9    1.0  1  JD1_lp28-7                            
+      2e-97  316.4  19.4    2.2e-97  316.3  19.4    1.0  1  N40_lp28-5                            
+    1.1e-96  314.0  22.4    1.2e-96  313.9  22.4    1.0  1  Y501_unitig_7_lp28-13                 
+    3.7e-96  312.3  14.2    4.1e-96  312.2  14.2    1.0  1  B31_lp28-4                            
+    1.8e-95  310.0  19.8      2e-95  309.9  19.8    1.0  1  B331_Ira_CP017214_lp28-1              
+    2.2e-94  306.5  15.7    2.7e-94  306.2  15.7    1.0  1  MOD5_untig_175_lp28-14                
+      9e-94  304.5  15.5      1e-93  304.3  15.5    1.0  1  B31_cp32-9                            
+    1.2e-93  304.1  19.1    1.3e-93  303.9  19.1    1.0  1  B31_cp26                              
+      6e-91  295.2  14.1    6.7e-91  295.1  14.1    1.0  1  B31_lp28-2                            
+    4.8e-90  292.3  10.3    5.3e-90  292.1  10.3    1.0  1  PotiB2_lp32-3#2                       
+    3.3e-59  191.2   1.4      4e-59  191.0   1.4    1.1  1  B31_lp17                              
+
+
+Domain annotation for each sequence (and alignments):
+>> 297_cp32-12  
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !  361.0  18.2  5.1e-111  5.1e-111       1     247 [.       1     245 [.       1     249 [. 0.99
+
+  Alignments for each domain:
+  == domain 1  score: 361.0 bits;  conditional E-value: 5.1e-111
+  pf32_ref_v1   1 mdrkkpkiitiasikGGvGKstlsiifatlLskkkKvLLiDlDpQasltSYflkkikek.vdieklniyevlkekldinkviikindnldlipsylsl 97 
+                  md+kkpkiitiasikGGvGKst++iifa+lL++k+KvLLiD+D+Qas+tSYf+k+i ++ ++i ++niy+vlkekldin++ii+i+dnldlipsylsl
+  297_cp32-12   1 MDNKKPKIITIASIKGGVGKSTSAIIFANLLAQKYKVLLIDIDTQASTTSYFYKEIASQkINIVSKNIYRVLKEKLDINNAIINIKDNLDLIPSYLSL 98 
+                  9********************************************************999************************************** PP
+
+  pf32_ref_v1  98 ekfnkesieykelllkkklellkenydYiiiDtsPsldlllknaLvisdyviiPvtaekwsvEslelleeaieklekkkikifiletqfkknnthkel 195
+                  +kf++e i++kel+lk++l +lk++ydYiiiDt+Psld++l+naL++s+++i+P+taekw+vEslelle++i+kl++ ki+ifil+t+fkknnthkel
+  297_cp32-12  99 HKFSSEFIPLKELRLKDNLIFLKQDYDYIIIDTNPSLDFTLSNALMTSNCIIVPMTAEKWAVESLELLEFYIKKLRI-KIPIFILITRFKKNNTHKEL 195
+                  *****************************************************************************.******************** PP
+
+  pf32_ref_v1 196 lkllkkkyeekflgkiheredlkkliaeneefdlkedYykeykevLekilkk 247
+                  lk++++k  + flg++heredl+++i+ n+efd+++dY++eyke+++k++++
+  297_cp32-12 196 LKHVRSK--KGFLGIVHEREDLNRKITGNDEFDMTKDYIEEYKEAVSKFFDM 245
+                  *******..***************************************9975 PP
+
+>> JD1_cp32-8  
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !  358.4  15.9    3e-110    3e-110       1     246 [.       1     244 [.       1     246 [] 0.99
+
+  Alignments for each domain:
+  == domain 1  score: 358.4 bits;  conditional E-value: 3e-110
+  pf32_ref_v1   1 mdrkkpkiitiasikGGvGKstlsiifatlLskkkKvLLiDlDpQasltSYflkkikek.vdieklniyevlkekldinkviikindnldlipsylsl 97 
+                  md+kkpkiitiasikGGvGKst+siifatlL++k+KvLLiDlD+Qas+tSYf+kki+++ +d+ ++niy+vlk++ld+n++i++i++nldlipsy++l
+   JD1_cp32-8   1 MDTKKPKIITIASIKGGVGKSTSSIIFATLLAQKYKVLLIDLDTQASTTSYFCKKIENQkIDLVNKNIYRVLKDTLDVNNAIVNIKENLDLIPSYITL 98 
+                  9************************************************************************************************* PP
+
+  pf32_ref_v1  98 ekfnkesieykelllkkklellkenydYiiiDtsPsldlllknaLvisdyviiPvtaekwsvEslelleeaieklekkkikifiletqfkknnthkel 195
+                  +kf++e i+++el+lk++l +lk++ydYi++Dt+Psld++l+naL++s++vi+P+taekw++Esl+lle++ie+l++ ki+if+l+t+fkknnthkel
+   JD1_cp32-8  99 HKFSNEFIPHQELRLKDSLIFLKQDYDYIVVDTNPSLDFTLSNALITSNCVIVPMTAEKWAIESLDLLEFHIENLKI-KIPIFLLVTRFKKNNTHKEL 195
+                  *****************************************************************************.******************** PP
+
+  pf32_ref_v1 196 lkllkkkyeekflgkiheredlkkliaeneefdlkedYykeykevLekilk 246
+                  lk+++++  e+flg iheredl+k+ia n+ef++++dY++eyke+L+k+++
+   JD1_cp32-8 196 LKYVESR--ERFLGFIHEREDLNKKIAGNNEFNMDKDYINEYKEALSKFFE 244
+                  *******..****************************************96 PP
+
+>> B31_cp32-10  
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !  354.3  17.4  5.4e-109  5.4e-109       1     245 [.       1     243 [.       1     246 [. 0.99
+
+  Alignments for each domain:
+  == domain 1  score: 354.3 bits;  conditional E-value: 5.4e-109
+  pf32_ref_v1   1 mdrkkpkiitiasikGGvGKstlsiifatlLskkkKvLLiDlDpQasltSYflkkikek.vdieklniyevlkekldinkviikindnldlipsylsl 97 
+                  md+kkpkiitiasikGGvGKst++ii+atlL+k++KvLLiD+D+Qas+tSYf+k+i ++ +di k+n+y+vlkek+din++i+ki++nldlipsyl+l
+  B31_cp32-10   1 MDNKKPKIITIASIKGGVGKSTSAIIMATLLAKEHKVLLIDMDTQASTTSYFYKEILNQnIDIVKINVYRVLKEKIDINDSIVKIKENLDLIPSYLTL 98 
+                  9*******************************************************9999************************************** PP
+
+  pf32_ref_v1  98 ekfnkesieykelllkkklellkenydYiiiDtsPsldlllknaLvisdyviiPvtaekwsvEslelleeaieklekkkikifiletqfkknnthkel 195
+                  +kf +esi++kel+l+++le+lk++y+Y+iiDt+Psld++l+naL++s+++i+P+taekw+vEslelle+++++l++ ki+if+++t+fkknnthk+l
+  B31_cp32-10  99 NKFLSESIPLKELRLQNNLEFLKRRYHYVIIDTNPSLDYTLSNALMTSNCIIVPMTAEKWAVESLELLEFHMNNLKI-KIPIFLVITRFKKNNTHKQL 195
+                  *****************************************************************************.******************** PP
+
+  pf32_ref_v1 196 lkllkkkyeekflgkiheredlkkliaeneefdlkedYykeykevLekil 245
+                  l+++++k  + flg iheredl+k+ia+neefd+++dY++eyk vL+++l
+  B31_cp32-10 196 LQHVESK--TGFLGFIHEREDLNKKIAKNEEFDMTKDYINEYKGVLSRFL 243
+                  *******..**************************************997 PP
+
+>> B31_cp32-3  
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !  350.2  17.4    1e-107    1e-107       1     247 [.       1     245 [.       1     246 [] 0.99
+
+  Alignments for each domain:
+  == domain 1  score: 350.2 bits;  conditional E-value: 1e-107
+  pf32_ref_v1   1 mdrkkpkiitiasikGGvGKstlsiifatlLskkkKvLLiDlDpQasltSYflkkikek.vdieklniyevlkekldinkviikindnldlipsylsl 97 
+                  md+kkpkiitiasikGGvGKst++ii+atlLsk++KvLLiD+D+Qas+tSYf++ki++  ++++k niye+lke++di+++ii++++nldlipsyl+l
+   B31_cp32-3   1 MDNKKPKIITIASIKGGVGKSTSAIILATLLSKNNKVLLIDMDTQASITSYFYEKIEKLgINFTKFNIYEILKENVDIDSTIINVDNNLDLIPSYLTL 98 
+                  9********************************************************99*************************************** PP
+
+  pf32_ref_v1  98 ekfnkesieykelllkkklellkenydYiiiDtsPsldlllknaLvisdyviiPvtaekwsvEslelleeaieklekkkikifiletqfkknnthkel 195
+                  ++f++++ie+k++llk++l +l ++ydYi+iDt+Psld++lknaL++sdyviiP+taekw+vEsl+l++++++kl++  ++if+++t+fkkn+thk+l
+   B31_cp32-3  99 HNFSEDKIEHKDFLLKTSLGTLYYKYDYIVIDTNPSLDVTLKNALLCSDYVIIPMTAEKWAVESLDLFNFFVRKLNL-FLPIFLIITRFKKNRTHKTL 195
+                  ****************************************************************************9.******************** PP
+
+  pf32_ref_v1 196 lkllkkkyeekflgkiheredlkkliaeneefdlkedYykeykevLekilkk 247
+                   ++lk+k  ++flg+i+eredl+++iaen++fdl++dY+key+++Le +lkk
+   B31_cp32-3 196 FEILKTK--DRFLGTISEREDLNRRIAENNNFDLNKDYIKEYENILEIFLKK 245
+                  *******..***************************************9975 PP
+
+>> B31_cp32-7  
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !  347.0  22.0  9.4e-107  9.4e-107       1     246 [.       1     244 [.       1     247 [. 0.99
+
+  Alignments for each domain:
+  == domain 1  score: 347.0 bits;  conditional E-value: 9.4e-107
+  pf32_ref_v1   1 mdrkkpkiitiasikGGvGKstlsiifatlLskkkKvLLiDlDpQasltSYflkkikek.vdieklniyevlkekldinkviikindnldlipsylsl 97 
+                  md+kkpkiitiasikGGvGKst++iif+tlLs++ KvLLiD+D+Qas+tSYf+kki e+ +++ ++niyevlk+++ i++++i+i++nldlipsy+sl
+   B31_cp32-7   1 MDNKKPKIITIASIKGGVGKSTSAIIFTTLLSQDWKVLLIDMDTQASVTSYFYKKIIEDnFNLLEKNIYEVLKGNVLIDNSVINISNNLDLIPSYISL 98 
+                  9*******************************************************9999************************************** PP
+
+  pf32_ref_v1  98 ekfnkesieykelllkkklellkenydYiiiDtsPsldlllknaLvisdyviiPvtaekwsvEslelleeaieklekkkikifiletqfkknnthkel 195
+                  +kfnke+i++ke+ l+k+l +l++nydYiiiDt+Psld++l+naLv+sdy+i+P+taekw+vEslell+++i++l++ +i+if+++t+fkknnthk l
+   B31_cp32-7  99 HKFNKEAITFKEIKLQKQLLNLQSNYDYIIIDTNPSLDYTLTNALVCSDYIIVPITAEKWAVESLELLKFSISDLAI-DIPIFLIITRFKKNNTHKAL 195
+                  *****************************************************************************.******************** PP
+
+  pf32_ref_v1 196 lkllkkkyeekflgkiheredlkkliaeneefdlkedYykeykevLekilk 246
+                   + lk++  ++flg i eredl+k+ia+n+ f+l++dY+ eyk++L+k+++
+   B31_cp32-7 196 FSSLKDN--KNFLGLIYEREDLNKKIAKNDLFNLNRDYMLEYKNILSKFIT 244
+                  *******..***************************************986 PP
+
+>> B31_cp32-5  
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !  344.4  14.3    6e-106    6e-106       1     247 [.       1     246 [.       1     249 [. 0.99
+
+  Alignments for each domain:
+  == domain 1  score: 344.4 bits;  conditional E-value: 6e-106
+  pf32_ref_v1   1 mdrkkpkiitiasikGGvGKstlsiifatlLskkkKvLLiDlDpQasltSYflkkikek.vdieklniyevlkek.ldinkviikindnldlipsyls 96 
+                  md+kkpkiitias+kGGvGKst+sii+atlLsk+kK+LLiD+D+Qas+tS+++++i++k v++e+ niye+lke  ld ++vii+i++nldlipsyls
+   B31_cp32-5   1 MDNKKPKIITIASLKGGVGKSTTSIILATLLSKSKKILLIDIDTQASITSFYFNNIQNKnVNLENFNIYEILKEGaLDTRDVIINIDNNLDLIPSYLS 98 
+                  9********************************************************999*************9879********************* PP
+
+  pf32_ref_v1  97 lekfnkesieykelllkkklellkenydYiiiDtsPsldlllknaLvisdyviiPvtaekwsvEslelleeaieklekkkikifiletqfkknnthke 194
+                  l+kfn+e+i++kel+lkkkle +++nydYiiiDt+Psld++l+naLv+s+yv++P+taekw+vEsl+lle++ +k+ + + +if+l+t+fkknnthk+
+   B31_cp32-5  99 LHKFNQEAITFKELRLKKKLESIQDNYDYIIIDTPPSLDFALTNALVSSQYVLVPITAEKWAVESLDLLEFYSKKIGT-NAPIFVLVTRFKKNNTHKQ 195
+                  *****************************************************************************9.******************* PP
+
+  pf32_ref_v1 195 llkllkkkyeekflgkiheredlkkliaeneefdlkedYykeykevLekilkk 247
+                  ll++l+ +  +++lg+i+eredl+++iaen++fdl++dY+ eyk+vLe +l+k
+   B31_cp32-5 196 LLDILQLR--DDYLGIISEREDLNRRIAENDKFDLDKDYVCEYKKVLECFLNK 246
+                  ********..****************************************986 PP
+
+>> B31_lp54  
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !  342.9  18.2  1.6e-105  1.6e-105       1     247 [.       1     245 [.       1     247 [. 0.99
+
+  Alignments for each domain:
+  == domain 1  score: 342.9 bits;  conditional E-value: 1.6e-105
+  pf32_ref_v1   1 mdrkkpkiitiasikGGvGKstlsiifatlLskkkKvLLiDlDpQasltSYflkkikek.vdieklniyevlkekldinkviikindnldlipsylsl 97 
+                  md+k++k+itiasikGGvGKst+s+ifatlLs k KvLLiD+D+Qas+tSYf++kik++ +d+ + niyevl ++l+i++++i+in+nldlipsyl+l
+     B31_lp54   1 MDKKETKVITIASIKGGVGKSTTSLIFATLLSIKCKVLLIDIDTQASTTSYFFNKIKDNnIDLINRNIYEVLISNLHIDNALITINKNLDLIPSYLTL 98 
+                  9*********************************************************99************************************** PP
+
+  pf32_ref_v1  98 ekfnkesieykelllkkklellkenydYiiiDtsPsldlllknaLvisdyviiPvtaekwsvEslelleeaieklekkkikifiletqfkknnthkel 195
+                  +kfn+esi+yke+ lk++l+ll+++ydYii+Dt+Psld++l+naLv+s+y+iiP+taekw+vEsl+l++++++kl + ++++++++t+fk+nnth+el
+     B31_lp54  99 HKFNSESIPYKEFKLKEQLKLLSNHYDYIILDTNPSLDFTLTNALVCSNYIIIPITAEKWAVESLDLFTFFMNKLLL-TLPMYLINTKFKRNNTHREL 195
+                  ****************************************************************************9.******************** PP
+
+  pf32_ref_v1 196 lkllkkkyeekflgkiheredlkkliaeneefdlkedYykeykevLekilkk 247
+                  lk+l+k+  ++flg+i+eredl+k+ia+n++fdl++dY+ ey+++L+ +l+k
+     B31_lp54 196 LKVLEKN--NNFLGTISEREDLNKRIAKNDRFDLTKDYIIEYQNTLTAFLNK 245
+                  *******..****************************************986 PP
+
+>> B31_cp32-1  
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !  339.7  14.5  1.5e-104  1.5e-104       1     246 [.       1     244 [.       1     246 [] 0.99
+
+  Alignments for each domain:
+  == domain 1  score: 339.7 bits;  conditional E-value: 1.5e-104
+  pf32_ref_v1   1 mdrkkpkiitiasikGGvGKstlsiifatlLskkkKvLLiDlDpQasltSYflkkikek.vdieklniyevlkekldinkviikindnldlipsylsl 97 
+                  md+kkpkiitiasikGGvGKst++ii+atlLsk++KvLLiD+D+Qas+tSYf+k++ e+ +d+ ++niyevlk++  in++ii++++n+dl+psylsl
+   B31_cp32-1   1 MDTKKPKIITIASIKGGVGKSTSAIILATLLSKDNKVLLIDMDTQASVTSYFYKTLVESeFDLLEKNIYEVLKGNQLINDAIINVDHNFDLLPSYLSL 98 
+                  9******************************************************99999************************************** PP
+
+  pf32_ref_v1  98 ekfnkesieykelllkkklellkenydYiiiDtsPsldlllknaLvisdyviiPvtaekwsvEslelleeaieklekkkikifiletqfkknnthkel 195
+                  ++f++e  +yke++lk+++++lk +y++ii+Dt+P+ld++l+naLv+s++vi+P+taekw++Esl+lle++ +kl++ k k+f+++t+fkkn+thk+l
+   B31_cp32-1  99 HTFSEEPLPYKEHRLKDSFKYLKFKYNFIILDTNPHLDSTLSNALVVSKHVIVPMTAEKWTIESLQLLEFFTDKLKL-KPKVFLFVTKFKKNKTHKDL 195
+                  ****************************************************************************9.9******************* PP
+
+  pf32_ref_v1 196 lkllkkkyeekflgkiheredlkkliaeneefdlkedYykeykevLekilk 246
+                  l++l+kk  ekflg+i+eredl+++ia+n++fdl++dY+key +vL++++ 
+   B31_cp32-1 196 LEMLQKK--EKFLGIISEREDLNRRIAKNDRFDLDKDYIKEYVNVLNNFIL 244
+                  *******..***************************************985 PP
+
+>> JD1_cp32-6  
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !  336.9  13.5  1.2e-103  1.2e-103       1     246 [.       1     246 [.       1     249 [] 0.98
+
+  Alignments for each domain:
+  == domain 1  score: 336.9 bits;  conditional E-value: 1.2e-103
+  pf32_ref_v1   1 mdrkkpkiitiasikGGvGKstlsiifatlLskkkKvLLiDlDpQasltSYflkkikek.vdieklniyevlkekldinkviikindnldlipsylsl 97 
+                  md+kkpkiitiasikGGvGKst++iifatlL++k+KvLLiD+D+Qas+tSY++++i+++ +d++k+niyevl ekldin++i+++ +nldlipsyl+l
+   JD1_cp32-6   1 MDNKKPKIITIASIKGGVGKSTSAIIFATLLAQKYKVLLIDIDTQASTTSYYYDDIQKSsIDLRKNNIYEVLIEKLDINRSIVNVANNLDLIPSYLTL 98 
+                  9*********************************************************9*************************************** PP
+
+  pf32_ref_v1  98 ekfnkesi..eykelllkkklellkenydYiiiDtsPsldlllknaLvisdyviiPvtaekwsvEslelleeaieklekkkikifiletqfkknnthk 193
+                  +++n   +  +++e++lkk+l++++  y++iiiDt+Psld++l+naLv++++vi+P+taekw++Es++ll++++ek+   ++++++++t+fkknnthk
+   JD1_cp32-6  99 HSINAFGYkhTFDEFRLKKELKHIDVGYNFIIIDTPPSLDFTLTNALVCCNNVIVPLTAEKWTIESFDLLKFFMEKIGV-ELPTYFIITRFKKNNTHK 195
+                  ****98764589******************************************************************9.****************** PP
+
+  pf32_ref_v1 194 ellkllkkkyeekflgkiheredlkkliaeneefdlkedYykeykevLekilk 246
+                  +ll++l++k  e+flg+i+eredl+++ia+n++fd++ dY+keyk+ L ++++
+   JD1_cp32-6 196 QLLEMLNSK--ENFLGMISEREDLNRRIASNSSFDFQMDYIKEYKNSLMNFYA 246
+                  *********..***************************************986 PP
+
+>> DN127_cp9  
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !  335.1  18.9  4.1e-103  4.1e-103       1     245 [.       1     243 [.       1     246 [] 0.99
+
+  Alignments for each domain:
+  == domain 1  score: 335.1 bits;  conditional E-value: 4.1e-103
+  pf32_ref_v1   1 mdrkkpkiitiasikGGvGKstlsiifatlLskkkKvLLiDlDpQasltSYflkkikek.vdieklniyevlkekldinkviikindnldlipsylsl 97 
+                  md kk+kiitia+ikGGvGKst++iif+ lLs+k+KvLLiD+D+Qas+tSYf+kki e+ +d+ ++niy+vlk+++ in++ii++n+ ldl+psylsl
+    DN127_cp9   1 MDIKKSKIITIANIKGGVGKSTSAIIFSILLSQKYKVLLIDMDTQASTTSYFNKKIIENkFDLLEKNIYKVLKSNYLINDSIINVNNGLDLLPSYLSL 98 
+                  9******************************************************99999************************************** PP
+
+  pf32_ref_v1  98 ekfnkesieykelllkkklellkenydYiiiDtsPsldlllknaLvisdyviiPvtaekwsvEslelleeaieklekkkikifiletqfkknnthkel 195
+                  ++f++e  +yk ++lk+++++lk nydYiiiDt+P+ld++l+naLvis ++i+Pvtaekw++Esl+lle++i+kl++ ++k+f+++t+fkkn+thk+l
+    DN127_cp9  99 HTFSEEILPYKTHRLKDSFKYLKFNYDYIIIDTNPHLDSTLSNALVISGHIIVPVTAEKWAIESLQLLEFFINKLKL-NLKVFLFATKFKKNKTHKDL 195
+                  ****************************************************************************9.******************** PP
+
+  pf32_ref_v1 196 lkllkkkyeekflgkiheredlkkliaeneefdlkedYykeykevLekil 245
+                  l +l+kk  ++flg+i+eredl+++ia+n++fdl++dY+key ++L+++ 
+    DN127_cp9 196 LGILQKK--SRFLGIISEREDLNRRIAKNDDFDLDRDYIKEYINILNNFN 243
+                  *******..***************************************96 PP
+
+>> B31_lp28-3  
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !  333.6  18.8  1.2e-102  1.2e-102       1     245 [.       1     249 [.       1     250 [] 0.99
+
+  Alignments for each domain:
+  == domain 1  score: 333.6 bits;  conditional E-value: 1.2e-102
+  pf32_ref_v1   1 mdrkkpkiitiasikGGvGKstlsiifatlLsk.kkKvLLiDlDpQasltSYflkkikekvdieklniyevlkekldinkviikindnldlipsylsl 97 
+                  md kk++iit+asikGGvGKs+lsi+f+++L++  kKvLLiDlDpQ+sltSYf+++i+   +iek+n+y++lk+++++n++i+ki+d++++ips+++l
+   B31_lp28-3   1 MDIKKSDIITMASIKGGVGKSVLSILFSYVLKElGKKVLLIDLDPQNSLTSYFNRYIS---NIEKYNTYSMLKGDFHFNECIKKIDDYISIIPSHPIL 95 
+                  9*********************************************************...************************************* PP
+
+  pf32_ref_v1  98 ekfnkesieykelllkkkle..llkenydYiiiDtsPsldlllknaLvisdyviiPvtaekwsvEslelleeaieklek...kkikifiletqfkkn. 189
+                   kfn+e+i+yke++l+++l+  ++++n+dY+++Dt+Psld+llknaL+++dy++iPv++e ws+Es+++l++a+++++k   k ++i+i+e+qf+kn 
+   B31_lp28-3  96 GKFNSEAIDYKEVILEHHLNenMQNYNFDYVLLDTPPSLDFLLKNALNVADYIVIPVQVEIWSIESFTILINAVNDITKfrkKIYNISIVENQFIKNr 193
+                  *******************99999*****************************************************99986779************* PP
+
+  pf32_ref_v1 190 nthkellkllkkkyeekflgkiheredlkkliaeneefdlkedYykeykevLekil 245
+                  nt+ke+++ll+k+y+e+++gkih+++++k+li+ + e++ ke+Yy+e+k++L++i+
+   B31_lp28-3 194 NTIKEVEDLLYKEYREYIKGKIHFSNSIKVLINGRLEPSKKEMYYREIKDTLKNIF 249
+                  ******************************************************97 PP
+
+>> JD1_lp28-6  
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !  330.9  21.9  7.8e-102  7.8e-102       1     246 [.       1     250 [.       1     251 [] 0.99
+
+  Alignments for each domain:
+  == domain 1  score: 330.9 bits;  conditional E-value: 7.8e-102
+  pf32_ref_v1   1 mdrkkpkiitiasikGGvGKstlsiifatlLsk.kkKvLLiDlDpQasltSYflkkikekvdieklniyevlkekldinkviikindnldlipsylsl 97 
+                  md kkp iit+asikGGvGKstlsi+f+++L++  kKvLLiDlDpQ+sltSYf+++++   +i+k+n+y++lk+++++n++++kind++++ips+++l
+   JD1_lp28-6   1 MDIKKPVIITMASIKGGVGKSTLSILFSHVLKEsGKKVLLIDLDPQNSLTSYFHRYVN---NIKKYNVYNMLKGNVNFNECVNKINDYISIIPSHPVL 95 
+                  9********************************9************************...************************************* PP
+
+  pf32_ref_v1  98 ekfnkesieykelllkkkle..llkenydYiiiDtsPsldlllknaLvisdyviiPvtaekwsvEslelleeaieklek...kkikifiletqfkkn. 189
+                  e+fn e +++ke++l+  l+  ++++n+dYiiiDtsP+ ++llknaL++++y++iPv++e ws+Es+++l+++i+k++k   k ++i+i+e+qf+kn 
+   JD1_lp28-6  96 ENFNAEIVDFKEIVLEYYLNenMQQCNFDYIIIDTSPNSGYLLKNALNAANYIVIPVQIELWSLESFTMLINSINKISKfrnKVYNISIVENQFIKNr 193
+                  *******************99999******************************************************998889************** PP
+
+  pf32_ref_v1 190 nthkellkllkkkyeekflgkiheredlkkliaeneefdlkedYykeykevLekilk 246
+                  n++kel++ll+kky+e+++gkih+++ +k +i+++ee+ +ke+Yy+e+k++L++i++
+   JD1_lp28-6 194 NIIKELESLLHKKYKEYVKGKIHYSNGIKIFITKREEPAIKETYYEETKNTLKNIFS 250
+                  ******************************************************985 PP
+
+>> B31_lp25  
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !  329.0  13.9  2.9e-101  2.9e-101       1     247 [.       1     245 [.       1     247 [. 0.99
+
+  Alignments for each domain:
+  == domain 1  score: 329.0 bits;  conditional E-value: 2.9e-101
+  pf32_ref_v1   1 mdrkkpkiitiasikGGvGKstlsiifatlLskkkKvLLiDlDpQasltSYflkkikek.vdieklniyevlkekldinkviikindnldlipsylsl 97 
+                  mdr+++ki++i+sikGGvGKst++iif+tlLskk+KvLLiD DpQas+tSYf++ ++e+ vd++k+niyevl +k++in++++++n+nl+++psy+ l
+     B31_lp25   1 MDRENTKIVAICSIKGGVGKSTSAIIFSTLLSKKYKVLLIDADPQASTTSYFSDLLEEQgVDVSKQNIYEVLADKKNINSSTFRLNNNLYILPSYIYL 98 
+                  9************************************************************************************************* PP
+
+  pf32_ref_v1  98 ekfnkesieykelllkkklellkenydYiiiDtsPsldlllknaLvisdyviiPvtaekwsvEslelleeaieklekkkikifiletqfkknnthkel 195
+                    f +++i++ke++lk++l+llk++ydYiiiDtsPsl+++l+n+Lv+s+y+iiP+ta+kwsvEs++lle+a+++l++ ki+if ++t+fkknnt+k+l
+     B31_lp25  99 YLFYDDNIPFKETRLKDSLKLLKHKYDYIIIDTSPSLGIILTNVLVVSNYIIIPMTAQKWSVESMQLLEFALKRLKL-KIPIFPMVTNFKKNNTYKHL 195
+                  ****************************************************************************9.******************** PP
+
+  pf32_ref_v1 196 lkllkkkyeekflgkiheredlkkliaeneefdlkedYykeykevLekilkk 247
+                  l+l++++  ++flg+iheredl+k+iaen++fdl++dY+key+ +Lek+++ 
+     B31_lp25 196 LELISRD--DNFLGVIHEREDLNKRIAENDTFDLNKDYIKEYEITLEKFFQL 245
+                  *******..****************************************975 PP
+
+>> B31_lp36  
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !  328.8  20.6  3.3e-101  3.3e-101       1     245 [.       1     249 []       1     249 [] 0.99
+
+  Alignments for each domain:
+  == domain 1  score: 328.8 bits;  conditional E-value: 3.3e-101
+  pf32_ref_v1   1 mdrkkpkiitiasikGGvGKstlsiifatlLsk.kkKvLLiDlDpQasltSYflkkikekvdieklniyevlkekldinkviikindnldlipsylsl 97 
+                  md+kkp +it+as+kGGvGKs lsi+f+++L++  kKvLLiDlDpQ+sltSYf+k+i+   +i+k+n+ye+lk++++++k+ +kin+ +++ips+++l
+     B31_lp36   1 MDQKKPIVITLASLKGGVGKSSLSILFSYVLKElGKKVLLIDLDPQNSLTSYFNKYIS---SIKKYNVYEFLKGNTYFDKCENKINEFISIIPSHPIL 95 
+                  9*********************************************************...9************************************ PP
+
+  pf32_ref_v1  98 ekfnkesieykelllkkkle..llkenydYiiiDtsPsldlllknaLvisdyviiPvtaekwsvEslelleeaieklek...kkikifiletqfkkn. 189
+                  ekfn+++i+yke++l+++l+  + + ++dYiiiDtsPs+++llknaL+++d++iiPv++e+ws+Es+++l+e+i+++++   k+++i+i+e+qf+kn 
+     B31_lp36  96 EKFNTDDIDYKEIILEFRLNksTKSFDFDYIIIDTSPSRNFLLKNALNVTDHIIIPVQVERWSIESFSILTETINNIQIiknKRYNISIIENQFIKNr 193
+                  ********************8888899***************************************************888889************** PP
+
+  pf32_ref_v1 190 nthkellkllkkkyeekflgkiheredlkkliaeneefdlkedYykeykevLekil 245
+                  nt+ke++++l++ky+++++gkih+++++k++i++  e++lke Yy+e++++L++il
+     B31_lp36 194 NTLKEVEEVLYEKYGKYIKGKIHFSNSIKVFINDLLEPSLKEIYYREAESALKNIL 249
+                  ******************************************************96 PP
+
+>> 118a_cp32-13  
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !  328.1  19.8  5.6e-101  5.6e-101       1     246 [.       1     252 [.       1     254 [] 0.98
+
+  Alignments for each domain:
+  == domain 1  score: 328.1 bits;  conditional E-value: 5.6e-101
+   pf32_ref_v1   1 mdrkkpkiitiasikGGvGKstlsiifatlLsk.kkKvLLiDlDpQasltSYflkkikekvdieklniyevlkek..ldinkviikindnldlipsy 94 
+                   md+kkpkiitiasikGGvGKs+l+iif+ +L++ ++KvLLiD+DpQ+sltSYf k++k   +ie ln+y++lk+    d+nk+++kin+++++ips+
+  118a_cp32-13   1 MDNKKPKIITIASIKGGVGKSVLTIIFGFILKDfNNKVLLIDMDPQNSLTSYFAKYLK---SIEGLNLYYMLKDYkkNDLNKYLNKINEKMYIIPSH 94 
+                   9*********************************************************...9***********865589****************** PP
+
+   pf32_ref_v1  95 lslekfnkesieykelllkkkle..llkenydYiiiDtsPsldlllknaLvisdyviiPvtaekwsvEslelleeaieklek...kkikifiletqf 186
+                   ++l+kf++e+ +yke+ll+++l+  l+++n+dY+iiDt+Psl+ ll naL+i+d+viiP++ e+wsvE++++l++aie++++   k+iki+i+e+qf
+  118a_cp32-13  95 PILCKFEQEDERYKEQLLEHCLNkiLCSNNFDYVIIDTPPSLSPLLFNALNITDEVIIPIQLERWSVEAFPMLMDAIEEVNIfknKEIKISIVENQF 191
+                   ***********************9999*****************************************************9888899********** PP
+
+   pf32_ref_v1 187 kkn.nthkellkllkkkyeekflgkiheredlkkliaeneefdlkedYykeykevLekilk 246
+                   +kn nt+k++++ll+k+y+  ++gkih+ +++k+li+e +e++++e Yyke+ke+L+ki+k
+  118a_cp32-13 192 IKNrNTLKDIEELLYKNYGLFVKGKIHNFNNIKVLINELKEPNIQEIYYKEAKETLKKIIK 252
+                   ***********************************************************97 PP
+
+>> Y501_unitig_2_lp28-12  
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !  326.4  19.9  1.8e-100  1.8e-100       1     245 [.       1     249 [.       1     251 [] 0.99
+
+  Alignments for each domain:
+  == domain 1  score: 326.4 bits;  conditional E-value: 1.8e-100
+            pf32_ref_v1   1 mdrkkpkiitiasikGGvGKstlsiifatlLsk.kkKvLLiDlDpQasltSYflkkikekvdieklniyevlkekldinkviikindn 87 
+                            m++++p+i+t+as+kGGvGKstl+i+fa++L++ +kKvLLiD+DpQ+sltSYf k+++   di+k+niy++lke+++++++i+kind+
+  Y501_unitig_2_lp28-12   1 MQHNRPTIMTMASLKGGVGKSTLAILFAYILKNlDKKVLLIDIDPQNSLTSYFEKHLN---DIKKYNIYRILKEETYFEQCINKINDH 85 
+                            999*******************************************************...*************************** PP
+
+            pf32_ref_v1  88 ldlipsylslekfnkesieykelllkkkle..llkenydYiiiDtsPsldlllknaLvisdyviiPvtaekwsvEslelleeaiekle 173
+                            +++ips+++l++fn e ie ke +lk++l+  +l++n+dYi+iDt+Ps d+l++naL ++dyviiPv++ekw++Esl++l+e i+k++
+  Y501_unitig_2_lp28-12  86 ISFIPSHPVLDDFNWEYIENKEDCLKNHLSqnILNYNFDYILIDTPPSKDFLFRNALSATDYVIIPVQVEKWAIESLNILMEIISKFQ 173
+                            *****************************9999*****************************************************99 PP
+
+            pf32_ref_v1 174 k...kkikifiletqfkkn.nthkellkllkkkyeekflgkiheredlkkliaeneefdlkedYykeykevLekil 245
+                            +   k++ i+i+e+ f+kn nt+ke++++l+kkye++++gkih+++ +k +i+e  e++ +e Yyke++++L++il
+  Y501_unitig_2_lp28-12 174 NiknKNYYISIVENLFIKNrNTLKEIESALYKKYENYIRGKIHNYNGIKIFIHEVLEPSKNEIYYKEAENALKNIL 249
+                            888899********************************************************************97 PP
+
+>> HO14_NovelPFam32_DatabaseShortContig  
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !  326.2  15.7    2e-100    2e-100       1     245 [.       1     248 [.       1     250 [] 0.98
+
+  Alignments for each domain:
+  == domain 1  score: 326.2 bits;  conditional E-value: 2e-100
+                           pf32_ref_v1   1 mdrkkpkiitiasikGGvGKstlsiifatlLsk.kkKvLLiDlDpQasltSYflkkikekvdieklniyevlk 72 
+                                           md kkp+i+t+a++kGGvGKstl+iifa+lL++ +kKvL++D+DpQ+s+tSYflk+++   ++e +n+y++lk
+  HO14_NovelPFam32_DatabaseShortContig   1 MD-KKPNILTMANLKGGVGKSTLTIIFAYLLKDlDKKVLIVDMDPQNSITSYFLKHLH---NVEIYNTYNMLK 69 
+                                           65.9******************************************************...9*********** PP
+
+                           pf32_ref_v1  73 ekldinkviikindnldlipsylslekfnkesieykelllkkkle..llkenydYiiiDtsPsldlllknaLv 143
+                                           +++ +nk+++k++d++ +ips+++le+fn++ ++yke++l+++le  +l++++dYi++Dt+P++d+l+knaL+
+  HO14_NovelPFam32_DatabaseShortContig  70 GSVPFNKCVRKVDDYICIIPSHPILENFNSDPVDYKEIILEFRLEqnILAHEFDYILLDTPPNRDFLIKNALN 142
+                                           ********************************************9999************************* PP
+
+                           pf32_ref_v1 144 isdyviiPvtaekwsvEslelleeaieklek...kkikifiletqfkkn.nthkellkllkkkyeekflgkih 212
+                                           i+d+viiPv++e+ws+Es+ +l+++i+++++   k ++i+i+e+qf+kn nt+k+++kll+k+y+++++gkih
+  HO14_NovelPFam32_DatabaseShortContig 143 ITDHVIIPVQVERWSIESFIILMDMIKNFQIikkKIYTISIVENQFIKNrNTLKDIEKLLYKEYGSYVKGKIH 215
+                                           ****************************998875679************************************ PP
+
+                           pf32_ref_v1 213 eredlkkliaeneefdlkedYykeykevLekil 245
+                                           +++ +k++i+e  e++ ke Yyke+ke+L++il
+  HO14_NovelPFam32_DatabaseShortContig 216 FSNGIKVFINELLEPSPKEVYYKEAKETLQNIL 248
+                                           *******************************97 PP
+
+>> Bol26_lp28-9  
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !  324.3  17.1    8e-100    8e-100       1     246 [.       1     252 [.       1     254 [] 0.98
+
+  Alignments for each domain:
+  == domain 1  score: 324.3 bits;  conditional E-value: 8e-100
+   pf32_ref_v1   1 mdrkkpkiitiasikGGvGKstlsiifatlLsk.kkKvLLiDlDpQasltSYflkkikekvdieklniyevlkek..ldinkviikindnldlipsy 94 
+                   mdrkk++iitiasikGGvGKs+l+iif+++L++ +kKvLLiDlDpQ+sltSYf+++ik    +e +n+y+++ke   ld+nk+++kin ++++ips+
+  Bol26_lp28-9   1 MDRKKTEIITIASIKGGVGKSVLAIIFGHILKNfDKKVLLIDLDPQNSLTSYFIEYIK---GVEGINVYYMFKEYknLDLNKYLNKINSEMYIIPSH 94 
+                   9*********************************************************...9***********8655999***************** PP
+
+   pf32_ref_v1  95 lslekfnkesieykelllkkkle..llkenydYiiiDtsPsldlllknaLvisdyviiPvtaekwsvEslelleeaieklek...kkikifiletqf 186
+                   ++l+kf++e+ +yke+ll+++++  l+++++dYiiiDt+Psl+ ll naL+i+d+viiP+++e+wsvE++++l++aie++++   kki+++i+e+qf
+  Bol26_lp28-9  95 PILCKFEQEDERYKEQLLEHCIKkiLYNNDFDYIIIDTPPSLGPLLYNALNITDKVIIPIQIERWSVEAFPMLMDAIEEVNIfknKKIDVSIVENQF 191
+                   ***********************9999*****************************************************9888899********** PP
+
+   pf32_ref_v1 187 kkn.nthkellkllkkkyeekflgkiheredlkkliaeneefdlkedYykeykevLekilk 246
+                   +kn nt+k++++++ k+y+  ++gkih+ +++k+li+e +e+d++ +Yyke++e+Leki+k
+  Bol26_lp28-9 192 IKNrNTFKDVEEVVFKNYGMFIKGKIHSLNSIKVLINELKEPDVEAMYYKEAQEALEKIVK 252
+                   **********************************************************986 PP
+
+>> B31_cp32-4  
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !  323.2  22.6   1.8e-99   1.8e-99       1     245 [.       1     251 []       1     251 [] 0.98
+
+  Alignments for each domain:
+  == domain 1  score: 323.2 bits;  conditional E-value: 1.8e-99
+  pf32_ref_v1   1 mdrkkpkiitiasikGGvGKstlsiifatlLsk.kkKvLLiDlDpQasltSYflkkikekvdieklniyevlkek..ldinkviikindnldlipsyl 95 
+                  md+kkpkiitiasikGGvGKs+lsiif+++Ls+ ++KvL++DlDpQ+sltSYfl++i+   +ie +n+y++lk++  + +n++i++in+n+++ip+++
+   B31_cp32-4   1 MDNKKPKIITIASIKGGVGKSMLSIIFSYILSEmNNKVLIVDLDPQNSLTSYFLQYIR---NIELNNVYYLLKRDqnIAFNEYINSINNNMYIIPAHP 95 
+                  9*********************************************************...************8755889****************** PP
+
+  pf32_ref_v1  96 slekfnkesieykelllkkkle..llkenydYiiiDtsPsldlllknaLvisdyviiPvtaekwsvEslelleeaieklek...kkikifiletqfkk 188
+                  +l+kf+k +i+ykel+l++ ++  l+ +n+dY++iDt+Psl++ll naL+i+++viiP++ae+wsvEsl++l+++i+++e+   k+i++ i+e+qf+k
+   B31_cp32-4  96 ILCKFEKGDIPYKELMLEHIFDknLHYYNFDYVVIDTPPSLSSLLFNALNITHKVIIPIQAERWSVESLPILMNEIKEVEIirkKNIDVLIIENQFIK 193
+                  *********************988999*****************************************************889889************ PP
+
+  pf32_ref_v1 189 n.nthkellkllkkkyeekflgkiheredlkkliaeneefdlkedYykeykevLekil 245
+                  n nt+k+++++l+++y++ ++g +h+++++k++i+e +e++ ke Yy+e+k++L++++
+   B31_cp32-4 194 NrNTYKDIESILQSEYKDLIKGRVHFYNSIKVFINELKEPNNKEIYYQEIKKILNNMF 251
+                  *******************************************************996 PP
+
+>> N4>JD1_cp32-11  
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !  322.4  15.4   3.1e-99   3.1e-99       1     246 [.       1     244 [.       1     248 [. 0.99
+
+  Alignments for each domain:
+  == domain 1  score: 322.4 bits;  conditional E-value: 3.1e-99
+     pf32_ref_v1   1 mdrkkpkiitiasikGGvGKstlsiifatlLskkkKvLLiDlDpQasltSYflkkikek.vdieklniyevlkekldinkviikindnldlipsy 94 
+                     md+kkpkiitiasikGGvGKst+++ +a lLskk+KvLLiD+D+Qas+tSY+++ki+e+ ++++  niyevl ++ldi+k+i++i+dnldl+psy
+  N4>JD1_cp32-11   1 MDTKKPKIITIASIKGGVGKSTTCLALAFLLSKKNKVLLIDMDTQASVTSYYQDKIQEDnINLKFSNIYEVLVNDLDIKKAIVNIEDNLDLLPSY 95 
+                     9*********************************************************9************************************ PP
+
+     pf32_ref_v1  95 lslekfnkesieykelllkkklellkenydYiiiDtsPsldlllknaLvisdyviiPvtaekwsvEslelleeaieklekkkikifiletqfkkn 189
+                     lsl+ +n+ +ie+k+lllk++l++++++y+Yii+Dt+Ps+d+++kna+++sdy+i+P+ aekw+vE+l+ll  +++kl + ki++f+l+t+fkkn
+  N4>JD1_cp32-11  96 LSLHMLNEIEIEFKDLLLKSNLSCFSSDYKYIILDTAPSYDIAFKNAVLSSDYIIVPIIAEKWAVECLDLLDYFLNKLGL-KIPLFLLITRFKKN 189
+                     *******************************************************************************9.************** PP
+
+     pf32_ref_v1 190 nthkellkllkkkyeekflgkiheredlkkliaeneefdlkedYykeykevLekilk 246
+                     nthke+l+llk++   +flg+i+eredl+k+ia+n++f+l++dY+ eyk++++k+++
+  N4>JD1_cp32-11 190 NTHKEFLNLLKNR--GDFLGIISEREDLNKNIASNSRFSLEKDYMYEYKNAINKFFD 244
+                     *************..***************************************996 PP
+
+>> WI91-23_lp56  
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !  322.3  21.0   3.3e-99   3.3e-99       1     246 [.       1     250 [.       1     253 [] 0.99
+
+  Alignments for each domain:
+  == domain 1  score: 322.3 bits;  conditional E-value: 3.3e-99
+   pf32_ref_v1   1 mdrkkpkiitiasikGGvGKstlsiifatlLsk.kkKvLLiDlDpQasltSYflkkikekvdieklniyevlkekldinkviikindnldlipsyls 96 
+                   mdrk++kiitias kGGvGK+tl+i+f+++L++ +kKvLLiDlDpQ+sl+SYf+k++    +i+k+n y++lk+++++ ++i+kind++++ips+++
+  WI91-23_lp56   1 MDRKESKIITIASPKGGVGKTTLTILFSYILKDlSKKVLLIDLDPQNSLSSYFSKYVF---NIDKCNSYSLLKKDVYFGQCINKINDYISIIPSHPI 94 
+                   9*******************************************************99...************************************ PP
+
+   pf32_ref_v1  97 lekfnkesieykelllkkkle..llkenydYiiiDtsPsldlllknaLvisdyviiPvtaekwsvEslelleeaieklek...kkikifiletqfkk 188
+                   le+fn+e  +yk+lll++ l+  + ++n+dYi++Dt+P+l+++lkn+L++++y+iiPv++e++svEsl++l+++i++++    k+++i+i+e+qf+k
+  WI91-23_lp56  95 LENFNSEILNYKDLLLENILNrnISNYNFDYILLDTPPNLGFILKNSLNVTEYIIIPVQVERFSVESLSILMQTINDVRDfrnKNFNISIIENQFIK 191
+                   ********************99999*****************************************************988889************* PP
+
+   pf32_ref_v1 189 n.nthkellkllkkkyeekflgkiheredlkkliaeneefdlkedYykeykevLekilk 246
+                   n nt+k++++ll+k+y+ +++gkih+++++k+li+e  e+++ke Yyke+k++Le+i++
+  WI91-23_lp56 192 NrNTFKDVEELLYKEYSFYIKGKIHYYNSVKVLINELLEPSVKEVYYKEIKNTLENIIN 250
+                   *********************************************************97 PP
+
+>> B31_lp21  
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !  321.4  15.3   6.2e-99   6.2e-99       3     246 ..       2     249 ..       1     253 [. 0.98
+
+  Alignments for each domain:
+  == domain 1  score: 321.4 bits;  conditional E-value: 6.2e-99
+  pf32_ref_v1   3 rkkpkiitiasikGGvGKstlsiifatlLsk.kkKvLLiDlDpQasltSYflkkikekvdieklniyevlkekldinkviikindnldlipsylslek 99 
+                  +kkp+i+tias+kGGvGKstl+i+f++lL++  kK+L++D+DpQ+s+tSYf+++++   ++e +n+y++lk+ +++n+++ kind++ +ip++++le+
+     B31_lp21   2 NKKPNILTIASLKGGVGKSTLTILFSYLLKDlGKKILIVDMDPQNSITSYFSNYVH---NVEIYNTYSMLKGGVSFNNCVGKINDHIFIIPAHPILEN 96 
+                  79******************************************************...9************************************** PP
+
+  pf32_ref_v1 100 fnkesieykelllkkkle..llkenydYiiiDtsPsldlllknaLvisdyviiPvtaekwsvEslelleeaieklek...kkikifiletqfkkn.nt 191
+                  fn e i+yke++l+ ++e  + ++++dYi++Dt+P++d+l+knaL+i+d++iiPv++e+ws+Es+++l+++ie++++   k ++++i+e+qf+kn nt
+     B31_lp21  97 FNLEPIDYKEIVLELRIEqnISAYEFDYILLDTPPHRDFLVKNALNITDHIIIPVQVERWSIESFTILMNMIENFQIikkKIYTTSIVENQFIKNrNT 194
+                  *****************99899*****************************************************9887566999************* PP
+
+  pf32_ref_v1 192 hkellkllkkkyeekflgkiheredlkkliaeneefdlkedYykeykevLekilk 246
+                  +k++++ll++ky+++++gkih+++ +k++i+e  e++++e+Yyke+k++L++il 
+     B31_lp21 195 LKDIERLLYEKYGSYVKGKIHFSNGIKVFINELIEPSSEESYYKEAKKTLHNILG 249
+                  ****************************************************985 PP
+
+>> B31_lp28-1  
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !  318.4  17.2   5.1e-98   5.1e-98       1     246 [.       1     252 [.       1     254 [] 0.98
+
+  Alignments for each domain:
+  == domain 1  score: 318.4 bits;  conditional E-value: 5.1e-98
+  pf32_ref_v1   1 mdrkkpkiitiasikGGvGKstlsiifatlLsk.kkKvLLiDlDpQasltSYflkkikekvdieklniyevlkek..ldinkviikindnldlipsyl 95 
+                  mdrkk++iitias+kGGvGKs+l+iif+++L++ +kKvLL+DlDpQ+sltSYf+++ik   +ie +n+y+++k+   +d nk++++in+n++++ps++
+   B31_lp28-1   1 MDRKKTEIITIASVKGGVGKSALAIIFSYILKNfNKKVLLVDLDPQNSLTSYFIRHIK---SIEGINVYYMFKDYqdFDPNKYLNEINNNMYIVPSHP 95 
+                  9*********************************************************...9***********98445668***************** PP
+
+  pf32_ref_v1  96 slekfnkesieykelllkkkle..llkenydYiiiDtsPsldlllknaLvisdyviiPvtaekwsvEslelleeaieklek...kkikifiletqfkk 188
+                  +l+kf++e+++yke+ll+ +++  l+++n+dYi+iDt+Psl+ ll naL+i+++viiPv+ e+wsvE++++l++aie++++   kki+i+i+e+qf+k
+   B31_lp28-1  96 ILCKFEQEDKRYKEQLLEYCVKkiLINNNFDYILIDTPPSLGPLLYNALNITNKVIIPVQLERWSVEAFPMLMDAIEEVNLfkdKKIDISIVENQFIK 193
+                  **********************9999******************************************************88889************* PP
+
+  pf32_ref_v1 189 n.nthkellkllkkkyeekflgkiheredlkkliaeneefdlkedYykeykevLekilk 246
+                  n nt+ +++k + kky+  ++gkih+ +++k+li+e +e+d++  Yyke++e+Leki+k
+   B31_lp28-1 194 NrNTFIDVEKQVLKKYSILIKGKIHSFNSVKVLINELKEPDVSAVYYKEAQEALEKIVK 252
+                  ********************************************************986 PP
+
+>> B31_lp38  
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !  318.2  18.3   5.8e-98   5.8e-98       1     246 [.       1     244 [.       1     245 [] 0.99
+
+  Alignments for each domain:
+  == domain 1  score: 318.2 bits;  conditional E-value: 5.8e-98
+  pf32_ref_v1   1 mdrkkpkiitiasikGGvGKstlsiifatlLsk.kkKvLLiDlDpQasltSYflkkikekvdieklniyevlkekldinkviikindnldlipsylsl 97 
+                  mdrkk++iitia++kGGvGKstlsi+f+++L++  kKvLLiD+D+Q++ltSYf k++    +++k+niy++l ++++++++i kindn+ +ips++ l
+     B31_lp38   1 MDRKKSNIITIANLKGGVGKSTLSILFSYVLKDlGKKVLLIDMDSQNALTSYFRKYVF---NFDKNNIYNLLIGNVYFDQCISKINDNIFIIPSHPFL 95 
+                  9*******************************************************99...9************************************ PP
+
+  pf32_ref_v1  98 ekfnkesieykelllkkkle..llkenydYiiiDtsPsldlllknaLvisdyviiPvtaekwsvEslelleeaieklekkkikifiletqfkkn.nth 192
+                  ++fn+++ + ke+ll+++l+  +l +++dYi +Dt+Ps++++lknaL++++++iiPv++e+ws+Esle+l+++i++   k+++i+i+++qf+kn n++
+     B31_lp38  96 DEFNDKNLDNKENLLSFCLDknVLGHDFDYIFLDTPPSFSFILKNALNTTNHIIIPVQPETWSIESLEILMKKITD---KSYNISIVVNQFIKNrNIL 190
+                  *******************9999************************************************99987...789**************** PP
+
+  pf32_ref_v1 193 kellkllkkkyeekflgkiheredlkkliaeneefdlkedYykeykevLekilk 246
+                  ke++++l+k+y+++++gkih+++++k++i ++ e+d+k++Yyke+k+vL++il+
+     B31_lp38 191 KEVEDALYKRYSNYIKGKIHYYNSIKVFIINRLEPDIKSKYYKEAKDVLKNILD 244
+                  ***************************************************985 PP
+
+>> CA_28_91_lp28-8  
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !  317.7  13.7   8.2e-98   8.2e-98       1     247 [.       1     250 [.       1     254 [. 0.97
+
+  Alignments for each domain:
+  == domain 1  score: 317.7 bits;  conditional E-value: 8.2e-98
+      pf32_ref_v1   1 mdrkkpkiitiasikGGvGKstlsiifatlLskkkKvLLiDlDpQasltSYflkkikek.vdieklniyevlkekldinkviikindnldlips 93 
+                      mdrk++kiit+asikGGvGKst++i+fa+lLs+++KvLLiD+D+Qas+tSYf++k+ke+ vd+e++ni+evlk++ldin++++++ +nl+lips
+  CA_28_91_lp28-8   1 MDRKRTKIITVASIKGGVGKSTSAIVFAKLLSREYKVLLIDIDTQASTTSYFYEKVKENnVDLERKNICEVLKDNLDINNTVVSVGKNLNLIPS 94 
+                      9********************************************************************************************* PP
+
+      pf32_ref_v1  94 ylslekfnkesi.....eykelllkkklellkenydYiiiDtsPsldlllknaLvisdyviiPvtaekwsvEslelleeaieklekkkikifil 182
+                      yl+l+++n e +     +  +l lk +++ l+ nydYi+iDt+Psldl+l++aL++++y++iP+taekw++Es+elle++i++lek  ++if++
+  CA_28_91_lp28-8  95 YLTLHSLNGEFYclnkhKAIDLKLKVEIKRLRINYDYIVIDTNPSLDLTLRCALNATHYMVIPMTAEKWTFESYELLEFFIKSLEK-LVPIFFI 187
+                      **********9988866777888999999********************************************************7.******* PP
+
+      pf32_ref_v1 183 etqfkknnthkellkllkkkyeekflgkiheredlkkliaeneefdlkedYykeykevLekilkk 247
+                       t+fk++nthkellk+++kk  ++flg+++e+e l+k+ia+n efdlk++Y+ ey+e+L++++++
+  CA_28_91_lp28-8 188 LTRFKRTNTHKELLKIMQKK--NNFLGVVSEKEGLNKKIATNGEFDLKSSYILEYSEILKNLISH 250
+                      ********************..***************************************9875 PP
+
+>> JD1_lp28-7  
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !  317.1  18.9   1.2e-97   1.2e-97       1     245 [.       1     251 [.       1     253 [] 0.98
+
+  Alignments for each domain:
+  == domain 1  score: 317.1 bits;  conditional E-value: 1.2e-97
+  pf32_ref_v1   1 mdrkkpkiitiasikGGvGKstlsiifatlLsk.kkKvLLiDlDpQasltSYflkkikekvdieklniyevlkek..ldinkviikindnldlipsyl 95 
+                  md+kkp+ii+ia+ikGGvGKs+l+iif+ +L++ +kKvLL+D+DpQ+sltSYf+k+ik   +++k+n+y++lke+   +++k+++ki+dn++lips++
+   JD1_lp28-7   1 MDNKKPEIISIANIKGGVGKSVLTIIFSFILKSfDKKVLLVDFDPQNSLTSYFFKYIK---SLSKNNVYSFLKEDsnANLDKYLTKIHDNVYLIPSHP 95 
+                  9*********************************************************...9***********98668999***************** PP
+
+  pf32_ref_v1  96 slekfnkesieykelllkkkle..llkenydYiiiDtsPsldlllknaLvisdyviiPvtaekwsvEslelleeaieklek...kkikifiletqfkk 188
+                  sl+ fnke+++ykel+lk+kle  + ++n++Y+iiDt+P+ld+ll+naL+i++++iiP+++e++svEsl++l+++iek+++   k+i+i+i+e+qf+k
+   JD1_lp28-7  96 SLHLFNKENTSYKELFLKHKLErvFPNYNFNYVIIDTPPNLDSLLDNALNITNRLIIPIQVERFSVESLSILMKYIEKVSMyldKDIDISIIENQFMK 193
+                  **********************9999******************************************************99999************* PP
+
+  pf32_ref_v1 189 n.nthkellkllkkkyeekflgkiheredlkkliaeneefdlkedYykeykevLekil 245
+                  n nt+k++++ +k+ky+++++gk+h+++++k++ ++ +e+++ke Yy+e+ e+L++il
+   JD1_lp28-7 194 NrNTFKSIENSIKDKYGKYIKGKVHFYNKVKVFTNNLQEPSVKEPYYQECLEALKNIL 251
+                  ********************************************************97 PP
+
+>> N40_lp28-5  
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !  316.3  19.4   2.2e-97   2.2e-97       1     247 [.       1     243 [.       1     245 [] 0.99
+
+  Alignments for each domain:
+  == domain 1  score: 316.3 bits;  conditional E-value: 2.2e-97
+  pf32_ref_v1   1 mdrkkpkiitiasikGGvGKstlsiifatlLskkkKvLLiDlDpQasltSYflkkikekvdieklniyevlkekldinkviikindnldlipsylsle 98 
+                  mdr+k+kii+++sikGGvGKs+++iifa++Ls k+KvLLiD+DpQas++SY ++ki+e  +i ++niy+vl+  l+in++i+ i++nld+ipsy+ l+
+   N40_lp28-5   1 MDRRKCKIICLSSIKGGVGKSVSAIIFAQILSMKYKVLLIDMDPQASISSYLYDKIEE-RNILSKNIYKVLTFALNINDAINIISENLDFIPSYIDLN 97 
+                  9*******************************************************95.6************************************** PP
+
+  pf32_ref_v1  99 kfnkesieykelllkkklellkenydYiiiDtsPsldlllknaLvisdyviiPvtaekwsvEslelleeaieklekkkikifiletqfkknnthkell 196
+                   fn++s+++kel lkk+l +lk+ny+YiiiDt+Ps+d++l naL++s+ v++P+ +e+w++Es+++++++i+ l++ ++k fi++t+fkkn+thkell
+   N40_lp28-5  98 LFNRDSMPLKELNLKKSLLNLKKNYEYIIIDTNPSMDSTLANALIVSNFVLTPIISERWAIESFDMIMSYINYLSL-NLKPFIFITRFKKNSTHKELL 194
+                  ***************************************************************************9.********************* PP
+
+  pf32_ref_v1 197 kllkkkyeekflgkiheredlkkliaeneefdlkedYykeykevLekilkk 247
+                  k+l++k  +++lg+++eredl+++ia++e+fdl++dY++eyk++L+++l++
+   N40_lp28-5 195 KILHSK--HNVLGVVNEREDLNRKIAKSENFDLSKDYIEEYKNILKNFLEI 243
+                  ******..****************************************975 PP
+
+>> Y501_unitig_7_lp28-13  
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !  313.9  22.4   1.2e-96   1.2e-96       1     246 [.       1     251 [.       1     252 [] 0.97
+
+  Alignments for each domain:
+  == domain 1  score: 313.9 bits;  conditional E-value: 1.2e-96
+            pf32_ref_v1   1 mdrkkpkiitiasikGGvGKstlsiifatlLsk.kkKvLLiDlDpQasltSYflkkikekvdieklniyevlkekldinkviikindn 87 
+                            md+kkp+iit+ s+kGGvGKstlsi+f+++L++ +kK LLiDlD+Q+sl+SYf k+i+   +iek+niy++lk++++++++i+kindn
+  Y501_unitig_7_lp28-13   1 MDTKKPNIITMVSLKGGVGKSTLSILFSYILKDlNKKTLLIDLDSQNSLSSYFKKYIN---NIEKNNIYNLLKGEIYFSRCINKINDN 85 
+                            9*********************************************************...*************************** PP
+
+            pf32_ref_v1  88 ldlipsylslekfnkesieykelllkkkle..llkenydYiiiDtsPsldlllknaLvisdyviiPvtaekwsvEslelleeaiek.l 172
+                            +++ip++++l+k+n e+i+yk  ll+++++  + ++n+dYi+iDtsPs+d+llknaL+i++y+iiPv++e++++Esle+l+++i++ +
+  Y501_unitig_7_lp28-13  86 IYFIPAHPVLDKLNFENINYKGSLLTHHINknISNHNFDYILIDTSPSFDFLLKNALNITNYIIIPVQVERLAIESLEILIDKITSrI 173
+                            *****************************99999**********************************************99987635 PP
+
+            pf32_ref_v1 173 ek...kkikifiletqfkkn.nthkellkllkkkyeekflgkiheredlkkliaeneefdlkedYykeykevLekilk 246
+                            +     +++i+i+e+qf++n nt+k+++k+l+k+y+e+++gkih+++++k ++++  e++ + +Yyke++ +L+++l+
+  Y501_unitig_7_lp28-13 174 QSfksSNYNISIVENQFIRNrNTMKDFEKVLYKEYGEYIKGKIHYSNNIKIFMNDLVEPSPRGKYYKEAEIALKNMLS 251
+                            5565579********************************************************************986 PP
+
+>> B31_lp28-4  
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !  312.2  14.2   4.1e-96   4.1e-96       1     245 [.       1     247 [.       1     250 [] 0.97
+
+  Alignments for each domain:
+  == domain 1  score: 312.2 bits;  conditional E-value: 4.1e-96
+  pf32_ref_v1   1 mdrkkpkiitiasikGGvGKstlsiifatlLskkkKvLLiDlDpQasltSYflkkikek.vdieklniyevlkekldinkviikindnldlipsylsl 97 
+                  mdrkk+kiitias+kGGvGKst+sii+a+lLskk+KvLLiD+D+Qa++tSY+++++++k +di+k+ni +v+k+ +dink+ii++++n+ lipsy+++
+   B31_lp28-4   1 MDRKKSKIITIASLKGGVGKSTTSIILANLLSKKHKVLLIDTDDQAATTSYYYNELETKnFDISKMNIGNVIKDGTDINKSIINVENNIALIPSYITV 98 
+                  9*********************************************************99************************************** PP
+
+  pf32_ref_v1  98 ekfnkesi.....eykelllkkklellkenydYiiiDtsPsldlllknaLvisdyviiPvtaekwsvEslelleeaieklekkkikifiletqfkknn 190
+                  +++n e +        e+ lk+kl+ +++nydYiiiDt+P+++++lk +L++s+yvi P+taekw+vE++e l+++i++++   i+ifi++t+fkkn 
+   B31_lp28-4  99 DELNGEYYydnrhLPIEFSLKTKLNSIADNYDYIIIDTNPKRNFTLKLSLISSNYVISPMTAEKWAVEGFETLRRYIKEVAG--IPIFIVITRFKKNV 194
+                  *****99876665567999*************************************************************97..************** PP
+
+  pf32_ref_v1 191 thkellkllkkkyeekflgkiheredlkkliaeneefdlkedYykeykevLekil 245
+                  thk+l+++++ k  + flg i+eredl+k+i +ne+fd+++dY+ eyk++L+ +l
+   B31_lp28-4 195 THKQLMEIVSMK--NGFLGYISEREDLNKRIGCNEKFDFSKDYIIEYKKILDVFL 247
+                  ************..**************************************997 PP
+
+>> B331_Ira_CP017214_lp28-1  
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !  309.9  19.8     2e-95     2e-95       1     246 [.       1     248 [.       1     249 [] 0.98
+
+  Alignments for each domain:
+  == domain 1  score: 309.9 bits;  conditional E-value: 2e-95
+               pf32_ref_v1   1 mdrkkpkiitiasikGGvGKstlsiifatlLsk.kkKvLLiDlDpQasltSYflkkikekvdieklniyevlkekldinkviiki 84 
+                               md kkp+ii+++s+kGGvGKstlsi+f++lL++  kK+LLiDlDpQ+sltSYf+k+i    d e++n+y++lk++++++k+++ki
+  B331_Ira_CP017214_lp28-1   1 MDIKKPDIIALTSVKGGVGKSTLSILFSYLLKElGKKILLIDLDPQNSLTSYFTKYIP---DAETYNVYSMLKGDFYFKKYLNKI 82 
+                               9*********************************************************...9*********************** PP
+
+               pf32_ref_v1  85 ndnldlipsylslekfnkesieykelllkkkle..llkenydYiiiDtsPsldlllknaLvisdyviiPvtaekwsvEslellee 167
+                               nd++++ips+++lekfn+e+   +e++l+  l+  ++++++dYi++DtsP  +lllk+aL++s+y+iiPv++e ws+Es+++l++
+  B331_Ira_CP017214_lp28-1  83 NDYMYIIPSHPMLEKFNTETD--QETFLEYYLNrnIINCDFDYILLDTSPGSNLLLKSALNTSNYIIIPVQSEIWSIESFNILIN 165
+                               ******************988..7999999999999************************************************* PP
+
+               pf32_ref_v1 168 aieklek...kkikifiletqfkkn.nthkellkllkkkyeekflgkiheredlkkliaeneefdlkedYykeykevLekilk 246
+                                i+ ++k   kk++i+i+e+qf+kn n++ke+++l++k+y+e+++gkih+++++k+li+++ e++++e Yy+e+ke+L++i++
+  B331_Ira_CP017214_lp28-1 166 IINGITKhreKKYNISIVENQFIKNrNILKEVENLIHKEYKEYIKGKIHFYNSIKVLITKRLEPSSREIYYQEIKETLKNIFS 248
+                               ******99999*********************************************************************985 PP
+
+>> MOD5_untig_175_lp28-14  
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !  306.2  15.7   2.7e-94   2.7e-94       1     247 [.       1     250 [.       1     252 [. 0.98
+
+  Alignments for each domain:
+  == domain 1  score: 306.2 bits;  conditional E-value: 2.7e-94
+             pf32_ref_v1   1 mdrkkpkiitiasikGGvGKstlsiifatlLsk.kkKvLLiDlDpQasltSYflkkikek.vdieklniyevlkekldinkviikin 85 
+                             m ++k+kiiti+s+kGGvGKst++iifa++L+k +kKvLLiD+D+Q+s+tSY+++++k++ +d+ k ni ev+++k++i +++i+in
+  MOD5_untig_175_lp28-14   1 MAKRKAKIITISSMKGGVGKSTSAIIFANILTKnNKKVLLIDMDDQSSVTSYYFEELKNHrFDVLKRNIGEVIRDKIEIIQALININ 87 
+                             899******************************9***************************************************** PP
+
+             pf32_ref_v1  86 dnldlipsylslekfnkesi.....eykelllkkklellkenydYiiiDtsPsldlllknaLvisdyviiPvtaekwsvEslellee 167
+                             +nldlip++++l+++n+  +     +y e+ lk+kl+++k+nydY+iiDt+P+++++lk aL++sdyvi P+ aekws+E++e+l++
+  MOD5_untig_175_lp28-14  88 NNLDLIPACITLDDLNNICYcssnyKYIEWGLKDKLTIIKNNYDYVIIDTNPKRNFTLKAALLSSDYVISPMVAEKWSMEAFEVLKK 174
+                             ****************987777766999*********************************************************** PP
+
+             pf32_ref_v1 168 aieklekkkikifiletqfkknnthkellkllkkkyeekflgkiheredlkkliaeneefdlkedYykeykevLekilkk 247
+                             ++++++   i+ifi++t+fkkn  hk+ll+++k k  e+flg+i+eredl+k+i +neefd+++dY+ ey++vL+++l+k
+  MOD5_untig_175_lp28-14 175 YVDSVSA--IPIFIVITRFKKNFSHKSLLDIVKFK--ENFLGVINEREDLNKRIGCNEEFDFSKDYIIEYHNVLDSFLSK 250
+                             ******7..***********************999..***************************************9975 PP
+
+>> B31_cp32-9  
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !  304.3  15.5     1e-93     1e-93       1     246 [.       1     249 [.       1     251 [] 0.97
+
+  Alignments for each domain:
+  == domain 1  score: 304.3 bits;  conditional E-value: 1e-93
+  pf32_ref_v1   1 mdrkkpkiitiasikGGvGKstlsiifatlLsk.kkKvLLiDlDpQasltSYflkkikek.vdieklniyevlkekldinkviikindnldlipsyls 96 
+                  md+kkpkiitiasikGGvGKst++++++++L+k ++KvL+iD DpQas+tSYfl k+ke+ v++e++n+yev+k++++i+++i+++++ ld+ips l+
+   B31_cp32-9   1 MDNKKPKIITIASIKGGVGKSTSALFYGNILAKeRHKVLIIDSDPQASITSYFLFKLKEQnVNVENYNLYEVFKQRKYIENCIFTVSNCLDIIPSSLE 98 
+                  9********************************9**************************************************************** PP
+
+  pf32_ref_v1  97 lekfnkesieykelllkkklellkenydYiiiDtsPsldlllknaLvisdyviiPvtaekwsvEslelleeaieklekkkik.ifiletqfkknnthk 193
+                  l+ fn+esi+++++ll+k+l ++k++ydY+iiDt+Psl++ll+naLvi++y+iiP++++ w+vEs++l+ +ai+k+  ++i+  f+++  ++++n+ k
+   B31_cp32-9  99 LSVFNSESIPLQDNLLEKRLLTIKSKYDYVIIDTNPSLGHLLNNALVITNYLIIPINSDLWAVESIDLILDAINKVYRNDITpYFLVTGALERQNIDK 196
+                  *****************************************************************************96665055566677999**** PP
+
+  pf32_ref_v1 194 ellkllkkkyeekflgkiheredlkkliaeneefdlkedYykeykevLekilk 246
+                  e+   l+++y+e+++g+i +r+d+kk++ +++ef++k+dYy+eyk+ L+k+lk
+   B31_cp32-9 197 EIIFNLENRYKENLIGVIPKRDDIKKVLFYRKEFSSKTDYYQEYKKSLDKMLK 249
+                  ***************************************************97 PP
+
+>> B31_cp26  
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !  303.9  19.1   1.3e-93   1.3e-93       1     247 [.       1     250 [.       1     252 [. 0.98
+
+  Alignments for each domain:
+  == domain 1  score: 303.9 bits;  conditional E-value: 1.3e-93
+  pf32_ref_v1   1 mdrkkpkiitiasikGGvGKstlsiifatlLsk.kkKvLLiDlDpQasltSYflkkikek.vdieklniyevlkekldinkviikindnldlipsyls 96 
+                  md+k++kiitiasikGGvGKst+s++f+++Lsk ++K+LLiDlDpQas+tS++++ +++k ++ +++niy+vlk+++di++++iki++n d+i+s+++
+     B31_cp26   1 MDKKNTKIITIASIKGGVGKSTTSLMFTNILSKkNNKILLIDLDPQASSTSFYINILRKKnLSPKDINIYKVLKKEIDIENSTIKIDNNTDFIASHIN 98 
+                  9********************************9************************999************************************* PP
+
+  pf32_ref_v1  97 lekfnkesieykelllkkklellkenydYiiiDtsPsldlllknaLvisdyviiPvtaekwsvEslelleeaieklekkkikifiletqfkkn.nthk 193
+                  l++fn+esi++ke+llk  l++++++yd+ii+Dt+P+l++ll+n+L+isdy+iiP+ +++w++Esl+l+++ +++l  k+++if+l+t+f+   n+ k
+     B31_cp26  99 LSRFNEESISLKENLLKIFLSFIQNRYDFIIMDTAPTLGSLLNNSLIISDYLIIPLPTDQWAIESLDLIINRLDDLFRKDLPIFYLITKFIERqNIDK 196
+                  ******************************************************************************************6555**** PP
+
+  pf32_ref_v1 194 ellkllkkkyeekflgkiheredlkkliaeneefdlkedYykeykevLekilkk 247
+                  el+k+++ +y+ kflg + +r++l+k+i ++eef+++edYyk y+++Le++l++
+     B31_cp26 197 ELKKFIECEYKGKFLGSVPKRDNLRKTIFYREEFNSNEDYYKAYENILENFLSI 250
+                  ***************************************************975 PP
+
+>> B31_lp28-2  
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !  295.1  14.1   6.7e-91   6.7e-91       1     244 [.       1     255 []       1     255 [] 0.96
+
+  Alignments for each domain:
+  == domain 1  score: 295.1 bits;  conditional E-value: 6.7e-91
+  pf32_ref_v1   1 mdrk....kpkiitiasikGGvGKstlsiifatlLskkkKvLLiDlDpQasltSYflkkikek.vdieklniyevlkekldinkviikindnldlips 93 
+                  mdrk    kp+ii+iasikGGvGKst+si+f+t+Lsk++KvLL+DlDpQ+++tSYf+++ + +   i+ +n y+++k+++++++v+i+i++nld+ips
+   B31_lp28-2   1 MDRKklakKPHIIAIASIKGGVGKSTSSIMFSTILSKTNKVLLVDLDPQNAVTSYFITQDHPRmELINIYNSYSLIKKHKTFKDVVISISKNLDFIPS 98 
+                  555544449****************************************************99778999***************************** PP
+
+  pf32_ref_v1  94 ylslekfnkesieykelllkkklellkenydYiiiDtsPsldlllknaLvisdyviiPvtaekwsvEslelleeaieklek.....kkikifiletqf 186
+                  yl+l+kf+ke +++kel+l++++ ++ e+ydY+iiDt+Psl++ l+naLvi+d+viiPv  e+w+vE+l+ll+++i++le+     +   i+i+++++
+   B31_lp28-2  99 YLELAKFSKEGNQFKELMLRNAVYNYLEDYDYVIIDTPPSLSSELDNALVIADKVIIPVPLERWAVENLPLLINQIKELENnfmgkEAKIIHIFASKV 196
+                  ********************************************************************************989995468899****** PP
+
+  pf32_ref_v1 187 kkn.nthkellkllkkkyeekflgkiheredlkkliaeneefdlkedYykeykevLeki 244
+                  +    t++e+++llk+ky +kf+g++h++e+lkk i++   ++ +e+Yykey ++Leki
+   B31_lp28-2 197 EIGrVTSTEIMSLLKEKYLNKFIGEVHKSEALKKIIDYAIGPKENENYYKEYLRILEKI 255
+                  9988999*************************************************986 PP
+
+>> PotiB2_lp32-3#2  
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !  292.1  10.3   5.3e-90   5.3e-90       1     247 [.       1     256 [.       1     258 [] 0.96
+
+  Alignments for each domain:
+  == domain 1  score: 292.1 bits;  conditional E-value: 5.3e-90
+      pf32_ref_v1   1 mdrk....kpkiitiasikGGvGKstlsiifatlLskkkKvLLiDlDpQasltSYflkkikekvdieklniyevlkekldinkviikindnldl 90 
+                      mdrk    kp+ii+ias++GG GKst+si+f+ +Lsk++KvLLiDlDpQ+++tSYf++k +    i+ +n y+++k ++ +++v+++i++nld+
+  PotiB2_lp32-3#2   1 MDRKklgkKPNIIAIASFNGGGGKSTSSIMFSLILSKTNKVLLIDLDPQNAITSYFITKNHF-RAINIYNSYSLIKAEKIFRDVVVNISENLDF 93 
+                      666555559**************************************************774.69999************************** PP
+
+      pf32_ref_v1  91 ipsylslekfnkesieykelllkkklellkenydYiiiDtsPsldlllknaLvisdyviiPvtaekwsvEslelleeaieklek.....kkiki 179
+                      ipsy++l+kf+ke+ ++kel+l+++l+ + e+ydY+iiDtsP l++ l+naLvi+d+v+iP+ + +wsvE+l++++++i+kle+     ++  i
+  PotiB2_lp32-3#2  94 IPSYVTLAKFTKEADQFKELMLRNALRDYLEDYDYVIIDTSPGLSSELDNALVIADRVVIPILPARWSVEGLPVIIQHIKKLENnfmgeNSKII 187
+                      ***********************************************************************************98888667999 PP
+
+      pf32_ref_v1 180 filetqfkkn.nthkellkllkkkyeekflgkiheredlkkliaeneefdlkedYykeykevLekilkk 247
+                      +i+++qf+     +++++ llk+ky ++f+gk+h++e+lk+li+++ e++ ke+Yykey ++Lek+++ 
+  PotiB2_lp32-3#2 188 HIFASQFEVGrIASTKIMALLKEKYLNEFIGKVHKSEALKRLIDYSLEPKEKENYYKEYLTILEKMMNF 256
+                      *********96777****************************************************975 PP
+
+>> B31_lp17  
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !  191.0   1.4     4e-59     4e-59       7     234 ..       2     228 ..       1     240 [. 0.93
+
+  Alignments for each domain:
+  == domain 1  score: 191.0 bits;  conditional E-value: 4e-59
+  pf32_ref_v1   7 kiitiasikGGvGKstlsiifatlLskkkKvLLiDlDpQasltS.Yflkkikekvdieklniyevlkekldinkviikindnldlipsylsl...ekf 100
+                  k i+++ +kGGvGK+tls  +a++Lsk+kKv+L+D+D Q++++S +fl++     +i kl+i+++l +k+d+++v+++i++n++++p+++s    +++
+     B31_lp17   2 KKIAFHIQKGGVGKTTLSGNIASYLSKTKKVILVDCDIQQASSStWFLNH-----EILKLDIKDFLLKKMDVDQVVRQIQKNFYILPCVPSGtfrRDV 94 
+                  78***********************************9998888899999.....89*********************************9877789* PP
+
+  pf32_ref_v1 101 nkesieykelllkkklellkenydYiiiDtsPsldlllknaLvisdyviiPvtaekwsvEslelleeaieklek........kkikifiletqfkknn 190
+                  ++e +++ +l+++++lel k  +++ i+D+sPs++l+ +++++++++vi+P+t+e +s+E++++++e++e+l k        +ki +++l+++fk++n
+     B31_lp17  95 QHELQDFPYLIDDFCLELEKLGFEFAIFDLSPSFELWERRIILAMCEVITPLTPEFLSLEGINIFKEEFESLLKsyrkkvkhEKIICNMLNKSFKRHN 192
+                  ***********************************************************************9988998776559*************9 PP
+
+  pf32_ref_v1 191 th.kellkllkkkyeekflgkiheredlkkliaeneefdlkedYy 234
+                  +h ++++++ ++ ye  +++ki+e++ +kk i          dYy
+     B31_lp17 193 LHlRQFKTFGYDLYEVGQDAKIAESQLYKKSIF---------DYY 228
+                  998**************************8875.........444 PP
+
+
+
+Internal pipeline statistics summary:
+-------------------------------------
+Query model(s):                            1  (249 nodes)
+Target sequences:                         36  (9066 residues searched)
+Passed MSV filter:                        36  (1); expected 0.7 (0.02)
+Passed bias filter:                       36  (1); expected 0.7 (0.02)
+Passed Vit filter:                        36  (1); expected 0.0 (0.001)
+Passed Fwd filter:                        36  (1); expected 0.0 (1e-05)
+Initial search space (Z):                 36  [actual number of targets]
+Domain search space  (domZ):              36  [number of targets reported over threshold]
+# CPU time: 0.03u 0.00s 00:00:00.03 Elapsed: 00:00:00.03
+# Mc/sec: 61.02
+//
+[ok]

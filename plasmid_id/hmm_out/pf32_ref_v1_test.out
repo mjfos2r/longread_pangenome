@@ -1,0 +1,861 @@
+# hmmsearch :: search profile(s) against a sequence database
+# HMMER 3.4 (Aug 2023); http://hmmer.org/
+# Copyright (C) 2023 Howard Hughes Medical Institute.
+# Freely distributed under the BSD open source license.
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+# query HMM file:                  hmm/pf32_ref_v1.hmm
+# target sequence database:        seqs/pf32_ref_v1_test_set.faa
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
+Query:       pf32_ref_v1  [M=249]
+Scores for complete sequences (score includes all domains):
+   --- full sequence ---   --- best 1 domain ---    -#dom-
+    E-value  score  bias    E-value  score  bias    exp  N  Sequence Description
+    ------- ------ -----    ------- ------ -----   ---- --  -------- -----------
+   4.2e-111  361.2  18.2   5.1e-111  361.0  18.2    1.0  1  TEST_35   
+   2.7e-110  358.6  15.9     3e-110  358.4  15.9    1.0  1  TEST_31   
+   4.3e-109  354.6  17.4   5.4e-109  354.3  17.4    1.0  1  TEST_33   
+   9.1e-108  350.3  17.4     1e-107  350.2  17.4    1.0  1  TEST_26   
+     8e-107  347.2  22.0   9.4e-107  347.0  22.0    1.0  1  TEST_30   
+     5e-106  344.6  14.3     6e-106  344.4  14.3    1.0  1  TEST_28   
+   1.3e-105  343.2  18.2   1.6e-105  342.9  18.2    1.0  1  TEST_21   
+   1.4e-104  339.9  14.5   1.5e-104  339.7  14.5    1.0  1  TEST_25   
+     1e-103  337.0  13.5   1.2e-103  336.9  13.5    1.0  1  TEST_29   
+   3.7e-103  335.2  18.9   4.1e-103  335.1  18.9    1.0  1  TEST_23   
+   1.1e-102  333.7  18.8   1.2e-102  333.6  18.8    1.0  1  TEST_13   
+     7e-102  331.0  21.9   7.8e-102  330.9  21.9    1.0  1  TEST_10   
+   2.3e-101  329.3  13.9   2.9e-101  329.0  13.9    1.0  1  TEST_18   
+     3e-101  329.0  20.6   3.3e-101  328.8  20.6    1.0  1  TEST_19   
+   5.1e-101  328.2  19.8   5.6e-101  328.1  19.8    1.0  1  TEST_36   
+   1.6e-100  326.6  19.9   1.8e-100  326.4  19.9    1.0  1  TEST_5    
+   1.8e-100  326.4  15.7     2e-100  326.2  15.7    1.0  1  TEST_1    
+   7.2e-100  324.4  17.1     8e-100  324.3  17.1    1.0  1  TEST_7    
+    1.6e-99  323.3  22.6    1.8e-99  323.2  22.6    1.0  1  TEST_27   
+    2.6e-99  322.6  15.4    3.1e-99  322.4  15.4    1.0  1  TEST_34   
+      3e-99  322.4  21.0    3.3e-99  322.3  21.0    1.0  1  TEST_22   
+    5.1e-99  321.7  15.3    6.2e-99  321.4  15.3    1.0  1  TEST_17   
+    4.6e-98  318.5  17.2    5.1e-98  318.4  17.2    1.0  1  TEST_15   
+    5.2e-98  318.3  18.3    5.8e-98  318.2  18.3    1.0  1  TEST_20   
+    6.7e-98  318.0  13.7    8.2e-98  317.7  13.7    1.0  1  TEST_8    
+    1.1e-97  317.3  18.9    1.2e-97  317.1  18.9    1.0  1  TEST_9    
+      2e-97  316.4  19.4    2.2e-97  316.3  19.4    1.0  1  TEST_11   
+    1.1e-96  314.0  22.4    1.2e-96  313.9  22.4    1.0  1  TEST_4    
+    3.7e-96  312.3  14.2    4.1e-96  312.2  14.2    1.0  1  TEST_12   
+    1.8e-95  310.0  19.8      2e-95  309.9  19.8    1.0  1  TEST_6    
+    2.2e-94  306.5  15.7    2.7e-94  306.2  15.7    1.0  1  TEST_3    
+      9e-94  304.5  15.5      1e-93  304.3  15.5    1.0  1  TEST_32   
+    1.2e-93  304.1  19.1    1.3e-93  303.9  19.1    1.0  1  TEST_24   
+      6e-91  295.2  14.1    6.7e-91  295.1  14.1    1.0  1  TEST_14   
+    4.8e-90  292.3  10.3    5.3e-90  292.1  10.3    1.0  1  TEST_2    
+    3.3e-59  191.2   1.4      4e-59  191.0   1.4    1.1  1  TEST_16   
+
+
+Domain annotation for each sequence (and alignments):
+>> TEST_35  
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !  361.0  18.2  5.1e-111  5.1e-111       1     247 [.       1     245 [.       1     249 [. 0.99
+
+  Alignments for each domain:
+  == domain 1  score: 361.0 bits;  conditional E-value: 5.1e-111
+  pf32_ref_v1   1 mdrkkpkiitiasikGGvGKstlsiifatlLskkkKvLLiDlDpQasltSYflkkikek.vdieklniyevlkekldinkviikindnldlipsylsl 97 
+                  md+kkpkiitiasikGGvGKst++iifa+lL++k+KvLLiD+D+Qas+tSYf+k+i ++ ++i ++niy+vlkekldin++ii+i+dnldlipsylsl
+      TEST_35   1 MDNKKPKIITIASIKGGVGKSTSAIIFANLLAQKYKVLLIDIDTQASTTSYFYKEIASQkINIVSKNIYRVLKEKLDINNAIINIKDNLDLIPSYLSL 98 
+                  9********************************************************999************************************** PP
+
+  pf32_ref_v1  98 ekfnkesieykelllkkklellkenydYiiiDtsPsldlllknaLvisdyviiPvtaekwsvEslelleeaieklekkkikifiletqfkknnthkel 195
+                  +kf++e i++kel+lk++l +lk++ydYiiiDt+Psld++l+naL++s+++i+P+taekw+vEslelle++i+kl++ ki+ifil+t+fkknnthkel
+      TEST_35  99 HKFSSEFIPLKELRLKDNLIFLKQDYDYIIIDTNPSLDFTLSNALMTSNCIIVPMTAEKWAVESLELLEFYIKKLRI-KIPIFILITRFKKNNTHKEL 195
+                  *****************************************************************************.******************** PP
+
+  pf32_ref_v1 196 lkllkkkyeekflgkiheredlkkliaeneefdlkedYykeykevLekilkk 247
+                  lk++++k  + flg++heredl+++i+ n+efd+++dY++eyke+++k++++
+      TEST_35 196 LKHVRSK--KGFLGIVHEREDLNRKITGNDEFDMTKDYIEEYKEAVSKFFDM 245
+                  *******..***************************************9975 PP
+
+>> TEST_31  
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !  358.4  15.9    3e-110    3e-110       1     246 [.       1     244 [.       1     246 [] 0.99
+
+  Alignments for each domain:
+  == domain 1  score: 358.4 bits;  conditional E-value: 3e-110
+  pf32_ref_v1   1 mdrkkpkiitiasikGGvGKstlsiifatlLskkkKvLLiDlDpQasltSYflkkikek.vdieklniyevlkekldinkviikindnldlipsylsl 97 
+                  md+kkpkiitiasikGGvGKst+siifatlL++k+KvLLiDlD+Qas+tSYf+kki+++ +d+ ++niy+vlk++ld+n++i++i++nldlipsy++l
+      TEST_31   1 MDTKKPKIITIASIKGGVGKSTSSIIFATLLAQKYKVLLIDLDTQASTTSYFCKKIENQkIDLVNKNIYRVLKDTLDVNNAIVNIKENLDLIPSYITL 98 
+                  9************************************************************************************************* PP
+
+  pf32_ref_v1  98 ekfnkesieykelllkkklellkenydYiiiDtsPsldlllknaLvisdyviiPvtaekwsvEslelleeaieklekkkikifiletqfkknnthkel 195
+                  +kf++e i+++el+lk++l +lk++ydYi++Dt+Psld++l+naL++s++vi+P+taekw++Esl+lle++ie+l++ ki+if+l+t+fkknnthkel
+      TEST_31  99 HKFSNEFIPHQELRLKDSLIFLKQDYDYIVVDTNPSLDFTLSNALITSNCVIVPMTAEKWAIESLDLLEFHIENLKI-KIPIFLLVTRFKKNNTHKEL 195
+                  *****************************************************************************.******************** PP
+
+  pf32_ref_v1 196 lkllkkkyeekflgkiheredlkkliaeneefdlkedYykeykevLekilk 246
+                  lk+++++  e+flg iheredl+k+ia n+ef++++dY++eyke+L+k+++
+      TEST_31 196 LKYVESR--ERFLGFIHEREDLNKKIAGNNEFNMDKDYINEYKEALSKFFE 244
+                  *******..****************************************96 PP
+
+>> TEST_33  
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !  354.3  17.4  5.4e-109  5.4e-109       1     245 [.       1     243 [.       1     246 [. 0.99
+
+  Alignments for each domain:
+  == domain 1  score: 354.3 bits;  conditional E-value: 5.4e-109
+  pf32_ref_v1   1 mdrkkpkiitiasikGGvGKstlsiifatlLskkkKvLLiDlDpQasltSYflkkikek.vdieklniyevlkekldinkviikindnldlipsylsl 97 
+                  md+kkpkiitiasikGGvGKst++ii+atlL+k++KvLLiD+D+Qas+tSYf+k+i ++ +di k+n+y+vlkek+din++i+ki++nldlipsyl+l
+      TEST_33   1 MDNKKPKIITIASIKGGVGKSTSAIIMATLLAKEHKVLLIDMDTQASTTSYFYKEILNQnIDIVKINVYRVLKEKIDINDSIVKIKENLDLIPSYLTL 98 
+                  9*******************************************************9999************************************** PP
+
+  pf32_ref_v1  98 ekfnkesieykelllkkklellkenydYiiiDtsPsldlllknaLvisdyviiPvtaekwsvEslelleeaieklekkkikifiletqfkknnthkel 195
+                  +kf +esi++kel+l+++le+lk++y+Y+iiDt+Psld++l+naL++s+++i+P+taekw+vEslelle+++++l++ ki+if+++t+fkknnthk+l
+      TEST_33  99 NKFLSESIPLKELRLQNNLEFLKRRYHYVIIDTNPSLDYTLSNALMTSNCIIVPMTAEKWAVESLELLEFHMNNLKI-KIPIFLVITRFKKNNTHKQL 195
+                  *****************************************************************************.******************** PP
+
+  pf32_ref_v1 196 lkllkkkyeekflgkiheredlkkliaeneefdlkedYykeykevLekil 245
+                  l+++++k  + flg iheredl+k+ia+neefd+++dY++eyk vL+++l
+      TEST_33 196 LQHVESK--TGFLGFIHEREDLNKKIAKNEEFDMTKDYINEYKGVLSRFL 243
+                  *******..**************************************997 PP
+
+>> TEST_26  
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !  350.2  17.4    1e-107    1e-107       1     247 [.       1     245 [.       1     246 [] 0.99
+
+  Alignments for each domain:
+  == domain 1  score: 350.2 bits;  conditional E-value: 1e-107
+  pf32_ref_v1   1 mdrkkpkiitiasikGGvGKstlsiifatlLskkkKvLLiDlDpQasltSYflkkikek.vdieklniyevlkekldinkviikindnldlipsylsl 97 
+                  md+kkpkiitiasikGGvGKst++ii+atlLsk++KvLLiD+D+Qas+tSYf++ki++  ++++k niye+lke++di+++ii++++nldlipsyl+l
+      TEST_26   1 MDNKKPKIITIASIKGGVGKSTSAIILATLLSKNNKVLLIDMDTQASITSYFYEKIEKLgINFTKFNIYEILKENVDIDSTIINVDNNLDLIPSYLTL 98 
+                  9********************************************************99*************************************** PP
+
+  pf32_ref_v1  98 ekfnkesieykelllkkklellkenydYiiiDtsPsldlllknaLvisdyviiPvtaekwsvEslelleeaieklekkkikifiletqfkknnthkel 195
+                  ++f++++ie+k++llk++l +l ++ydYi+iDt+Psld++lknaL++sdyviiP+taekw+vEsl+l++++++kl++  ++if+++t+fkkn+thk+l
+      TEST_26  99 HNFSEDKIEHKDFLLKTSLGTLYYKYDYIVIDTNPSLDVTLKNALLCSDYVIIPMTAEKWAVESLDLFNFFVRKLNL-FLPIFLIITRFKKNRTHKTL 195
+                  ****************************************************************************9.******************** PP
+
+  pf32_ref_v1 196 lkllkkkyeekflgkiheredlkkliaeneefdlkedYykeykevLekilkk 247
+                   ++lk+k  ++flg+i+eredl+++iaen++fdl++dY+key+++Le +lkk
+      TEST_26 196 FEILKTK--DRFLGTISEREDLNRRIAENNNFDLNKDYIKEYENILEIFLKK 245
+                  *******..***************************************9975 PP
+
+>> TEST_30  
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !  347.0  22.0  9.4e-107  9.4e-107       1     246 [.       1     244 [.       1     247 [. 0.99
+
+  Alignments for each domain:
+  == domain 1  score: 347.0 bits;  conditional E-value: 9.4e-107
+  pf32_ref_v1   1 mdrkkpkiitiasikGGvGKstlsiifatlLskkkKvLLiDlDpQasltSYflkkikek.vdieklniyevlkekldinkviikindnldlipsylsl 97 
+                  md+kkpkiitiasikGGvGKst++iif+tlLs++ KvLLiD+D+Qas+tSYf+kki e+ +++ ++niyevlk+++ i++++i+i++nldlipsy+sl
+      TEST_30   1 MDNKKPKIITIASIKGGVGKSTSAIIFTTLLSQDWKVLLIDMDTQASVTSYFYKKIIEDnFNLLEKNIYEVLKGNVLIDNSVINISNNLDLIPSYISL 98 
+                  9*******************************************************9999************************************** PP
+
+  pf32_ref_v1  98 ekfnkesieykelllkkklellkenydYiiiDtsPsldlllknaLvisdyviiPvtaekwsvEslelleeaieklekkkikifiletqfkknnthkel 195
+                  +kfnke+i++ke+ l+k+l +l++nydYiiiDt+Psld++l+naLv+sdy+i+P+taekw+vEslell+++i++l++ +i+if+++t+fkknnthk l
+      TEST_30  99 HKFNKEAITFKEIKLQKQLLNLQSNYDYIIIDTNPSLDYTLTNALVCSDYIIVPITAEKWAVESLELLKFSISDLAI-DIPIFLIITRFKKNNTHKAL 195
+                  *****************************************************************************.******************** PP
+
+  pf32_ref_v1 196 lkllkkkyeekflgkiheredlkkliaeneefdlkedYykeykevLekilk 246
+                   + lk++  ++flg i eredl+k+ia+n+ f+l++dY+ eyk++L+k+++
+      TEST_30 196 FSSLKDN--KNFLGLIYEREDLNKKIAKNDLFNLNRDYMLEYKNILSKFIT 244
+                  *******..***************************************986 PP
+
+>> TEST_28  
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !  344.4  14.3    6e-106    6e-106       1     247 [.       1     246 [.       1     249 [. 0.99
+
+  Alignments for each domain:
+  == domain 1  score: 344.4 bits;  conditional E-value: 6e-106
+  pf32_ref_v1   1 mdrkkpkiitiasikGGvGKstlsiifatlLskkkKvLLiDlDpQasltSYflkkikek.vdieklniyevlkek.ldinkviikindnldlipsyls 96 
+                  md+kkpkiitias+kGGvGKst+sii+atlLsk+kK+LLiD+D+Qas+tS+++++i++k v++e+ niye+lke  ld ++vii+i++nldlipsyls
+      TEST_28   1 MDNKKPKIITIASLKGGVGKSTTSIILATLLSKSKKILLIDIDTQASITSFYFNNIQNKnVNLENFNIYEILKEGaLDTRDVIINIDNNLDLIPSYLS 98 
+                  9********************************************************999*************9879********************* PP
+
+  pf32_ref_v1  97 lekfnkesieykelllkkklellkenydYiiiDtsPsldlllknaLvisdyviiPvtaekwsvEslelleeaieklekkkikifiletqfkknnthke 194
+                  l+kfn+e+i++kel+lkkkle +++nydYiiiDt+Psld++l+naLv+s+yv++P+taekw+vEsl+lle++ +k+ + + +if+l+t+fkknnthk+
+      TEST_28  99 LHKFNQEAITFKELRLKKKLESIQDNYDYIIIDTPPSLDFALTNALVSSQYVLVPITAEKWAVESLDLLEFYSKKIGT-NAPIFVLVTRFKKNNTHKQ 195
+                  *****************************************************************************9.******************* PP
+
+  pf32_ref_v1 195 llkllkkkyeekflgkiheredlkkliaeneefdlkedYykeykevLekilkk 247
+                  ll++l+ +  +++lg+i+eredl+++iaen++fdl++dY+ eyk+vLe +l+k
+      TEST_28 196 LLDILQLR--DDYLGIISEREDLNRRIAENDKFDLDKDYVCEYKKVLECFLNK 246
+                  ********..****************************************986 PP
+
+>> TEST_21  
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !  342.9  18.2  1.6e-105  1.6e-105       1     247 [.       1     245 [.       1     247 [. 0.99
+
+  Alignments for each domain:
+  == domain 1  score: 342.9 bits;  conditional E-value: 1.6e-105
+  pf32_ref_v1   1 mdrkkpkiitiasikGGvGKstlsiifatlLskkkKvLLiDlDpQasltSYflkkikek.vdieklniyevlkekldinkviikindnldlipsylsl 97 
+                  md+k++k+itiasikGGvGKst+s+ifatlLs k KvLLiD+D+Qas+tSYf++kik++ +d+ + niyevl ++l+i++++i+in+nldlipsyl+l
+      TEST_21   1 MDKKETKVITIASIKGGVGKSTTSLIFATLLSIKCKVLLIDIDTQASTTSYFFNKIKDNnIDLINRNIYEVLISNLHIDNALITINKNLDLIPSYLTL 98 
+                  9*********************************************************99************************************** PP
+
+  pf32_ref_v1  98 ekfnkesieykelllkkklellkenydYiiiDtsPsldlllknaLvisdyviiPvtaekwsvEslelleeaieklekkkikifiletqfkknnthkel 195
+                  +kfn+esi+yke+ lk++l+ll+++ydYii+Dt+Psld++l+naLv+s+y+iiP+taekw+vEsl+l++++++kl + ++++++++t+fk+nnth+el
+      TEST_21  99 HKFNSESIPYKEFKLKEQLKLLSNHYDYIILDTNPSLDFTLTNALVCSNYIIIPITAEKWAVESLDLFTFFMNKLLL-TLPMYLINTKFKRNNTHREL 195
+                  ****************************************************************************9.******************** PP
+
+  pf32_ref_v1 196 lkllkkkyeekflgkiheredlkkliaeneefdlkedYykeykevLekilkk 247
+                  lk+l+k+  ++flg+i+eredl+k+ia+n++fdl++dY+ ey+++L+ +l+k
+      TEST_21 196 LKVLEKN--NNFLGTISEREDLNKRIAKNDRFDLTKDYIIEYQNTLTAFLNK 245
+                  *******..****************************************986 PP
+
+>> TEST_25  
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !  339.7  14.5  1.5e-104  1.5e-104       1     246 [.       1     244 [.       1     246 [] 0.99
+
+  Alignments for each domain:
+  == domain 1  score: 339.7 bits;  conditional E-value: 1.5e-104
+  pf32_ref_v1   1 mdrkkpkiitiasikGGvGKstlsiifatlLskkkKvLLiDlDpQasltSYflkkikek.vdieklniyevlkekldinkviikindnldlipsylsl 97 
+                  md+kkpkiitiasikGGvGKst++ii+atlLsk++KvLLiD+D+Qas+tSYf+k++ e+ +d+ ++niyevlk++  in++ii++++n+dl+psylsl
+      TEST_25   1 MDTKKPKIITIASIKGGVGKSTSAIILATLLSKDNKVLLIDMDTQASVTSYFYKTLVESeFDLLEKNIYEVLKGNQLINDAIINVDHNFDLLPSYLSL 98 
+                  9******************************************************99999************************************** PP
+
+  pf32_ref_v1  98 ekfnkesieykelllkkklellkenydYiiiDtsPsldlllknaLvisdyviiPvtaekwsvEslelleeaieklekkkikifiletqfkknnthkel 195
+                  ++f++e  +yke++lk+++++lk +y++ii+Dt+P+ld++l+naLv+s++vi+P+taekw++Esl+lle++ +kl++ k k+f+++t+fkkn+thk+l
+      TEST_25  99 HTFSEEPLPYKEHRLKDSFKYLKFKYNFIILDTNPHLDSTLSNALVVSKHVIVPMTAEKWTIESLQLLEFFTDKLKL-KPKVFLFVTKFKKNKTHKDL 195
+                  ****************************************************************************9.9******************* PP
+
+  pf32_ref_v1 196 lkllkkkyeekflgkiheredlkkliaeneefdlkedYykeykevLekilk 246
+                  l++l+kk  ekflg+i+eredl+++ia+n++fdl++dY+key +vL++++ 
+      TEST_25 196 LEMLQKK--EKFLGIISEREDLNRRIAKNDRFDLDKDYIKEYVNVLNNFIL 244
+                  *******..***************************************985 PP
+
+>> TEST_29  
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !  336.9  13.5  1.2e-103  1.2e-103       1     246 [.       1     246 [.       1     249 [] 0.98
+
+  Alignments for each domain:
+  == domain 1  score: 336.9 bits;  conditional E-value: 1.2e-103
+  pf32_ref_v1   1 mdrkkpkiitiasikGGvGKstlsiifatlLskkkKvLLiDlDpQasltSYflkkikek.vdieklniyevlkekldinkviikindnldlipsylsl 97 
+                  md+kkpkiitiasikGGvGKst++iifatlL++k+KvLLiD+D+Qas+tSY++++i+++ +d++k+niyevl ekldin++i+++ +nldlipsyl+l
+      TEST_29   1 MDNKKPKIITIASIKGGVGKSTSAIIFATLLAQKYKVLLIDIDTQASTTSYYYDDIQKSsIDLRKNNIYEVLIEKLDINRSIVNVANNLDLIPSYLTL 98 
+                  9*********************************************************9*************************************** PP
+
+  pf32_ref_v1  98 ekfnkesi..eykelllkkklellkenydYiiiDtsPsldlllknaLvisdyviiPvtaekwsvEslelleeaieklekkkikifiletqfkknnthk 193
+                  +++n   +  +++e++lkk+l++++  y++iiiDt+Psld++l+naLv++++vi+P+taekw++Es++ll++++ek+   ++++++++t+fkknnthk
+      TEST_29  99 HSINAFGYkhTFDEFRLKKELKHIDVGYNFIIIDTPPSLDFTLTNALVCCNNVIVPLTAEKWTIESFDLLKFFMEKIGV-ELPTYFIITRFKKNNTHK 195
+                  ****98764589******************************************************************9.****************** PP
+
+  pf32_ref_v1 194 ellkllkkkyeekflgkiheredlkkliaeneefdlkedYykeykevLekilk 246
+                  +ll++l++k  e+flg+i+eredl+++ia+n++fd++ dY+keyk+ L ++++
+      TEST_29 196 QLLEMLNSK--ENFLGMISEREDLNRRIASNSSFDFQMDYIKEYKNSLMNFYA 246
+                  *********..***************************************986 PP
+
+>> TEST_23  
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !  335.1  18.9  4.1e-103  4.1e-103       1     245 [.       1     243 [.       1     246 [] 0.99
+
+  Alignments for each domain:
+  == domain 1  score: 335.1 bits;  conditional E-value: 4.1e-103
+  pf32_ref_v1   1 mdrkkpkiitiasikGGvGKstlsiifatlLskkkKvLLiDlDpQasltSYflkkikek.vdieklniyevlkekldinkviikindnldlipsylsl 97 
+                  md kk+kiitia+ikGGvGKst++iif+ lLs+k+KvLLiD+D+Qas+tSYf+kki e+ +d+ ++niy+vlk+++ in++ii++n+ ldl+psylsl
+      TEST_23   1 MDIKKSKIITIANIKGGVGKSTSAIIFSILLSQKYKVLLIDMDTQASTTSYFNKKIIENkFDLLEKNIYKVLKSNYLINDSIINVNNGLDLLPSYLSL 98 
+                  9******************************************************99999************************************** PP
+
+  pf32_ref_v1  98 ekfnkesieykelllkkklellkenydYiiiDtsPsldlllknaLvisdyviiPvtaekwsvEslelleeaieklekkkikifiletqfkknnthkel 195
+                  ++f++e  +yk ++lk+++++lk nydYiiiDt+P+ld++l+naLvis ++i+Pvtaekw++Esl+lle++i+kl++ ++k+f+++t+fkkn+thk+l
+      TEST_23  99 HTFSEEILPYKTHRLKDSFKYLKFNYDYIIIDTNPHLDSTLSNALVISGHIIVPVTAEKWAIESLQLLEFFINKLKL-NLKVFLFATKFKKNKTHKDL 195
+                  ****************************************************************************9.******************** PP
+
+  pf32_ref_v1 196 lkllkkkyeekflgkiheredlkkliaeneefdlkedYykeykevLekil 245
+                  l +l+kk  ++flg+i+eredl+++ia+n++fdl++dY+key ++L+++ 
+      TEST_23 196 LGILQKK--SRFLGIISEREDLNRRIAKNDDFDLDRDYIKEYINILNNFN 243
+                  *******..***************************************96 PP
+
+>> TEST_13  
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !  333.6  18.8  1.2e-102  1.2e-102       1     245 [.       1     249 [.       1     250 [] 0.99
+
+  Alignments for each domain:
+  == domain 1  score: 333.6 bits;  conditional E-value: 1.2e-102
+  pf32_ref_v1   1 mdrkkpkiitiasikGGvGKstlsiifatlLsk.kkKvLLiDlDpQasltSYflkkikekvdieklniyevlkekldinkviikindnldlipsylsl 97 
+                  md kk++iit+asikGGvGKs+lsi+f+++L++  kKvLLiDlDpQ+sltSYf+++i+   +iek+n+y++lk+++++n++i+ki+d++++ips+++l
+      TEST_13   1 MDIKKSDIITMASIKGGVGKSVLSILFSYVLKElGKKVLLIDLDPQNSLTSYFNRYIS---NIEKYNTYSMLKGDFHFNECIKKIDDYISIIPSHPIL 95 
+                  9*********************************************************...************************************* PP
+
+  pf32_ref_v1  98 ekfnkesieykelllkkkle..llkenydYiiiDtsPsldlllknaLvisdyviiPvtaekwsvEslelleeaieklek...kkikifiletqfkkn. 189
+                   kfn+e+i+yke++l+++l+  ++++n+dY+++Dt+Psld+llknaL+++dy++iPv++e ws+Es+++l++a+++++k   k ++i+i+e+qf+kn 
+      TEST_13  96 GKFNSEAIDYKEVILEHHLNenMQNYNFDYVLLDTPPSLDFLLKNALNVADYIVIPVQVEIWSIESFTILINAVNDITKfrkKIYNISIVENQFIKNr 193
+                  *******************99999*****************************************************99986779************* PP
+
+  pf32_ref_v1 190 nthkellkllkkkyeekflgkiheredlkkliaeneefdlkedYykeykevLekil 245
+                  nt+ke+++ll+k+y+e+++gkih+++++k+li+ + e++ ke+Yy+e+k++L++i+
+      TEST_13 194 NTIKEVEDLLYKEYREYIKGKIHFSNSIKVLINGRLEPSKKEMYYREIKDTLKNIF 249
+                  ******************************************************97 PP
+
+>> TEST_10  
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !  330.9  21.9  7.8e-102  7.8e-102       1     246 [.       1     250 [.       1     251 [] 0.99
+
+  Alignments for each domain:
+  == domain 1  score: 330.9 bits;  conditional E-value: 7.8e-102
+  pf32_ref_v1   1 mdrkkpkiitiasikGGvGKstlsiifatlLsk.kkKvLLiDlDpQasltSYflkkikekvdieklniyevlkekldinkviikindnldlipsylsl 97 
+                  md kkp iit+asikGGvGKstlsi+f+++L++  kKvLLiDlDpQ+sltSYf+++++   +i+k+n+y++lk+++++n++++kind++++ips+++l
+      TEST_10   1 MDIKKPVIITMASIKGGVGKSTLSILFSHVLKEsGKKVLLIDLDPQNSLTSYFHRYVN---NIKKYNVYNMLKGNVNFNECVNKINDYISIIPSHPVL 95 
+                  9********************************9************************...************************************* PP
+
+  pf32_ref_v1  98 ekfnkesieykelllkkkle..llkenydYiiiDtsPsldlllknaLvisdyviiPvtaekwsvEslelleeaieklek...kkikifiletqfkkn. 189
+                  e+fn e +++ke++l+  l+  ++++n+dYiiiDtsP+ ++llknaL++++y++iPv++e ws+Es+++l+++i+k++k   k ++i+i+e+qf+kn 
+      TEST_10  96 ENFNAEIVDFKEIVLEYYLNenMQQCNFDYIIIDTSPNSGYLLKNALNAANYIVIPVQIELWSLESFTMLINSINKISKfrnKVYNISIVENQFIKNr 193
+                  *******************99999******************************************************998889************** PP
+
+  pf32_ref_v1 190 nthkellkllkkkyeekflgkiheredlkkliaeneefdlkedYykeykevLekilk 246
+                  n++kel++ll+kky+e+++gkih+++ +k +i+++ee+ +ke+Yy+e+k++L++i++
+      TEST_10 194 NIIKELESLLHKKYKEYVKGKIHYSNGIKIFITKREEPAIKETYYEETKNTLKNIFS 250
+                  ******************************************************985 PP
+
+>> TEST_18  
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !  329.0  13.9  2.9e-101  2.9e-101       1     247 [.       1     245 [.       1     247 [. 0.99
+
+  Alignments for each domain:
+  == domain 1  score: 329.0 bits;  conditional E-value: 2.9e-101
+  pf32_ref_v1   1 mdrkkpkiitiasikGGvGKstlsiifatlLskkkKvLLiDlDpQasltSYflkkikek.vdieklniyevlkekldinkviikindnldlipsylsl 97 
+                  mdr+++ki++i+sikGGvGKst++iif+tlLskk+KvLLiD DpQas+tSYf++ ++e+ vd++k+niyevl +k++in++++++n+nl+++psy+ l
+      TEST_18   1 MDRENTKIVAICSIKGGVGKSTSAIIFSTLLSKKYKVLLIDADPQASTTSYFSDLLEEQgVDVSKQNIYEVLADKKNINSSTFRLNNNLYILPSYIYL 98 
+                  9************************************************************************************************* PP
+
+  pf32_ref_v1  98 ekfnkesieykelllkkklellkenydYiiiDtsPsldlllknaLvisdyviiPvtaekwsvEslelleeaieklekkkikifiletqfkknnthkel 195
+                    f +++i++ke++lk++l+llk++ydYiiiDtsPsl+++l+n+Lv+s+y+iiP+ta+kwsvEs++lle+a+++l++ ki+if ++t+fkknnt+k+l
+      TEST_18  99 YLFYDDNIPFKETRLKDSLKLLKHKYDYIIIDTSPSLGIILTNVLVVSNYIIIPMTAQKWSVESMQLLEFALKRLKL-KIPIFPMVTNFKKNNTYKHL 195
+                  ****************************************************************************9.******************** PP
+
+  pf32_ref_v1 196 lkllkkkyeekflgkiheredlkkliaeneefdlkedYykeykevLekilkk 247
+                  l+l++++  ++flg+iheredl+k+iaen++fdl++dY+key+ +Lek+++ 
+      TEST_18 196 LELISRD--DNFLGVIHEREDLNKRIAENDTFDLNKDYIKEYEITLEKFFQL 245
+                  *******..****************************************975 PP
+
+>> TEST_19  
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !  328.8  20.6  3.3e-101  3.3e-101       1     245 [.       1     249 []       1     249 [] 0.99
+
+  Alignments for each domain:
+  == domain 1  score: 328.8 bits;  conditional E-value: 3.3e-101
+  pf32_ref_v1   1 mdrkkpkiitiasikGGvGKstlsiifatlLsk.kkKvLLiDlDpQasltSYflkkikekvdieklniyevlkekldinkviikindnldlipsylsl 97 
+                  md+kkp +it+as+kGGvGKs lsi+f+++L++  kKvLLiDlDpQ+sltSYf+k+i+   +i+k+n+ye+lk++++++k+ +kin+ +++ips+++l
+      TEST_19   1 MDQKKPIVITLASLKGGVGKSSLSILFSYVLKElGKKVLLIDLDPQNSLTSYFNKYIS---SIKKYNVYEFLKGNTYFDKCENKINEFISIIPSHPIL 95 
+                  9*********************************************************...9************************************ PP
+
+  pf32_ref_v1  98 ekfnkesieykelllkkkle..llkenydYiiiDtsPsldlllknaLvisdyviiPvtaekwsvEslelleeaieklek...kkikifiletqfkkn. 189
+                  ekfn+++i+yke++l+++l+  + + ++dYiiiDtsPs+++llknaL+++d++iiPv++e+ws+Es+++l+e+i+++++   k+++i+i+e+qf+kn 
+      TEST_19  96 EKFNTDDIDYKEIILEFRLNksTKSFDFDYIIIDTSPSRNFLLKNALNVTDHIIIPVQVERWSIESFSILTETINNIQIiknKRYNISIIENQFIKNr 193
+                  ********************8888899***************************************************888889************** PP
+
+  pf32_ref_v1 190 nthkellkllkkkyeekflgkiheredlkkliaeneefdlkedYykeykevLekil 245
+                  nt+ke++++l++ky+++++gkih+++++k++i++  e++lke Yy+e++++L++il
+      TEST_19 194 NTLKEVEEVLYEKYGKYIKGKIHFSNSIKVFINDLLEPSLKEIYYREAESALKNIL 249
+                  ******************************************************96 PP
+
+>> TEST_36  
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !  328.1  19.8  5.6e-101  5.6e-101       1     246 [.       1     252 [.       1     254 [] 0.98
+
+  Alignments for each domain:
+  == domain 1  score: 328.1 bits;  conditional E-value: 5.6e-101
+  pf32_ref_v1   1 mdrkkpkiitiasikGGvGKstlsiifatlLsk.kkKvLLiDlDpQasltSYflkkikekvdieklniyevlkek..ldinkviikindnldlipsyl 95 
+                  md+kkpkiitiasikGGvGKs+l+iif+ +L++ ++KvLLiD+DpQ+sltSYf k++k   +ie ln+y++lk+    d+nk+++kin+++++ips++
+      TEST_36   1 MDNKKPKIITIASIKGGVGKSVLTIIFGFILKDfNNKVLLIDMDPQNSLTSYFAKYLK---SIEGLNLYYMLKDYkkNDLNKYLNKINEKMYIIPSHP 95 
+                  9*********************************************************...9***********865589******************* PP
+
+  pf32_ref_v1  96 slekfnkesieykelllkkkle..llkenydYiiiDtsPsldlllknaLvisdyviiPvtaekwsvEslelleeaieklek...kkikifiletqfkk 188
+                  +l+kf++e+ +yke+ll+++l+  l+++n+dY+iiDt+Psl+ ll naL+i+d+viiP++ e+wsvE++++l++aie++++   k+iki+i+e+qf+k
+      TEST_36  96 ILCKFEQEDERYKEQLLEHCLNkiLCSNNFDYVIIDTPPSLSPLLFNALNITDEVIIPIQLERWSVEAFPMLMDAIEEVNIfknKEIKISIVENQFIK 193
+                  **********************9999*****************************************************9888899************ PP
+
+  pf32_ref_v1 189 n.nthkellkllkkkyeekflgkiheredlkkliaeneefdlkedYykeykevLekilk 246
+                  n nt+k++++ll+k+y+  ++gkih+ +++k+li+e +e++++e Yyke+ke+L+ki+k
+      TEST_36 194 NrNTLKDIEELLYKNYGLFVKGKIHNFNNIKVLINELKEPNIQEIYYKEAKETLKKIIK 252
+                  *********************************************************97 PP
+
+>> TEST_5  
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !  326.4  19.9  1.8e-100  1.8e-100       1     245 [.       1     249 [.       1     251 [] 0.99
+
+  Alignments for each domain:
+  == domain 1  score: 326.4 bits;  conditional E-value: 1.8e-100
+  pf32_ref_v1   1 mdrkkpkiitiasikGGvGKstlsiifatlLsk.kkKvLLiDlDpQasltSYflkkikekvdieklniyevlkekldinkviikindnldlipsylsl 97 
+                  m++++p+i+t+as+kGGvGKstl+i+fa++L++ +kKvLLiD+DpQ+sltSYf k+++   di+k+niy++lke+++++++i+kind++++ips+++l
+       TEST_5   1 MQHNRPTIMTMASLKGGVGKSTLAILFAYILKNlDKKVLLIDIDPQNSLTSYFEKHLN---DIKKYNIYRILKEETYFEQCINKINDHISFIPSHPVL 95 
+                  999*******************************************************...************************************* PP
+
+  pf32_ref_v1  98 ekfnkesieykelllkkkle..llkenydYiiiDtsPsldlllknaLvisdyviiPvtaekwsvEslelleeaieklek...kkikifiletqfkkn. 189
+                  ++fn e ie ke +lk++l+  +l++n+dYi+iDt+Ps d+l++naL ++dyviiPv++ekw++Esl++l+e i+k+++   k++ i+i+e+ f+kn 
+       TEST_5  96 DDFNWEYIENKEDCLKNHLSqnILNYNFDYILIDTPPSKDFLFRNALSATDYVIIPVQVEKWAIESLNILMEIISKFQNiknKNYYISIVENLFIKNr 193
+                  *******************9999*****************************************************99888899************** PP
+
+  pf32_ref_v1 190 nthkellkllkkkyeekflgkiheredlkkliaeneefdlkedYykeykevLekil 245
+                  nt+ke++++l+kkye++++gkih+++ +k +i+e  e++ +e Yyke++++L++il
+       TEST_5 194 NTLKEIESALYKKYENYIRGKIHNYNGIKIFIHEVLEPSKNEIYYKEAENALKNIL 249
+                  ******************************************************97 PP
+
+>> TEST_1  
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !  326.2  15.7    2e-100    2e-100       1     245 [.       1     248 [.       1     250 [] 0.98
+
+  Alignments for each domain:
+  == domain 1  score: 326.2 bits;  conditional E-value: 2e-100
+  pf32_ref_v1   1 mdrkkpkiitiasikGGvGKstlsiifatlLsk.kkKvLLiDlDpQasltSYflkkikekvdieklniyevlkekldinkviikindnldlipsylsl 97 
+                  md kkp+i+t+a++kGGvGKstl+iifa+lL++ +kKvL++D+DpQ+s+tSYflk+++   ++e +n+y++lk+++ +nk+++k++d++ +ips+++l
+       TEST_1   1 MD-KKPNILTMANLKGGVGKSTLTIIFAYLLKDlDKKVLIVDMDPQNSITSYFLKHLH---NVEIYNTYNMLKGSVPFNKCVRKVDDYICIIPSHPIL 94 
+                  65.9******************************************************...9************************************ PP
+
+  pf32_ref_v1  98 ekfnkesieykelllkkkle..llkenydYiiiDtsPsldlllknaLvisdyviiPvtaekwsvEslelleeaieklek...kkikifiletqfkkn. 189
+                  e+fn++ ++yke++l+++le  +l++++dYi++Dt+P++d+l+knaL+i+d+viiPv++e+ws+Es+ +l+++i+++++   k ++i+i+e+qf+kn 
+       TEST_1  95 ENFNSDPVDYKEIILEFRLEqnILAHEFDYILLDTPPNRDFLIKNALNITDHVIIPVQVERWSIESFIILMDMIKNFQIikkKIYTISIVENQFIKNr 192
+                  *******************9999*****************************************************998875679************* PP
+
+  pf32_ref_v1 190 nthkellkllkkkyeekflgkiheredlkkliaeneefdlkedYykeykevLekil 245
+                  nt+k+++kll+k+y+++++gkih+++ +k++i+e  e++ ke Yyke+ke+L++il
+       TEST_1 193 NTLKDIEKLLYKEYGSYVKGKIHFSNGIKVFINELLEPSPKEVYYKEAKETLQNIL 248
+                  ******************************************************97 PP
+
+>> TEST_7  
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !  324.3  17.1    8e-100    8e-100       1     246 [.       1     252 [.       1     254 [] 0.98
+
+  Alignments for each domain:
+  == domain 1  score: 324.3 bits;  conditional E-value: 8e-100
+  pf32_ref_v1   1 mdrkkpkiitiasikGGvGKstlsiifatlLsk.kkKvLLiDlDpQasltSYflkkikekvdieklniyevlkek..ldinkviikindnldlipsyl 95 
+                  mdrkk++iitiasikGGvGKs+l+iif+++L++ +kKvLLiDlDpQ+sltSYf+++ik    +e +n+y+++ke   ld+nk+++kin ++++ips++
+       TEST_7   1 MDRKKTEIITIASIKGGVGKSVLAIIFGHILKNfDKKVLLIDLDPQNSLTSYFIEYIK---GVEGINVYYMFKEYknLDLNKYLNKINSEMYIIPSHP 95 
+                  9*********************************************************...9***********8655999****************** PP
+
+  pf32_ref_v1  96 slekfnkesieykelllkkkle..llkenydYiiiDtsPsldlllknaLvisdyviiPvtaekwsvEslelleeaieklek...kkikifiletqfkk 188
+                  +l+kf++e+ +yke+ll+++++  l+++++dYiiiDt+Psl+ ll naL+i+d+viiP+++e+wsvE++++l++aie++++   kki+++i+e+qf+k
+       TEST_7  96 ILCKFEQEDERYKEQLLEHCIKkiLYNNDFDYIIIDTPPSLGPLLYNALNITDKVIIPIQIERWSVEAFPMLMDAIEEVNIfknKKIDVSIVENQFIK 193
+                  **********************9999*****************************************************9888899************ PP
+
+  pf32_ref_v1 189 n.nthkellkllkkkyeekflgkiheredlkkliaeneefdlkedYykeykevLekilk 246
+                  n nt+k++++++ k+y+  ++gkih+ +++k+li+e +e+d++ +Yyke++e+Leki+k
+       TEST_7 194 NrNTFKDVEEVVFKNYGMFIKGKIHSLNSIKVLINELKEPDVEAMYYKEAQEALEKIVK 252
+                  ********************************************************986 PP
+
+>> TEST_27  
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !  323.2  22.6   1.8e-99   1.8e-99       1     245 [.       1     251 []       1     251 [] 0.98
+
+  Alignments for each domain:
+  == domain 1  score: 323.2 bits;  conditional E-value: 1.8e-99
+  pf32_ref_v1   1 mdrkkpkiitiasikGGvGKstlsiifatlLsk.kkKvLLiDlDpQasltSYflkkikekvdieklniyevlkek..ldinkviikindnldlipsyl 95 
+                  md+kkpkiitiasikGGvGKs+lsiif+++Ls+ ++KvL++DlDpQ+sltSYfl++i+   +ie +n+y++lk++  + +n++i++in+n+++ip+++
+      TEST_27   1 MDNKKPKIITIASIKGGVGKSMLSIIFSYILSEmNNKVLIVDLDPQNSLTSYFLQYIR---NIELNNVYYLLKRDqnIAFNEYINSINNNMYIIPAHP 95 
+                  9*********************************************************...************8755889****************** PP
+
+  pf32_ref_v1  96 slekfnkesieykelllkkkle..llkenydYiiiDtsPsldlllknaLvisdyviiPvtaekwsvEslelleeaieklek...kkikifiletqfkk 188
+                  +l+kf+k +i+ykel+l++ ++  l+ +n+dY++iDt+Psl++ll naL+i+++viiP++ae+wsvEsl++l+++i+++e+   k+i++ i+e+qf+k
+      TEST_27  96 ILCKFEKGDIPYKELMLEHIFDknLHYYNFDYVVIDTPPSLSSLLFNALNITHKVIIPIQAERWSVESLPILMNEIKEVEIirkKNIDVLIIENQFIK 193
+                  *********************988999*****************************************************889889************ PP
+
+  pf32_ref_v1 189 n.nthkellkllkkkyeekflgkiheredlkkliaeneefdlkedYykeykevLekil 245
+                  n nt+k+++++l+++y++ ++g +h+++++k++i+e +e++ ke Yy+e+k++L++++
+      TEST_27 194 NrNTYKDIESILQSEYKDLIKGRVHFYNSIKVFINELKEPNNKEIYYQEIKKILNNMF 251
+                  *******************************************************996 PP
+
+>> TEST_34  
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !  322.4  15.4   3.1e-99   3.1e-99       1     246 [.       1     244 [.       1     248 [. 0.99
+
+  Alignments for each domain:
+  == domain 1  score: 322.4 bits;  conditional E-value: 3.1e-99
+  pf32_ref_v1   1 mdrkkpkiitiasikGGvGKstlsiifatlLskkkKvLLiDlDpQasltSYflkkikek.vdieklniyevlkekldinkviikindnldlipsylsl 97 
+                  md+kkpkiitiasikGGvGKst+++ +a lLskk+KvLLiD+D+Qas+tSY+++ki+e+ ++++  niyevl ++ldi+k+i++i+dnldl+psylsl
+      TEST_34   1 MDTKKPKIITIASIKGGVGKSTTCLALAFLLSKKNKVLLIDMDTQASVTSYYQDKIQEDnINLKFSNIYEVLVNDLDIKKAIVNIEDNLDLLPSYLSL 98 
+                  9*********************************************************9*************************************** PP
+
+  pf32_ref_v1  98 ekfnkesieykelllkkklellkenydYiiiDtsPsldlllknaLvisdyviiPvtaekwsvEslelleeaieklekkkikifiletqfkknnthkel 195
+                  + +n+ +ie+k+lllk++l++++++y+Yii+Dt+Ps+d+++kna+++sdy+i+P+ aekw+vE+l+ll  +++kl + ki++f+l+t+fkknnthke+
+      TEST_34  99 HMLNEIEIEFKDLLLKSNLSCFSSDYKYIILDTAPSYDIAFKNAVLSSDYIIVPIIAEKWAVECLDLLDYFLNKLGL-KIPLFLLITRFKKNNTHKEF 195
+                  ****************************************************************************9.******************** PP
+
+  pf32_ref_v1 196 lkllkkkyeekflgkiheredlkkliaeneefdlkedYykeykevLekilk 246
+                  l+llk++   +flg+i+eredl+k+ia+n++f+l++dY+ eyk++++k+++
+      TEST_34 196 LNLLKNR--GDFLGIISEREDLNKNIASNSRFSLEKDYMYEYKNAINKFFD 244
+                  *******..***************************************996 PP
+
+>> TEST_22  
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !  322.3  21.0   3.3e-99   3.3e-99       1     246 [.       1     250 [.       1     253 [] 0.99
+
+  Alignments for each domain:
+  == domain 1  score: 322.3 bits;  conditional E-value: 3.3e-99
+  pf32_ref_v1   1 mdrkkpkiitiasikGGvGKstlsiifatlLsk.kkKvLLiDlDpQasltSYflkkikekvdieklniyevlkekldinkviikindnldlipsylsl 97 
+                  mdrk++kiitias kGGvGK+tl+i+f+++L++ +kKvLLiDlDpQ+sl+SYf+k++    +i+k+n y++lk+++++ ++i+kind++++ips+++l
+      TEST_22   1 MDRKESKIITIASPKGGVGKTTLTILFSYILKDlSKKVLLIDLDPQNSLSSYFSKYVF---NIDKCNSYSLLKKDVYFGQCINKINDYISIIPSHPIL 95 
+                  9*******************************************************99...************************************* PP
+
+  pf32_ref_v1  98 ekfnkesieykelllkkkle..llkenydYiiiDtsPsldlllknaLvisdyviiPvtaekwsvEslelleeaieklek...kkikifiletqfkkn. 189
+                  e+fn+e  +yk+lll++ l+  + ++n+dYi++Dt+P+l+++lkn+L++++y+iiPv++e++svEsl++l+++i++++    k+++i+i+e+qf+kn 
+      TEST_22  96 ENFNSEILNYKDLLLENILNrnISNYNFDYILLDTPPNLGFILKNSLNVTEYIIIPVQVERFSVESLSILMQTINDVRDfrnKNFNISIIENQFIKNr 193
+                  *******************99999*****************************************************988889*************** PP
+
+  pf32_ref_v1 190 nthkellkllkkkyeekflgkiheredlkkliaeneefdlkedYykeykevLekilk 246
+                  nt+k++++ll+k+y+ +++gkih+++++k+li+e  e+++ke Yyke+k++Le+i++
+      TEST_22 194 NTFKDVEELLYKEYSFYIKGKIHYYNSVKVLINELLEPSVKEVYYKEIKNTLENIIN 250
+                  *******************************************************97 PP
+
+>> TEST_17  
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !  321.4  15.3   6.2e-99   6.2e-99       3     246 ..       2     249 ..       1     253 [. 0.98
+
+  Alignments for each domain:
+  == domain 1  score: 321.4 bits;  conditional E-value: 6.2e-99
+  pf32_ref_v1   3 rkkpkiitiasikGGvGKstlsiifatlLsk.kkKvLLiDlDpQasltSYflkkikekvdieklniyevlkekldinkviikindnldlipsylslek 99 
+                  +kkp+i+tias+kGGvGKstl+i+f++lL++  kK+L++D+DpQ+s+tSYf+++++   ++e +n+y++lk+ +++n+++ kind++ +ip++++le+
+      TEST_17   2 NKKPNILTIASLKGGVGKSTLTILFSYLLKDlGKKILIVDMDPQNSITSYFSNYVH---NVEIYNTYSMLKGGVSFNNCVGKINDHIFIIPAHPILEN 96 
+                  79******************************************************...9************************************** PP
+
+  pf32_ref_v1 100 fnkesieykelllkkkle..llkenydYiiiDtsPsldlllknaLvisdyviiPvtaekwsvEslelleeaieklek...kkikifiletqfkkn.nt 191
+                  fn e i+yke++l+ ++e  + ++++dYi++Dt+P++d+l+knaL+i+d++iiPv++e+ws+Es+++l+++ie++++   k ++++i+e+qf+kn nt
+      TEST_17  97 FNLEPIDYKEIVLELRIEqnISAYEFDYILLDTPPHRDFLVKNALNITDHIIIPVQVERWSIESFTILMNMIENFQIikkKIYTTSIVENQFIKNrNT 194
+                  *****************99899*****************************************************9887566999************* PP
+
+  pf32_ref_v1 192 hkellkllkkkyeekflgkiheredlkkliaeneefdlkedYykeykevLekilk 246
+                  +k++++ll++ky+++++gkih+++ +k++i+e  e++++e+Yyke+k++L++il 
+      TEST_17 195 LKDIERLLYEKYGSYVKGKIHFSNGIKVFINELIEPSSEESYYKEAKKTLHNILG 249
+                  ****************************************************985 PP
+
+>> TEST_15  
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !  318.4  17.2   5.1e-98   5.1e-98       1     246 [.       1     252 [.       1     254 [] 0.98
+
+  Alignments for each domain:
+  == domain 1  score: 318.4 bits;  conditional E-value: 5.1e-98
+  pf32_ref_v1   1 mdrkkpkiitiasikGGvGKstlsiifatlLsk.kkKvLLiDlDpQasltSYflkkikekvdieklniyevlkek..ldinkviikindnldlipsyl 95 
+                  mdrkk++iitias+kGGvGKs+l+iif+++L++ +kKvLL+DlDpQ+sltSYf+++ik   +ie +n+y+++k+   +d nk++++in+n++++ps++
+      TEST_15   1 MDRKKTEIITIASVKGGVGKSALAIIFSYILKNfNKKVLLVDLDPQNSLTSYFIRHIK---SIEGINVYYMFKDYqdFDPNKYLNEINNNMYIVPSHP 95 
+                  9*********************************************************...9***********98445668***************** PP
+
+  pf32_ref_v1  96 slekfnkesieykelllkkkle..llkenydYiiiDtsPsldlllknaLvisdyviiPvtaekwsvEslelleeaieklek...kkikifiletqfkk 188
+                  +l+kf++e+++yke+ll+ +++  l+++n+dYi+iDt+Psl+ ll naL+i+++viiPv+ e+wsvE++++l++aie++++   kki+i+i+e+qf+k
+      TEST_15  96 ILCKFEQEDKRYKEQLLEYCVKkiLINNNFDYILIDTPPSLGPLLYNALNITNKVIIPVQLERWSVEAFPMLMDAIEEVNLfkdKKIDISIVENQFIK 193
+                  **********************9999******************************************************88889************* PP
+
+  pf32_ref_v1 189 n.nthkellkllkkkyeekflgkiheredlkkliaeneefdlkedYykeykevLekilk 246
+                  n nt+ +++k + kky+  ++gkih+ +++k+li+e +e+d++  Yyke++e+Leki+k
+      TEST_15 194 NrNTFIDVEKQVLKKYSILIKGKIHSFNSVKVLINELKEPDVSAVYYKEAQEALEKIVK 252
+                  ********************************************************986 PP
+
+>> TEST_20  
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !  318.2  18.3   5.8e-98   5.8e-98       1     246 [.       1     244 [.       1     245 [] 0.99
+
+  Alignments for each domain:
+  == domain 1  score: 318.2 bits;  conditional E-value: 5.8e-98
+  pf32_ref_v1   1 mdrkkpkiitiasikGGvGKstlsiifatlLsk.kkKvLLiDlDpQasltSYflkkikekvdieklniyevlkekldinkviikindnldlipsylsl 97 
+                  mdrkk++iitia++kGGvGKstlsi+f+++L++  kKvLLiD+D+Q++ltSYf k++    +++k+niy++l ++++++++i kindn+ +ips++ l
+      TEST_20   1 MDRKKSNIITIANLKGGVGKSTLSILFSYVLKDlGKKVLLIDMDSQNALTSYFRKYVF---NFDKNNIYNLLIGNVYFDQCISKINDNIFIIPSHPFL 95 
+                  9*******************************************************99...9************************************ PP
+
+  pf32_ref_v1  98 ekfnkesieykelllkkkle..llkenydYiiiDtsPsldlllknaLvisdyviiPvtaekwsvEslelleeaieklekkkikifiletqfkkn.nth 192
+                  ++fn+++ + ke+ll+++l+  +l +++dYi +Dt+Ps++++lknaL++++++iiPv++e+ws+Esle+l+++i++   k+++i+i+++qf+kn n++
+      TEST_20  96 DEFNDKNLDNKENLLSFCLDknVLGHDFDYIFLDTPPSFSFILKNALNTTNHIIIPVQPETWSIESLEILMKKITD---KSYNISIVVNQFIKNrNIL 190
+                  *******************9999************************************************99987...789**************** PP
+
+  pf32_ref_v1 193 kellkllkkkyeekflgkiheredlkkliaeneefdlkedYykeykevLekilk 246
+                  ke++++l+k+y+++++gkih+++++k++i ++ e+d+k++Yyke+k+vL++il+
+      TEST_20 191 KEVEDALYKRYSNYIKGKIHYYNSIKVFIINRLEPDIKSKYYKEAKDVLKNILD 244
+                  ***************************************************985 PP
+
+>> TEST_8  
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !  317.7  13.7   8.2e-98   8.2e-98       1     247 [.       1     250 [.       1     254 [. 0.97
+
+  Alignments for each domain:
+  == domain 1  score: 317.7 bits;  conditional E-value: 8.2e-98
+  pf32_ref_v1   1 mdrkkpkiitiasikGGvGKstlsiifatlLskkkKvLLiDlDpQasltSYflkkikek.vdieklniyevlkekldinkviikindnldlipsylsl 97 
+                  mdrk++kiit+asikGGvGKst++i+fa+lLs+++KvLLiD+D+Qas+tSYf++k+ke+ vd+e++ni+evlk++ldin++++++ +nl+lipsyl+l
+       TEST_8   1 MDRKRTKIITVASIKGGVGKSTSAIVFAKLLSREYKVLLIDIDTQASTTSYFYEKVKENnVDLERKNICEVLKDNLDINNTVVSVGKNLNLIPSYLTL 98 
+                  9************************************************************************************************* PP
+
+  pf32_ref_v1  98 ekfnkesi.....eykelllkkklellkenydYiiiDtsPsldlllknaLvisdyviiPvtaekwsvEslelleeaieklekkkikifiletqfkknn 190
+                  +++n e +     +  +l lk +++ l+ nydYi+iDt+Psldl+l++aL++++y++iP+taekw++Es+elle++i++lek  ++if++ t+fk++n
+       TEST_8  99 HSLNGEFYclnkhKAIDLKLKVEIKRLRINYDYIVIDTNPSLDLTLRCALNATHYMVIPMTAEKWTFESYELLEFFIKSLEK-LVPIFFILTRFKRTN 195
+                  ******9988866777888999999********************************************************7.*************** PP
+
+  pf32_ref_v1 191 thkellkllkkkyeekflgkiheredlkkliaeneefdlkedYykeykevLekilkk 247
+                  thkellk+++kk  ++flg+++e+e l+k+ia+n efdlk++Y+ ey+e+L++++++
+       TEST_8 196 THKELLKIMQKK--NNFLGVVSEKEGLNKKIATNGEFDLKSSYILEYSEILKNLISH 250
+                  ************..***************************************9875 PP
+
+>> TEST_9  
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !  317.1  18.9   1.2e-97   1.2e-97       1     245 [.       1     251 [.       1     253 [] 0.98
+
+  Alignments for each domain:
+  == domain 1  score: 317.1 bits;  conditional E-value: 1.2e-97
+  pf32_ref_v1   1 mdrkkpkiitiasikGGvGKstlsiifatlLsk.kkKvLLiDlDpQasltSYflkkikekvdieklniyevlkek..ldinkviikindnldlipsyl 95 
+                  md+kkp+ii+ia+ikGGvGKs+l+iif+ +L++ +kKvLL+D+DpQ+sltSYf+k+ik   +++k+n+y++lke+   +++k+++ki+dn++lips++
+       TEST_9   1 MDNKKPEIISIANIKGGVGKSVLTIIFSFILKSfDKKVLLVDFDPQNSLTSYFFKYIK---SLSKNNVYSFLKEDsnANLDKYLTKIHDNVYLIPSHP 95 
+                  9*********************************************************...9***********98668999***************** PP
+
+  pf32_ref_v1  96 slekfnkesieykelllkkkle..llkenydYiiiDtsPsldlllknaLvisdyviiPvtaekwsvEslelleeaieklek...kkikifiletqfkk 188
+                  sl+ fnke+++ykel+lk+kle  + ++n++Y+iiDt+P+ld+ll+naL+i++++iiP+++e++svEsl++l+++iek+++   k+i+i+i+e+qf+k
+       TEST_9  96 SLHLFNKENTSYKELFLKHKLErvFPNYNFNYVIIDTPPNLDSLLDNALNITNRLIIPIQVERFSVESLSILMKYIEKVSMyldKDIDISIIENQFMK 193
+                  **********************9999******************************************************99999************* PP
+
+  pf32_ref_v1 189 n.nthkellkllkkkyeekflgkiheredlkkliaeneefdlkedYykeykevLekil 245
+                  n nt+k++++ +k+ky+++++gk+h+++++k++ ++ +e+++ke Yy+e+ e+L++il
+       TEST_9 194 NrNTFKSIENSIKDKYGKYIKGKVHFYNKVKVFTNNLQEPSVKEPYYQECLEALKNIL 251
+                  ********************************************************97 PP
+
+>> TEST_11  
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !  316.3  19.4   2.2e-97   2.2e-97       1     247 [.       1     243 [.       1     245 [] 0.99
+
+  Alignments for each domain:
+  == domain 1  score: 316.3 bits;  conditional E-value: 2.2e-97
+  pf32_ref_v1   1 mdrkkpkiitiasikGGvGKstlsiifatlLskkkKvLLiDlDpQasltSYflkkikekvdieklniyevlkekldinkviikindnldlipsylsle 98 
+                  mdr+k+kii+++sikGGvGKs+++iifa++Ls k+KvLLiD+DpQas++SY ++ki+e  +i ++niy+vl+  l+in++i+ i++nld+ipsy+ l+
+      TEST_11   1 MDRRKCKIICLSSIKGGVGKSVSAIIFAQILSMKYKVLLIDMDPQASISSYLYDKIEE-RNILSKNIYKVLTFALNINDAINIISENLDFIPSYIDLN 97 
+                  9*******************************************************95.6************************************** PP
+
+  pf32_ref_v1  99 kfnkesieykelllkkklellkenydYiiiDtsPsldlllknaLvisdyviiPvtaekwsvEslelleeaieklekkkikifiletqfkknnthkell 196
+                   fn++s+++kel lkk+l +lk+ny+YiiiDt+Ps+d++l naL++s+ v++P+ +e+w++Es+++++++i+ l++ ++k fi++t+fkkn+thkell
+      TEST_11  98 LFNRDSMPLKELNLKKSLLNLKKNYEYIIIDTNPSMDSTLANALIVSNFVLTPIISERWAIESFDMIMSYINYLSL-NLKPFIFITRFKKNSTHKELL 194
+                  ***************************************************************************9.********************* PP
+
+  pf32_ref_v1 197 kllkkkyeekflgkiheredlkkliaeneefdlkedYykeykevLekilkk 247
+                  k+l++k  +++lg+++eredl+++ia++e+fdl++dY++eyk++L+++l++
+      TEST_11 195 KILHSK--HNVLGVVNEREDLNRKIAKSENFDLSKDYIEEYKNILKNFLEI 243
+                  ******..****************************************975 PP
+
+>> TEST_4  
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !  313.9  22.4   1.2e-96   1.2e-96       1     246 [.       1     251 [.       1     252 [] 0.97
+
+  Alignments for each domain:
+  == domain 1  score: 313.9 bits;  conditional E-value: 1.2e-96
+  pf32_ref_v1   1 mdrkkpkiitiasikGGvGKstlsiifatlLsk.kkKvLLiDlDpQasltSYflkkikekvdieklniyevlkekldinkviikindnldlipsylsl 97 
+                  md+kkp+iit+ s+kGGvGKstlsi+f+++L++ +kK LLiDlD+Q+sl+SYf k+i+   +iek+niy++lk++++++++i+kindn+++ip++++l
+       TEST_4   1 MDTKKPNIITMVSLKGGVGKSTLSILFSYILKDlNKKTLLIDLDSQNSLSSYFKKYIN---NIEKNNIYNLLKGEIYFSRCINKINDNIYFIPAHPVL 95 
+                  9*********************************************************...************************************* PP
+
+  pf32_ref_v1  98 ekfnkesieykelllkkkle..llkenydYiiiDtsPsldlllknaLvisdyviiPvtaekwsvEslelleeaiek.lek...kkikifiletqfkkn 189
+                  +k+n e+i+yk  ll+++++  + ++n+dYi+iDtsPs+d+llknaL+i++y+iiPv++e++++Esle+l+++i++ ++     +++i+i+e+qf++n
+       TEST_4  96 DKLNFENINYKGSLLTHHINknISNHNFDYILIDTSPSFDFLLKNALNITNYIIIPVQVERLAIESLEILIDKITSrIQSfksSNYNISIVENQFIRN 193
+                  *******************99999**********************************************999876355565579************* PP
+
+  pf32_ref_v1 190 .nthkellkllkkkyeekflgkiheredlkkliaeneefdlkedYykeykevLekilk 246
+                   nt+k+++k+l+k+y+e+++gkih+++++k ++++  e++ + +Yyke++ +L+++l+
+       TEST_4 194 rNTMKDFEKVLYKEYGEYIKGKIHYSNNIKIFMNDLVEPSPRGKYYKEAEIALKNMLS 251
+                  *******************************************************986 PP
+
+>> TEST_12  
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !  312.2  14.2   4.1e-96   4.1e-96       1     245 [.       1     247 [.       1     250 [] 0.97
+
+  Alignments for each domain:
+  == domain 1  score: 312.2 bits;  conditional E-value: 4.1e-96
+  pf32_ref_v1   1 mdrkkpkiitiasikGGvGKstlsiifatlLskkkKvLLiDlDpQasltSYflkkikek.vdieklniyevlkekldinkviikindnldlipsylsl 97 
+                  mdrkk+kiitias+kGGvGKst+sii+a+lLskk+KvLLiD+D+Qa++tSY+++++++k +di+k+ni +v+k+ +dink+ii++++n+ lipsy+++
+      TEST_12   1 MDRKKSKIITIASLKGGVGKSTTSIILANLLSKKHKVLLIDTDDQAATTSYYYNELETKnFDISKMNIGNVIKDGTDINKSIINVENNIALIPSYITV 98 
+                  9*********************************************************99************************************** PP
+
+  pf32_ref_v1  98 ekfnkesi.....eykelllkkklellkenydYiiiDtsPsldlllknaLvisdyviiPvtaekwsvEslelleeaieklekkkikifiletqfkknn 190
+                  +++n e +        e+ lk+kl+ +++nydYiiiDt+P+++++lk +L++s+yvi P+taekw+vE++e l+++i++++   i+ifi++t+fkkn 
+      TEST_12  99 DELNGEYYydnrhLPIEFSLKTKLNSIADNYDYIIIDTNPKRNFTLKLSLISSNYVISPMTAEKWAVEGFETLRRYIKEVAG--IPIFIVITRFKKNV 194
+                  *****99876665567999*************************************************************97..************** PP
+
+  pf32_ref_v1 191 thkellkllkkkyeekflgkiheredlkkliaeneefdlkedYykeykevLekil 245
+                  thk+l+++++ k  + flg i+eredl+k+i +ne+fd+++dY+ eyk++L+ +l
+      TEST_12 195 THKQLMEIVSMK--NGFLGYISEREDLNKRIGCNEKFDFSKDYIIEYKKILDVFL 247
+                  ************..**************************************997 PP
+
+>> TEST_6  
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !  309.9  19.8     2e-95     2e-95       1     246 [.       1     248 [.       1     249 [] 0.98
+
+  Alignments for each domain:
+  == domain 1  score: 309.9 bits;  conditional E-value: 2e-95
+  pf32_ref_v1   1 mdrkkpkiitiasikGGvGKstlsiifatlLsk.kkKvLLiDlDpQasltSYflkkikekvdieklniyevlkekldinkviikindnldlipsylsl 97 
+                  md kkp+ii+++s+kGGvGKstlsi+f++lL++  kK+LLiDlDpQ+sltSYf+k+i    d e++n+y++lk++++++k+++kind++++ips+++l
+       TEST_6   1 MDIKKPDIIALTSVKGGVGKSTLSILFSYLLKElGKKILLIDLDPQNSLTSYFTKYIP---DAETYNVYSMLKGDFYFKKYLNKINDYMYIIPSHPML 95 
+                  9*********************************************************...9************************************ PP
+
+  pf32_ref_v1  98 ekfnkesieykelllkkkle..llkenydYiiiDtsPsldlllknaLvisdyviiPvtaekwsvEslelleeaieklek...kkikifiletqfkkn. 189
+                  ekfn+e+   +e++l+  l+  ++++++dYi++DtsP  +lllk+aL++s+y+iiPv++e ws+Es+++l++ i+ ++k   kk++i+i+e+qf+kn 
+       TEST_6  96 EKFNTETD--QETFLEYYLNrnIINCDFDYILLDTSPGSNLLLKSALNTSNYIIIPVQSEIWSIESFNILINIINGITKhreKKYNISIVENQFIKNr 191
+                  *****988..7999999999999*******************************************************99999*************** PP
+
+  pf32_ref_v1 190 nthkellkllkkkyeekflgkiheredlkkliaeneefdlkedYykeykevLekilk 246
+                  n++ke+++l++k+y+e+++gkih+++++k+li+++ e++++e Yy+e+ke+L++i++
+       TEST_6 192 NILKEVENLIHKEYKEYIKGKIHFYNSIKVLITKRLEPSSREIYYQEIKETLKNIFS 248
+                  ******************************************************985 PP
+
+>> TEST_3  
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !  306.2  15.7   2.7e-94   2.7e-94       1     247 [.       1     250 [.       1     252 [. 0.98
+
+  Alignments for each domain:
+  == domain 1  score: 306.2 bits;  conditional E-value: 2.7e-94
+  pf32_ref_v1   1 mdrkkpkiitiasikGGvGKstlsiifatlLsk.kkKvLLiDlDpQasltSYflkkikek.vdieklniyevlkekldinkviikindnldlipsyls 96 
+                  m ++k+kiiti+s+kGGvGKst++iifa++L+k +kKvLLiD+D+Q+s+tSY+++++k++ +d+ k ni ev+++k++i +++i+in+nldlip++++
+       TEST_3   1 MAKRKAKIITISSMKGGVGKSTSAIIFANILTKnNKKVLLIDMDDQSSVTSYYFEELKNHrFDVLKRNIGEVIRDKIEIIQALININNNLDLIPACIT 98 
+                  899******************************9**************************************************************** PP
+
+  pf32_ref_v1  97 lekfnkesi.....eykelllkkklellkenydYiiiDtsPsldlllknaLvisdyviiPvtaekwsvEslelleeaieklekkkikifiletqfkkn 189
+                  l+++n+  +     +y e+ lk+kl+++k+nydY+iiDt+P+++++lk aL++sdyvi P+ aekws+E++e+l++++++++   i+ifi++t+fkkn
+       TEST_3  99 LDDLNNICYcssnyKYIEWGLKDKLTIIKNNYDYVIIDTNPKRNFTLKAALLSSDYVISPMVAEKWSMEAFEVLKKYVDSVSA--IPIFIVITRFKKN 194
+                  *****987777766999*****************************************************************7..************* PP
+
+  pf32_ref_v1 190 nthkellkllkkkyeekflgkiheredlkkliaeneefdlkedYykeykevLekilkk 247
+                    hk+ll+++k k  e+flg+i+eredl+k+i +neefd+++dY+ ey++vL+++l+k
+       TEST_3 195 FSHKSLLDIVKFK--ENFLGVINEREDLNKRIGCNEEFDFSKDYIIEYHNVLDSFLSK 250
+                  **********999..***************************************9975 PP
+
+>> TEST_32  
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !  304.3  15.5     1e-93     1e-93       1     246 [.       1     249 [.       1     251 [] 0.97
+
+  Alignments for each domain:
+  == domain 1  score: 304.3 bits;  conditional E-value: 1e-93
+  pf32_ref_v1   1 mdrkkpkiitiasikGGvGKstlsiifatlLsk.kkKvLLiDlDpQasltSYflkkikek.vdieklniyevlkekldinkviikindnldlipsyls 96 
+                  md+kkpkiitiasikGGvGKst++++++++L+k ++KvL+iD DpQas+tSYfl k+ke+ v++e++n+yev+k++++i+++i+++++ ld+ips l+
+      TEST_32   1 MDNKKPKIITIASIKGGVGKSTSALFYGNILAKeRHKVLIIDSDPQASITSYFLFKLKEQnVNVENYNLYEVFKQRKYIENCIFTVSNCLDIIPSSLE 98 
+                  9********************************9**************************************************************** PP
+
+  pf32_ref_v1  97 lekfnkesieykelllkkklellkenydYiiiDtsPsldlllknaLvisdyviiPvtaekwsvEslelleeaieklekkkik.ifiletqfkknnthk 193
+                  l+ fn+esi+++++ll+k+l ++k++ydY+iiDt+Psl++ll+naLvi++y+iiP++++ w+vEs++l+ +ai+k+  ++i+  f+++  ++++n+ k
+      TEST_32  99 LSVFNSESIPLQDNLLEKRLLTIKSKYDYVIIDTNPSLGHLLNNALVITNYLIIPINSDLWAVESIDLILDAINKVYRNDITpYFLVTGALERQNIDK 196
+                  *****************************************************************************96665055566677999**** PP
+
+  pf32_ref_v1 194 ellkllkkkyeekflgkiheredlkkliaeneefdlkedYykeykevLekilk 246
+                  e+   l+++y+e+++g+i +r+d+kk++ +++ef++k+dYy+eyk+ L+k+lk
+      TEST_32 197 EIIFNLENRYKENLIGVIPKRDDIKKVLFYRKEFSSKTDYYQEYKKSLDKMLK 249
+                  ***************************************************97 PP
+
+>> TEST_24  
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !  303.9  19.1   1.3e-93   1.3e-93       1     247 [.       1     250 [.       1     252 [. 0.98
+
+  Alignments for each domain:
+  == domain 1  score: 303.9 bits;  conditional E-value: 1.3e-93
+  pf32_ref_v1   1 mdrkkpkiitiasikGGvGKstlsiifatlLsk.kkKvLLiDlDpQasltSYflkkikek.vdieklniyevlkekldinkviikindnldlipsyls 96 
+                  md+k++kiitiasikGGvGKst+s++f+++Lsk ++K+LLiDlDpQas+tS++++ +++k ++ +++niy+vlk+++di++++iki++n d+i+s+++
+      TEST_24   1 MDKKNTKIITIASIKGGVGKSTTSLMFTNILSKkNNKILLIDLDPQASSTSFYINILRKKnLSPKDINIYKVLKKEIDIENSTIKIDNNTDFIASHIN 98 
+                  9********************************9************************999************************************* PP
+
+  pf32_ref_v1  97 lekfnkesieykelllkkklellkenydYiiiDtsPsldlllknaLvisdyviiPvtaekwsvEslelleeaieklekkkikifiletqfkkn.nthk 193
+                  l++fn+esi++ke+llk  l++++++yd+ii+Dt+P+l++ll+n+L+isdy+iiP+ +++w++Esl+l+++ +++l  k+++if+l+t+f+   n+ k
+      TEST_24  99 LSRFNEESISLKENLLKIFLSFIQNRYDFIIMDTAPTLGSLLNNSLIISDYLIIPLPTDQWAIESLDLIINRLDDLFRKDLPIFYLITKFIERqNIDK 196
+                  ******************************************************************************************6555**** PP
+
+  pf32_ref_v1 194 ellkllkkkyeekflgkiheredlkkliaeneefdlkedYykeykevLekilkk 247
+                  el+k+++ +y+ kflg + +r++l+k+i ++eef+++edYyk y+++Le++l++
+      TEST_24 197 ELKKFIECEYKGKFLGSVPKRDNLRKTIFYREEFNSNEDYYKAYENILENFLSI 250
+                  ***************************************************975 PP
+
+>> TEST_14  
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !  295.1  14.1   6.7e-91   6.7e-91       1     244 [.       1     255 []       1     255 [] 0.96
+
+  Alignments for each domain:
+  == domain 1  score: 295.1 bits;  conditional E-value: 6.7e-91
+  pf32_ref_v1   1 mdrk....kpkiitiasikGGvGKstlsiifatlLskkkKvLLiDlDpQasltSYflkkikek.vdieklniyevlkekldinkviikindnldlips 93 
+                  mdrk    kp+ii+iasikGGvGKst+si+f+t+Lsk++KvLL+DlDpQ+++tSYf+++ + +   i+ +n y+++k+++++++v+i+i++nld+ips
+      TEST_14   1 MDRKklakKPHIIAIASIKGGVGKSTSSIMFSTILSKTNKVLLVDLDPQNAVTSYFITQDHPRmELINIYNSYSLIKKHKTFKDVVISISKNLDFIPS 98 
+                  555544449****************************************************99778999***************************** PP
+
+  pf32_ref_v1  94 ylslekfnkesieykelllkkklellkenydYiiiDtsPsldlllknaLvisdyviiPvtaekwsvEslelleeaieklek.....kkikifiletqf 186
+                  yl+l+kf+ke +++kel+l++++ ++ e+ydY+iiDt+Psl++ l+naLvi+d+viiPv  e+w+vE+l+ll+++i++le+     +   i+i+++++
+      TEST_14  99 YLELAKFSKEGNQFKELMLRNAVYNYLEDYDYVIIDTPPSLSSELDNALVIADKVIIPVPLERWAVENLPLLINQIKELENnfmgkEAKIIHIFASKV 196
+                  ********************************************************************************989995468899****** PP
+
+  pf32_ref_v1 187 kkn.nthkellkllkkkyeekflgkiheredlkkliaeneefdlkedYykeykevLeki 244
+                  +    t++e+++llk+ky +kf+g++h++e+lkk i++   ++ +e+Yykey ++Leki
+      TEST_14 197 EIGrVTSTEIMSLLKEKYLNKFIGEVHKSEALKKIIDYAIGPKENENYYKEYLRILEKI 255
+                  9988999*************************************************986 PP
+
+>> TEST_2  
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !  292.1  10.3   5.3e-90   5.3e-90       1     247 [.       1     256 [.       1     258 [] 0.96
+
+  Alignments for each domain:
+  == domain 1  score: 292.1 bits;  conditional E-value: 5.3e-90
+  pf32_ref_v1   1 mdrk....kpkiitiasikGGvGKstlsiifatlLskkkKvLLiDlDpQasltSYflkkikekvdieklniyevlkekldinkviikindnldlipsy 94 
+                  mdrk    kp+ii+ias++GG GKst+si+f+ +Lsk++KvLLiDlDpQ+++tSYf++k +    i+ +n y+++k ++ +++v+++i++nld+ipsy
+       TEST_2   1 MDRKklgkKPNIIAIASFNGGGGKSTSSIMFSLILSKTNKVLLIDLDPQNAITSYFITKNHF-RAINIYNSYSLIKAEKIFRDVVVNISENLDFIPSY 97 
+                  666555559**************************************************774.69999****************************** PP
+
+  pf32_ref_v1  95 lslekfnkesieykelllkkklellkenydYiiiDtsPsldlllknaLvisdyviiPvtaekwsvEslelleeaieklek.....kkikifiletqfk 187
+                  ++l+kf+ke+ ++kel+l+++l+ + e+ydY+iiDtsP l++ l+naLvi+d+v+iP+ + +wsvE+l++++++i+kle+     ++  i+i+++qf+
+       TEST_2  98 VTLAKFTKEADQFKELMLRNALRDYLEDYDYVIIDTSPGLSSELDNALVIADRVVIPILPARWSVEGLPVIIQHIKKLENnfmgeNSKIIHIFASQFE 195
+                  *******************************************************************************98888667999******** PP
+
+  pf32_ref_v1 188 kn.nthkellkllkkkyeekflgkiheredlkkliaeneefdlkedYykeykevLekilkk 247
+                       +++++ llk+ky ++f+gk+h++e+lk+li+++ e++ ke+Yykey ++Lek+++ 
+       TEST_2 196 VGrIASTKIMALLKEKYLNEFIGKVHKSEALKRLIDYSLEPKEKENYYKEYLTILEKMMNF 256
+                  *96777****************************************************975 PP
+
+>> TEST_16  
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !  191.0   1.4     4e-59     4e-59       7     234 ..       2     228 ..       1     240 [. 0.93
+
+  Alignments for each domain:
+  == domain 1  score: 191.0 bits;  conditional E-value: 4e-59
+  pf32_ref_v1   7 kiitiasikGGvGKstlsiifatlLskkkKvLLiDlDpQasltS.Yflkkikekvdieklniyevlkekldinkviikindnldlipsylsl...ekf 100
+                  k i+++ +kGGvGK+tls  +a++Lsk+kKv+L+D+D Q++++S +fl++     +i kl+i+++l +k+d+++v+++i++n++++p+++s    +++
+      TEST_16   2 KKIAFHIQKGGVGKTTLSGNIASYLSKTKKVILVDCDIQQASSStWFLNH-----EILKLDIKDFLLKKMDVDQVVRQIQKNFYILPCVPSGtfrRDV 94 
+                  78***********************************9998888899999.....89*********************************9877789* PP
+
+  pf32_ref_v1 101 nkesieykelllkkklellkenydYiiiDtsPsldlllknaLvisdyviiPvtaekwsvEslelleeaieklek........kkikifiletqfkknn 190
+                  ++e +++ +l+++++lel k  +++ i+D+sPs++l+ +++++++++vi+P+t+e +s+E++++++e++e+l k        +ki +++l+++fk++n
+      TEST_16  95 QHELQDFPYLIDDFCLELEKLGFEFAIFDLSPSFELWERRIILAMCEVITPLTPEFLSLEGINIFKEEFESLLKsyrkkvkhEKIICNMLNKSFKRHN 192
+                  ***********************************************************************9988998776559*************9 PP
+
+  pf32_ref_v1 191 th.kellkllkkkyeekflgkiheredlkkliaeneefdlkedYy 234
+                  +h ++++++ ++ ye  +++ki+e++ +kk i          dYy
+      TEST_16 193 LHlRQFKTFGYDLYEVGQDAKIAESQLYKKSIF---------DYY 228
+                  998**************************8875.........444 PP
+
+
+
+Internal pipeline statistics summary:
+-------------------------------------
+Query model(s):                            1  (249 nodes)
+Target sequences:                         36  (9066 residues searched)
+Passed MSV filter:                        36  (1); expected 0.7 (0.02)
+Passed bias filter:                       36  (1); expected 0.7 (0.02)
+Passed Vit filter:                        36  (1); expected 0.0 (0.001)
+Passed Fwd filter:                        36  (1); expected 0.0 (1e-05)
+Initial search space (Z):                 36  [actual number of targets]
+Domain search space  (domZ):              36  [number of targets reported over threshold]
+# CPU time: 0.03u 0.00s 00:00:00.03 Elapsed: 00:00:00.03
+# Mc/sec: 63.97
+//
+[ok]
