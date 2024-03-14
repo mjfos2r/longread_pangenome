@@ -1,0 +1,531 @@
+
+RAxML-NG v. 1.2.1 released on 22.12.2023 by The Exelixis Lab.
+Developed by: Alexey M. Kozlov and Alexandros Stamatakis.
+Contributors: Diego Darriba, Tomas Flouri, Benoit Morel, Sarah Lutteropp, Ben Bettisworth, Julia Haag, Anastasis Togkousidis.
+Latest version: https://github.com/amkozlov/raxml-ng
+Questions/problems/suggestions? Please visit: https://groups.google.com/forum/#!forum/raxml
+
+System: Apple M2, 8 cores, 8 GB RAM
+
+RAxML-NG was called at 13-Mar-2024 13:05:37 as follows:
+
+raxml-ng --msa ../alignments/all_pf32_put_incl_aligned.afa --data-type AA --model JTT+G
+
+Analysis options:
+  run mode: ML tree search
+  start tree(s): random (10) + parsimony (10)
+  random seed: 1710349537
+  tip-inner: OFF
+  pattern compression: ON
+  per-rate scalers: OFF
+  site repeats: ON
+  logLH epsilon: general: 10.000000, brlen-triplet: 1000.000000
+  fast spr radius: AUTO
+  spr subtree cutoff: 1.000000
+  fast CLV updates: ON
+  branch lengths: proportional (ML estimate, algorithm: NR-FAST)
+  SIMD kernels: SSE3
+  parallelization: coarse-grained (auto), PTHREADS (auto)
+
+[00:00:00] Reading alignment from file: ../alignments/all_pf32_put_incl_aligned.afa
+[00:00:00] Loaded alignment with 428 taxa and 629 sites
+
+WARNING: Sequences 94a_lp28-4_ParA_1 and JD1_lp28-4_ParA_1 are exactly identical!
+WARNING: Sequences 94a_lp28-4_ParA_1 and B31_lp28-4_ParA_1 are exactly identical!
+WARNING: Sequences 94a_lp28-4_ParA_1 and 156a_lp28-4_ParA_1 are exactly identical!
+WARNING: Sequences 94a_lp28-4_ParA_1 and B379_lp28-4_ParA_1 are exactly identical!
+WARNING: Sequences 94a_lp28-4_ParA_1 and MM1_lp28-4_ParA_1 are exactly identical!
+WARNING: Sequences 94a_lp28-4_ParA_1 and N40_lp28-4_ParA_1 are exactly identical!
+WARNING: Sequences 94a_lp28-4_ParA_1 and B31-5A4_lp28-4_ParA_1 are exactly identical!
+WARNING: Sequences JD1_cp32-11_ParA_1 and 94a_cp32-11_ParA_1 are exactly identical!
+WARNING: Sequences JD1_cp32-11_ParA_1 and B379_cp32-11_ParA_1 are exactly identical!
+WARNING: Sequences JD1_cp32-11_ParA_1 and 156a_cp32-11_ParA_1 are exactly identical!
+WARNING: Sequences PAli_lp38_ParA_1 and B31-5A4_lp38_ParA_1 are exactly identical!
+WARNING: Sequences PAli_lp38_ParA_1 and B31_lp38_ParA_2 are exactly identical!
+WARNING: Sequences PAli_lp38_ParA_1 and B31_NRZ_lp38_ParA_1 are exactly identical!
+WARNING: Sequences B331_cp32-3_ParA_1 and B408_cp32-3_ParA_1 are exactly identical!
+WARNING: Sequences B331_cp32-3_ParA_1 and B500_cp32-3_ParA_1 are exactly identical!
+WARNING: Sequences 94a_lp28-3_ParA_1 and B408_lp28-3_ParA_1 are exactly identical!
+WARNING: Sequences 94a_lp28-3_ParA_1 and WI91-23_lp28-3_ParA_1 are exactly identical!
+WARNING: Sequences 94a_lp28-3_ParA_1 and B31-5A4_lp28-3_ParA_1 are exactly identical!
+WARNING: Sequences 94a_lp28-3_ParA_1 and B331_lp28-3_ParA_1 are exactly identical!
+WARNING: Sequences 94a_lp28-3_ParA_1 and MM1_lp28-3_ParA_1 are exactly identical!
+WARNING: Sequences 94a_lp28-3_ParA_1 and ZS7_lp28-3_ParA_2 are exactly identical!
+WARNING: Sequences 94a_lp28-3_ParA_1 and B31_lp28-3_ParA_1 are exactly identical!
+WARNING: Sequences 94a_lp28-3_ParA_1 and B500_lp28-3_ParA_1 are exactly identical!
+WARNING: Sequences 94a_lp28-3_ParA_1 and JD1_lp28-3_ParA_1 are exactly identical!
+WARNING: Sequences 94a_lp28-3_ParA_1 and 156a_lp28-3_ParA_1 are exactly identical!
+WARNING: Sequences 94a_lp28-3_ParA_1 and B379_lp28-3_ParA_1 are exactly identical!
+WARNING: Sequences Am293_chromosome_ParA_4 and B31-5A4_chromosome_ParA_4 are exactly identical!
+WARNING: Sequences Am293_chromosome_ParA_4 and B331_chromosome_ParA_4 are exactly identical!
+WARNING: Sequences Am293_chromosome_ParA_4 and B500_chromosome_ParA_4 are exactly identical!
+WARNING: Sequences Am293_chromosome_ParA_4 and Am388_chromosome_ParA_4 are exactly identical!
+WARNING: Sequences Am293_chromosome_ParA_4 and Am315_chromosome_ParA_4 are exactly identical!
+WARNING: Sequences Am293_chromosome_ParA_4 and B408_chromosome_ParA_4 are exactly identical!
+WARNING: Sequences Am293_chromosome_ParA_4 and 80a_chromosome_ParA_4 are exactly identical!
+WARNING: Sequences B331_lp28-11_ParA_1 and B31-5A4_lp28-1_ParA_1 are exactly identical!
+WARNING: Sequences B331_lp28-11_ParA_1 and B408_lp28-1_ParA_1 are exactly identical!
+WARNING: Sequences B331_lp28-11_ParA_1 and PAbe_lp28-1_ParA_2 are exactly identical!
+WARNING: Sequences B331_lp28-11_ParA_1 and B31_NRZ_lp28-1_ParA_2 are exactly identical!
+WARNING: Sequences B331_lp28-11_ParA_1 and JD1_chromosome_ParA_2 are exactly identical!
+WARNING: Sequences 94a_lp28-3_ParA_2_PUTATIVE and ZS7_lp28-3_ParA_1_PUTATIVE are exactly identical!
+WARNING: Sequences 94a_lp28-3_ParA_2_PUTATIVE and WI91-23_lp28-3_ParA_2_PUTATIVE are exactly identical!
+WARNING: Sequences 94a_lp28-3_ParA_2_PUTATIVE and B31_lp28-3_ParA_2_PUTATIVE are exactly identical!
+WARNING: Sequences 94a_lp28-3_ParA_2_PUTATIVE and 156a_lp28-3_ParA_2_PUTATIVE are exactly identical!
+WARNING: Sequences 156a_lp25_ParA_2 and JD1_lp25_ParA_1 are exactly identical!
+WARNING: Sequences 156a_lp25_ParA_2 and MM1_lp25_ParA_1 are exactly identical!
+WARNING: Sequences B31-5A4_lp56_ParA_1 and B31_lp56_ParA_2 are exactly identical!
+WARNING: Sequences B31-5A4_lp56_ParA_1 and B31_NRZ_lp56_ParA_1 are exactly identical!
+WARNING: Sequences B31-5A4_lp56_ParA_1 and 94a_lp56_ParA_2 are exactly identical!
+WARNING: Sequences B31-5A4_lp56_ParA_1 and PAli_lp56_ParA_1 are exactly identical!
+WARNING: Sequences B31-5A4_lp56_ParA_1 and PAbe_lp56_ParA_1 are exactly identical!
+WARNING: Sequences B408_cp32-1_ParA_1 and B331_cp32-11_ParA_1 are exactly identical!
+WARNING: Sequences B408_cp32-1_ParA_1 and B500_cp32-11_ParA_1 are exactly identical!
+WARNING: Sequences JD1_cp26_ParA_1 and Sh-2-82_cp26_ParA_1 are exactly identical!
+WARNING: Sequences B379_lp28-6_ParA_1 and JD1_lp28-6_ParA_1 are exactly identical!
+WARNING: Sequences Am388_chromosome_ParA_3 and Sh-2-82_chromosome_ParA_3 are exactly identical!
+WARNING: Sequences Am388_chromosome_ParA_3 and B31_chromosome_ParA_1_PUTATIVE are exactly identical!
+WARNING: Sequences Am388_chromosome_ParA_3 and Am293_chromosome_ParA_3 are exactly identical!
+WARNING: Sequences Am388_chromosome_ParA_3 and MM1_chromosome_ParA_1 are exactly identical!
+WARNING: Sequences Am388_chromosome_ParA_3 and B379_chromosome_ParA_3 are exactly identical!
+WARNING: Sequences Am388_chromosome_ParA_3 and N40_chromosome_ParA_1_PUTATIVE are exactly identical!
+WARNING: Sequences Am388_chromosome_ParA_3 and NE_5261_chromosome_ParA_3 are exactly identical!
+WARNING: Sequences Am388_chromosome_ParA_3 and ZS7_chromosome_ParA_1_PUTATIVE are exactly identical!
+WARNING: Sequences Am388_chromosome_ParA_3 and Am315_chromosome_ParA_3 are exactly identical!
+WARNING: Sequences Am388_chromosome_ParA_3 and B31-5A4_chromosome_ParA_3 are exactly identical!
+WARNING: Sequences Am388_chromosome_ParA_3 and 80a_chromosome_ParA_3 are exactly identical!
+WARNING: Sequences Am388_chromosome_ParA_3 and NE_5267_chromosome_ParA_3 are exactly identical!
+WARNING: Sequences B31_cp32-7_ParA_2_PUTATIVE and N40_cp32-7_ParA_2_PUTATIVE are exactly identical!
+WARNING: Sequences B31-5A4_lp25_ParA_1 and B331_lp25_ParA_1 are exactly identical!
+WARNING: Sequences B31-5A4_lp25_ParA_1 and N40_lp25_ParA_1 are exactly identical!
+WARNING: Sequences B31-5A4_lp25_ParA_1 and ZS7_lp25_ParA_2 are exactly identical!
+WARNING: Sequences B31-5A4_lp25_ParA_1 and B500_lp25_ParA_1 are exactly identical!
+WARNING: Sequences B31-5A4_lp25_ParA_1 and B408_lp25_ParA_1 are exactly identical!
+WARNING: Sequences B31-5A4_lp25_ParA_1 and WI91-23_lp25_ParA_2 are exactly identical!
+WARNING: Sequences B31-5A4_lp25_ParA_1 and B31_lp25_ParA_1 are exactly identical!
+WARNING: Sequences MM1_cp32-5_ParA_1 and PAli_cp32-5_ParA_1 are exactly identical!
+WARNING: Sequences MM1_cp32-5_ParA_1 and B379_cp32-5_ParA_1 are exactly identical!
+WARNING: Sequences MM1_cp32-5_ParA_1 and Bol26_cp32-5_ParA_1 are exactly identical!
+WARNING: Sequences MM1_cp32-5_ParA_1 and JD1_cp32-1+5_ParA_2 are exactly identical!
+WARNING: Sequences MM1_cp32-5_ParA_1 and 94a_cp32-5_ParA_1 are exactly identical!
+WARNING: Sequences MM1_cp32-5_ParA_1 and PAbe_cp32-5-1_ParA_1 are exactly identical!
+WARNING: Sequences MM1_cp32-5_ParA_1 and B31_NRZ_cp32-5+1_ParA_1 are exactly identical!
+WARNING: Sequences MM1_cp32-5_ParA_1 and N40_cp32-5_ParA_1 are exactly identical!
+WARNING: Sequences Bol26_lp36_ParA_1 and JD1_lp36_ParA_1 are exactly identical!
+WARNING: Sequences Bol26_lp36_ParA_1 and PAbe_lp36_ParA_1 are exactly identical!
+WARNING: Sequences Bol26_lp36_ParA_1 and B379_lp36_ParA_1 are exactly identical!
+WARNING: Sequences Bol26_lp36_ParA_1 and 156a_lp36_ParA_1 are exactly identical!
+WARNING: Sequences Bol26_lp36_ParA_1 and PAli_lp36_ParA_1 are exactly identical!
+WARNING: Sequences Bol26_lp36_ParA_1 and B31-5A4_lp36_ParA_1 are exactly identical!
+WARNING: Sequences Bol26_lp36_ParA_1 and B31_NRZ_lp36_ParA_1 are exactly identical!
+WARNING: Sequences Bol26_lp36_ParA_1 and B31_lp36_ParA_1 are exactly identical!
+WARNING: Sequences Bol26_lp36_ParA_1 and ZS7_lp36_ParA_1 are exactly identical!
+WARNING: Sequences Bol26_lp36_ParA_1 and B379_lp36_ParA_2 are exactly identical!
+WARNING: Sequences WI91-23_lp54_ParA_2_PUTATIVE and 94a_lp54_ParA_2_PUTATIVE are exactly identical!
+WARNING: Sequences WI91-23_lp54_ParA_2_PUTATIVE and ZS7_lp54_ParA_2_PUTATIVE are exactly identical!
+WARNING: Sequences WI91-23_lp54_ParA_2_PUTATIVE and Bol26_lp54_ParA_2_PUTATIVE are exactly identical!
+WARNING: Sequences B31-5A4_cp32-4_ParA_1 and B31_cp32-4_ParA_1 are exactly identical!
+WARNING: Sequences B31-5A4_cp32-4_ParA_1 and PAli_cp32-4_ParA_1 are exactly identical!
+WARNING: Sequences B31-5A4_cp32-4_ParA_1 and PAbe_cp32-9-4_ParA_1 are exactly identical!
+WARNING: Sequences B31-5A4_cp32-4_ParA_1 and B31_NRZ_cp32-4_ParA_1 are exactly identical!
+WARNING: Sequences B31-5A4_cp32-9_ParA_1 and B31_cp32-9_ParA_1 are exactly identical!
+WARNING: Sequences B31-5A4_cp32-9_ParA_1 and ZS7_cp32-9_ParA_1 are exactly identical!
+WARNING: Sequences B31-5A4_cp32-9_ParA_1 and Bol26_cp32-9_ParA_1 are exactly identical!
+WARNING: Sequences Sh-2-82_chromosome_ParA_2 and B379_chromosome_ParA_2 are exactly identical!
+WARNING: Sequences MM1_cp32-6_ParA_1 and B379_cp32-6_ParA_1 are exactly identical!
+WARNING: Sequences MM1_cp32-6_ParA_1 and 156a_cp32-6_ParA_1 are exactly identical!
+WARNING: Sequences MM1_cp32-6_ParA_1 and 94a_cp32-6_ParA_1 are exactly identical!
+WARNING: Sequences 156a_lp36_ParA_2_PUTATIVE and WI91-23_lp36_ParA_2_PUTATIVE are exactly identical!
+WARNING: Sequences 156a_lp36_ParA_2_PUTATIVE and 94a_lp36_ParA_2_PUTATIVE are exactly identical!
+WARNING: Sequences 156a_lp36_ParA_2_PUTATIVE and ZS7_lp36_ParA_2_PUTATIVE are exactly identical!
+WARNING: Sequences 156a_lp36_ParA_2_PUTATIVE and Bol26_lp36_ParA_2_PUTATIVE are exactly identical!
+WARNING: Sequences PAbe_cp32-2_ParA_1 and B31_NRZ_cp32-2_ParA_1 are exactly identical!
+WARNING: Sequences PAbe_cp32-2_ParA_1 and N40_cp32-7_ParA_1 are exactly identical!
+WARNING: Sequences PAbe_cp32-2_ParA_1 and MM1_cp32-7_ParA_1 are exactly identical!
+WARNING: Sequences PAbe_cp32-2_ParA_1 and 94a_cp32-7_ParA_1 are exactly identical!
+WARNING: Sequences PAbe_cp32-2_ParA_1 and B379_cp32-7_ParA_1 are exactly identical!
+WARNING: Sequences PAbe_cp32-2_ParA_1 and B408_cp32-7_ParA_1 are exactly identical!
+WARNING: Sequences PAbe_cp32-2_ParA_1 and B31_cp32-7_ParA_1 are exactly identical!
+WARNING: Sequences PAbe_cp32-2_ParA_1 and B331_cp32-7_ParA_1 are exactly identical!
+WARNING: Sequences PAbe_cp32-2_ParA_1 and B500_cp32-7_ParA_1 are exactly identical!
+WARNING: Sequences PAbe_cp32-2_ParA_1 and B31-5A4_cp32-7_ParA_1 are exactly identical!
+WARNING: Sequences PAbe_cp32-2_ParA_1 and WI91-23_cp32-7_ParA_1 are exactly identical!
+WARNING: Sequences PAbe_cp32-2_ParA_1 and 156a_cp32-7_ParA_1 are exactly identical!
+WARNING: Sequences PAbe_cp32-3_ParA_1 and JD1_cp32-3_ParA_1 are exactly identical!
+WARNING: Sequences PAbe_cp32-3_ParA_1 and PAli_cp32-3_ParA_1 are exactly identical!
+WARNING: Sequences PAbe_cp32-3_ParA_1 and B379_cp32-3_ParA_1 are exactly identical!
+WARNING: Sequences PAbe_cp32-3_ParA_1 and 156a_cp32-3_ParA_1 are exactly identical!
+WARNING: Sequences PAbe_cp32-3_ParA_1 and ZS7_cp32-3+10_ParA_1 are exactly identical!
+WARNING: Sequences PAbe_cp32-3_ParA_1 and B31_cp32-3_ParA_1 are exactly identical!
+WARNING: Sequences PAbe_cp32-3_ParA_1 and B31_NRZ_cp32-3_ParA_1 are exactly identical!
+WARNING: Sequences PAbe_cp32-3_ParA_1 and B31-5A4_cp32-3_ParA_1 are exactly identical!
+WARNING: Sequences 156a_cp32-1_ParA_1 and B31_NRZ_cp32-5+1_ParA_2 are exactly identical!
+WARNING: Sequences 156a_cp32-1_ParA_1 and WI91-23_cp32-1_ParA_1 are exactly identical!
+WARNING: Sequences 156a_cp32-1_ParA_1 and B31-5A4_cp32-1_ParA_1 are exactly identical!
+WARNING: Sequences 156a_cp32-1_ParA_1 and JD1_cp32-1+5_ParA_1 are exactly identical!
+WARNING: Sequences 156a_cp32-1_ParA_1 and PAli_cp32-1_ParA_1 are exactly identical!
+WARNING: Sequences 156a_cp32-1_ParA_1 and PAbe_cp32-5-1_ParA_2 are exactly identical!
+WARNING: Sequences 156a_cp32-1_ParA_1 and B31_cp32-1_ParA_1 are exactly identical!
+WARNING: Sequences 156a_cp32-1_ParA_1 and ZS7_cp32-1_ParA_1 are exactly identical!
+WARNING: Sequences B500_lp54_ParA_1 and Sh-2-82_lp54_ParA_1 are exactly identical!
+WARNING: Sequences B500_lp54_ParA_1 and NE_5261_lp54_ParA_1 are exactly identical!
+WARNING: Sequences B500_lp54_ParA_1 and B31-5A4_lp54_ParA_1 are exactly identical!
+WARNING: Sequences B500_lp54_ParA_1 and Am315_lp54_ParA_1 are exactly identical!
+WARNING: Sequences B500_lp54_ParA_1 and 156a_lp54_ParA_1 are exactly identical!
+WARNING: Sequences B500_lp54_ParA_1 and MM1_lp54_ParA_1 are exactly identical!
+WARNING: Sequences B500_lp54_ParA_1 and PAli_lp54_ParA_1 are exactly identical!
+WARNING: Sequences B500_lp54_ParA_1 and Am388_lp54_ParA_1 are exactly identical!
+WARNING: Sequences B500_lp54_ParA_1 and B408_lp54_ParA_1 are exactly identical!
+WARNING: Sequences B500_lp54_ParA_1 and Bol26_lp54_ParA_1 are exactly identical!
+WARNING: Sequences B500_lp54_ParA_1 and 80a_lp54_ParA_1 are exactly identical!
+WARNING: Sequences B500_lp54_ParA_1 and 94a_lp54_ParA_1 are exactly identical!
+WARNING: Sequences B500_lp54_ParA_1 and NE_5267_lp54_ParA_1 are exactly identical!
+WARNING: Sequences B500_lp54_ParA_1 and B379_lp54_ParA_1 are exactly identical!
+WARNING: Sequences B500_lp54_ParA_1 and B31_NRZ_lp54_ParA_1 are exactly identical!
+WARNING: Sequences B500_lp54_ParA_1 and PAbe_lp54_ParA_1 are exactly identical!
+WARNING: Sequences B500_lp54_ParA_1 and Am293_lp54_ParA_1 are exactly identical!
+WARNING: Sequences B500_lp54_ParA_1 and B31_lp54_ParA_1 are exactly identical!
+WARNING: Sequences B500_lp54_ParA_1 and JD1_lp54_ParA_1 are exactly identical!
+WARNING: Sequences B500_lp54_ParA_1 and NE_5248_lp54_ParA_1 are exactly identical!
+WARNING: Sequences B500_lp54_ParA_1 and B331_lp54_ParA_1 are exactly identical!
+WARNING: Sequences B500_lp54_ParA_1 and WI91-23_lp54_ParA_1 are exactly identical!
+WARNING: Sequences B500_lp54_ParA_1 and ZS7_lp54_ParA_1 are exactly identical!
+WARNING: Sequences B500_lp54_ParA_1 and N40_lp54_ParA_1 are exactly identical!
+WARNING: Sequences NE_5248_chromosome_ParA_1 and Am315_chromosome_ParA_1 are exactly identical!
+WARNING: Sequences NE_5248_chromosome_ParA_1 and NE_5267_chromosome_ParA_1 are exactly identical!
+WARNING: Sequences NE_5248_chromosome_ParA_1 and B31-5A4_chromosome_ParA_1 are exactly identical!
+WARNING: Sequences NE_5248_chromosome_ParA_1 and B408_chromosome_ParA_1 are exactly identical!
+WARNING: Sequences NE_5248_chromosome_ParA_1 and Am388_chromosome_ParA_1 are exactly identical!
+WARNING: Sequences NE_5248_chromosome_ParA_1 and Am293_chromosome_ParA_1 are exactly identical!
+WARNING: Sequences NE_5248_chromosome_ParA_1 and NE_5261_chromosome_ParA_1 are exactly identical!
+WARNING: Sequences NE_5248_chromosome_ParA_1 and B331_chromosome_ParA_1 are exactly identical!
+WARNING: Sequences NE_5248_chromosome_ParA_1 and 80a_chromosome_ParA_1 are exactly identical!
+WARNING: Sequences NE_5248_chromosome_ParA_1 and B500_chromosome_ParA_1 are exactly identical!
+WARNING: Sequences ZS7_cp26_ParA_2_PUTATIVE and 156a_cp26_ParA_2_PUTATIVE are exactly identical!
+WARNING: Sequences ZS7_cp26_ParA_2_PUTATIVE and Bol26_cp26_ParA_2_PUTATIVE are exactly identical!
+WARNING: Sequences ZS7_cp26_ParA_2_PUTATIVE and JD1_cp26_ParA_2_PUTATIVE are exactly identical!
+WARNING: Sequences NE_5267_chromosome_ParA_2 and B31-5A4_chromosome_ParA_2 are exactly identical!
+WARNING: Sequences NE_5267_chromosome_ParA_2 and NE_5248_chromosome_ParA_2 are exactly identical!
+WARNING: Sequences NE_5267_chromosome_ParA_2 and NE_5261_chromosome_ParA_2 are exactly identical!
+WARNING: Sequences NE_5267_chromosome_ParA_2 and Am315_chromosome_ParA_2 are exactly identical!
+WARNING: Sequences NE_5267_chromosome_ParA_2 and Am293_chromosome_ParA_2 are exactly identical!
+WARNING: Sequences NE_5267_chromosome_ParA_2 and Am388_chromosome_ParA_2 are exactly identical!
+WARNING: Sequences B331_chromosome_ParA_2 and B500_chromosome_ParA_2 are exactly identical!
+WARNING: Sequences B331_chromosome_ParA_2 and B408_chromosome_ParA_2 are exactly identical!
+WARNING: Sequences B331_cp32-4_ParA_1 and B500_cp32-4_ParA_1 are exactly identical!
+WARNING: Sequences B408_cp32-8_ParA_1 and JD1_cp32-8_ParA_1 are exactly identical!
+WARNING: Sequences B408_cp32-8_ParA_1 and B331_cp32-8_ParA_1 are exactly identical!
+WARNING: Sequences B408_cp32-8_ParA_1 and B500_cp32-8_ParA_1 are exactly identical!
+WARNING: Sequences MM1_cp32-9_ParA_1 and N40_cp32-9_ParA_1 are exactly identical!
+WARNING: Sequences MM1_cp32-9_ParA_1 and JD1_cp32-9_ParA_1 are exactly identical!
+WARNING: Sequences MM1_cp32-9_ParA_1 and B379_cp32-9_ParA_1 are exactly identical!
+WARNING: Sequences B500_lp21-cp9_ParA_1 and Sh-2-82_chromosome_ParA_5 are exactly identical!
+WARNING: Sequences B500_lp21-cp9_ParA_1 and B379_chromosome_ParA_5 are exactly identical!
+WARNING: Sequences ZS7_cp32-3+10_ParA_2_PUTATIVE and 156a_cp32-3_ParA_2_PUTATIVE are exactly identical!
+WARNING: Sequences B379_chromosome_ParA_1 and Sh-2-82_chromosome_ParA_1 are exactly identical!
+WARNING: Sequences WI91-23_cp9-3_ParA_1_PUTATIVE and 94a_cp9_ParA_1_PUTATIVE are exactly identical!
+WARNING: Sequences B31_cp32-8_ParA_1 and B31-5A4_cp32-8_ParA_1 are exactly identical!
+WARNING: Sequences B31_cp32-8_ParA_1 and 156a_cp32-8_ParA_1 are exactly identical!
+WARNING: Sequences 156a_cp32-1_ParA_2_PUTATIVE and WI91-23_cp32-1_ParA_2_PUTATIVE are exactly identical!
+WARNING: Sequences 156a_cp32-1_ParA_2_PUTATIVE and ZS7_cp32-1_ParA_2_PUTATIVE are exactly identical!
+WARNING: Sequences JD1_cp32-6_ParA_1 and B31_cp32-6_ParA_1 are exactly identical!
+WARNING: Sequences JD1_cp32-6_ParA_1 and B331_cp32-6_ParA_1 are exactly identical!
+WARNING: Sequences JD1_cp32-6_ParA_1 and B31-5A4_cp32-6_ParA_1 are exactly identical!
+WARNING: Sequences JD1_cp32-6_ParA_1 and WI91-23_cp32-6_ParA_1 are exactly identical!
+WARNING: Sequences JD1_cp32-6_ParA_1 and B500_cp32-6_ParA_1 are exactly identical!
+WARNING: Sequences JD1_cp32-6_ParA_1 and B408_cp32-6_ParA_1 are exactly identical!
+WARNING: Sequences 156a_cp32-4_ParA_2_PUTATIVE and ZS7_cp32-4_ParA_2_PUTATIVE are exactly identical!
+WARNING: Sequences 156a_cp32-4_ParA_2_PUTATIVE and WI91-23_cp32-4_ParA_2_PUTATIVE are exactly identical!
+WARNING: Sequences NE_5267_lp17_ParA_1 and NE_5261_lp17_ParA_1 are exactly identical!
+WARNING: Sequences NE_5267_lp17_ParA_1 and B408_lp17_ParA_1 are exactly identical!
+WARNING: Sequences NE_5267_lp17_ParA_1 and NE_5248_lp17_ParA_1 are exactly identical!
+WARNING: Sequences NE_5267_lp17_ParA_1 and B31-5A4_lp17_ParA_1 are exactly identical!
+WARNING: Sequences NE_5267_lp17_ParA_1 and B500_lp17_ParA_1 are exactly identical!
+WARNING: Sequences NE_5267_lp17_ParA_1 and Am315_lp17_ParA_1 are exactly identical!
+WARNING: Sequences NE_5267_lp17_ParA_1 and B331_lp17_ParA_1 are exactly identical!
+WARNING: Sequences NE_5267_lp17_ParA_1 and B379_lp17_ParA_1 are exactly identical!
+WARNING: Sequences NE_5267_lp17_ParA_1 and Sh-2-82_lp17_ParA_1 are exactly identical!
+WARNING: Sequences NE_5267_lp17_ParA_1 and 80a_lp17_ParA_1 are exactly identical!
+WARNING: Sequences NE_5267_lp17_ParA_1 and Am388_lp17_ParA_1 are exactly identical!
+WARNING: Sequences NE_5267_lp17_ParA_1 and Am293_lp17_ParA_1 are exactly identical!
+WARNING: Sequences NE_5248_chromosome_ParA_4 and NE_5261_chromosome_ParA_4 are exactly identical!
+WARNING: Sequences NE_5248_chromosome_ParA_4 and NE_5267_chromosome_ParA_4 are exactly identical!
+WARNING: Sequences JD1_cp32-1+5_ParA_3_PUTATIVE and WI91-23_cp32-5_ParA_2_PUTATIVE are exactly identical!
+WARNING: Sequences JD1_cp32-1+5_ParA_3_PUTATIVE and Bol26_cp32-5_ParA_2_PUTATIVE are exactly identical!
+WARNING: Sequences JD1_cp32-1+5_ParA_3_PUTATIVE and 94a_cp32-5_ParA_2_PUTATIVE are exactly identical!
+WARNING: Sequences JD1_cp32-1+5_ParA_3_PUTATIVE and N40_cp32-5_ParA_2_PUTATIVE are exactly identical!
+WARNING: Sequences PAli_lp56_ParA_2 and B31-5A4_lp56_ParA_2 are exactly identical!
+WARNING: Sequences PAli_lp56_ParA_2 and JD1_cp32-10_ParA_1 are exactly identical!
+WARNING: Sequences PAli_lp56_ParA_2 and B31_NRZ_lp56_ParA_2 are exactly identical!
+WARNING: Sequences PAli_lp56_ParA_2 and B31_lp56_ParA_3 are exactly identical!
+WARNING: Sequences PAli_lp56_ParA_2 and PAbe_lp56_ParA_2 are exactly identical!
+WARNING: Sequences WI91-23_cp32-10_ParA_1 and N40_cp32-10_ParA_1 are exactly identical!
+WARNING: Sequences 156a_lp28-6_ParA_2 and B408_lp28-6_ParA_1 are exactly identical!
+WARNING: Sequences 156a_lp28-6_ParA_2 and B331_lp28-6_ParA_1 are exactly identical!
+WARNING: Sequences 156a_lp28-6_ParA_2 and B500_lp28-6_ParA_1 are exactly identical!
+WARNING: Sequences 156a_lp28-6_ParA_2 and WI91-23_lp28-6_ParA_2 are exactly identical!
+WARNING: Sequences B408_cp26_ParA_1 and B500_cp26_ParA_1 are exactly identical!
+WARNING: Sequences B408_cp26_ParA_1 and WI91-23_cp26_ParA_1 are exactly identical!
+WARNING: Sequences B408_cp26_ParA_1 and B331_cp26_ParA_1 are exactly identical!
+WARNING: Sequences 156a_lp38_ParA_2 and B379_lp38_ParA_1 are exactly identical!
+WARNING: Sequences 156a_lp38_ParA_2 and JD1_lp38_ParA_1 are exactly identical!
+WARNING: Sequences 94a_lp28-4_ParA_2_PUTATIVE and WI91-23_lp28-4_ParA_2_PUTATIVE are exactly identical!
+WARNING: Sequences 94a_lp28-4_ParA_2_PUTATIVE and Bol26_lp28-4_ParA_2_PUTATIVE are exactly identical!
+WARNING: Sequences 94a_lp28-4_ParA_2_PUTATIVE and 156a_lp28-4_ParA_2_PUTATIVE are exactly identical!
+WARNING: Sequences 94a_lp28-4_ParA_2_PUTATIVE and ZS7_lp28-4_ParA_2_PUTATIVE are exactly identical!
+WARNING: Sequences 94a_cp32-11_ParA_2_PUTATIVE and 156a_cp32-11_ParA_2_PUTATIVE are exactly identical!
+WARNING: Sequences 156a_lp38_ParA_1_PUTATIVE and JD1_lp38_ParA_2_PUTATIVE are exactly identical!
+WARNING: Sequences JD1_chromosome_ParA_1_PUTATIVE and B331_chromosome_ParA_3 are exactly identical!
+WARNING: Sequences JD1_chromosome_ParA_1_PUTATIVE and B408_chromosome_ParA_3 are exactly identical!
+WARNING: Sequences JD1_chromosome_ParA_1_PUTATIVE and B500_chromosome_ParA_3 are exactly identical!
+WARNING: Sequences B500_lp38_ParA_1 and B408_lp38_ParA_1 are exactly identical!
+WARNING: Sequences B500_lp38_ParA_1 and B331_lp38_ParA_1 are exactly identical!
+WARNING: Sequences B500_lp38_ParA_1 and WI91-23_lp38_ParA_2 are exactly identical!
+WARNING: Sequences B500_lp28-4_ParA_1 and B408_lp28-4_ParA_1 are exactly identical!
+WARNING: Sequences B500_lp28-4_ParA_1 and ZS7_lp28-4_ParA_1 are exactly identical!
+WARNING: Sequences B500_lp28-4_ParA_1 and WI91-23_lp28-4_ParA_1 are exactly identical!
+WARNING: Sequences B500_lp28-4_ParA_1 and Bol26_lp28-4_ParA_1 are exactly identical!
+WARNING: Sequences NE_5267_cp26_ParA_1 and Am315_cp26_ParA_1 are exactly identical!
+WARNING: Sequences NE_5267_cp26_ParA_1 and NE_5261_cp26_ParA_1 are exactly identical!
+WARNING: Sequences NE_5267_cp26_ParA_1 and B31-5A4_cp26_ParA_1 are exactly identical!
+WARNING: Sequences NE_5267_cp26_ParA_1 and ZS7_cp26_ParA_1 are exactly identical!
+WARNING: Sequences NE_5267_cp26_ParA_1 and Am293_cp26_ParA_1 are exactly identical!
+WARNING: Sequences NE_5267_cp26_ParA_1 and Am388_cp26_ParA_1 are exactly identical!
+WARNING: Sequences NE_5267_cp26_ParA_1 and Bol26_cp26_ParA_1 are exactly identical!
+WARNING: Sequences NE_5267_cp26_ParA_1 and B31_cp26_ParA_1 are exactly identical!
+WARNING: Sequences NE_5267_cp26_ParA_1 and NE_5248_cp26_ParA_1 are exactly identical!
+WARNING: Sequences ZS7_lp25_ParA_1_PUTATIVE and WI91-23_lp25_ParA_1_PUTATIVE are exactly identical!
+WARNING: Sequences N40_lp36_ParA_1 and WI91-23_lp36_ParA_1 are exactly identical!
+WARNING: Sequences N40_lp36_ParA_1 and B331_lp36_ParA_1 are exactly identical!
+WARNING: Sequences N40_lp36_ParA_1 and 94a_lp36_ParA_1 are exactly identical!
+WARNING: Sequences N40_lp36_ParA_1 and B408_lp36_ParA_1 are exactly identical!
+WARNING: Sequences N40_lp36_ParA_1 and B500_lp36_ParA_1 are exactly identical!
+WARNING: Sequences N40_lp36_ParA_1 and MM1_lp36_ParA_1 are exactly identical!
+WARNING: Sequences B408_cp32-5_ParA_1 and B500_cp32-5_ParA_1 are exactly identical!
+WARNING: Sequences B408_cp32-5_ParA_1 and B331_cp32-5_ParA_1 are exactly identical!
+WARNING: Sequences ZS7_lp28-1_ParA_1_PUTATIVE and PAbe_lp28-1_ParA_1 are exactly identical!
+WARNING: Sequences ZS7_lp28-1_ParA_1_PUTATIVE and B31_lp28-1_ParA_1 are exactly identical!
+WARNING: Sequences ZS7_lp28-1_ParA_1_PUTATIVE and B31-5A4_lp28-1_ParA_2 are exactly identical!
+WARNING: Sequences ZS7_lp28-1_ParA_1_PUTATIVE and B31_NRZ_lp28-1_ParA_1 are exactly identical!
+WARNING: Sequences WI91-23_cp32-7_ParA_2_PUTATIVE and 94a_cp32-7_ParA_2_PUTATIVE are exactly identical!
+WARNING: Sequences WI91-23_cp32-7_ParA_2_PUTATIVE and 156a_cp32-7_ParA_2_PUTATIVE are exactly identical!
+WARNING: Sequences WI91-23_lp56_ParA_2 and B408_lp56_ParA_1 are exactly identical!
+WARNING: Sequences WI91-23_lp56_ParA_2 and B331_lp56_ParA_1 are exactly identical!
+WARNING: Sequences Bol26_cp32-12_ParA_1 and 156a_cp32-12_ParA_1 are exactly identical!
+WARNING: Sequences Bol26_cp32-12_ParA_1 and ZS7_cp32-12_ParA_1 are exactly identical!
+WARNING: Sequences B379_chromosome_ParA_4 and Sh-2-82_chromosome_ParA_4 are exactly identical!
+WARNING: Sequences Bol26_lp28-4_ParA_3_PUTATIVE and 156a_lp28-4_ParA_3_PUTATIVE are exactly identical!
+WARNING: Sequences WI91-23_cp32-10_ParA_2_PUTATIVE and 94a_cp32-10_ParA_2_PUTATIVE are exactly identical!
+WARNING: Sequences B31_lp28-2_ParA_1_PUTATIVE and ZS7_lp28-2_ParA_1_PUTATIVE are exactly identical!
+WARNING: Sequences B379_cp32-2_ParA_1 and 156a_cp32-4_ParA_1 are exactly identical!
+WARNING: Sequences 94a_cp32-6_ParA_2_PUTATIVE and 156a_cp32-6_ParA_2_PUTATIVE are exactly identical!
+WARNING: Sequences 94a_cp32-6_ParA_2_PUTATIVE and WI91-23_cp32-6_ParA_2_PUTATIVE are exactly identical!
+WARNING: Sequences B31-5A4_lp21_ParA_1 and B31_lp21_ParA_1 are exactly identical!
+WARNING: Sequences ZS7_cp32-12_ParA_2_PUTATIVE and 156a_cp32-12_ParA_2_PUTATIVE are exactly identical!
+WARNING: Sequences Bol26_cp32-9_ParA_2_PUTATIVE and ZS7_cp32-9_ParA_2_PUTATIVE are exactly identical!
+WARNING: Sequences ZS7_cp32-4_ParA_1 and WI91-23_cp32-4_ParA_1 are exactly identical!
+WARNING: Sequences ZS7_cp32-4_ParA_1 and N40_cp32-4_ParA_1 are exactly identical!
+WARNING: Sequences ZS7_cp32-4_ParA_1 and MM1_cp32-4_ParA_1 are exactly identical!
+WARNING: Duplicate sequences found: 296
+
+NOTE: Reduced alignment (with duplicates and gap-only sites/taxa removed) 
+NOTE: was saved to: /Users/mf019/bioinformatics/longread_GWAS/plasmid_id/plasmid_seqs/alignments/all_pf32_put_incl_aligned.afa.raxml.reduced.phy
+
+Alignment comprises 1 partitions and 525 patterns
+
+Partition 0: noname
+Model: JTT+G4m
+Alignment sites / patterns: 629 / 525
+Gaps: 61.26 %
+Invariant sites: 34.18 %
+
+
+NOTE: Binary MSA file created: ../alignments/all_pf32_put_incl_aligned.afa.raxml.rba
+
+Parallelization scheme autoconfig: 4 worker(s) x 2 thread(s)
+
+[00:00:00] Generating 10 random starting tree(s) with 428 taxa
+[00:00:00] Generating 10 parsimony starting tree(s) with 428 taxa
+Parallel parsimony with 8 threads
+Parallel reduction/worker buffer size: 1 KB  / 0 KB
+
+[00:00:00] Data distribution: max. partitions/sites/weight per thread: 1 / 263 / 21040
+[00:00:00] Data distribution: max. searches per worker: 5
+
+Starting ML tree search with 20 distinct starting trees
+
+[00:00:00 -230760.464545] Initial branch length optimization
+[00:00:07 -187751.886066] Model parameter optimization (eps = 10.000000)
+[00:00:23 -187234.494264] AUTODETECT spr round 1 (radius: 5)
+[00:01:04 -112191.091785] AUTODETECT spr round 2 (radius: 10)
+[00:02:50 -54421.429531] AUTODETECT spr round 3 (radius: 15)
+[00:05:06 -34313.204113] AUTODETECT spr round 4 (radius: 20)
+[00:08:26 -31676.598557] AUTODETECT spr round 5 (radius: 25)
+[00:11:33 -31254.656981] SPR radius for FAST iterations: 25 (autodetect)
+[00:11:33 -31254.656981] Model parameter optimization (eps = 3.000000)
+[00:11:38 -31163.577182] FAST spr round 1 (radius: 25)
+[00:12:17 -24265.672422] FAST spr round 2 (radius: 25)
+[00:12:49 -23937.766756] FAST spr round 3 (radius: 25)
+[00:13:13 -23933.118897] Model parameter optimization (eps = 1.000000)
+[00:13:16 -23907.233854] SLOW spr round 1 (radius: 5)
+[00:14:09 -23902.099529] SLOW spr round 2 (radius: 10)
+[00:15:10 -23902.098702] SLOW spr round 3 (radius: 15)
+[00:18:11 -23902.098107] SLOW spr round 4 (radius: 20)
+[00:23:14 -23902.097666] SLOW spr round 5 (radius: 25)
+[00:26:44] [worker #3] ML tree search #4, logLikelihood: -23903.711891
+[00:27:06 -23902.097339] Model parameter optimization (eps = 0.100000)
+
+[00:27:06] [worker #0] ML tree search #1, logLikelihood: -23902.020108
+
+[00:27:07 -227025.645667] Initial branch length optimization
+[00:27:11 -187087.985959] Model parameter optimization (eps = 10.000000)
+[00:27:19 -186627.306675] AUTODETECT spr round 1 (radius: 5)
+[00:27:24] [worker #2] ML tree search #3, logLikelihood: -23909.613740
+[00:27:47 -106808.022567] AUTODETECT spr round 2 (radius: 10)
+[00:28:46] [worker #1] ML tree search #2, logLikelihood: -23911.439714
+[00:28:56 -55125.212695] AUTODETECT spr round 3 (radius: 15)
+[00:30:45 -32930.414875] AUTODETECT spr round 4 (radius: 20)
+[00:32:31 -30472.606156] AUTODETECT spr round 5 (radius: 25)
+[00:34:47 -29691.160987] SPR radius for FAST iterations: 25 (autodetect)
+[00:34:47 -29691.160987] Model parameter optimization (eps = 3.000000)
+[00:34:54 -29538.176314] FAST spr round 1 (radius: 25)
+[00:35:41 -24413.508828] FAST spr round 2 (radius: 25)
+[00:36:24 -23927.345914] FAST spr round 3 (radius: 25)
+[00:36:55 -23924.376040] Model parameter optimization (eps = 1.000000)
+[00:36:57 -23921.055289] SLOW spr round 1 (radius: 5)
+[00:38:05 -23907.134641] SLOW spr round 2 (radius: 5)
+[00:39:19 -23904.863961] SLOW spr round 3 (radius: 10)
+[00:40:37 -23904.861924] SLOW spr round 4 (radius: 15)
+[00:44:29 -23904.861207] SLOW spr round 5 (radius: 20)
+[00:50:51 -23904.860939] SLOW spr round 6 (radius: 25)
+[01:05:16 -23904.860837] Model parameter optimization (eps = 0.100000)
+
+[01:05:22] [worker #0] ML tree search #5, logLikelihood: -23904.775768
+
+[01:05:22 -228813.628613] Initial branch length optimization
+[01:06:46 -186439.238484] Model parameter optimization (eps = 10.000000)
+[01:07:38 -185933.924105] AUTODETECT spr round 1 (radius: 5)
+[01:10:05] [worker #3] ML tree search #8, logLikelihood: -23903.956393
+[01:10:56] [worker #2] ML tree search #7, logLikelihood: -23913.862306
+[01:12:46 -102921.237061] AUTODETECT spr round 2 (radius: 10)
+[01:22:23 -59782.458399] AUTODETECT spr round 3 (radius: 15)
+[01:32:58] [worker #1] ML tree search #6, logLikelihood: -23909.017119
+[01:38:18 -37737.515799] AUTODETECT spr round 4 (radius: 20)
+[01:56:11 -29874.424612] AUTODETECT spr round 5 (radius: 25)
+[02:03:26 -29849.008179] SPR radius for FAST iterations: 25 (autodetect)
+[02:03:26 -29849.008179] Model parameter optimization (eps = 3.000000)
+[02:03:30 -29704.487877] FAST spr round 1 (radius: 25)
+[02:04:07 -24267.305138] FAST spr round 2 (radius: 25)
+[02:04:39 -23951.652908] FAST spr round 3 (radius: 25)
+[02:05:09 -23918.730222] FAST spr round 4 (radius: 25)
+[02:05:29 -23918.729414] Model parameter optimization (eps = 1.000000)
+[02:05:30 -23917.080778] SLOW spr round 1 (radius: 5)
+[02:06:26 -23907.897184] SLOW spr round 2 (radius: 10)
+[02:07:27 -23907.895409] SLOW spr round 3 (radius: 15)
+[02:10:19 -23907.895253] SLOW spr round 4 (radius: 20)
+[02:15:27 -23907.895235] SLOW spr round 5 (radius: 25)
+[02:19:38 -23907.895233] Model parameter optimization (eps = 0.100000)
+
+[02:19:39] [worker #0] ML tree search #9, logLikelihood: -23907.894211
+
+[02:19:39 -35996.214965] Initial branch length optimization
+[02:19:45 -24170.123107] Model parameter optimization (eps = 10.000000)
+[02:19:47 -24123.236302] AUTODETECT spr round 1 (radius: 5)
+[02:20:08 -23980.604732] AUTODETECT spr round 2 (radius: 10)
+[02:21:31] [worker #3] ML tree search #12, logLikelihood: -23907.549310
+[02:21:37 -23964.263962] AUTODETECT spr round 3 (radius: 15)
+[02:22:14] [worker #2] ML tree search #11, logLikelihood: -23908.477744
+[02:23:21] [worker #1] ML tree search #10, logLikelihood: -23905.868780
+[02:24:54 -23963.486789] AUTODETECT spr round 4 (radius: 20)
+[02:29:21 -23963.270638] AUTODETECT spr round 5 (radius: 25)
+[02:33:56 -23963.186065] SPR radius for FAST iterations: 20 (autodetect)
+[02:33:56 -23963.186065] Model parameter optimization (eps = 3.000000)
+[02:33:57 -23962.795817] FAST spr round 1 (radius: 20)
+[02:34:29 -23914.757349] FAST spr round 2 (radius: 20)
+[02:34:58 -23914.446725] Model parameter optimization (eps = 1.000000)
+[02:34:59 -23914.438670] SLOW spr round 1 (radius: 5)
+[02:36:01 -23912.694780] SLOW spr round 2 (radius: 10)
+[02:37:16 -23912.694523] SLOW spr round 3 (radius: 15)
+[02:40:28 -23912.694507] SLOW spr round 4 (radius: 20)
+[02:46:14 -23912.694505] SLOW spr round 5 (radius: 25)
+[02:50:23] [worker #2] ML tree search #15, logLikelihood: -23906.070310
+[02:51:14 -23912.694504] Model parameter optimization (eps = 0.100000)
+
+[02:51:15] [worker #0] ML tree search #13, logLikelihood: -23912.694230
+
+[02:51:15 -35935.424434] Initial branch length optimization
+[02:51:21 -24117.170192] Model parameter optimization (eps = 10.000000)
+[02:51:23 -24074.333813] AUTODETECT spr round 1 (radius: 5)
+[02:51:45 -23965.950049] AUTODETECT spr round 2 (radius: 10)
+[02:53:02 -23957.838516] AUTODETECT spr round 3 (radius: 15)
+[02:53:10] [worker #3] ML tree search #16, logLikelihood: -23909.939060
+[02:54:05] [worker #1] ML tree search #14, logLikelihood: -23919.617976
+[02:55:24 -23956.501895] AUTODETECT spr round 4 (radius: 20)
+[02:58:43 -23956.411645] SPR radius for FAST iterations: 15 (autodetect)
+[02:58:43 -23956.411645] Model parameter optimization (eps = 3.000000)
+[02:58:44 -23955.833648] FAST spr round 1 (radius: 15)
+[02:59:10 -23918.433438] FAST spr round 2 (radius: 15)
+[02:59:32 -23911.402516] Model parameter optimization (eps = 1.000000)
+[02:59:33 -23911.298234] SLOW spr round 1 (radius: 5)
+[03:00:23 -23903.589722] SLOW spr round 2 (radius: 10)
+[03:01:18 -23903.589298] SLOW spr round 3 (radius: 15)
+[03:03:56 -23903.589244] SLOW spr round 4 (radius: 20)
+[03:08:40 -23903.589236] SLOW spr round 5 (radius: 25)
+[03:12:59 -23903.589234] Model parameter optimization (eps = 0.100000)
+
+[03:13:00] [worker #0] ML tree search #17, logLikelihood: -23903.580095
+
+
+RAxML-NG v. 1.2.1 released on 22.12.2023 by The Exelixis Lab.
+Developed by: Alexey M. Kozlov and Alexandros Stamatakis.
+Contributors: Diego Darriba, Tomas Flouri, Benoit Morel, Sarah Lutteropp, Ben Bettisworth, Julia Haag, Anastasis Togkousidis.
+Latest version: https://github.com/amkozlov/raxml-ng
+Questions/problems/suggestions? Please visit: https://groups.google.com/forum/#!forum/raxml
+
+System: Apple M2, 8 cores, 8 GB RAM
+
+RAxML-NG was called at 13-Mar-2024 22:50:27 as follows:
+
+raxml-ng --msa ../alignments/all_pf32_put_incl_aligned.afa --data-type AA --model JTT+G
+
+Analysis options:
+  run mode: ML tree search
+  start tree(s): random (10) + parsimony (10)
+  random seed: 1710384627
+  tip-inner: OFF
+  pattern compression: ON
+  per-rate scalers: OFF
+  site repeats: ON
+  logLH epsilon: general: 10.000000, brlen-triplet: 1000.000000
+  fast spr radius: AUTO
+  spr subtree cutoff: 1.000000
+  fast CLV updates: ON
+  branch lengths: proportional (ML estimate, algorithm: NR-FAST)
+  SIMD kernels: SSE3
+  parallelization: coarse-grained (auto), PTHREADS (auto)
+
+WARNING: The model you specified on the command line (JTT+G) will be ignored 
+         since the binary MSA file already contains a model definition.
+         If you want to change the model, please re-run RAxML-NG 
+         with the original PHYLIP/FASTA alignment and --redo option.
+
+[00:00:00] Loading binary alignment from file: ../alignments/all_pf32_put_incl_aligned.afa.raxml.rba
+[00:00:00] Alignment comprises 428 taxa, 1 partitions and 525 patterns
+
+Partition 0: noname
+Model: JTT+G4m
+Alignment sites / patterns: 629 / 525
+Gaps: 61.26 %
+Invariant sites: 34.18 %
+
+
+Parallelization scheme autoconfig: 4 worker(s) x 2 thread(s)
+
+Parallel reduction/worker buffer size: 1 KB  / 0 KB
+
+[00:00:00] NOTE: Resuming execution from checkpoint (logLH: -23903.58, ML trees: 17, bootstraps: 0)
+[00:00:00] Data distribution: max. partitions/sites/weight per thread: 1 / 263 / 21040
+[00:00:00] Data distribution: max. searches per worker: 0
+
+Starting ML tree search with 20 distinct starting trees
+
