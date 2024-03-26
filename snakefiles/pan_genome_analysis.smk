@@ -20,7 +20,7 @@ rule Roary:
     threads: 15
     message: "running roary on all of our annotations! : \n roary -p {threads} -f {output.outdir} {input} 2>&1 >{log}"
     log: f'{analysis_dir}/pangenome/v3/logs/roary_log.txt'
-    singularity: f'{analysis_dir}/singularity/images/roary_latest.sif'
+    singularity: 'singularity/images/roary_latest.sif'
     shell:
         "roary -e --mafft -p {threads} -f {output.outdir} {input} >{log} 2>&1"
 
