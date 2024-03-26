@@ -16,7 +16,8 @@ rule Roary:
         glob.glob(f'{analysis_dir}/paired_assemblies/annotation/*.gff3')
     output:
         outdir = directory(f'{analysis_dir}/pangenome/v3/roary_v3/'),
-        outfile = f'{analysis_dir}/pangenome/v3/roary_v3/core_gene_alignment.aln'
+        outfile = f'{analysis_dir}/pangenome/v3/roary_v3/core_gene_alignment.aln',
+        outasm = f'{analysis_dir}/pangenome/v3/roary_v3/pan_genome_reference.fa',
     threads: 15
     message: "running roary on all of our annotations! : \n roary -p {threads} -f {output.outdir} {input} 2>&1 >{log}"
     log: f'{analysis_dir}/pangenome/v3/logs/roary_log.txt'
