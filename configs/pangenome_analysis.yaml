@@ -1,4 +1,4 @@
-# define analysis directory 
+# define analysis directory
 analysis_dir: "longread_analysis"
 reference_fa: "ref/GCF_000008685.2_ASM868v2_genomic.fna"
 reference_gff: "ref/GCF_000008685.2_ASM868v2_genomic.gff"
@@ -18,6 +18,6 @@ minimap2_params:
 
 # define bakta params
 bakta_params:
-  db: "db/bakta"
+  db: "/home/mf019/db/bakta"
   gram: "--gram -"
   opts: "--verbose"
