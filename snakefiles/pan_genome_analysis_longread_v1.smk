@@ -6,24 +6,24 @@ analysis_dir = config['analysis_dir']
 
 rule all:
     input:
-        f'{analysis_dir}/pangenome/v3/roary_longread_v1/core_gene_alignment.aln',
+        #f'{analysis_dir}/pangenome/v3/roary_longread_v1/core_gene_alignment.aln',
         f'{analysis_dir}/pangenome/v3/tree/longread_v1/roary_longread_v1_core_aln.newick',
         f'{analysis_dir}/pangenome/v3/tree/longread_v1/RAxML_bestTree.roary_longread_v1_gtrgam',
         f'{analysis_dir}/pangenome/v3/bakta_longread_v1/roary_core_longread_v1.gff3'
 
-rule Roary:
-    input:
-        glob.glob(f'{analysis_dir}/paired_assemblies/annotation/longread/*.gff3')
-    output:
-        outdir = directory(f'{analysis_dir}/pangenome/v3/roary_longread_v1/'),
-        outfile = f'{analysis_dir}/pangenome/v3/roary_longread_v1/core_gene_alignment.aln',
-        outasm = f'{analysis_dir}/pangenome/v3/roary_longread_v1/pan_genome_reference.fa',
-    threads: 15
-    message: "running roary on all of our annotations! : \n roary -p {threads} -f {output.outdir} {input} 2>&1 >{log}"
-    log: f'{analysis_dir}/pangenome/v3/logs/roary_log.txt'
-    singularity: 'singularity/images/roary_latest.sif'
-    shell:
-        "roary -e --mafft -p {threads} -f {output.outdir} {input} >{log} 2>&1"
+#rule Roary:
+#    input:
+#        glob.glob(f'{analysis_dir}/paired_assemblies/annotation/longread/*.gff3')
+#    output:
+#        outdir = directory(f'{analysis_dir}/pangenome/v3/roary_longread_v1/'),
+#        outfile = f'{analysis_dir}/pangenome/v3/roary_longread_v1/core_gene_alignment.aln',
+#        outasm = f'{analysis_dir}/pangenome/v3/roary_longread_v1/pan_genome_reference.fa',
+#    threads: 15
+#    message: "running roary on all of our annotations! : \n roary -p {threads} -f {output.outdir} {input} 2>&1 >{log}"
+#    log: f'{analysis_dir}/pangenome/v3/logs/roary_log.txt'
+#    singularity: 'singularity/images/roary_latest.sif'
+#    shell:
+#        "roary -e --mafft -p {threads} -f {output.outdir} {input} >{log} 2>&1"
 
 rule FastTree:
     input:
@@ -66,3 +66,6 @@ rule bakta:
         "Running bakta to annotate the pangenome reference at ==>> {input}"
     shell:
         "bakta --db={params.bakta_params[db]} {params.bakta_params[gram]} --skip-trna --keep-contig-headers --genus Borrelia --species burgdorferi --strain roary_pangenome_v3 --threads {threads} {params.bakta_params[opts]} --force --output {output.outdir} --prefix {params.bakta_prefix} {input} 2>&1 >{log}"
+
+
+snakemake --cores 15 --use-conda --use-singularity -s snakefiles/pan_genome_analysis_longread_v1.smk --keep-incomplete --cleanup-metadata 'longread_analysis/pangenome/v3/roary_longread_v1' 'longread_analysis/pangenome/v3/roary_longread_v1/core_gene_alignment.aln' 'longread_analysis/pangenome/v3/roary_longread_v1/pan_genome_reference.fa'
