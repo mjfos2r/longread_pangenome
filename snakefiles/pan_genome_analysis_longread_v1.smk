@@ -66,6 +66,3 @@ rule bakta:
         "Running bakta to annotate the pangenome reference at ==>> {input}"
     shell:
         "bakta --db={params.bakta_params[db]} {params.bakta_params[gram]} --skip-trna --keep-contig-headers --genus Borrelia --species burgdorferi --strain roary_pangenome_v3 --threads {threads} {params.bakta_params[opts]} --force --output {output.outdir} --prefix {params.bakta_prefix} {input} 2>&1 >{log}"
-
-
-snakemake --cores 15 --use-conda --use-singularity -s snakefiles/pan_genome_analysis_longread_v1.smk --keep-incomplete --cleanup-metadata 'longread_analysis/pangenome/v3/roary_longread_v1' 'longread_analysis/pangenome/v3/roary_longread_v1/core_gene_alignment.aln' 'longread_analysis/pangenome/v3/roary_longread_v1/pan_genome_reference.fa'
