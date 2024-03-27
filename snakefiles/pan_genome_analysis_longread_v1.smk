@@ -13,7 +13,7 @@ rule all:
 
 rule Roary:
     input:
-        glob.glob(f'{analysis_dir}/paired_assemblies/annotation/*.gff3')
+        glob.glob(f'{analysis_dir}/paired_assemblies/annotation/longread/*.gff3')
     output:
         outdir = directory(f'{analysis_dir}/pangenome/v3/roary_longread_v1/'),
         outfile = f'{analysis_dir}/pangenome/v3/roary_longread_v1/core_gene_alignment.aln',
