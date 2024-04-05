@@ -7,9 +7,9 @@ analysis_dir = config['analysis_dir']
 rule all:
     input:
         f'{analysis_dir}/pangenome/v3/roary_shortread_v1/core_gene_alignment.aln',
-        f'{analysis_dir}/pangenome/v3/tree/shortread_v1/roary_longread_v1_core_aln.newick',
-        f'{analysis_dir}/pangenome/v3/tree/shortread_v1/RAxML_bestTree.roary_longread_v1_gtrgam',
-        f'{analysis_dir}/pangenome/v3/bakta_longread_v1/longread_v1.gff3'
+        f'{analysis_dir}/pangenome/v3/tree/shortread_v1/roary_shortread_v1_core_aln.newick',
+        f'{analysis_dir}/pangenome/v3/tree/shortread_v1/RAxML_bestTree.roary_shortread_v1_gtrgam',
+        f'{analysis_dir}/pangenome/v3/bakta_shortread_v1/roary_shortread_v1.gff3'
 
 rule Roary:
     input:
@@ -54,7 +54,7 @@ rule bakta:
     input: f'{analysis_dir}/pangenome/v3/roary_longread_v1/pan_genome_reference.fa'
     output:
         outdir = directory(f'{analysis_dir}/pangenome/v3/bakta_shortread_v1/'),
-        outgff = f'{analysis_dir}/pangenome/v3/bakta_shortread_v1/longread_v1.gff3',
+        outgff = f'{analysis_dir}/pangenome/v3/bakta_shortread_v1/roary_shortread_v1.gff3',
     params:
         bakta_params = config['bakta_params'],
         bakta_prefix = 'longread_v1'
