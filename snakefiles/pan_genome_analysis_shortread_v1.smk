@@ -29,7 +29,7 @@ rule FastTree:
     input:
         f'{analysis_dir}/pangenome/v3/roary_shortread_v1/core_gene_alignment.aln'
     output:
-        f'{analysis_dir}/pangenome/v3/tree/shortread_v1/roary_longread_v1_core_aln.newick'
+        f'{analysis_dir}/pangenome/v3/tree/shortread_v1/roary_shortread_v1_core_aln.newick'
     threads: 15
     conda: "fasttree"
     message: "running fasttree on the roary output ==>> {input}"
@@ -39,7 +39,7 @@ rule FastTree:
 
 rule RAxML:
     input:
-        f'{analysis_dir}/pangenome/v3/roary_longread_v1/core_gene_alignment.aln'
+        f'{analysis_dir}/pangenome/v3/roary_shortread_v1/core_gene_alignment.aln'
     output:
         outdir = directory(f'{analysis_dir}/pangenome/v3/tree/shortread_v1/'),
         outfile = f'{analysis_dir}/pangenome/v3/tree/shortread_v1/RAxML_bestTree.roary_shortread_v1_gtrgam'
@@ -51,7 +51,7 @@ rule RAxML:
         "raxmlHPC -m GTRGAMMA -p 71235 -s {input} -n roary_shortread_v1_gtrgam -w {output.outdir} >{log} 2>&1"
 
 rule bakta:
-    input: f'{analysis_dir}/pangenome/v3/roary_longread_v1/pan_genome_reference.fa'
+    input: f'{analysis_dir}/pangenome/v3/roary_shortread_v1/pan_genome_reference.fa'
     output:
         outdir = directory(f'{analysis_dir}/pangenome/v3/bakta_shortread_v1/'),
         outgff = f'{analysis_dir}/pangenome/v3/bakta_shortread_v1/roary_shortread_v1.gff3',
