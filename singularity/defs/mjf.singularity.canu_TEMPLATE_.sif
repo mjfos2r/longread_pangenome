@@ -4,6 +4,7 @@ From: alpine:3.19
 %post
     apk update
     apk upgrade
+    apk add gcompat
     apk add git make
     apk add bash curl openjdk8-jre-base perl zlip-dev
 
