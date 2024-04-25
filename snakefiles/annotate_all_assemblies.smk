@@ -30,7 +30,8 @@ rule bakta:
     shell:
         "bakta --db {params.bakta_params[db]} {params.bakta_params[gram]} --threads {threads} {params.bakta_params[opts]} --force --output {output.outdir} --prefix {wildcards.sample} {input.assembly} 2>&1 >{log}"
 
-
+# cmd is:
+# bakta --db /home/mf019/db/bakta --gram - --threads 60 --verbose --keep-contig-headers --force --output longread_analysis/paired_assemblies/paired_only/shortread/annotation/UNY172 --prefix UNY172 longread_analysis/paired_assemblies/paired_only/shortread/contigs/UNY172.fasta 2>&1 >longread_analysis/logs/shortread/UNY172.bakta.log
 #rule Quast:
 #    input:
 #        input_assembly = analysis_dir + "/paired_assemblies/{method}/contigs/{sample}.fasta"
