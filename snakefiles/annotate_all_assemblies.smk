@@ -10,7 +10,8 @@ samples = {
 
 rule all:
     input:
-        expand(analysis_dir+"/paired_assemblies/paired_only/{method}/contigs/{sample}.fasta", method=samples.keys(), sample=lambda wildcards: samples[wildcards.method])
+        expand(analysis_dir+"/paired_assemblies/paired_only/{method}/contigs/{sample}.fasta", method=["shortread"], sample=samples["shortread"]),
+        expand(analysis_dir+"/paired_assemblies/paired_only/{method}/contigs/{sample}.fasta", method=["longread"], sample=samples["longread"])
 
 rule bakta:
     input:
