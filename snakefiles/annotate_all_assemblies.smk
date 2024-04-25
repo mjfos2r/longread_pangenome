@@ -10,8 +10,8 @@ samples = {
 
 rule all:
     input:
-        expand(analysis_dir+"/paired_assemblies/paired_only/{method}/contigs/{sample}.fasta", method=["shortread"], sample=samples["shortread"]),
-        expand(analysis_dir+"/paired_assemblies/paired_only/{method}/contigs/{sample}.fasta", method=["longread"], sample=samples["longread"])
+        expand(analysis_dir+"/paired_assemblies/paired_only/{method}/annotation/{sample}/{sample}.gff3", method=["shortread"], sample=samples["shortread"]),
+        expand(analysis_dir+"/paired_assemblies/paired_only/{method}/annotation/{sample}/{sample}.gff3", method=["longread"], sample=samples["longread"])
 
 rule bakta:
     input:
