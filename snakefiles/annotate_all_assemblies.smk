@@ -3,6 +3,11 @@ import glob
 configfile: "configs/pangenome_analysis.yaml"
 analysis_dir = config['analysis_dir']
 
+samples = {
+    "shortread" : [s.split("/")[-1].split(".")[0] for s in glob.glob(analysis_dir+"/paired_assemblies/shortread/contigs/*.fasta")],
+    "longread" :  [s.split("/")[-1].split(".")[0] for s in glob.glob(analysis_dir+"/paired_assemblies/longread/contigs/*.fasta")],
+}
+
 rule all:
     input:
         expand(analysis_dir+"/paired_assemblies/{method}/contigs/{sample}.fasta", method=samples.keys(), sample=samples.items())
