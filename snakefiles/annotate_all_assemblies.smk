@@ -10,7 +10,8 @@ analysis_dir = config['analysis_dir']
 samples = {
     "shortread" : [s.split("/")[-1].split(".")[0] for s in glob.glob(analysis_dir+"/paired_assemblies/shortread/contigs/*.fasta")],
     "longread" :  [s.split("/")[-1].split(".")[0] for s in glob.glob(analysis_dir+"/paired_assemblies/longread/contigs/*.fasta")],
-    }
+}
+
 all_input = []
 for key,values in samples.items():
     for value in values:
@@ -22,6 +23,24 @@ for key,values in samples.items():
 rule all:
     input:
         all_input
+
+rule bakta:
+    input:
+        assembly = analysis_dir+"/paired_assemblies/{method}/contigs/{sample}.fasta"
+    output:
+        outdir = directory(analysis_dir+"/paired_assemblies/{method}/annotation/{sample}"),
+        outgff = analysis_dir+"/paired_assemblies/{method}/annotation/{sample}/{sample}.gff3",
+        checkpoint = touch(analysis_dir + "/checkpoints/{method}/.{sample}_bakta_finished")
+    params:
+        bakta_params = config['bakta_params']
+    threads: 60
+    log: analysis_dir + "/logs/{method}/{sample}.bakta.log"
+    conda: "bakta"
+    message:
+        "Running bakta for sample {wildcards.sample}"
+    shell:
+        "bakta --db {params.bakta_params[db]} {params.bakta_params[gram]} --threads {threads} {params.bakta_params[opts]} --force --output {output.outdir} --prefix {wildcards.sample} {input.assembly} 2>&1 >{log}"
+
 
 #rule Quast:
 #    input:
@@ -58,26 +77,6 @@ rule all:
 #    output:
 #        touch(analysis_dir + "/checkpoints/.all_quast_reps_exist")
 #
-##
-# annotate with bakta
-##
-
-rule bakta:
-    input:
-        assembly = analysis_dir+"/paired_assemblies/{method}/contigs/{sample}.fasta"
-    output:
-        outdir = directory(analysis_dir+"/paired_assemblies/{method}/annotation/{sample}"),
-        outgff = analysis_dir+"/paired_assemblies/{method}/annotation/{sample}/{sample}.gff3",
-        checkpoint = touch(analysis_dir + "/checkpoints/{method}/.{sample}_bakta_finished")
-    params:
-        bakta_params = config['bakta_params']
-    threads: 60
-    log: analysis_dir + "/logs/{method}/{sample}.bakta.log"
-    conda: "bakta"
-    message:
-        "Running bakta for sample {wildcards.sample}"
-    shell:
-        "bakta --db {params.bakta_params[db]} {params.bakta_params[gram]} --threads {threads} {params.bakta_params[opts]} --force --output {output.outdir} --prefix {wildcards.sample} {input.assembly} 2>&1 >{log}"
 
 ## Define input function to check if all sample BAM files exist
 #def all_annotations_exist(wildcards):
