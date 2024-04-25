@@ -11,18 +11,19 @@ samples = {
     "shortread" : [s.split("/")[-1].split(".")[0] for s in glob.glob(analysis_dir+"/paired_assemblies/shortread/contigs/*.fasta")],
     "longread" :  [s.split("/")[-1].split(".")[0] for s in glob.glob(analysis_dir+"/paired_assemblies/longread/contigs/*.fasta")],
 }
-
-all_input = []
-for key,values in samples.items():
-    for value in values:
-        annotations_out = analysis_dir + f"/paired_assemblies/{key}/annotation/{value}/{value}.gff3"
-        all_input.append(annotations_out)
+def get_input():
+    all_input = []
+    for key,values in samples.items():
+        for value in values:
+            annotations_out = analysis_dir + f"/paired_assemblies/{key}/annotation/{value}/{value}.gff3"
+            all_input.append(annotations_out)
+    return all_input
         #quast_out = analysis_dir+ f"/reports/quast/{key}/{value}/report.txt"
         #all_input.append(quast_out)
 
 rule all:
     input:
-        all_input
+        get_input()
 
 rule bakta:
     input:
