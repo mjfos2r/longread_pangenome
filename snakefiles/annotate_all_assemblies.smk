@@ -3,27 +3,9 @@ import glob
 configfile: "configs/pangenome_analysis.yaml"
 analysis_dir = config['analysis_dir']
 
-#samples = {"illumina" : [v.split("/")[-1].split(".")[0] for v in glob.glob(analysis_dir + "/paired_assemblies/illumina/contigs/*.fasta")],
-#             "pacbio" : [s.split("/")[-1].split(".")[0] for s in glob.glob(analysis_dir + "/paired_assemblies/pacbio/contigs/*.fasta")],
-#           "nanopore" : [t.split("/")[-1].split(".")[0] for t in glob.glob(analysis_dir + "/paired_assemblies/nanopore/contigs/*.fasta")],
-#             "hybrid" : [u.split("/")[-1].replace(".fasta", "") for u in glob.glob(analysis_dir + "/paired_assemblies/hybrid/contigs/*.fasta")]}
-samples = {
-    "shortread" : [s.split("/")[-1].split(".")[0] for s in glob.glob(analysis_dir+"/paired_assemblies/shortread/contigs/*.fasta")],
-    "longread" :  [s.split("/")[-1].split(".")[0] for s in glob.glob(analysis_dir+"/paired_assemblies/longread/contigs/*.fasta")],
-}
-def get_input():
-    all_input = []
-    for key,values in samples.items():
-        for value in values:
-            annotations_out = analysis_dir + f"/paired_assemblies/{key}/annotation/{value}/{value}.gff3"
-            all_input.append(annotations_out)
-    return all_input
-        #quast_out = analysis_dir+ f"/reports/quast/{key}/{value}/report.txt"
-        #all_input.append(quast_out)
-
 rule all:
     input:
-        get_input()
+        expand(analysis_dir+"/paired_assemblies/{method}/contigs/{sample}.fasta", method=samples.keys(), sample=samples.items())
 
 rule bakta:
     input:
