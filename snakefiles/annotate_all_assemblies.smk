@@ -10,7 +10,7 @@ samples = {
 
 rule all:
     input:
-        expand(analysis_dir+"/paired_assemblies/paired_only/{method}/contigs/{sample}.fasta", method=samples.keys(), sample=samples.items())
+        expand(analysis_dir+"/paired_assemblies/paired_only/{method}/contigs/{sample}.fasta", method=samples.keys(), sample=[sample for method, samples_list in samples.items() for sample in samples_list])
 
 rule bakta:
     input:
