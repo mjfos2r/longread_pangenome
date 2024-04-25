@@ -4,9 +4,9 @@ configfile: "configs/pangenome_analysis.yaml"
 analysis_dir = config['analysis_dir']
 
 #samples = {"illumina" : [v.split("/")[-1].split(".")[0] for v in glob.glob(analysis_dir + "/paired_assemblies/illumina/contigs/*.fasta")],
-             "pacbio" : [s.split("/")[-1].split(".")[0] for s in glob.glob(analysis_dir + "/paired_assemblies/pacbio/contigs/*.fasta")],
-           "nanopore" : [t.split("/")[-1].split(".")[0] for t in glob.glob(analysis_dir + "/paired_assemblies/nanopore/contigs/*.fasta")],
-             "hybrid" : [u.split("/")[-1].replace(".fasta", "") for u in glob.glob(analysis_dir + "/paired_assemblies/hybrid/contigs/*.fasta")]}
+#             "pacbio" : [s.split("/")[-1].split(".")[0] for s in glob.glob(analysis_dir + "/paired_assemblies/pacbio/contigs/*.fasta")],
+#           "nanopore" : [t.split("/")[-1].split(".")[0] for t in glob.glob(analysis_dir + "/paired_assemblies/nanopore/contigs/*.fasta")],
+#             "hybrid" : [u.split("/")[-1].replace(".fasta", "") for u in glob.glob(analysis_dir + "/paired_assemblies/hybrid/contigs/*.fasta")]}
 samples = {
     "shortread" : [s.split("/")[-1].split(".")[0] for s in glob.glob(analysis_dir+"/paired_assemblies/shortread/contigs/*.fasta")],
     "longread" :  [s.split("/")[-1].split(".")[0] for s in glob.glob(analysis_dir+"/paired_assemblies/longread/contigs/*.fasta")],
