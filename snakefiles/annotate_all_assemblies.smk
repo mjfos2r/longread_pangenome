@@ -4,21 +4,21 @@ configfile: "configs/pangenome_analysis.yaml"
 analysis_dir = config['analysis_dir']
 
 samples = {
-    "shortread" : [s.split("/")[-1].split(".")[0] for s in glob.glob(analysis_dir+"/paired_assemblies/shortread/contigs/*.fasta")],
-    "longread" :  [s.split("/")[-1].split(".")[0] for s in glob.glob(analysis_dir+"/paired_assemblies/longread/contigs/*.fasta")],
+    "shortread" : [s.split("/")[-1].split(".")[0] for s in glob.glob(analysis_dir+"/paired_assemblies/paired_only/shortread/contigs/*.fasta")],
+    "longread" :  [s.split("/")[-1].split(".")[0] for s in glob.glob(analysis_dir+"/paired_assemblies/paired_only/longread/contigs/*.fasta")],
 }
 
 rule all:
     input:
-        expand(analysis_dir+"/paired_assemblies/{method}/contigs/{sample}.fasta", method=samples.keys(), sample=samples.items())
+        expand(analysis_dir+"/paired_assemblies/paired_only/{method}/contigs/{sample}.fasta", method=samples.keys(), sample=samples.items())
 
 rule bakta:
     input:
-        assembly = analysis_dir+"/paired_assemblies/{method}/contigs/{sample}.fasta"
+        assembly = analysis_dir+"/paired_assemblies/paired_only/{method}/contigs/{sample}.fasta"
     output:
-        outdir = directory(analysis_dir+"/paired_assemblies/{method}/annotation/{sample}"),
-        outgff = analysis_dir+"/paired_assemblies/{method}/annotation/{sample}/{sample}.gff3",
-        checkpoint = touch(analysis_dir + "/checkpoints/{method}/.{sample}_bakta_finished")
+        outdir = directory(analysis_dir+"/paired_assemblies/paired_only/{method}/annotation/{sample}"),
+        outgff = analysis_dir+"/paired_assemblies/paired_only/{method}/annotation/{sample}/{sample}.gff3",
+        checkpoint = touch(analysis_dir + "/checkpoints/paired_only/{method}/.{sample}_bakta_finished")
     params:
         bakta_params = config['bakta_params']
     threads: 60
