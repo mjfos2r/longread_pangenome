@@ -32,6 +32,7 @@ assemblies/*
 #.rplot
 #.map
 
+# Why will it not just ignore these blastdb files?
 *.pdb
 *.phr
 *.pin
@@ -42,6 +43,11 @@ assemblies/*
 *.psq
 *.ptf
 *.pto
+
+# Fine ignore it explicitly then.
+plasmid_id/pf32_db/pf32.pdb
+plasmid_id/pf32_db/pf32.phr
+plasmid_id/pf32_db/pf32.pin
 
 *.sto
 *.afa
