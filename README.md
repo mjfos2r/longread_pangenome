@@ -1,53 +1,53 @@
 # Working Repository for our Borrelia burgdorferi Genome Wide Association Study
-This is the repository for the longread GWAS project performed by the Lemieux Lab at MGH in Boston.
+This is the repository for the long-read pangenome project performed by the Lemieux Lab at MGH/Broad in Boston.
 Snakefiles are in various states of functionality (issues stem from directory clobbering and this is a known limitation of snakemake workflows)
 However, core functionality is outlined in each rule should the snakefile fail to successfully complete.
 
-`longread_GWAS/.git`
+`longread_pangenome/.git`
 - git repo stuff goes here, don't touch unless you absolutely need to.
 
-`longread_GWAS/.github`
+`longread_pangenome/.github`
 - github actions and automations go here (leftover from the snakemake workflow template I originally forked for this repo, should probably tidy up)
 
-`longread_GWAS/.vscode`
+`longread_pangenome/.vscode`
 - metadata and preferences for the vscode project are stored here.
 
-`longread_GWAS/assemblies`
+`longread_pangenome/assemblies`
  - here is where the assembly fastas and annotations in GFF3 & GBFF are housed.
-    within this, there are subdirectories for hybrid assemblies, illumina assemblies, nanopore assemblies, and pacbio assemblies. Isolates with paired assemblies across multiple methods are housed in the `longread_GWAS/assemblies/paired_assemblies` directory.
+    within this, there are subdirectories for hybrid assemblies, illumina assemblies, nanopore assemblies, and pacbio assemblies. Isolates with paired assemblies across multiple methods are housed in the `longread_pangenome/assemblies/paired_assemblies` directory.
     it is further subdivided into `annotation/`, `contigs/`, `shortread/` and `paired_only/`. the first two are for all paired assemblies together which includes longread assemblies without a shortread pair. `shortread/` is just illumina assemblies from this subset, and `paired_only/` is broken down between short and long read assemblies and further between `annotation/` and `contigs/`.
     {{TODO}} deal with massive redundancy for storage optimization.
 
-`longread_GWAS/configs`
+`longread_pangenome/configs`
 - configs for the snakemake workflows are kept here. see snakefiles below for further details.
 
-`longread_GWAS/longread_analysis`
+`longread_pangenome/longread_analysis`
 - this is the working and output directory for the snakemake workflows defined in snakefiles.
     due to file size, this is UNTRACKED by github and this needs to have bucket backup automated at some point.
 
-`longread_GWAS/notebooks`
+`longread_pangenome/notebooks`
 - jupyter notebooks primarily for metadata wranglin' are kept here.
 - jupyter notebooks and data for OspC and MLST typing are also kept here.
 
-`longread_GWAS/plasmid_id`
+`longread_pangenome/plasmid_id`
 - this is where notebooks and associated data are kept for plasmid abundance analysis.
 
-`longread_GWAS/ref`
+`longread_pangenome/ref`
 - reference genome(s) and annotations are kept here.
 
-`longread_GWAS/scripts`
+`longread_pangenome/scripts`
 - assorted scripts are housed here. This is where scripts for use in snakemake workflows are kept.
 {{TODO}} this needs to be cleaned up and further populated.
 
-`longread_GWAS/singularity`
+`longread_pangenome/singularity`
 - here is where container defs/recipes and container images are stored. This project uses Singularity/apptainer containers *EXCLUSIVELY*.
 any docker container will necessarily be converted into an apptainer for integration with snakemake.
 
-`longread_GWAS/snakefiles`
+`longread_pangenome/snakefiles`
 - here is where the main snakefiles for the workflows are housed.
-configs for these workflows are kept in `longread_GWAS/configs` and these configs define paths, working directories, and rule params.
+configs for these workflows are kept in `longread_pangenome/configs` and these configs define paths, working directories, and rule params.
 
-`longread_GWAS/spreadsheets`
+`longread_pangenome/spreadsheets`
 - here is where unorganized/assorted spreadsheets are housed. {{TODO}} these need to be sorted into their corresponding subdirectories elsewhere.
 
 {{TODO}}
