@@ -1,6 +1,8 @@
 # Manuscript Meeting 12 June 2024
+
 ***
-    ##Topics of discussion:
+
+    ## Topic of discussion:
 ***
     ### Authorship and order of authors
 Michael, Rachel, Ben, Amine <- Co-first authors.
@@ -45,8 +47,8 @@ Figure 5. Gene Graph
     - Core genes, RST1 specific genes
     - what point does this graphg begin breaking down.
     - larger genetic structure influences network connectedness.
-
-#### Sections 2-2.9? Network Stuff:
+***
+    #### Sections 2-2.9? Network Stuff:
 This is gonna need to be condensed and moved around to flow with the emergent narrative.
 *Priorities*
 >>Ben to accept the baton for working with Rachel's figures, Michael and Ben have access to Rachel's codebase.

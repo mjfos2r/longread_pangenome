@@ -4,24 +4,16 @@ import os
 import glob
 import pandas
 import pprint
-from Bio            import Entrez
-from Bio            import SeqIO
-from Bio.Blast      import NCBIXML
+import argparse
+#################################################
+from Bio                        import Entrez
+from Bio                        import SeqIO
+from Bio.Blast                  import NCBIXML
+from Bio.Blast.Applications     import NcbiblastnCommandline
 #################################################
 #               Entrez Settings                 #
 #################################################
 Entrez.email = "mfoster11@mgh.harvard.edu"
-#################################################
-#               Checkpoint Bools                #
-#################################################
-GET_REFERENCE_SEQS           = False
-FIX_REFERENCE_SEQS           = False
-WRITE_GENES                  = False
-BUILD_BLAST_DB               = False
-RUN_BLAST                    = False
-PARSE_BLAST_RESULTS          = False
-MERGE_RESULTS                = False
-FINALIZE_AND_WRITE_METADATA  = False
 #################################################
 #              Function Definitions             #
 #################################################
@@ -43,9 +35,24 @@ def parse_blast_results(blast_results : str) -> dict:
                     results[record.query].append((alignment.title, hsp.expect, hsp.score,))
     return results
 #################################################
+#                Set up ArgParse                #
+#################################################
+#{{TO-DO}} 
+# # Need to finish setting up argparse so that I can run it from the commandline
+# # OR from snakemake directly using the inputs and outputs!
+def initialize_args():
+parser = argparse.ArgumentParser(description='Process command line arguments.')
+parser.add_argument('--assembly', action='store_true', help='directory containing assemblies')
+parser.add_argument('--metadata', action='store_true', help='metadata file')
+parser.add_argument('--blastdbs', action='store_true', help='path to blast databases')
+parser.add_argument('--output-metadata', action='store_true', help='path to output metadata')
+
+args = parser.parse_args()
+
+#################################################
 #         Define Inputs and File Paths          #
 #################################################
-assemblies = glob.glob("../../assemblies/*/annotation/*/*.gbff")
+assemblies = glob.glob() #glob.glob("../../assemblies/*/annotation/*/*.gbff")
 #print(assemblies)
 metadata = "../metadata/longread_metadata_v2.csv"
 input_metadata = load_input_metadata(metadata)
@@ -57,20 +64,32 @@ known_types = input_metadata[['Isolate', 'OspC_Type']]
 # Then parse the blast results and add the type to the metadata table.
 #################################################
 # OspC List from Ira and Hanincova et al.
-ospc_genotype_to_ref = { 'A' : 'X69596',   'Ba' : 'EF537413', 'Bb' : 'NC_011724', 'C' : 'DQ437462',
-                        'Da' : 'AF029863', 'Db' : 'GQ478283',  'E' : 'AY275221', 'Fa' : 'AY275225',
-                        'Fb' : 'EF537433', 'Fc' : 'GQ478285',  'G' : 'AY275223', 'Ha' : 'EU377781',
-                        'Hb' : 'GQ478286', 'Ia' : 'AY275219', 'Ib' : 'EU377752',  'J' : 'CP001535',
-                         'K' : 'AY275214',  'L' : 'EU375832',  'M' : 'CP001550',  'N' : 'EU377775',
-                         'O' : 'FJ997281',  'T' : 'AY275222', 'Ua' : 'EU377769', 'Ub' : 'GQ478287',
-                        'A3' : 'EF592541', 'B3' : 'EF592542', 'C3' : 'EF592543', 'D3' : 'EF592544',
-                        'E3' : 'EF592545', 'F3' : 'EF592547', 'H3' : 'FJ932733', 'I3' : 'FJ932734' }
+ospc_genotype_to_ref = { 'A' : 'X69596',   'Ba' : 'EF537413',
+                        'Bb' : 'NC_011724', 'C' : 'DQ437462',
+                        'Da' : 'AF029863', 'Db' : 'GQ478283',
+                         'E' : 'AY275221', 'Fa' : 'AY275225',
+                        'Fb' : 'EF537433', 'Fc' : 'GQ478285',
+                         'G' : 'AY275223', 'Ha' : 'EU377781',
+                        'Hb' : 'GQ478286', 'Ia' : 'AY275219',
+                        'Ib' : 'EU377752',  'J' : 'CP001535',
+                         'K' : 'AY275214',  'L' : 'EU375832',
+                         'M' : 'CP001550',  'N' : 'EU377775',
+                         'O' : 'FJ997281',  'T' : 'AY275222',
+                        'Ua' : 'EU377769', 'Ub' : 'GQ478287',
+                        'A3' : 'EF592541', 'B3' : 'EF592542',
+                        'C3' : 'EF592543', 'D3' : 'EF592544',
+                        'E3' : 'EF592545', 'F3' : 'EF592547',
+                        'H3' : 'FJ932733', 'I3' : 'FJ932734' }
 
 # OspC AT list from file provided by Ira
-ospc_AT_to_ref = { 'AT1' : 'EU482041', ' AT2' : 'EU482042',  'AT3' : 'EU482043',  'AT4' : 'EU482044',
-                   'AT5' : 'EU482045',  'AT6' : 'EU482046',  'AT7' : 'EU482047',  'AT8' : 'EU482048',
-                   'AT9' : 'EU482049', 'AT10' : 'EU482050', 'AT11' : 'EU482051', 'AT12' : 'EU482052',
-                  'AT13' : 'EU482053', 'AT14' : 'EU482054', 'AT15' : 'EU482055', 'AT16' : 'EU482056',
+ospc_AT_to_ref = { 'AT1' : 'EU482041', 'AT2' : 'EU482042',
+                   'AT3' : 'EU482043', 'AT4' : 'EU482044',
+                   'AT5' : 'EU482045', 'AT6' : 'EU482046',
+                   'AT7' : 'EU482047', 'AT8' : 'EU482048',
+                   'AT9' : 'EU482049', 'AT10' : 'EU482050',
+                  'AT11' : 'EU482051', 'AT12' : 'EU482052',
+                  'AT13' : 'EU482053', 'AT14' : 'EU482054',
+                  'AT15' : 'EU482055', 'AT16' : 'EU482056', 
                   'B.bissettii_25015' : 'U04282' }
 
 #################################################
@@ -250,7 +269,6 @@ else:
 
 if RUN_BLAST is True:
     # ok now we can blast each file against our local blastdb
-    from Bio.Blast.Applications import NcbiblastnCommandline
     for sample in ospc_genes:
         print(f"blasting {sample}")
         cmd = NcbiblastnCommandline(query=f"temp_in/{sample}.osps.fasta", db="blastdb/ospcAT/ospcAT", out=f"temp_out/{sample}.ospsAT_blast.xml", outfmt=5)
