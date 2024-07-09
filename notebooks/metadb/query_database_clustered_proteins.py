@@ -1,18 +1,19 @@
 #!/usr/local/bin/python3.11
 
-import multiprocessing
 import pandas
 import pickle
 import sqlite3
 from tqdm import tqdm
+import multiprocessing
 
 def execute_query(db_path, query):
-    """
-    Executes a given SQL query using a database connection.
+    """Executes a given SQL query using a database connection.
 
-    :param db_path: Path to the SQLite database file.
-    :param query: SQL query to execute.
-    :return: DataFrame containing the results of the query.
+    Parameters:
+        db_path: Path to the SQLite database file.
+        query: SQL query to execute.
+    Returns:
+        DataFrame containing the results of the query.
     """
 
     conn = sqlite3.connect(db_path)
@@ -42,11 +43,11 @@ def process_gene_group(db_path, group, gene_ids, progress_queue):
     return group, group_df # return group_id and group_df
 
 def update_progress_bar(total_tasks, progress_queue):
-    """
-    Monitors the progress queue and updates the progress bar.
+    """Monitors the progress queue and updates the progress bar.
 
-    :param total_tasks: Total number of tasks to complete.
-    :param progress_queue: Queue to receive progress updates.
+    Parameters:
+        total_tasks: Total number of tasks to complete.
+        progress_queue: Queue to receive progress updates.
     """
     with tqdm(total=total_tasks) as pbar:
         for _ in range(total_tasks):
@@ -54,12 +55,13 @@ def update_progress_bar(total_tasks, progress_queue):
             pbar.update(1)
 
 def parallel_process_groups(db_path, groups_dict):
-    """
-    Processes all groups in parallel by distributing each group to a separate worker.
+    """Processes all groups in parallel by distributing each group to a separate worker.
 
-    :param db_path: Path to the SQLite database file.
-    :param groups_dict: Dictionary of gene_groups with their associated list of gene_ids.
-    :return: Dictionary of groups with their concatenated DataFrames.
+    Parameters
+        db_path: Path to the SQLite database file.
+        groups_dict: Dictionary of gene_groups with their associated list of gene_ids.
+    Returns:
+        Dictionary of groups with their concatenated DataFrames.
     """
     manager = multiprocessing.Manager() # set up SyncManager "To manage shared state"
     progress_queue = manager.Queue() # instantiate process queue w/in SyncManager
