@@ -74,7 +74,7 @@ def process_file(file_path):
 ######################################################################################################################################
 
 # where the files?
-dir_of_results = 'results'
+dir_of_results = 'results_v2'
 
 # gimme a list of all the results files
 results_files = glob.glob(f'{dir_of_results}/*.txt')
@@ -97,4 +97,4 @@ col_names = ["gene","gtr_log_l","gtr_aicc","gtr_dnds","codon_log_l","codon_aicc"
 results_df = pandas.DataFrame(rows, columns=col_names)
 
 # dump to csv
-results_df.to_csv('results_busted_amine.csv', sep=',')
+results_df.to_csv('results_busted_amine_v2.csv', sep=',')
