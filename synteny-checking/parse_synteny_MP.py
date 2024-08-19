@@ -14,12 +14,15 @@ from pathlib import Path
 import traceback
 import tempfile
 import pickle
+import rich.progress
 from concurrent.futures import ProcessPoolExecutor, as_completed
 
 def parse_genbank(path):
+    # this was changed for the big ava alignment.
+    asm_id = os.path.basename(path)
     records = defaultdict()
     for record in SeqIO.parse(path, 'genbank'):
-        records[record.id] = record
+        records[asm_id] = record
     return records
 
 def get_alignment_files(alignments_dir):
@@ -87,23 +90,24 @@ def get_homologies(alignments, asm1_dict, asm2_dict):
         # Flipped for b31 alns, {{TO-DO: FIX THIS!}}
         # FLIPPED AGAIN FOR AVA >:(
 
-        asm1_id        = alignment['QUERY_ID']
-        asm1_name      = alignment['QUERY_NAME']
+        asm1_id              = alignment['QUERY_ID']
+        asm1_name            = f'{alignment['QUERY_ID']}_{alignment['QUERY_NAME']}'
         asm1_start           = int(alignment['QUERY_START'])
         asm1_end             = int(alignment['QUERY_END'])
         asm1_aln_length      = int(alignment['QUERY_LENGTH']) # ALIGNED LENGTH)
-        asm1_length    = len(asm1_dict[asm1_name].seq)
-        #asm2_id             = alignment['REF_ID']
-        asm2_name      = f'{alignment['REF_ID']}_{alignment['REF_NAME']}'#.replace("0000", "_").replace("_0", "_")
+        asm1_length          = len(asm1_dict[asm1_name].seq)
+        asm2_id              = alignment['REF_ID']
+        asm2_name            = f'{alignment['REF_ID']}_{alignment['REF_NAME']}' #.replace("0000", "_").replace("_0", "_")
         asm2_start           = int(alignment['REF_START'])
         asm2_end             = int(alignment['REF_END'])
         asm2_aln_length      = int(alignment['REF_LENGTH']) # ALIGNED LENGTH)
-        asm2_identity  = alignment['IDENTITY']
-        asm2_length    = len(asm2_dict[asm2_name].seq)
-        asm1_features = get_features_from_range(asm1_dict[asm1_name], asm1_start, asm1_end)
-        asm2_features = get_features_from_range(asm2_dict[asm2_name], asm2_start, asm2_end)
-        asm1_genes    = simplify_genes_for_contig(asm1_features)
-        asm2_genes    = simplify_genes_for_contig(asm2_features)
+        asm2_identity        = alignment['IDENTITY']
+        asm2_length          = len(asm2_dict[asm2_name].seq)
+        asm1_features        = get_features_from_range(asm1_dict[asm1_name], asm1_start, asm1_end)
+        asm2_features        = get_features_from_range(asm2_dict[asm2_name], asm2_start, asm2_end)
+        asm1_genes           = simplify_genes_for_contig(asm1_features)
+        asm2_genes           = simplify_genes_for_contig(asm2_features)
+
         #asm_genes = "placeholder :)"
         # Get percent coverage for each alignment
         # UPDATE DON'T DO THAT HERE THE RANGES GET ALL WEIRD.
@@ -342,6 +346,24 @@ def parallel_find(directory, cpus):
             files.extend(result)
     return files
 
+def comma_separated_numbers(value):
+    try:
+        # Split the input by commas and convert each part to an integer
+        numbers = [int(num) for num in value.split(',')]
+        return numbers
+    except ValueError:
+        raise argparse.ArgumentTypeError(f"Invalid number: {value}")
+
+def unpack_pickle(file):
+    with rich.progress.open(file, "rb", transient=True) as file:
+        data = pickle.load(file)
+    print("Pickle Parsed!")
+    return data
+
+def pack_pickle(obj, file):
+    with rich.progress.open(file, "wb",transient=True) as file:
+        pickle.dump(obj, file)
+    print('Pickle packed!')
 
 def main():
     # Create the parser
@@ -353,7 +375,7 @@ def main():
     parser.add_argument('--cpus',          help='How many cores we rippin', type=int)
     parser.add_argument('--mode',          help="specify \'ava\' for all_vs_all and 'av1' for all_vs_one mode, 'av1' requires you to give the reference genbank with --reference", type=str)
     parser.add_argument('--ref',           help='the reference genbank for all_vs_one mode', required=False, type=str)
-    parser.add_argument('--resume',        help='use this to resume without searching for all of the results again.', required=False, action='store_true',)
+    parser.add_argument('--resume',        help='use this to resume. specify stage(s) to continue after. 1: get results files, 2: parse files. give multiple as list of ints separated by comma. ex: --resume 1,2', required=False, type=comma_separated_numbers)
 
     # Parse the arguments
     args = parser.parse_args()
@@ -370,29 +392,44 @@ def main():
     pickle_detailed_rows = os.path.join(args.output_dir, pickle_detailed_rows)
     pickle_no_homology =  os.path.join(args.output_dir, pickle_no_homology)
 
-    if args.resume:
+    # Print the parsed arguments, only if they were provided
+    print("Arguments provided:")
+    print(f"CPUs: {args.cpus}")
+    print(f"Alignments directory: {args.alignments_dir}")
+    print(f"Annotations directory: {args.annotations_dir}")
+    print(f"Output directory: {args.output_dir}")
+    print(f"Mode: {args.mode}")
+
+    if args.ref is not None:
+        print(f"Reference GenBank: {args.ref}")
+    if args.resume is not None:
+        print(f"Stages to resume after: {args.resume}")
+
+    if 1 in args.resume:
         print(f"Reading list of results files from {files_list_path}")
-        alignment_files = pickle.load(open(files_list_path,'rb'))
+        alignment_files = unpack_pickle(files_list_path)
     else:
-        alignment_files = parallel_find(args.alignments_dir, args.cpus) # this is so massive it needed parallelization just to build the list of files :(
+        # this is so massive it needed parallelization just to build the list of files :(
+        alignment_files = parallel_find(args.alignments_dir, args.cpus)
         print(f"writing list of results files to  {files_list_path}")
-        pickle.dump(alignment_files, open(files_list_path, 'wb'))
+        pack_pickle(alignment_files, files_list_path)
 
     #alignment_files = get_alignment_files(args.alignments_dir)
+
     if mode == 'ava':
-        if args.resume:
+        if 2 in args.resume:
             print(f"Unpacking parsed pickles for processing:\n{pickle_simple_rows}\n{pickle_detailed_rows}\n{pickle_no_homology}")
-            simple_rows   = pickle.load(open(pickle_simple_rows, 'rb'))
-            detailed_rows = pickle.load(open(pickle_detailed_rows, 'rb'))
-            no_homologies = pickle.load(open(pickle_no_homology, 'rb'))
+            simple_rows   = unpack_pickle(pickle_simple_rows)
+            detailed_rows = unpack_pickle(pickle_detailed_rows)
+            no_homologies = unpack_pickle(pickle_no_homology)
             print("Pickles Popped!")
         else:
             simple_rows, detailed_rows, no_homologies = parallel_parse(args.cpus, alignment_files, args.annotations_dir)
             print(f"Promptly packing pickles of parsed products:\n{pickle_simple_rows}\n{pickle_detailed_rows}\n{pickle_no_homology}")
-            pickle.dump(simple_rows, open(pickle_simple_rows, 'wb'))
-            pickle.dump(detailed_rows, open(pickle_detailed_rows, 'wb'))
-            pickle.dump(no_homologies, open(pickle_no_homology, 'wb'))
-            print("Pickles Packed!")
+            pack_pickle(simple_rows, pickle_simple_rows)
+            pack_pickle(detailed_rows, pickle_detailed_rows)
+            pack_pickle(no_homologies, pickle_no_homology)
+
             ## Now let's make our rows.
         #simple_rows = get_rows(alignments, homologies)
         #completion_msg = f'Parsed homology between {asm1_id} and {asm2_id}!'
