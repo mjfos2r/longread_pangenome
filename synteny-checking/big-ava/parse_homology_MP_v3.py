@@ -17,6 +17,7 @@ import tempfile
 import time
 import traceback
 import pickle  # I need to add back the resume-from-crash feature I had in v2.
+from pathlib import Path # linter is angry but I've no clue why. Need to explicitly type the paths I guess?
 from collections import defaultdict, deque
 
 # Stdlib multiprocessing imports
@@ -25,9 +26,7 @@ from concurrent.futures import (
     ThreadPoolExecutor,
     as_completed,
 )
-
 from multiprocessing import cpu_count
-from pathlib import Path # linter is angry but I've no clue why. Need to explicitly type the paths I guess?
 from queue import Queue, Empty
 from threading import Thread
 
@@ -117,6 +116,7 @@ class ConsolePanel(Console):
 
 
 class LogPanel:
+    """custom log handler for our rich live progress panel"""
     def __init__(self, RollingBufferHandler):
         self.buffer_handler = RollingBufferHandler
 
@@ -1160,7 +1160,7 @@ def main(args):
             shutil.move(temp_log_path, final_log_path)
             logging.info("Log file moved to: ", final_log_path)
 
-    except Exception:
+    except Exception: # shut up linter I don't care.
         print(f"An error occurred: {traceback.format_exc()}")
 
     finally:
