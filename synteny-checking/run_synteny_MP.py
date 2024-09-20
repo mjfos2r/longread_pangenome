@@ -51,14 +51,14 @@ def get_mauve_command(file1, file2, output_path):
 def get_mummer_command(file1, file2, output_path):
     # Set up the command to run one genome vs another.
     # Changed params for length_thr from 1000 to 250
-    # Changed params to not output plot and png
-    command = ['pgv-mummer', '-q', '--threads=4', f'{file2}', f'{file1}', '-o', output_path,
+    # Changed params to not output plot and png 
+    command = ['pgv-mummer', '-q', '--threads=4', f'{file2}', f'{file1}', '-o', output_path, 
                '--formats=html', '--show_scale_bar', '--curve',] # '--length_thr=250', '--identity_thr=75', apparently both default to 0 lol.
     return command
 
 def get_mmseq_command(file1, file2, output_path):
     # Set up the command to run one genome vs another.
-    command = ['pgv-mmseqs', '-q', '--threads=4', f'{file2}', f'{file1}', '-o', output_path,
+    command = ['pgv-mmseqs', '-q', '--threads=2', f'{file2}', f'{file1}', '-o', output_path, 
                '--length_thr=250', '--identity_thr=75', '--show_scale_bar', '--curve',]
     return command
 
@@ -67,10 +67,10 @@ def run_command(command):
         # Run the command
         result = subprocess.run(command, check=True, capture_output=True, text=True)
         return f'Successfully completed: {' '.join(command)}' if result.returncode == 0 else result.stderr
-
+    
     except subprocess.CalledProcessError as e:
         return f"Command '{command}' failed with error: {e.stderr}"
-
+    
     except Exception as e:
         return f"An unexpected error occurred: {str(e)}"
 
@@ -79,7 +79,7 @@ def parse_results(results):
     # visualize? ## ITS LITERALLY ALREADY DOING THIS :)
     # This will actually probably be the updated multiparser stuff I've written in the other file!
     pass
-
+    
 #def run_alignment(prog, genome, output_path, reference):
 #    if prog == "mauve":
 #        command = get_mauve_command(genome, output_path, reference)
@@ -111,7 +111,7 @@ def progress_bar(futures):
 def main():
     # Create the arg parser
     parser = argparse.ArgumentParser(description="A script to run mauve on a directory of assemblies against the B31 reference genome.")
-
+    
     # Add the arguments
     parser.add_argument('--mode',      type=str, help='Please specify which mode to run in: all_v_all or all_v_one [--ava, --av1]', required=True)
     parser.add_argument('--prog',      type=str, help='type of alignment to run [mauve, mummer, mmseq]', required=True)
@@ -119,10 +119,10 @@ def main():
     parser.add_argument('--reference', type=str, help='path to reference genome for alignment (if running av1 mode)')
     parser.add_argument('--output',    type=str, help='The directory for outputs', required=True)
     parser.add_argument('--cores',     type=int, help='how many cores we boggin?', required=True)
-
+    
     # Parse the arguments
     args = parser.parse_args()
-
+    
     print(f"Parsed arguments: {args}", file=sys.stderr) # Log parsed arguments for debugging
     if args.mode == 'ava':
         print("running in all_vs_all mode!")
@@ -130,13 +130,13 @@ def main():
         print("running in all_vs_one mode!")
     else:
         parser.error("ERROR: selected mode is not allowed. try again with --ava or --av1!")
-
+        
     if args.mode == 'av1' and not args.reference:
         parser.error("--reference is required when running in all_v_one (av1) mode")
-
-    # figure out how many workers to spin up based on 4 threads per instance of mmseqs2. round num workers down.
-    num_workers = math.floor(args.cores/4)
-
+                        
+    # figure out how many workers to spin up based on 4 threads per instance of mmseqs2. round num workers down. 
+    num_workers = math.floor(args.cores/2)
+    
     # Print the arguments
     print(f"alignment mode {args.mode}")
     print(f"alignment type {args.prog}")
@@ -175,13 +175,13 @@ def main():
                         #print(f"job:{job_count} added!")
                         #job_count += 1
             progress_bar(futures)
-
+            
     elif args.mode == 'av1':
         genomes = get_gb_inputs(args.input_dir)
         print(f"Number of genomes being processed: {len(genomes)}")
         reference = args.reference
         print(f"Reference: {reference}")
-
+                                    
         with ProcessPoolExecutor(max_workers=num_workers) as executor:
             futures = []
             for genome in genomes:
@@ -189,8 +189,8 @@ def main():
                 command = get_alignment_command(genome, reference, output_path, args.prog)
                 futures.append(executor.submit(run_alignment, command))
             progress_bar(futures)
-
-
+            
+        
     ##print(f"Cores for Mauve: {args.cores_for_mauve}")
     #match args.prog:
     #    case "mauve":
@@ -215,4 +215,3 @@ def main():
 #
 if __name__ == "__main__":
     main()
-

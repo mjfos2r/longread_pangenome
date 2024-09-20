@@ -17,9 +17,9 @@ def get_command(in_file, out_file, ref_genome_path):
     # Set up the command to run one genome vs the B31 reference.
     progressive_mauve_path = '/Applications/Mauve.app/Contents/MacOS/progressiveMauve'
     command = [f'{progressive_mauve_path}', f'--output={out_file}.xmfa',
-                 f'--backbone-output={out_file}.backbone',
-                 f'--output-guide-tree={out_file}.gtree',
-                 f'{ref_genome_path}', f'{in_file}']
+                f'--backbone-output={out_file}.backbone',
+                f'--output-guide-tree={out_file}.gtree',
+                f'{ref_genome_path}', f'{in_file}']
     return command
 
 def run_mauve(command):
