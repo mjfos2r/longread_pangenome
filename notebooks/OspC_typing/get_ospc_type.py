@@ -56,7 +56,7 @@ known_types = input_metadata[['Isolate', 'OspC_Type']]
 # I will be taking this, making a blast DB and then I need to isolate the OspC seqs from each assembly, then blast against the OspC database.
 # Then parse the blast results and add the type to the metadata table.
 #################################################
-# OspC List from Ira and Hanincova et al.
+# OspC List from Ira and Hanincova et al. and from Cerar et al.
 ospc_genotype_to_ref = { 'A' : 'X69596',   'Ba' : 'EF537413', 'Bb' : 'NC_011724', 'C' : 'DQ437462',
                         'Da' : 'AF029863', 'Db' : 'GQ478283',  'E' : 'AY275221', 'Fa' : 'AY275225',
                         'Fb' : 'EF537433', 'Fc' : 'GQ478285',  'G' : 'AY275223', 'Ha' : 'EU377781',
@@ -64,7 +64,8 @@ ospc_genotype_to_ref = { 'A' : 'X69596',   'Ba' : 'EF537413', 'Bb' : 'NC_011724'
                          'K' : 'AY275214',  'L' : 'EU375832',  'M' : 'CP001550',  'N' : 'EU377775',
                          'O' : 'FJ997281',  'T' : 'AY275222', 'Ua' : 'EU377769', 'Ub' : 'GQ478287',
                         'A3' : 'EF592541', 'B3' : 'EF592542', 'C3' : 'EF592543', 'D3' : 'EF592544',
-                        'E3' : 'EF592545', 'F3' : 'EF592547', 'H3' : 'FJ932733', 'I3' : 'FJ932734' }
+                        'E3' : 'EF592545', 'F3' : 'EF592547', 'H3' : 'FJ932733', 'I3' : 'FJ932734', # rest of types below
+                        'P': ?, 'Q': ?, 'R': ?, 'S': ?} # need these!!
 
 # OspC AT list from file provided by Ira
 ospc_AT_to_ref = { 'AT1' : 'EU482041', ' AT2' : 'EU482042',  'AT3' : 'EU482043',  'AT4' : 'EU482044',
