@@ -1,0 +1,51 @@
+2024-08-01 20:24:58 | INFO | Run pyGenomeViz v1.2.1 CLI workflow (pgv-mmseqs)
+2024-08-01 20:24:58 | INFO | $ pgv-mmseqs -q --threads=4 renamed_GCF_000008685.2.gbff /home/mf019/longread_pangenome/longread_analysis/paired_assemblies/paired_only/longread/annotation/URI46H/URI46H.gbff -o asms_vs_B31_prot/URI46H --length_thr=250 --identity_thr=75 --show_scale_bar --curve
+2024-08-01 20:24:58 | INFO | Operating System: linux
+2024-08-01 20:24:58 | INFO | Python Version: v3.12.4
+2024-08-01 20:24:58 | INFO | Check Dependencies: matplotlib v3.9.1
+2024-08-01 20:24:58 | INFO | Check Dependencies: biopython v1.84
+2024-08-01 20:24:58 | INFO | Parameters: seqs=['renamed_GCF_000008685.2.gbff', '/home/mf019/longread_pangenome/longread_analysis/paired_assemblies/paired_only/longread/annotation/URI46H/URI46H.gbff']
+2024-08-01 20:24:58 | INFO | Parameters: outdir='asms_vs_B31_prot/URI46H'
+2024-08-01 20:24:58 | INFO | Parameters: formats=('png', 'html')
+2024-08-01 20:24:58 | INFO | Parameters: reuse=False
+2024-08-01 20:24:58 | INFO | Parameters: quiet=True
+2024-08-01 20:24:58 | INFO | Parameters: debug=False
+2024-08-01 20:24:58 | INFO | Parameters: threads=4
+2024-08-01 20:24:58 | INFO | Parameters: length_thr=250
+2024-08-01 20:24:58 | INFO | Parameters: identity_thr=75.0
+2024-08-01 20:24:58 | INFO | Parameters: evalue_thr=0.001
+2024-08-01 20:24:58 | INFO | Parameters: fig_width=15
+2024-08-01 20:24:58 | INFO | Parameters: fig_track_height=1.0
+2024-08-01 20:24:58 | INFO | Parameters: track_align_type='center'
+2024-08-01 20:24:58 | INFO | Parameters: feature_track_ratio=0.25
+2024-08-01 20:24:58 | INFO | Parameters: show_scale_bar=True
+2024-08-01 20:24:58 | INFO | Parameters: show_scale_xticks=False
+2024-08-01 20:24:58 | INFO | Parameters: curve=True
+2024-08-01 20:24:58 | INFO | Parameters: dpi=300
+2024-08-01 20:24:58 | INFO | Parameters: track_labelsize=20
+2024-08-01 20:24:58 | INFO | Parameters: scale_labelsize=15
+2024-08-01 20:24:58 | INFO | Parameters: normal_link_color='grey'
+2024-08-01 20:24:58 | INFO | Parameters: inverted_link_color='red'
+2024-08-01 20:24:58 | INFO | Parameters: segment_space=0.02
+2024-08-01 20:24:58 | INFO | Parameters: feature_type2color={'CDS': 'orange'}
+2024-08-01 20:24:58 | INFO | Parameters: pseudo_color='lightgrey'
+2024-08-01 20:24:58 | INFO | Parameters: feature_plotstyle='arrow'
+2024-08-01 20:24:58 | INFO | Parameters: feature_linewidth=0.0
+2024-08-01 20:24:58 | INFO | Parameters: feature_labeltrack='top'
+2024-08-01 20:24:58 | INFO | Parameters: feature_labeltype=None
+2024-08-01 20:24:58 | INFO | Parameters: feature_labelsize=8
+2024-08-01 20:24:58 | INFO | Parameters: cbar_width=0.01
+2024-08-01 20:24:58 | INFO | Parameters: cbar_height=0.2
+2024-08-01 20:24:59 | INFO | Convert Genbank object to CDS fasta file '/tmp/tmpgyjx54e8/renamed_GCF_000008685.2.faa'
+2024-08-01 20:24:59 | INFO | Convert Genbank object to CDS fasta file '/tmp/tmpgyjx54e8/URI46H.faa'
+2024-08-01 20:24:59 | INFO | ========== Start MMseqs RBH Search ==========
+2024-08-01 20:24:59 | INFO | 01. MMseqs RBH Search 'renamed_GCF_000008685.2' vs 'URI46H'
+2024-08-01 20:24:59 | INFO | $ mmseqs easy-rbh '/tmp/tmpgyjx54e8/renamed_GCF_000008685.2.faa' '/tmp/tmpgyjx54e8/URI46H.faa' '/tmp/tmpgyjx54e8/01_renamed_GCF_000008685.2_vs_URI46H.tsv' /tmp/tmpgyjx54e8 --threads 4 -e 0.001 -v 0
+2024-08-01 20:25:06 | INFO | ========== Finish MMseqs RBH Search ==========
+2024-08-01 20:25:06 | INFO | Write alignment result to 'asms_vs_B31_prot/URI46H/align_coords.tsv'
+2024-08-01 20:25:06 | INFO | Filter alignment result by length_thr=250, identity_thr=75.0 evalue_thr=0.001
+2024-08-01 20:25:06 | INFO | Plotting PNG format result...
+2024-08-01 20:25:10 | INFO | Output result image file 'asms_vs_B31_prot/URI46H/result.png'
+2024-08-01 20:25:10 | INFO | Plotting HTML format result...
+2024-08-01 20:25:16 | INFO | Output result image file 'asms_vs_B31_prot/URI46H/result.html'
+2024-08-01 20:25:16 | INFO | Done (elapsed time: 17.53[s])

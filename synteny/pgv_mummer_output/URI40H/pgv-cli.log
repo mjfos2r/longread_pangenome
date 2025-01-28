@@ -1,0 +1,55 @@
+2024-07-26 17:12:32 | INFO | Run pyGenomeViz v1.2.1 CLI workflow (pgv-mummer)
+2024-07-26 17:12:32 | INFO | $ pgv-mummer GCF_000008685.2.gbff /home/mf019/longread_pangenome/longread_analysis/paired_assemblies/paired_only/longread/annotation/URI40H/URI40H.gbff -o pgv_mummer_output/URI40H --show_scale_bar
+2024-07-26 17:12:32 | INFO | Operating System: linux
+2024-07-26 17:12:32 | INFO | Python Version: v3.12.4
+2024-07-26 17:12:32 | INFO | Check Dependencies: matplotlib v3.9.1
+2024-07-26 17:12:32 | INFO | Check Dependencies: biopython v1.84
+2024-07-26 17:12:32 | INFO | Parameters: seqs=['GCF_000008685.2.gbff', '/home/mf019/longread_pangenome/longread_analysis/paired_assemblies/paired_only/longread/annotation/URI40H/URI40H.gbff']
+2024-07-26 17:12:32 | INFO | Parameters: outdir=' pgv_mummer_output/URI40H'
+2024-07-26 17:12:32 | INFO | Parameters: formats=('png', 'html')
+2024-07-26 17:12:32 | INFO | Parameters: reuse=False
+2024-07-26 17:12:32 | INFO | Parameters: quiet=False
+2024-07-26 17:12:32 | INFO | Parameters: debug=False
+2024-07-26 17:12:32 | INFO | Parameters: seqtype='nucleotide'
+2024-07-26 17:12:32 | INFO | Parameters: threads=89
+2024-07-26 17:12:32 | INFO | Parameters: length_thr=0
+2024-07-26 17:12:32 | INFO | Parameters: identity_thr=0
+2024-07-26 17:12:32 | INFO | Parameters: fig_width=15
+2024-07-26 17:12:32 | INFO | Parameters: fig_track_height=1.0
+2024-07-26 17:12:32 | INFO | Parameters: track_align_type='center'
+2024-07-26 17:12:32 | INFO | Parameters: feature_track_ratio=0.25
+2024-07-26 17:12:32 | INFO | Parameters: show_scale_bar=True
+2024-07-26 17:12:32 | INFO | Parameters: show_scale_xticks=False
+2024-07-26 17:12:32 | INFO | Parameters: curve=False
+2024-07-26 17:12:32 | INFO | Parameters: dpi=300
+2024-07-26 17:12:32 | INFO | Parameters: track_labelsize=20
+2024-07-26 17:12:32 | INFO | Parameters: scale_labelsize=15
+2024-07-26 17:12:32 | INFO | Parameters: normal_link_color='grey'
+2024-07-26 17:12:32 | INFO | Parameters: inverted_link_color='red'
+2024-07-26 17:12:32 | INFO | Parameters: segment_space=0.02
+2024-07-26 17:12:32 | INFO | Parameters: feature_type2color={'CDS': 'orange'}
+2024-07-26 17:12:32 | INFO | Parameters: pseudo_color='lightgrey'
+2024-07-26 17:12:32 | INFO | Parameters: feature_plotstyle='arrow'
+2024-07-26 17:12:32 | INFO | Parameters: feature_linewidth=0.0
+2024-07-26 17:12:32 | INFO | Parameters: feature_labeltrack='top'
+2024-07-26 17:12:32 | INFO | Parameters: feature_labeltype=None
+2024-07-26 17:12:32 | INFO | Parameters: feature_labelsize=8
+2024-07-26 17:12:32 | INFO | Parameters: cbar_width=0.01
+2024-07-26 17:12:32 | INFO | Parameters: cbar_height=0.2
+2024-07-26 17:12:32 | INFO | Convert Genbank object to genome fasta file '/tmp/tmpg_z52x8f/GCF_000008685.2.fna'
+2024-07-26 17:12:32 | INFO | Convert Genbank object to genome fasta file '/tmp/tmpg_z52x8f/URI40H.fna'
+2024-07-26 17:12:32 | INFO | ========== Start MUMmer Alignment ==========
+2024-07-26 17:12:32 | INFO | 01. MUMmer Alignment 'GCF_000008685.2' vs 'URI40H'
+2024-07-26 17:12:32 | INFO | $ nucmer --mum '/tmp/tmpg_z52x8f/URI40H.fna' '/tmp/tmpg_z52x8f/GCF_000008685.2.fna' --prefix=/tmp/tmpg_z52x8f/01_GCF_000008685.2_vs_URI40H
+2024-07-26 17:12:39 | INFO | $ delta-filter -1 '/tmp/tmpg_z52x8f/01_GCF_000008685.2_vs_URI40H.delta'
+2024-07-26 17:12:39 | INFO | > Save cmd stdout results to '/tmp/tmpg_z52x8f/01_GCF_000008685.2_vs_URI40H_filter.delta'
+2024-07-26 17:12:39 | INFO | $ show-coords -H -T -r -k '/tmp/tmpg_z52x8f/01_GCF_000008685.2_vs_URI40H_filter.delta'
+2024-07-26 17:12:39 | INFO | > Save cmd stdout results to '/tmp/tmpg_z52x8f/01_GCF_000008685.2_vs_URI40H_coords.tsv'
+2024-07-26 17:12:39 | INFO | ========== Finish MUMmer Alignment ==========
+2024-07-26 17:12:39 | INFO | Write alignment result to ' pgv_mummer_output/URI40H/align_coords.tsv'
+2024-07-26 17:12:39 | INFO | Filter alignment result by length_thr=0, identity_thr=0
+2024-07-26 17:12:39 | INFO | Plotting PNG format result...
+2024-07-26 17:12:41 | INFO | Output result image file ' pgv_mummer_output/URI40H/result.png'
+2024-07-26 17:12:41 | INFO | Plotting HTML format result...
+2024-07-26 17:12:43 | INFO | Output result image file ' pgv_mummer_output/URI40H/result.html'
+2024-07-26 17:12:43 | INFO | Done (elapsed time: 11.20[s])

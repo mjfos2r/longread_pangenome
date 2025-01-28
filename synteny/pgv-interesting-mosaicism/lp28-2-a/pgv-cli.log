@@ -1,0 +1,60 @@
+2024-10-09 16:59:26 | INFO | Run pyGenomeViz v1.3.0 CLI workflow (pgv-mmseqs)
+2024-10-09 16:59:26 | INFO | $ pgv-mmseqs -q --threads=14 /home/mf019/longread_pangenome/synteny/pgv-interesting-mosaicism/tmpmjng6hmm/UNY172P_B356_lp28-2 /home/mf019/longread_pangenome/synteny/pgv-interesting-mosaicism/tmpqkgoh43a/URI102H_lp28-2.gbff /home/mf019/longread_pangenome/synteny/pgv-interesting-mosaicism/tmp0mslcpuc/UCT109H_lp28-2.gbff /home/mf019/longread_pangenome/synteny/pgv-interesting-mosaicism/tmps60hsns_/URI40H_lp28-4.gbff /home/mf019/longread_pangenome/synteny/pgv-interesting-mosaicism/tmplbx4s4cx/URI42H_cp32-10.gbff -o pgv-interesting-mosaicism/lp28-2-a --show_scale_bar --curve --length_thr=250 --identity_thr=75
+2024-10-09 16:59:26 | INFO | Operating System: linux
+2024-10-09 16:59:26 | INFO | Python Version: v3.12.2
+2024-10-09 16:59:26 | INFO | Check Dependencies: matplotlib v3.8.4
+2024-10-09 16:59:26 | INFO | Check Dependencies: biopython v1.83
+2024-10-09 16:59:26 | INFO | Parameters: seqs=['/home/mf019/longread_pangenome/synteny/pgv-interesting-mosaicism/tmpmjng6hmm/UNY172P_B356_lp28-2', '/home/mf019/longread_pangenome/synteny/pgv-interesting-mosaicism/tmpqkgoh43a/URI102H_lp28-2.gbff', '/home/mf019/longread_pangenome/synteny/pgv-interesting-mosaicism/tmp0mslcpuc/UCT109H_lp28-2.gbff', '/home/mf019/longread_pangenome/synteny/pgv-interesting-mosaicism/tmps60hsns_/URI40H_lp28-4.gbff', '/home/mf019/longread_pangenome/synteny/pgv-interesting-mosaicism/tmplbx4s4cx/URI42H_cp32-10.gbff']
+2024-10-09 16:59:26 | INFO | Parameters: outdir='pgv-interesting-mosaicism/lp28-2-a'
+2024-10-09 16:59:26 | INFO | Parameters: formats=('png', 'html')
+2024-10-09 16:59:26 | INFO | Parameters: reuse=False
+2024-10-09 16:59:26 | INFO | Parameters: quiet=True
+2024-10-09 16:59:26 | INFO | Parameters: debug=False
+2024-10-09 16:59:26 | INFO | Parameters: threads=14
+2024-10-09 16:59:26 | INFO | Parameters: length_thr=250
+2024-10-09 16:59:26 | INFO | Parameters: identity_thr=75.0
+2024-10-09 16:59:26 | INFO | Parameters: evalue_thr=0.001
+2024-10-09 16:59:26 | INFO | Parameters: fig_width=15
+2024-10-09 16:59:26 | INFO | Parameters: fig_track_height=1.0
+2024-10-09 16:59:26 | INFO | Parameters: track_align_type='center'
+2024-10-09 16:59:26 | INFO | Parameters: feature_track_ratio=0.25
+2024-10-09 16:59:26 | INFO | Parameters: show_scale_bar=True
+2024-10-09 16:59:26 | INFO | Parameters: show_scale_xticks=False
+2024-10-09 16:59:26 | INFO | Parameters: curve=True
+2024-10-09 16:59:26 | INFO | Parameters: dpi=300
+2024-10-09 16:59:26 | INFO | Parameters: track_labelsize=20
+2024-10-09 16:59:26 | INFO | Parameters: scale_labelsize=15
+2024-10-09 16:59:26 | INFO | Parameters: normal_link_color='grey'
+2024-10-09 16:59:26 | INFO | Parameters: inverted_link_color='red'
+2024-10-09 16:59:26 | INFO | Parameters: segment_space=0.02
+2024-10-09 16:59:26 | INFO | Parameters: feature_type2color={'CDS': 'orange'}
+2024-10-09 16:59:26 | INFO | Parameters: pseudo_color='lightgrey'
+2024-10-09 16:59:26 | INFO | Parameters: feature_plotstyle='arrow'
+2024-10-09 16:59:26 | INFO | Parameters: feature_linewidth=0.0
+2024-10-09 16:59:26 | INFO | Parameters: feature_labeltrack='top'
+2024-10-09 16:59:26 | INFO | Parameters: feature_labeltype=None
+2024-10-09 16:59:26 | INFO | Parameters: feature_labelsize=8
+2024-10-09 16:59:26 | INFO | Parameters: cbar_width=0.01
+2024-10-09 16:59:26 | INFO | Parameters: cbar_height=0.2
+2024-10-09 16:59:26 | INFO | Convert Genbank object to CDS fasta file '/tmp/tmpvga0cbev/UNY172P_B356_lp28-2.faa'
+2024-10-09 16:59:26 | INFO | Convert Genbank object to CDS fasta file '/tmp/tmpvga0cbev/URI102H_lp28-2.faa'
+2024-10-09 16:59:26 | INFO | Convert Genbank object to CDS fasta file '/tmp/tmpvga0cbev/UCT109H_lp28-2.faa'
+2024-10-09 16:59:26 | INFO | Convert Genbank object to CDS fasta file '/tmp/tmpvga0cbev/URI40H_lp28-4.faa'
+2024-10-09 16:59:26 | INFO | Convert Genbank object to CDS fasta file '/tmp/tmpvga0cbev/URI42H_cp32-10.faa'
+2024-10-09 16:59:26 | INFO | ========== Start MMseqs RBH Search ==========
+2024-10-09 16:59:26 | INFO | 01. MMseqs RBH Search 'UNY172P_B356_lp28-2' vs 'URI102H_lp28-2'
+2024-10-09 16:59:26 | INFO | $ mmseqs easy-rbh '/tmp/tmpvga0cbev/UNY172P_B356_lp28-2.faa' '/tmp/tmpvga0cbev/URI102H_lp28-2.faa' '/tmp/tmpvga0cbev/01_UNY172P_B356_lp28-2_vs_URI102H_lp28-2.tsv' /tmp/tmpvga0cbev --threads 14 -e 0.001 -v 0
+2024-10-09 16:59:28 | INFO | 02. MMseqs RBH Search 'URI102H_lp28-2' vs 'UCT109H_lp28-2'
+2024-10-09 16:59:28 | INFO | $ mmseqs easy-rbh '/tmp/tmpvga0cbev/URI102H_lp28-2.faa' '/tmp/tmpvga0cbev/UCT109H_lp28-2.faa' '/tmp/tmpvga0cbev/02_URI102H_lp28-2_vs_UCT109H_lp28-2.tsv' /tmp/tmpvga0cbev --threads 14 -e 0.001 -v 0
+2024-10-09 16:59:30 | INFO | 03. MMseqs RBH Search 'UCT109H_lp28-2' vs 'URI40H_lp28-4'
+2024-10-09 16:59:30 | INFO | $ mmseqs easy-rbh '/tmp/tmpvga0cbev/UCT109H_lp28-2.faa' '/tmp/tmpvga0cbev/URI40H_lp28-4.faa' '/tmp/tmpvga0cbev/03_UCT109H_lp28-2_vs_URI40H_lp28-4.tsv' /tmp/tmpvga0cbev --threads 14 -e 0.001 -v 0
+2024-10-09 16:59:32 | INFO | 04. MMseqs RBH Search 'URI40H_lp28-4' vs 'URI42H_cp32-10'
+2024-10-09 16:59:32 | INFO | $ mmseqs easy-rbh '/tmp/tmpvga0cbev/URI40H_lp28-4.faa' '/tmp/tmpvga0cbev/URI42H_cp32-10.faa' '/tmp/tmpvga0cbev/04_URI40H_lp28-4_vs_URI42H_cp32-10.tsv' /tmp/tmpvga0cbev --threads 14 -e 0.001 -v 0
+2024-10-09 16:59:34 | INFO | ========== Finish MMseqs RBH Search ==========
+2024-10-09 16:59:34 | INFO | Write alignment result to 'pgv-interesting-mosaicism/lp28-2-a/align_coords.tsv'
+2024-10-09 16:59:34 | INFO | Filter alignment result by length_thr=250, identity_thr=75.0 evalue_thr=0.001
+2024-10-09 16:59:34 | INFO | Plotting PNG format result...
+2024-10-09 16:59:36 | INFO | Output result image file 'pgv-interesting-mosaicism/lp28-2-a/result.png'
+2024-10-09 16:59:36 | INFO | Plotting HTML format result...
+2024-10-09 16:59:38 | INFO | Output result image file 'pgv-interesting-mosaicism/lp28-2-a/result.html'
+2024-10-09 16:59:38 | INFO | Done (elapsed time: 11.46[s])

@@ -1,0 +1,65 @@
+2024-08-16 22:43:38,198 - DEBUG - initialized logger: main_logger
+2024-08-16 22:43:38,198 - DEBUG - max buffer length: 16
+2024-08-16 22:43:38,198 - DEBUG - setting up log formatter for pane view
+2024-08-16 22:43:38,198 - DEBUG - setting up custom rolling buffering handler for pane view
+2024-08-16 22:43:38,198 - DEBUG - adding custom rolling buffering handler to main_logger
+2024-08-16 22:43:38,198 - DEBUG - parsing args to dict and creating string for pane view
+2024-08-16 22:43:38,200 - DEBUG - creating path for subdirectory:v4 in output:asms_ava
+2024-08-16 22:43:38,200 - DEBUG - new output path: asms_ava/v4
+2024-08-16 22:43:38,200 - DEBUG - Starting live view
+2024-08-16 22:43:38,204 - INFO - Using the following arguments for this run
+[bold green]annotations_dir[/bold green]: asm_genbanks
+[bold green]alignments_dir[/bold green]: /mnt/disks/big-results/asms_all_v_all/homology
+[bold green]output_dir[/bold green]: asms_ava
+[bold green]logfile[/bold green]: homology_parsing
+[bold green]cores[/bold green]: 358
+[bold green]dale[/bold green]: True
+[bold green]version[/bold green]: v4
+
+2024-08-16 22:43:38,204 - INFO - Creating output directory: asms_ava/v4
+2024-08-16 22:43:38,204 - INFO - [green]Output directory successfully created[/green]
+2024-08-16 22:43:38,205 - INFO - [bold cyan]Starting Homology Analysis[/bold cyan]
+2024-08-16 22:43:38,206 - INFO - [bold blue]Indexing all GenBank files...[/bold blue]
+2024-08-16 22:43:38,214 - INFO - [green]Successfully indexed[/green] [green]2943[/green] [green]GenBank files.[/green]
+2024-08-16 22:43:38,214 - INFO - [yellow]Expected number of alignment files:[/yellow] 4329153
+2024-08-16 22:43:38,219 - INFO - [bold blue]Finding and processing alignment files...[/bold blue]
+2024-08-16 22:43:38,219 - DEBUG - [bold blue]Beginning parallel execution[/bold blue]
+2024-08-16 22:43:38,219 - DEBUG - [yellow]Beginning file discovery, initializing file Queue() and discovery Thread()[/yellow]
+2024-08-16 22:43:38,219 - DEBUG - Starting discovery thread!
+2024-08-16 22:43:38,220 - DEBUG - discover_files: Beginning walk through /mnt/disks/big-results/asms_all_v_all/homology
+2024-08-16 22:46:32,242 - DEBUG - discover_files: inserting None into queue
+2024-08-16 22:46:32,244 - INFO - [bold green]Discovery complete. Found[/bold green] 4329153 [bold green]files[/bold green]
+2024-08-16 22:48:27,401 - DEBUG - `None` path reached! Discovery is finished. Waiting for discovery thread to complete. Merging thread with main!
+2024-08-16 22:48:27,406 - DEBUG - Discovery thread successfully merged!
+2024-08-16 22:50:32,527 - INFO - Reached expected count of 4329153, setting [white]all_files_processed[/white] flag to [green]True[/green]!
+2024-08-16 22:50:34,979 - INFO - [bold green]Parallel processing is complete![/bold green]
+Total Runtime: 416.76 seconds. [bold green]Files discovered:[/bold green] 4329153, [bold green]Files processed:[/bold green] 4329153
+2024-08-16 22:50:34,980 - INFO - Total rows in simple_rows: 505122
+2024-08-16 22:50:34,980 - DEBUG - creating dataframe from simple_rows
+2024-08-16 22:50:35,524 - INFO - Total rows in DataFrame: 505122
+2024-08-16 22:50:35,524 - DEBUG - aggregating alignments by contig
+2024-08-16 22:50:44,097 - INFO - Total contigs in grouped_data: 2931
+2024-08-16 22:50:44,097 - DEBUG - creating summary dataframe of aggregated alignments
+2024-08-16 22:50:44,097 - DEBUG - beginning summary df construction!
+2024-08-16 22:50:44,193 - DEBUG - finished summary df construction!
+2024-08-16 22:50:44,197 - INFO - Total rows in summary DataFrame: 2931
+2024-08-16 22:50:44,198 - DEBUG - creating matrices from aggregated alignments!
+2024-08-16 22:50:44,441 - INFO - [green]Processed[/green] 4329153 [green]alignment files in[/green] 416.76 [green]seconds.[/green]
+2024-08-16 22:50:44,442 - INFO - Writing output files...
+2024-08-16 22:50:44,442 - INFO - [bold_blue]Writing rows to files. Please stand by.[/bold_blue]
+2024-08-16 22:50:44,442 - DEBUG - writing simple rows!
+2024-08-16 22:50:45,312 - INFO - [bold_green]simple_rows file has been written![/bold_green]
+2024-08-16 22:50:45,312 - DEBUG - writing detailed rows!
+2024-08-16 22:50:47,652 - INFO - [bold_green]detailed_rows file has been written![/bold_green]
+2024-08-16 22:50:47,653 - DEBUG - writing summary dataframe!
+2024-08-16 22:50:47,817 - INFO - [bold_green]summary DataFrame has been written![/bold_green]
+2024-08-16 22:50:47,818 - DEBUG - writing numpy matrix!
+2024-08-16 22:50:49,870 - INFO - [bold_green]numpy matrix has been written![/bold_green]
+2024-08-16 22:50:49,870 - DEBUG - writing pandas matrix!
+2024-08-16 22:50:50,782 - INFO - [bold_green]pandas DataFrame matrix has been written![/bold_green]
+2024-08-16 22:50:50,783 - DEBUG - writing contig labels (for numpy row/cols)
+2024-08-16 22:50:50,784 - INFO - [bold_green]contig labels have been written![/bold_green]
+2024-08-16 22:50:50,784 - INFO - [bold_green]All output files have been written![/bold_green]
+2024-08-16 22:50:50,784 - INFO - [bold green]Homology Analysis Completed Successfully![/bold green]
+2024-08-16 22:50:50,785 - INFO - Moving temp logfile to final logfile: asms_ava/v4/homology_parsing.log
+2024-08-16 22:50:50,785 - INFO - Log file moved to: asms_ava/v4/homology_parsing.log

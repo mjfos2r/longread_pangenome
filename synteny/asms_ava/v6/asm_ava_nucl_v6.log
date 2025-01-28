@@ -1,0 +1,88 @@
+2024-09-26 18:27:33,747 - DEBUG - initialized logger: main_logger
+2024-09-26 18:27:33,748 - DEBUG - max buffer length: 16
+2024-09-26 18:27:33,748 - DEBUG - setting up log formatter for pane view
+2024-09-26 18:27:33,748 - DEBUG - setting up custom rolling buffering handler for pane view
+2024-09-26 18:27:33,748 - DEBUG - adding custom rolling buffering handler to main_logger
+2024-09-26 18:27:33,748 - DEBUG - parsing args to dict and creating string for pane view
+2024-09-26 18:27:33,749 - DEBUG - creating path for subdirectory:v6 in output:asms_ava_prot
+2024-09-26 18:27:33,749 - DEBUG - new output path: asms_ava_prot/v6
+2024-09-26 18:27:33,750 - DEBUG - Starting live view
+2024-09-26 18:27:33,754 - INFO - Using the following arguments for this run
+[bold green]annotations_dir[/bold green]: asm_genbanks
+[bold green]alignments_dir[/bold green]: /mnt/disks/results-1/asms_ava_prot_v1/nucleotide
+[bold green]output_dir[/bold green]: asms_ava_prot
+[bold green]logfile[/bold green]: asm_ava_nucl_v6
+[bold green]cores[/bold green]: 358
+[bold green]dale[/bold green]: True
+[bold green]version[/bold green]: v6
+[bold green]analysis_type[/bold green]: nucl
+[bold green]min_identity[/bold green]: 50.0
+[bold green]identity_step[/bold green]: 10.0
+
+2024-09-26 18:27:33,754 - INFO - Creating output directory: asms_ava_prot/v6
+2024-09-26 18:27:33,754 - INFO - [green]Output directory successfully created[/green]
+2024-09-26 18:27:33,755 - INFO - [bold cyan]Starting Homology Analysis[/bold cyan]
+2024-09-26 18:27:33,755 - INFO - [bold blue]Indexing all GenBank files...[/bold blue]
+2024-09-26 18:27:33,764 - INFO - [green]Successfully indexed[/green] [green]2943[/green] [green]GenBank files.[/green]
+2024-09-26 18:27:33,764 - INFO - [yellow]Expected number of alignment files:[/yellow] 4329153
+2024-09-26 18:27:33,769 - INFO - [bold blue]Finding and processing alignment files...[/bold blue]
+2024-09-26 18:27:33,770 - DEBUG - [bold blue]Beginning parallel execution[/bold blue]
+2024-09-26 18:27:33,770 - DEBUG - [yellow]Beginning file discovery, initializing file Queue() and discovery Thread()[/yellow]
+2024-09-26 18:27:33,770 - DEBUG - Starting discovery thread!
+2024-09-26 18:27:33,770 - DEBUG - discover_files: Beginning walk through /mnt/disks/results-1/asms_ava_prot_v1/nucleotide
+2024-09-26 18:28:06,522 - DEBUG - Chunksize reached. Spawning jobs!
+2024-09-26 18:28:32,105 - DEBUG - Chunksize reached. Spawning jobs!
+2024-09-26 18:28:47,315 - DEBUG - Chunksize reached. Spawning jobs!
+2024-09-26 18:29:03,431 - DEBUG - Chunksize reached. Spawning jobs!
+2024-09-26 18:29:18,541 - DEBUG - Chunksize reached. Spawning jobs!
+2024-09-26 18:29:34,307 - DEBUG - Chunksize reached. Spawning jobs!
+2024-09-26 18:29:50,348 - DEBUG - Chunksize reached. Spawning jobs!
+2024-09-26 18:30:05,347 - DEBUG - Chunksize reached. Spawning jobs!
+2024-09-26 18:30:09,217 - DEBUG - discover_files: inserting None into queue
+2024-09-26 18:30:09,218 - INFO - [bold green]Discovery complete. Found[/bold green] 4329153 [bold green]files[/bold green]
+2024-09-26 18:30:20,383 - DEBUG - Chunksize reached. Spawning jobs!
+2024-09-26 18:30:35,517 - DEBUG - Chunksize reached. Spawning jobs!
+2024-09-26 18:30:49,889 - DEBUG - Chunksize reached. Spawning jobs!
+2024-09-26 18:31:05,394 - DEBUG - Chunksize reached. Spawning jobs!
+2024-09-26 18:31:20,645 - DEBUG - Chunksize reached. Spawning jobs!
+2024-09-26 18:31:35,803 - DEBUG - Chunksize reached. Spawning jobs!
+2024-09-26 18:31:52,109 - DEBUG - Chunksize reached. Spawning jobs!
+2024-09-26 18:32:07,974 - DEBUG - Chunksize reached. Spawning jobs!
+2024-09-26 18:32:23,491 - DEBUG - Chunksize reached. Spawning jobs!
+2024-09-26 18:32:38,873 - DEBUG - Chunksize reached. Spawning jobs!
+2024-09-26 18:32:53,479 - DEBUG - `None` path reached! Discovery is finished. Waiting for discovery thread to complete. Merging thread with main!
+2024-09-26 18:32:53,480 - DEBUG - Discovery thread successfully merged!
+2024-09-26 18:32:53,480 - DEBUG - Chunksize reached. Spawning jobs!
+2024-09-26 18:33:03,514 - DEBUG - Chunksize reached. Spawning jobs!
+2024-09-26 18:33:07,338 - DEBUG - Chunksize reached. Spawning jobs!
+2024-09-26 18:33:08,932 - DEBUG - Chunksize reached. Spawning jobs!
+2024-09-26 18:33:09,700 - DEBUG - Chunksize reached. Spawning jobs!
+2024-09-26 18:33:10,438 - DEBUG - Chunksize reached. Spawning jobs!
+2024-09-26 18:33:10,782 - DEBUG - Chunksize reached. Spawning jobs!
+2024-09-26 18:33:11,183 - DEBUG - Chunksize reached. Spawning jobs!
+2024-09-26 18:33:11,215 - INFO - Reached expected count of 4329153, setting [white]all_files_processed[/white] flag to [green]True[/green]!
+2024-09-26 18:33:13,641 - INFO - [bold green]Parallel processing is complete![/bold green]
+Total Runtime: 339.87 seconds. [bold green]Files discovered:[/bold green] 4329153, [bold green]Files processed:[/bold green] 4329153
+2024-09-26 18:33:13,641 - INFO - Total rows in simple_rows: 4329153
+2024-09-26 18:33:17,518 - INFO - Total rows in DataFrame: 4329153
+2024-09-26 18:33:17,518 - DEBUG - aggregating alignments by contig
+2024-09-26 18:34:24,956 - INFO - Total contigs in grouped_data: 2943
+2024-09-26 18:34:24,957 - DEBUG - creating summary dataframe of aggregated alignments
+2024-09-26 18:34:24,957 - DEBUG - beginning summary df construction!
+2024-09-26 18:34:25,052 - DEBUG - finished summary df construction!
+2024-09-26 18:34:25,063 - INFO - Total rows in summary DataFrame: 2943
+2024-09-26 18:34:25,063 - DEBUG - creating matrices from aggregated alignments!
+2024-09-26 18:34:25,479 - INFO - [green]Processed[/green] 4329153 [green]alignment files in[/green] 339.87 [green]seconds.[/green]
+2024-09-26 18:34:25,479 - INFO - Writing output files...
+2024-09-26 18:34:25,480 - INFO - [bold_blue]Writing rows to files. Please stand by.[/bold_blue]
+2024-09-26 18:34:29,327 - INFO - [bold_green]simple_rows file has been written![/bold_green]
+2024-09-26 18:34:38,344 - INFO - [bold_green]detailed_rows file has been written![/bold_green]
+2024-09-26 18:34:38,513 - INFO - [bold_green]summary DataFrame has been written![/bold_green]
+2024-09-26 18:34:40,529 - INFO - [bold_green]numpy matrix has been written![/bold_green]
+2024-09-26 18:34:41,482 - INFO - [bold_green]pandas DataFrame matrix has been written![/bold_green]
+2024-09-26 18:34:41,483 - INFO - [bold_green]Empty alignment files list has been written![/bold_green]
+2024-09-26 18:34:41,483 - INFO - [bold_green]contig labels have been written![/bold_green]
+2024-09-26 18:34:41,484 - INFO - [bold_green]All output files have been written![/bold_green]
+2024-09-26 18:34:41,484 - INFO - [bold green]Homology Analysis Completed Successfully![/bold green]
+2024-09-26 18:34:41,484 - INFO - Moving temp logfile to final logfile: asms_ava_prot/v6/asm_ava_nucl_v6.log
+2024-09-26 18:34:41,485 - INFO - Log file moved to: asms_ava_prot/v6/asm_ava_nucl_v6.log

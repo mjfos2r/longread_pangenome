@@ -1,0 +1,84 @@
+2024-10-08 18:56:13 | INFO | Run pyGenomeViz v1.3.0 CLI workflow (pgv-mmseqs)
+2024-10-08 18:56:13 | INFO | $ pgv-mmseqs -q --threads=2 asm_genbanks/URI89H_contig000023.gbff asm_genbanks/URI91H_contig000010.gbff asm_genbanks/URI120H_contig000006.gbff asm_genbanks/UCT31H_contig000008.gbff asm_genbanks/UCT96H_contig000005.gbff asm_genbanks/ESI26H_contig000012.gbff asm_genbanks/UWI283P_MC149_cp32-1.gbff asm_genbanks/UWI247P_MC104_cp32-1.gbff asm_genbanks/UWI248P_MC105_cp32-1.gbff asm_genbanks/UNY208P_MR641_cp32-1.gbff asm_genbanks/URI88H_contig000020.gbff asm_genbanks/UCT92H_contig000005.gbff asm_genbanks/UCT29H_contig000007.gbff -o pgv-interesting-mosaicism/cp32-1 --show_scale_bar --curve --length_thr=250 --identity_thr=75
+2024-10-08 18:56:13 | INFO | Operating System: linux
+2024-10-08 18:56:13 | INFO | Python Version: v3.12.2
+2024-10-08 18:56:13 | INFO | Check Dependencies: matplotlib v3.8.4
+2024-10-08 18:56:13 | INFO | Check Dependencies: biopython v1.83
+2024-10-08 18:56:13 | INFO | Parameters: seqs=['asm_genbanks/URI89H_contig000023.gbff', 'asm_genbanks/URI91H_contig000010.gbff', 'asm_genbanks/URI120H_contig000006.gbff', 'asm_genbanks/UCT31H_contig000008.gbff', 'asm_genbanks/UCT96H_contig000005.gbff', 'asm_genbanks/ESI26H_contig000012.gbff', 'asm_genbanks/UWI283P_MC149_cp32-1.gbff', 'asm_genbanks/UWI247P_MC104_cp32-1.gbff', 'asm_genbanks/UWI248P_MC105_cp32-1.gbff', 'asm_genbanks/UNY208P_MR641_cp32-1.gbff', 'asm_genbanks/URI88H_contig000020.gbff', 'asm_genbanks/UCT92H_contig000005.gbff', 'asm_genbanks/UCT29H_contig000007.gbff']
+2024-10-08 18:56:13 | INFO | Parameters: outdir='pgv-interesting-mosaicism/cp32-1'
+2024-10-08 18:56:13 | INFO | Parameters: formats=('png', 'html')
+2024-10-08 18:56:13 | INFO | Parameters: reuse=False
+2024-10-08 18:56:13 | INFO | Parameters: quiet=True
+2024-10-08 18:56:13 | INFO | Parameters: debug=False
+2024-10-08 18:56:13 | INFO | Parameters: threads=2
+2024-10-08 18:56:13 | INFO | Parameters: length_thr=250
+2024-10-08 18:56:13 | INFO | Parameters: identity_thr=75.0
+2024-10-08 18:56:13 | INFO | Parameters: evalue_thr=0.001
+2024-10-08 18:56:13 | INFO | Parameters: fig_width=15
+2024-10-08 18:56:13 | INFO | Parameters: fig_track_height=1.0
+2024-10-08 18:56:13 | INFO | Parameters: track_align_type='center'
+2024-10-08 18:56:13 | INFO | Parameters: feature_track_ratio=0.25
+2024-10-08 18:56:13 | INFO | Parameters: show_scale_bar=True
+2024-10-08 18:56:13 | INFO | Parameters: show_scale_xticks=False
+2024-10-08 18:56:13 | INFO | Parameters: curve=True
+2024-10-08 18:56:13 | INFO | Parameters: dpi=300
+2024-10-08 18:56:13 | INFO | Parameters: track_labelsize=20
+2024-10-08 18:56:13 | INFO | Parameters: scale_labelsize=15
+2024-10-08 18:56:13 | INFO | Parameters: normal_link_color='grey'
+2024-10-08 18:56:13 | INFO | Parameters: inverted_link_color='red'
+2024-10-08 18:56:13 | INFO | Parameters: segment_space=0.02
+2024-10-08 18:56:13 | INFO | Parameters: feature_type2color={'CDS': 'orange'}
+2024-10-08 18:56:13 | INFO | Parameters: pseudo_color='lightgrey'
+2024-10-08 18:56:13 | INFO | Parameters: feature_plotstyle='arrow'
+2024-10-08 18:56:13 | INFO | Parameters: feature_linewidth=0.0
+2024-10-08 18:56:13 | INFO | Parameters: feature_labeltrack='top'
+2024-10-08 18:56:13 | INFO | Parameters: feature_labeltype=None
+2024-10-08 18:56:13 | INFO | Parameters: feature_labelsize=8
+2024-10-08 18:56:13 | INFO | Parameters: cbar_width=0.01
+2024-10-08 18:56:13 | INFO | Parameters: cbar_height=0.2
+2024-10-08 18:56:13 | INFO | Convert Genbank object to CDS fasta file '/tmp/tmpyy4z_vp1/URI89H_contig000023.faa'
+2024-10-08 18:56:13 | INFO | Convert Genbank object to CDS fasta file '/tmp/tmpyy4z_vp1/URI91H_contig000010.faa'
+2024-10-08 18:56:13 | INFO | Convert Genbank object to CDS fasta file '/tmp/tmpyy4z_vp1/URI120H_contig000006.faa'
+2024-10-08 18:56:13 | INFO | Convert Genbank object to CDS fasta file '/tmp/tmpyy4z_vp1/UCT31H_contig000008.faa'
+2024-10-08 18:56:13 | INFO | Convert Genbank object to CDS fasta file '/tmp/tmpyy4z_vp1/UCT96H_contig000005.faa'
+2024-10-08 18:56:13 | INFO | Convert Genbank object to CDS fasta file '/tmp/tmpyy4z_vp1/ESI26H_contig000012.faa'
+2024-10-08 18:56:13 | INFO | Convert Genbank object to CDS fasta file '/tmp/tmpyy4z_vp1/UWI283P_MC149_cp32-1.faa'
+2024-10-08 18:56:13 | INFO | Convert Genbank object to CDS fasta file '/tmp/tmpyy4z_vp1/UWI247P_MC104_cp32-1.faa'
+2024-10-08 18:56:13 | INFO | Convert Genbank object to CDS fasta file '/tmp/tmpyy4z_vp1/UWI248P_MC105_cp32-1.faa'
+2024-10-08 18:56:13 | INFO | Convert Genbank object to CDS fasta file '/tmp/tmpyy4z_vp1/UNY208P_MR641_cp32-1.faa'
+2024-10-08 18:56:13 | INFO | Convert Genbank object to CDS fasta file '/tmp/tmpyy4z_vp1/URI88H_contig000020.faa'
+2024-10-08 18:56:13 | INFO | Convert Genbank object to CDS fasta file '/tmp/tmpyy4z_vp1/UCT92H_contig000005.faa'
+2024-10-08 18:56:13 | INFO | Convert Genbank object to CDS fasta file '/tmp/tmpyy4z_vp1/UCT29H_contig000007.faa'
+2024-10-08 18:56:13 | INFO | ========== Start MMseqs RBH Search ==========
+2024-10-08 18:56:13 | INFO | 01. MMseqs RBH Search 'URI89H_contig000023' vs 'URI91H_contig000010'
+2024-10-08 18:56:13 | INFO | $ mmseqs easy-rbh '/tmp/tmpyy4z_vp1/URI89H_contig000023.faa' '/tmp/tmpyy4z_vp1/URI91H_contig000010.faa' '/tmp/tmpyy4z_vp1/01_URI89H_contig000023_vs_URI91H_contig000010.tsv' /tmp/tmpyy4z_vp1 --threads 2 -e 0.001 -v 0
+2024-10-08 18:56:16 | INFO | 02. MMseqs RBH Search 'URI91H_contig000010' vs 'URI120H_contig000006'
+2024-10-08 18:56:16 | INFO | $ mmseqs easy-rbh '/tmp/tmpyy4z_vp1/URI91H_contig000010.faa' '/tmp/tmpyy4z_vp1/URI120H_contig000006.faa' '/tmp/tmpyy4z_vp1/02_URI91H_contig000010_vs_URI120H_contig000006.tsv' /tmp/tmpyy4z_vp1 --threads 2 -e 0.001 -v 0
+2024-10-08 18:56:18 | INFO | 03. MMseqs RBH Search 'URI120H_contig000006' vs 'UCT31H_contig000008'
+2024-10-08 18:56:18 | INFO | $ mmseqs easy-rbh '/tmp/tmpyy4z_vp1/URI120H_contig000006.faa' '/tmp/tmpyy4z_vp1/UCT31H_contig000008.faa' '/tmp/tmpyy4z_vp1/03_URI120H_contig000006_vs_UCT31H_contig000008.tsv' /tmp/tmpyy4z_vp1 --threads 2 -e 0.001 -v 0
+2024-10-08 18:56:21 | INFO | 04. MMseqs RBH Search 'UCT31H_contig000008' vs 'UCT96H_contig000005'
+2024-10-08 18:56:21 | INFO | $ mmseqs easy-rbh '/tmp/tmpyy4z_vp1/UCT31H_contig000008.faa' '/tmp/tmpyy4z_vp1/UCT96H_contig000005.faa' '/tmp/tmpyy4z_vp1/04_UCT31H_contig000008_vs_UCT96H_contig000005.tsv' /tmp/tmpyy4z_vp1 --threads 2 -e 0.001 -v 0
+2024-10-08 18:56:23 | INFO | 05. MMseqs RBH Search 'UCT96H_contig000005' vs 'ESI26H_contig000012'
+2024-10-08 18:56:23 | INFO | $ mmseqs easy-rbh '/tmp/tmpyy4z_vp1/UCT96H_contig000005.faa' '/tmp/tmpyy4z_vp1/ESI26H_contig000012.faa' '/tmp/tmpyy4z_vp1/05_UCT96H_contig000005_vs_ESI26H_contig000012.tsv' /tmp/tmpyy4z_vp1 --threads 2 -e 0.001 -v 0
+2024-10-08 18:56:26 | INFO | 06. MMseqs RBH Search 'ESI26H_contig000012' vs 'UWI283P_MC149_cp32-1'
+2024-10-08 18:56:26 | INFO | $ mmseqs easy-rbh '/tmp/tmpyy4z_vp1/ESI26H_contig000012.faa' '/tmp/tmpyy4z_vp1/UWI283P_MC149_cp32-1.faa' '/tmp/tmpyy4z_vp1/06_ESI26H_contig000012_vs_UWI283P_MC149_cp32-1.tsv' /tmp/tmpyy4z_vp1 --threads 2 -e 0.001 -v 0
+2024-10-08 18:56:28 | INFO | 07. MMseqs RBH Search 'UWI283P_MC149_cp32-1' vs 'UWI247P_MC104_cp32-1'
+2024-10-08 18:56:28 | INFO | $ mmseqs easy-rbh '/tmp/tmpyy4z_vp1/UWI283P_MC149_cp32-1.faa' '/tmp/tmpyy4z_vp1/UWI247P_MC104_cp32-1.faa' '/tmp/tmpyy4z_vp1/07_UWI283P_MC149_cp32-1_vs_UWI247P_MC104_cp32-1.tsv' /tmp/tmpyy4z_vp1 --threads 2 -e 0.001 -v 0
+2024-10-08 18:56:31 | INFO | 08. MMseqs RBH Search 'UWI247P_MC104_cp32-1' vs 'UWI248P_MC105_cp32-1'
+2024-10-08 18:56:31 | INFO | $ mmseqs easy-rbh '/tmp/tmpyy4z_vp1/UWI247P_MC104_cp32-1.faa' '/tmp/tmpyy4z_vp1/UWI248P_MC105_cp32-1.faa' '/tmp/tmpyy4z_vp1/08_UWI247P_MC104_cp32-1_vs_UWI248P_MC105_cp32-1.tsv' /tmp/tmpyy4z_vp1 --threads 2 -e 0.001 -v 0
+2024-10-08 18:56:33 | INFO | 09. MMseqs RBH Search 'UWI248P_MC105_cp32-1' vs 'UNY208P_MR641_cp32-1'
+2024-10-08 18:56:33 | INFO | $ mmseqs easy-rbh '/tmp/tmpyy4z_vp1/UWI248P_MC105_cp32-1.faa' '/tmp/tmpyy4z_vp1/UNY208P_MR641_cp32-1.faa' '/tmp/tmpyy4z_vp1/09_UWI248P_MC105_cp32-1_vs_UNY208P_MR641_cp32-1.tsv' /tmp/tmpyy4z_vp1 --threads 2 -e 0.001 -v 0
+2024-10-08 18:56:36 | INFO | 10. MMseqs RBH Search 'UNY208P_MR641_cp32-1' vs 'URI88H_contig000020'
+2024-10-08 18:56:36 | INFO | $ mmseqs easy-rbh '/tmp/tmpyy4z_vp1/UNY208P_MR641_cp32-1.faa' '/tmp/tmpyy4z_vp1/URI88H_contig000020.faa' '/tmp/tmpyy4z_vp1/10_UNY208P_MR641_cp32-1_vs_URI88H_contig000020.tsv' /tmp/tmpyy4z_vp1 --threads 2 -e 0.001 -v 0
+2024-10-08 18:56:38 | INFO | 11. MMseqs RBH Search 'URI88H_contig000020' vs 'UCT92H_contig000005'
+2024-10-08 18:56:38 | INFO | $ mmseqs easy-rbh '/tmp/tmpyy4z_vp1/URI88H_contig000020.faa' '/tmp/tmpyy4z_vp1/UCT92H_contig000005.faa' '/tmp/tmpyy4z_vp1/11_URI88H_contig000020_vs_UCT92H_contig000005.tsv' /tmp/tmpyy4z_vp1 --threads 2 -e 0.001 -v 0
+2024-10-08 18:56:41 | INFO | 12. MMseqs RBH Search 'UCT92H_contig000005' vs 'UCT29H_contig000007'
+2024-10-08 18:56:41 | INFO | $ mmseqs easy-rbh '/tmp/tmpyy4z_vp1/UCT92H_contig000005.faa' '/tmp/tmpyy4z_vp1/UCT29H_contig000007.faa' '/tmp/tmpyy4z_vp1/12_UCT92H_contig000005_vs_UCT29H_contig000007.tsv' /tmp/tmpyy4z_vp1 --threads 2 -e 0.001 -v 0
+2024-10-08 18:56:43 | INFO | ========== Finish MMseqs RBH Search ==========
+2024-10-08 18:56:43 | INFO | Write alignment result to 'pgv-interesting-mosaicism/cp32-1/align_coords.tsv'
+2024-10-08 18:56:43 | INFO | Filter alignment result by length_thr=250, identity_thr=75.0 evalue_thr=0.001
+2024-10-08 18:56:44 | INFO | Plotting PNG format result...
+2024-10-08 18:56:48 | INFO | Output result image file 'pgv-interesting-mosaicism/cp32-1/result.png'
+2024-10-08 18:56:48 | INFO | Plotting HTML format result...
+2024-10-08 18:56:50 | INFO | Output result image file 'pgv-interesting-mosaicism/cp32-1/result.html'
+2024-10-08 18:56:50 | INFO | Done (elapsed time: 37.26[s])

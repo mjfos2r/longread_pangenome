@@ -1,0 +1,93 @@
+2024-10-09 22:58:05 | INFO | Run pyGenomeViz v1.3.0 CLI workflow (pgv-mmseqs)
+2024-10-09 22:58:05 | INFO | $ pgv-mmseqs -q --threads=14 /home/mf019/longread_pangenome/synteny/pgv-interesting-mosaicism/tmpa6l307_1/URI39H_lp17.gbff /home/mf019/longread_pangenome/synteny/pgv-interesting-mosaicism/tmpd12hdyuk/URI89H_lp17.gbff /home/mf019/longread_pangenome/synteny/pgv-interesting-mosaicism/tmpu3u0rxo_/URI91H_lp17.gbff /home/mf019/longread_pangenome/synteny/pgv-interesting-mosaicism/tmp7xkw5qhs/URI120H_lp17.gbff /home/mf019/longread_pangenome/synteny/pgv-interesting-mosaicism/tmpk3qnj4zs/URI41H_lp28-3.gbff /home/mf019/longread_pangenome/synteny/pgv-interesting-mosaicism/tmphyw8o8em/UCT31H_lp17.gbff /home/mf019/longread_pangenome/synteny/pgv-interesting-mosaicism/tmpblh29rpo/URI93H_lp28-3.gbff /home/mf019/longread_pangenome/synteny/pgv-interesting-mosaicism/tmpd_g136q_/URI102H_lp17.gbff /home/mf019/longread_pangenome/synteny/pgv-interesting-mosaicism/tmpifv7ipr4/URI107H_lp17.gbff /home/mf019/longread_pangenome/synteny/pgv-interesting-mosaicism/tmpqib1xwhn/UCT109H_lp17.gbff /home/mf019/longread_pangenome/synteny/pgv-interesting-mosaicism/tmp462ry1ub/URI87H_lp17.gbff /home/mf019/longread_pangenome/synteny/pgv-interesting-mosaicism/tmpvmlc2vhl/UCT29H_lp17.gbff /home/mf019/longread_pangenome/synteny/pgv-interesting-mosaicism/tmpv2sagdjs/URI101H_lp17.gbff /home/mf019/longread_pangenome/synteny/pgv-interesting-mosaicism/tmp6lm6_fs1/URI111H_lp17.gbff /home/mf019/longread_pangenome/synteny/pgv-interesting-mosaicism/tmptw32_gu9/URI40H_lp17.gbff /home/mf019/longread_pangenome/synteny/pgv-interesting-mosaicism/tmp4yj3znx7/URI42H_lp17.gbff -o pgv-interesting-mosaicism/plot3 --show_scale_bar --curve --length_thr=100 --identity_thr=70
+2024-10-09 22:58:05 | INFO | Operating System: linux
+2024-10-09 22:58:05 | INFO | Python Version: v3.12.2
+2024-10-09 22:58:05 | INFO | Check Dependencies: matplotlib v3.8.4
+2024-10-09 22:58:05 | INFO | Check Dependencies: biopython v1.83
+2024-10-09 22:58:05 | INFO | Parameters: seqs=['/home/mf019/longread_pangenome/synteny/pgv-interesting-mosaicism/tmpa6l307_1/URI39H_lp17.gbff', '/home/mf019/longread_pangenome/synteny/pgv-interesting-mosaicism/tmpd12hdyuk/URI89H_lp17.gbff', '/home/mf019/longread_pangenome/synteny/pgv-interesting-mosaicism/tmpu3u0rxo_/URI91H_lp17.gbff', '/home/mf019/longread_pangenome/synteny/pgv-interesting-mosaicism/tmp7xkw5qhs/URI120H_lp17.gbff', '/home/mf019/longread_pangenome/synteny/pgv-interesting-mosaicism/tmpk3qnj4zs/URI41H_lp28-3.gbff', '/home/mf019/longread_pangenome/synteny/pgv-interesting-mosaicism/tmphyw8o8em/UCT31H_lp17.gbff', '/home/mf019/longread_pangenome/synteny/pgv-interesting-mosaicism/tmpblh29rpo/URI93H_lp28-3.gbff', '/home/mf019/longread_pangenome/synteny/pgv-interesting-mosaicism/tmpd_g136q_/URI102H_lp17.gbff', '/home/mf019/longread_pangenome/synteny/pgv-interesting-mosaicism/tmpifv7ipr4/URI107H_lp17.gbff', '/home/mf019/longread_pangenome/synteny/pgv-interesting-mosaicism/tmpqib1xwhn/UCT109H_lp17.gbff', '/home/mf019/longread_pangenome/synteny/pgv-interesting-mosaicism/tmp462ry1ub/URI87H_lp17.gbff', '/home/mf019/longread_pangenome/synteny/pgv-interesting-mosaicism/tmpvmlc2vhl/UCT29H_lp17.gbff', '/home/mf019/longread_pangenome/synteny/pgv-interesting-mosaicism/tmpv2sagdjs/URI101H_lp17.gbff', '/home/mf019/longread_pangenome/synteny/pgv-interesting-mosaicism/tmp6lm6_fs1/URI111H_lp17.gbff', '/home/mf019/longread_pangenome/synteny/pgv-interesting-mosaicism/tmptw32_gu9/URI40H_lp17.gbff', '/home/mf019/longread_pangenome/synteny/pgv-interesting-mosaicism/tmp4yj3znx7/URI42H_lp17.gbff']
+2024-10-09 22:58:05 | INFO | Parameters: outdir='pgv-interesting-mosaicism/plot3'
+2024-10-09 22:58:05 | INFO | Parameters: formats=('png', 'html')
+2024-10-09 22:58:05 | INFO | Parameters: reuse=False
+2024-10-09 22:58:05 | INFO | Parameters: quiet=True
+2024-10-09 22:58:05 | INFO | Parameters: debug=False
+2024-10-09 22:58:05 | INFO | Parameters: threads=14
+2024-10-09 22:58:05 | INFO | Parameters: length_thr=100
+2024-10-09 22:58:05 | INFO | Parameters: identity_thr=70.0
+2024-10-09 22:58:05 | INFO | Parameters: evalue_thr=0.001
+2024-10-09 22:58:05 | INFO | Parameters: fig_width=15
+2024-10-09 22:58:05 | INFO | Parameters: fig_track_height=1.0
+2024-10-09 22:58:05 | INFO | Parameters: track_align_type='center'
+2024-10-09 22:58:05 | INFO | Parameters: feature_track_ratio=0.25
+2024-10-09 22:58:05 | INFO | Parameters: show_scale_bar=True
+2024-10-09 22:58:05 | INFO | Parameters: show_scale_xticks=False
+2024-10-09 22:58:05 | INFO | Parameters: curve=True
+2024-10-09 22:58:05 | INFO | Parameters: dpi=300
+2024-10-09 22:58:05 | INFO | Parameters: track_labelsize=20
+2024-10-09 22:58:05 | INFO | Parameters: scale_labelsize=15
+2024-10-09 22:58:05 | INFO | Parameters: normal_link_color='grey'
+2024-10-09 22:58:05 | INFO | Parameters: inverted_link_color='red'
+2024-10-09 22:58:05 | INFO | Parameters: segment_space=0.02
+2024-10-09 22:58:05 | INFO | Parameters: feature_type2color={'CDS': 'orange'}
+2024-10-09 22:58:05 | INFO | Parameters: pseudo_color='lightgrey'
+2024-10-09 22:58:05 | INFO | Parameters: feature_plotstyle='arrow'
+2024-10-09 22:58:05 | INFO | Parameters: feature_linewidth=0.0
+2024-10-09 22:58:05 | INFO | Parameters: feature_labeltrack='top'
+2024-10-09 22:58:05 | INFO | Parameters: feature_labeltype=None
+2024-10-09 22:58:05 | INFO | Parameters: feature_labelsize=8
+2024-10-09 22:58:05 | INFO | Parameters: cbar_width=0.01
+2024-10-09 22:58:05 | INFO | Parameters: cbar_height=0.2
+2024-10-09 22:58:05 | INFO | Convert Genbank object to CDS fasta file '/tmp/tmp_yi7vn0i/URI39H_lp17.faa'
+2024-10-09 22:58:05 | INFO | Convert Genbank object to CDS fasta file '/tmp/tmp_yi7vn0i/URI89H_lp17.faa'
+2024-10-09 22:58:05 | INFO | Convert Genbank object to CDS fasta file '/tmp/tmp_yi7vn0i/URI91H_lp17.faa'
+2024-10-09 22:58:05 | INFO | Convert Genbank object to CDS fasta file '/tmp/tmp_yi7vn0i/URI120H_lp17.faa'
+2024-10-09 22:58:05 | INFO | Convert Genbank object to CDS fasta file '/tmp/tmp_yi7vn0i/URI41H_lp28-3.faa'
+2024-10-09 22:58:05 | INFO | Convert Genbank object to CDS fasta file '/tmp/tmp_yi7vn0i/UCT31H_lp17.faa'
+2024-10-09 22:58:05 | INFO | Convert Genbank object to CDS fasta file '/tmp/tmp_yi7vn0i/URI93H_lp28-3.faa'
+2024-10-09 22:58:05 | INFO | Convert Genbank object to CDS fasta file '/tmp/tmp_yi7vn0i/URI102H_lp17.faa'
+2024-10-09 22:58:05 | INFO | Convert Genbank object to CDS fasta file '/tmp/tmp_yi7vn0i/URI107H_lp17.faa'
+2024-10-09 22:58:05 | INFO | Convert Genbank object to CDS fasta file '/tmp/tmp_yi7vn0i/UCT109H_lp17.faa'
+2024-10-09 22:58:05 | INFO | Convert Genbank object to CDS fasta file '/tmp/tmp_yi7vn0i/URI87H_lp17.faa'
+2024-10-09 22:58:05 | INFO | Convert Genbank object to CDS fasta file '/tmp/tmp_yi7vn0i/UCT29H_lp17.faa'
+2024-10-09 22:58:05 | INFO | Convert Genbank object to CDS fasta file '/tmp/tmp_yi7vn0i/URI101H_lp17.faa'
+2024-10-09 22:58:05 | INFO | Convert Genbank object to CDS fasta file '/tmp/tmp_yi7vn0i/URI111H_lp17.faa'
+2024-10-09 22:58:05 | INFO | Convert Genbank object to CDS fasta file '/tmp/tmp_yi7vn0i/URI40H_lp17.faa'
+2024-10-09 22:58:05 | INFO | Convert Genbank object to CDS fasta file '/tmp/tmp_yi7vn0i/URI42H_lp17.faa'
+2024-10-09 22:58:05 | INFO | ========== Start MMseqs RBH Search ==========
+2024-10-09 22:58:05 | INFO | 01. MMseqs RBH Search 'URI39H_lp17' vs 'URI89H_lp17'
+2024-10-09 22:58:05 | INFO | $ mmseqs easy-rbh '/tmp/tmp_yi7vn0i/URI39H_lp17.faa' '/tmp/tmp_yi7vn0i/URI89H_lp17.faa' '/tmp/tmp_yi7vn0i/01_URI39H_lp17_vs_URI89H_lp17.tsv' /tmp/tmp_yi7vn0i --threads 14 -e 0.001 -v 0
+2024-10-09 22:58:06 | INFO | 02. MMseqs RBH Search 'URI89H_lp17' vs 'URI91H_lp17'
+2024-10-09 22:58:06 | INFO | $ mmseqs easy-rbh '/tmp/tmp_yi7vn0i/URI89H_lp17.faa' '/tmp/tmp_yi7vn0i/URI91H_lp17.faa' '/tmp/tmp_yi7vn0i/02_URI89H_lp17_vs_URI91H_lp17.tsv' /tmp/tmp_yi7vn0i --threads 14 -e 0.001 -v 0
+2024-10-09 22:58:07 | INFO | 03. MMseqs RBH Search 'URI91H_lp17' vs 'URI120H_lp17'
+2024-10-09 22:58:07 | INFO | $ mmseqs easy-rbh '/tmp/tmp_yi7vn0i/URI91H_lp17.faa' '/tmp/tmp_yi7vn0i/URI120H_lp17.faa' '/tmp/tmp_yi7vn0i/03_URI91H_lp17_vs_URI120H_lp17.tsv' /tmp/tmp_yi7vn0i --threads 14 -e 0.001 -v 0
+2024-10-09 22:58:08 | INFO | 04. MMseqs RBH Search 'URI120H_lp17' vs 'URI41H_lp28-3'
+2024-10-09 22:58:08 | INFO | $ mmseqs easy-rbh '/tmp/tmp_yi7vn0i/URI120H_lp17.faa' '/tmp/tmp_yi7vn0i/URI41H_lp28-3.faa' '/tmp/tmp_yi7vn0i/04_URI120H_lp17_vs_URI41H_lp28-3.tsv' /tmp/tmp_yi7vn0i --threads 14 -e 0.001 -v 0
+2024-10-09 22:58:10 | INFO | 05. MMseqs RBH Search 'URI41H_lp28-3' vs 'UCT31H_lp17'
+2024-10-09 22:58:10 | INFO | $ mmseqs easy-rbh '/tmp/tmp_yi7vn0i/URI41H_lp28-3.faa' '/tmp/tmp_yi7vn0i/UCT31H_lp17.faa' '/tmp/tmp_yi7vn0i/05_URI41H_lp28-3_vs_UCT31H_lp17.tsv' /tmp/tmp_yi7vn0i --threads 14 -e 0.001 -v 0
+2024-10-09 22:58:11 | INFO | 06. MMseqs RBH Search 'UCT31H_lp17' vs 'URI93H_lp28-3'
+2024-10-09 22:58:11 | INFO | $ mmseqs easy-rbh '/tmp/tmp_yi7vn0i/UCT31H_lp17.faa' '/tmp/tmp_yi7vn0i/URI93H_lp28-3.faa' '/tmp/tmp_yi7vn0i/06_UCT31H_lp17_vs_URI93H_lp28-3.tsv' /tmp/tmp_yi7vn0i --threads 14 -e 0.001 -v 0
+2024-10-09 22:58:12 | INFO | 07. MMseqs RBH Search 'URI93H_lp28-3' vs 'URI102H_lp17'
+2024-10-09 22:58:12 | INFO | $ mmseqs easy-rbh '/tmp/tmp_yi7vn0i/URI93H_lp28-3.faa' '/tmp/tmp_yi7vn0i/URI102H_lp17.faa' '/tmp/tmp_yi7vn0i/07_URI93H_lp28-3_vs_URI102H_lp17.tsv' /tmp/tmp_yi7vn0i --threads 14 -e 0.001 -v 0
+2024-10-09 22:58:13 | INFO | 08. MMseqs RBH Search 'URI102H_lp17' vs 'URI107H_lp17'
+2024-10-09 22:58:13 | INFO | $ mmseqs easy-rbh '/tmp/tmp_yi7vn0i/URI102H_lp17.faa' '/tmp/tmp_yi7vn0i/URI107H_lp17.faa' '/tmp/tmp_yi7vn0i/08_URI102H_lp17_vs_URI107H_lp17.tsv' /tmp/tmp_yi7vn0i --threads 14 -e 0.001 -v 0
+2024-10-09 22:58:14 | INFO | 09. MMseqs RBH Search 'URI107H_lp17' vs 'UCT109H_lp17'
+2024-10-09 22:58:14 | INFO | $ mmseqs easy-rbh '/tmp/tmp_yi7vn0i/URI107H_lp17.faa' '/tmp/tmp_yi7vn0i/UCT109H_lp17.faa' '/tmp/tmp_yi7vn0i/09_URI107H_lp17_vs_UCT109H_lp17.tsv' /tmp/tmp_yi7vn0i --threads 14 -e 0.001 -v 0
+2024-10-09 22:58:15 | INFO | 10. MMseqs RBH Search 'UCT109H_lp17' vs 'URI87H_lp17'
+2024-10-09 22:58:15 | INFO | $ mmseqs easy-rbh '/tmp/tmp_yi7vn0i/UCT109H_lp17.faa' '/tmp/tmp_yi7vn0i/URI87H_lp17.faa' '/tmp/tmp_yi7vn0i/10_UCT109H_lp17_vs_URI87H_lp17.tsv' /tmp/tmp_yi7vn0i --threads 14 -e 0.001 -v 0
+2024-10-09 22:58:16 | INFO | 11. MMseqs RBH Search 'URI87H_lp17' vs 'UCT29H_lp17'
+2024-10-09 22:58:16 | INFO | $ mmseqs easy-rbh '/tmp/tmp_yi7vn0i/URI87H_lp17.faa' '/tmp/tmp_yi7vn0i/UCT29H_lp17.faa' '/tmp/tmp_yi7vn0i/11_URI87H_lp17_vs_UCT29H_lp17.tsv' /tmp/tmp_yi7vn0i --threads 14 -e 0.001 -v 0
+2024-10-09 22:58:17 | INFO | 12. MMseqs RBH Search 'UCT29H_lp17' vs 'URI101H_lp17'
+2024-10-09 22:58:17 | INFO | $ mmseqs easy-rbh '/tmp/tmp_yi7vn0i/UCT29H_lp17.faa' '/tmp/tmp_yi7vn0i/URI101H_lp17.faa' '/tmp/tmp_yi7vn0i/12_UCT29H_lp17_vs_URI101H_lp17.tsv' /tmp/tmp_yi7vn0i --threads 14 -e 0.001 -v 0
+2024-10-09 22:58:18 | INFO | 13. MMseqs RBH Search 'URI101H_lp17' vs 'URI111H_lp17'
+2024-10-09 22:58:18 | INFO | $ mmseqs easy-rbh '/tmp/tmp_yi7vn0i/URI101H_lp17.faa' '/tmp/tmp_yi7vn0i/URI111H_lp17.faa' '/tmp/tmp_yi7vn0i/13_URI101H_lp17_vs_URI111H_lp17.tsv' /tmp/tmp_yi7vn0i --threads 14 -e 0.001 -v 0
+2024-10-09 22:58:19 | INFO | 14. MMseqs RBH Search 'URI111H_lp17' vs 'URI40H_lp17'
+2024-10-09 22:58:19 | INFO | $ mmseqs easy-rbh '/tmp/tmp_yi7vn0i/URI111H_lp17.faa' '/tmp/tmp_yi7vn0i/URI40H_lp17.faa' '/tmp/tmp_yi7vn0i/14_URI111H_lp17_vs_URI40H_lp17.tsv' /tmp/tmp_yi7vn0i --threads 14 -e 0.001 -v 0
+2024-10-09 22:58:20 | INFO | 15. MMseqs RBH Search 'URI40H_lp17' vs 'URI42H_lp17'
+2024-10-09 22:58:20 | INFO | $ mmseqs easy-rbh '/tmp/tmp_yi7vn0i/URI40H_lp17.faa' '/tmp/tmp_yi7vn0i/URI42H_lp17.faa' '/tmp/tmp_yi7vn0i/15_URI40H_lp17_vs_URI42H_lp17.tsv' /tmp/tmp_yi7vn0i --threads 14 -e 0.001 -v 0
+2024-10-09 22:58:21 | INFO | ========== Finish MMseqs RBH Search ==========
+2024-10-09 22:58:21 | INFO | Write alignment result to 'pgv-interesting-mosaicism/plot3/align_coords.tsv'
+2024-10-09 22:58:21 | INFO | Filter alignment result by length_thr=100, identity_thr=70.0 evalue_thr=0.001
+2024-10-09 22:58:22 | INFO | Plotting PNG format result...
+2024-10-09 22:58:26 | INFO | Output result image file 'pgv-interesting-mosaicism/plot3/result.png'
+2024-10-09 22:58:26 | INFO | Plotting HTML format result...
+2024-10-09 22:58:29 | INFO | Output result image file 'pgv-interesting-mosaicism/plot3/result.html'
+2024-10-09 22:58:29 | INFO | Done (elapsed time: 23.89[s])

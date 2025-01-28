@@ -1,0 +1,192 @@
+2024-10-08 19:09:22 | INFO | Run pyGenomeViz v1.3.0 CLI workflow (pgv-mmseqs)
+2024-10-08 19:09:22 | INFO | $ pgv-mmseqs -q --threads=14 asm_genbanks/UNY172P_B356_lp28-2.gbff asm_genbanks/URI39H_contig000006.gbff asm_genbanks/URI89H_contig000006.gbff asm_genbanks/URI91H_contig000006.gbff asm_genbanks/URI120H_contig000014.gbff asm_genbanks/URI41H_contig000004.gbff asm_genbanks/UCT31H_contig000005.gbff asm_genbanks/UCT96H_contig000011.gbff asm_genbanks/ESI26H_contig000003.gbff asm_genbanks/URI33H_contig000005.gbff asm_genbanks/URI48H_contig000003.gbff asm_genbanks/UWI283P_MC149_lp28-2.gbff asm_genbanks/UCT50H_contig000002.gbff asm_genbanks/UNY169P_B348_lp28-2.gbff asm_genbanks/URI36H_contig000010.gbff asm_genbanks/URI56H_contig000004.gbff asm_genbanks/UNY193P_B477_lp28-3.gbff asm_genbanks/URI34H_contig000003.gbff asm_genbanks/UCT35H_contig000002.gbff asm_genbanks/UNY203P_MR616_lp28-3.gbff asm_genbanks/UWI247P_MC104_lp28-1.gbff asm_genbanks/UWI248P_MC105_lp28-1.gbff asm_genbanks/UCT113H_contig000005.gbff asm_genbanks/UNY208P_MR641_lp28-1.gbff asm_genbanks/URI88H_contig000002.gbff asm_genbanks/UWI263P_MC123_lp28-1.gbff asm_genbanks/URI103H_contig000002.gbff asm_genbanks/URI86H_contig000002.gbff asm_genbanks/URI118H_contig000007.gbff asm_genbanks/URI44H_contig000007.gbff asm_genbanks/URI112H_contig000008.gbff asm_genbanks/URI117H_contig000007.gbff asm_genbanks/UCT30H_contig000002.gbff asm_genbanks/UCT110H_contig000003.gbff asm_genbanks/UNY149P_B247_lp28-1.gbff asm_genbanks/UCT92H_contig000004.gbff asm_genbanks/UCT32H_contig000003.gbff asm_genbanks/URI47H_contig000002.gbff asm_genbanks/URI93H_contig000003.gbff asm_genbanks/URI107H_contig000013.gbff asm_genbanks/URI87H_contig000014.gbff asm_genbanks/UCT29H_contig000005.gbff asm_genbanks/URI101H_contig000006.gbff asm_genbanks/URI111H_contig000006.gbff asm_genbanks/URI40H_contig000005.gbff asm_genbanks/URI46H_contig000004.gbff asm_genbanks/URI102H_contig000002.gbff asm_genbanks/UCT109H_contig000002.gbff asm_genbanks/URI42H_contig000005.gbff -o pgv-interesting-mosaicism/lp28 --show_scale_bar --curve --length_thr=250 --identity_thr=75
+2024-10-08 19:09:22 | INFO | Operating System: linux
+2024-10-08 19:09:22 | INFO | Python Version: v3.12.2
+2024-10-08 19:09:22 | INFO | Check Dependencies: matplotlib v3.8.4
+2024-10-08 19:09:22 | INFO | Check Dependencies: biopython v1.83
+2024-10-08 19:09:22 | INFO | Parameters: seqs=['asm_genbanks/UNY172P_B356_lp28-2.gbff', 'asm_genbanks/URI39H_contig000006.gbff', 'asm_genbanks/URI89H_contig000006.gbff', 'asm_genbanks/URI91H_contig000006.gbff', 'asm_genbanks/URI120H_contig000014.gbff', 'asm_genbanks/URI41H_contig000004.gbff', 'asm_genbanks/UCT31H_contig000005.gbff', 'asm_genbanks/UCT96H_contig000011.gbff', 'asm_genbanks/ESI26H_contig000003.gbff', 'asm_genbanks/URI33H_contig000005.gbff', 'asm_genbanks/URI48H_contig000003.gbff', 'asm_genbanks/UWI283P_MC149_lp28-2.gbff', 'asm_genbanks/UCT50H_contig000002.gbff', 'asm_genbanks/UNY169P_B348_lp28-2.gbff', 'asm_genbanks/URI36H_contig000010.gbff', 'asm_genbanks/URI56H_contig000004.gbff', 'asm_genbanks/UNY193P_B477_lp28-3.gbff', 'asm_genbanks/URI34H_contig000003.gbff', 'asm_genbanks/UCT35H_contig000002.gbff', 'asm_genbanks/UNY203P_MR616_lp28-3.gbff', 'asm_genbanks/UWI247P_MC104_lp28-1.gbff', 'asm_genbanks/UWI248P_MC105_lp28-1.gbff', 'asm_genbanks/UCT113H_contig000005.gbff', 'asm_genbanks/UNY208P_MR641_lp28-1.gbff', 'asm_genbanks/URI88H_contig000002.gbff', 'asm_genbanks/UWI263P_MC123_lp28-1.gbff', 'asm_genbanks/URI103H_contig000002.gbff', 'asm_genbanks/URI86H_contig000002.gbff', 'asm_genbanks/URI118H_contig000007.gbff', 'asm_genbanks/URI44H_contig000007.gbff', 'asm_genbanks/URI112H_contig000008.gbff', 'asm_genbanks/URI117H_contig000007.gbff', 'asm_genbanks/UCT30H_contig000002.gbff', 'asm_genbanks/UCT110H_contig000003.gbff', 'asm_genbanks/UNY149P_B247_lp28-1.gbff', 'asm_genbanks/UCT92H_contig000004.gbff', 'asm_genbanks/UCT32H_contig000003.gbff', 'asm_genbanks/URI47H_contig000002.gbff', 'asm_genbanks/URI93H_contig000003.gbff', 'asm_genbanks/URI107H_contig000013.gbff', 'asm_genbanks/URI87H_contig000014.gbff', 'asm_genbanks/UCT29H_contig000005.gbff', 'asm_genbanks/URI101H_contig000006.gbff', 'asm_genbanks/URI111H_contig000006.gbff', 'asm_genbanks/URI40H_contig000005.gbff', 'asm_genbanks/URI46H_contig000004.gbff', 'asm_genbanks/URI102H_contig000002.gbff', 'asm_genbanks/UCT109H_contig000002.gbff', 'asm_genbanks/URI42H_contig000005.gbff']
+2024-10-08 19:09:22 | INFO | Parameters: outdir='pgv-interesting-mosaicism/lp28'
+2024-10-08 19:09:22 | INFO | Parameters: formats=('png', 'html')
+2024-10-08 19:09:22 | INFO | Parameters: reuse=False
+2024-10-08 19:09:22 | INFO | Parameters: quiet=True
+2024-10-08 19:09:22 | INFO | Parameters: debug=False
+2024-10-08 19:09:22 | INFO | Parameters: threads=14
+2024-10-08 19:09:22 | INFO | Parameters: length_thr=250
+2024-10-08 19:09:22 | INFO | Parameters: identity_thr=75.0
+2024-10-08 19:09:22 | INFO | Parameters: evalue_thr=0.001
+2024-10-08 19:09:22 | INFO | Parameters: fig_width=15
+2024-10-08 19:09:22 | INFO | Parameters: fig_track_height=1.0
+2024-10-08 19:09:22 | INFO | Parameters: track_align_type='center'
+2024-10-08 19:09:22 | INFO | Parameters: feature_track_ratio=0.25
+2024-10-08 19:09:22 | INFO | Parameters: show_scale_bar=True
+2024-10-08 19:09:22 | INFO | Parameters: show_scale_xticks=False
+2024-10-08 19:09:22 | INFO | Parameters: curve=True
+2024-10-08 19:09:22 | INFO | Parameters: dpi=300
+2024-10-08 19:09:22 | INFO | Parameters: track_labelsize=20
+2024-10-08 19:09:22 | INFO | Parameters: scale_labelsize=15
+2024-10-08 19:09:22 | INFO | Parameters: normal_link_color='grey'
+2024-10-08 19:09:22 | INFO | Parameters: inverted_link_color='red'
+2024-10-08 19:09:22 | INFO | Parameters: segment_space=0.02
+2024-10-08 19:09:22 | INFO | Parameters: feature_type2color={'CDS': 'orange'}
+2024-10-08 19:09:22 | INFO | Parameters: pseudo_color='lightgrey'
+2024-10-08 19:09:22 | INFO | Parameters: feature_plotstyle='arrow'
+2024-10-08 19:09:22 | INFO | Parameters: feature_linewidth=0.0
+2024-10-08 19:09:22 | INFO | Parameters: feature_labeltrack='top'
+2024-10-08 19:09:22 | INFO | Parameters: feature_labeltype=None
+2024-10-08 19:09:22 | INFO | Parameters: feature_labelsize=8
+2024-10-08 19:09:22 | INFO | Parameters: cbar_width=0.01
+2024-10-08 19:09:22 | INFO | Parameters: cbar_height=0.2
+2024-10-08 19:09:23 | INFO | Convert Genbank object to CDS fasta file '/tmp/tmpi85tfndv/UNY172P_B356_lp28-2.faa'
+2024-10-08 19:09:23 | INFO | Convert Genbank object to CDS fasta file '/tmp/tmpi85tfndv/URI39H_contig000006.faa'
+2024-10-08 19:09:23 | INFO | Convert Genbank object to CDS fasta file '/tmp/tmpi85tfndv/URI89H_contig000006.faa'
+2024-10-08 19:09:23 | INFO | Convert Genbank object to CDS fasta file '/tmp/tmpi85tfndv/URI91H_contig000006.faa'
+2024-10-08 19:09:23 | INFO | Convert Genbank object to CDS fasta file '/tmp/tmpi85tfndv/URI120H_contig000014.faa'
+2024-10-08 19:09:23 | INFO | Convert Genbank object to CDS fasta file '/tmp/tmpi85tfndv/URI41H_contig000004.faa'
+2024-10-08 19:09:23 | INFO | Convert Genbank object to CDS fasta file '/tmp/tmpi85tfndv/UCT31H_contig000005.faa'
+2024-10-08 19:09:23 | INFO | Convert Genbank object to CDS fasta file '/tmp/tmpi85tfndv/UCT96H_contig000011.faa'
+2024-10-08 19:09:23 | INFO | Convert Genbank object to CDS fasta file '/tmp/tmpi85tfndv/ESI26H_contig000003.faa'
+2024-10-08 19:09:23 | INFO | Convert Genbank object to CDS fasta file '/tmp/tmpi85tfndv/URI33H_contig000005.faa'
+2024-10-08 19:09:23 | INFO | Convert Genbank object to CDS fasta file '/tmp/tmpi85tfndv/URI48H_contig000003.faa'
+2024-10-08 19:09:23 | INFO | Convert Genbank object to CDS fasta file '/tmp/tmpi85tfndv/UWI283P_MC149_lp28-2.faa'
+2024-10-08 19:09:23 | INFO | Convert Genbank object to CDS fasta file '/tmp/tmpi85tfndv/UCT50H_contig000002.faa'
+2024-10-08 19:09:23 | INFO | Convert Genbank object to CDS fasta file '/tmp/tmpi85tfndv/UNY169P_B348_lp28-2.faa'
+2024-10-08 19:09:23 | INFO | Convert Genbank object to CDS fasta file '/tmp/tmpi85tfndv/URI36H_contig000010.faa'
+2024-10-08 19:09:23 | INFO | Convert Genbank object to CDS fasta file '/tmp/tmpi85tfndv/URI56H_contig000004.faa'
+2024-10-08 19:09:23 | INFO | Convert Genbank object to CDS fasta file '/tmp/tmpi85tfndv/UNY193P_B477_lp28-3.faa'
+2024-10-08 19:09:23 | INFO | Convert Genbank object to CDS fasta file '/tmp/tmpi85tfndv/URI34H_contig000003.faa'
+2024-10-08 19:09:23 | INFO | Convert Genbank object to CDS fasta file '/tmp/tmpi85tfndv/UCT35H_contig000002.faa'
+2024-10-08 19:09:23 | INFO | Convert Genbank object to CDS fasta file '/tmp/tmpi85tfndv/UNY203P_MR616_lp28-3.faa'
+2024-10-08 19:09:23 | INFO | Convert Genbank object to CDS fasta file '/tmp/tmpi85tfndv/UWI247P_MC104_lp28-1.faa'
+2024-10-08 19:09:23 | INFO | Convert Genbank object to CDS fasta file '/tmp/tmpi85tfndv/UWI248P_MC105_lp28-1.faa'
+2024-10-08 19:09:23 | INFO | Convert Genbank object to CDS fasta file '/tmp/tmpi85tfndv/UCT113H_contig000005.faa'
+2024-10-08 19:09:23 | INFO | Convert Genbank object to CDS fasta file '/tmp/tmpi85tfndv/UNY208P_MR641_lp28-1.faa'
+2024-10-08 19:09:23 | INFO | Convert Genbank object to CDS fasta file '/tmp/tmpi85tfndv/URI88H_contig000002.faa'
+2024-10-08 19:09:23 | INFO | Convert Genbank object to CDS fasta file '/tmp/tmpi85tfndv/UWI263P_MC123_lp28-1.faa'
+2024-10-08 19:09:23 | INFO | Convert Genbank object to CDS fasta file '/tmp/tmpi85tfndv/URI103H_contig000002.faa'
+2024-10-08 19:09:23 | INFO | Convert Genbank object to CDS fasta file '/tmp/tmpi85tfndv/URI86H_contig000002.faa'
+2024-10-08 19:09:23 | INFO | Convert Genbank object to CDS fasta file '/tmp/tmpi85tfndv/URI118H_contig000007.faa'
+2024-10-08 19:09:23 | INFO | Convert Genbank object to CDS fasta file '/tmp/tmpi85tfndv/URI44H_contig000007.faa'
+2024-10-08 19:09:23 | INFO | Convert Genbank object to CDS fasta file '/tmp/tmpi85tfndv/URI112H_contig000008.faa'
+2024-10-08 19:09:23 | INFO | Convert Genbank object to CDS fasta file '/tmp/tmpi85tfndv/URI117H_contig000007.faa'
+2024-10-08 19:09:23 | INFO | Convert Genbank object to CDS fasta file '/tmp/tmpi85tfndv/UCT30H_contig000002.faa'
+2024-10-08 19:09:23 | INFO | Convert Genbank object to CDS fasta file '/tmp/tmpi85tfndv/UCT110H_contig000003.faa'
+2024-10-08 19:09:23 | INFO | Convert Genbank object to CDS fasta file '/tmp/tmpi85tfndv/UNY149P_B247_lp28-1.faa'
+2024-10-08 19:09:23 | INFO | Convert Genbank object to CDS fasta file '/tmp/tmpi85tfndv/UCT92H_contig000004.faa'
+2024-10-08 19:09:23 | INFO | Convert Genbank object to CDS fasta file '/tmp/tmpi85tfndv/UCT32H_contig000003.faa'
+2024-10-08 19:09:23 | INFO | Convert Genbank object to CDS fasta file '/tmp/tmpi85tfndv/URI47H_contig000002.faa'
+2024-10-08 19:09:23 | INFO | Convert Genbank object to CDS fasta file '/tmp/tmpi85tfndv/URI93H_contig000003.faa'
+2024-10-08 19:09:23 | INFO | Convert Genbank object to CDS fasta file '/tmp/tmpi85tfndv/URI107H_contig000013.faa'
+2024-10-08 19:09:23 | INFO | Convert Genbank object to CDS fasta file '/tmp/tmpi85tfndv/URI87H_contig000014.faa'
+2024-10-08 19:09:23 | INFO | Convert Genbank object to CDS fasta file '/tmp/tmpi85tfndv/UCT29H_contig000005.faa'
+2024-10-08 19:09:23 | INFO | Convert Genbank object to CDS fasta file '/tmp/tmpi85tfndv/URI101H_contig000006.faa'
+2024-10-08 19:09:23 | INFO | Convert Genbank object to CDS fasta file '/tmp/tmpi85tfndv/URI111H_contig000006.faa'
+2024-10-08 19:09:23 | INFO | Convert Genbank object to CDS fasta file '/tmp/tmpi85tfndv/URI40H_contig000005.faa'
+2024-10-08 19:09:23 | INFO | Convert Genbank object to CDS fasta file '/tmp/tmpi85tfndv/URI46H_contig000004.faa'
+2024-10-08 19:09:23 | INFO | Convert Genbank object to CDS fasta file '/tmp/tmpi85tfndv/URI102H_contig000002.faa'
+2024-10-08 19:09:23 | INFO | Convert Genbank object to CDS fasta file '/tmp/tmpi85tfndv/UCT109H_contig000002.faa'
+2024-10-08 19:09:23 | INFO | Convert Genbank object to CDS fasta file '/tmp/tmpi85tfndv/URI42H_contig000005.faa'
+2024-10-08 19:09:23 | INFO | ========== Start MMseqs RBH Search ==========
+2024-10-08 19:09:23 | INFO | 01. MMseqs RBH Search 'UNY172P_B356_lp28-2' vs 'URI39H_contig000006'
+2024-10-08 19:09:23 | INFO | $ mmseqs easy-rbh '/tmp/tmpi85tfndv/UNY172P_B356_lp28-2.faa' '/tmp/tmpi85tfndv/URI39H_contig000006.faa' '/tmp/tmpi85tfndv/01_UNY172P_B356_lp28-2_vs_URI39H_contig000006.tsv' /tmp/tmpi85tfndv --threads 14 -e 0.001 -v 0
+2024-10-08 19:09:24 | INFO | 02. MMseqs RBH Search 'URI39H_contig000006' vs 'URI89H_contig000006'
+2024-10-08 19:09:24 | INFO | $ mmseqs easy-rbh '/tmp/tmpi85tfndv/URI39H_contig000006.faa' '/tmp/tmpi85tfndv/URI89H_contig000006.faa' '/tmp/tmpi85tfndv/02_URI39H_contig000006_vs_URI89H_contig000006.tsv' /tmp/tmpi85tfndv --threads 14 -e 0.001 -v 0
+2024-10-08 19:09:25 | INFO | 03. MMseqs RBH Search 'URI89H_contig000006' vs 'URI91H_contig000006'
+2024-10-08 19:09:25 | INFO | $ mmseqs easy-rbh '/tmp/tmpi85tfndv/URI89H_contig000006.faa' '/tmp/tmpi85tfndv/URI91H_contig000006.faa' '/tmp/tmpi85tfndv/03_URI89H_contig000006_vs_URI91H_contig000006.tsv' /tmp/tmpi85tfndv --threads 14 -e 0.001 -v 0
+2024-10-08 19:09:26 | INFO | 04. MMseqs RBH Search 'URI91H_contig000006' vs 'URI120H_contig000014'
+2024-10-08 19:09:26 | INFO | $ mmseqs easy-rbh '/tmp/tmpi85tfndv/URI91H_contig000006.faa' '/tmp/tmpi85tfndv/URI120H_contig000014.faa' '/tmp/tmpi85tfndv/04_URI91H_contig000006_vs_URI120H_contig000014.tsv' /tmp/tmpi85tfndv --threads 14 -e 0.001 -v 0
+2024-10-08 19:09:27 | INFO | 05. MMseqs RBH Search 'URI120H_contig000014' vs 'URI41H_contig000004'
+2024-10-08 19:09:27 | INFO | $ mmseqs easy-rbh '/tmp/tmpi85tfndv/URI120H_contig000014.faa' '/tmp/tmpi85tfndv/URI41H_contig000004.faa' '/tmp/tmpi85tfndv/05_URI120H_contig000014_vs_URI41H_contig000004.tsv' /tmp/tmpi85tfndv --threads 14 -e 0.001 -v 0
+2024-10-08 19:09:28 | INFO | 06. MMseqs RBH Search 'URI41H_contig000004' vs 'UCT31H_contig000005'
+2024-10-08 19:09:28 | INFO | $ mmseqs easy-rbh '/tmp/tmpi85tfndv/URI41H_contig000004.faa' '/tmp/tmpi85tfndv/UCT31H_contig000005.faa' '/tmp/tmpi85tfndv/06_URI41H_contig000004_vs_UCT31H_contig000005.tsv' /tmp/tmpi85tfndv --threads 14 -e 0.001 -v 0
+2024-10-08 19:09:29 | INFO | 07. MMseqs RBH Search 'UCT31H_contig000005' vs 'UCT96H_contig000011'
+2024-10-08 19:09:29 | INFO | $ mmseqs easy-rbh '/tmp/tmpi85tfndv/UCT31H_contig000005.faa' '/tmp/tmpi85tfndv/UCT96H_contig000011.faa' '/tmp/tmpi85tfndv/07_UCT31H_contig000005_vs_UCT96H_contig000011.tsv' /tmp/tmpi85tfndv --threads 14 -e 0.001 -v 0
+2024-10-08 19:09:31 | INFO | 08. MMseqs RBH Search 'UCT96H_contig000011' vs 'ESI26H_contig000003'
+2024-10-08 19:09:31 | INFO | $ mmseqs easy-rbh '/tmp/tmpi85tfndv/UCT96H_contig000011.faa' '/tmp/tmpi85tfndv/ESI26H_contig000003.faa' '/tmp/tmpi85tfndv/08_UCT96H_contig000011_vs_ESI26H_contig000003.tsv' /tmp/tmpi85tfndv --threads 14 -e 0.001 -v 0
+2024-10-08 19:09:32 | INFO | 09. MMseqs RBH Search 'ESI26H_contig000003' vs 'URI33H_contig000005'
+2024-10-08 19:09:32 | INFO | $ mmseqs easy-rbh '/tmp/tmpi85tfndv/ESI26H_contig000003.faa' '/tmp/tmpi85tfndv/URI33H_contig000005.faa' '/tmp/tmpi85tfndv/09_ESI26H_contig000003_vs_URI33H_contig000005.tsv' /tmp/tmpi85tfndv --threads 14 -e 0.001 -v 0
+2024-10-08 19:09:33 | INFO | 10. MMseqs RBH Search 'URI33H_contig000005' vs 'URI48H_contig000003'
+2024-10-08 19:09:33 | INFO | $ mmseqs easy-rbh '/tmp/tmpi85tfndv/URI33H_contig000005.faa' '/tmp/tmpi85tfndv/URI48H_contig000003.faa' '/tmp/tmpi85tfndv/10_URI33H_contig000005_vs_URI48H_contig000003.tsv' /tmp/tmpi85tfndv --threads 14 -e 0.001 -v 0
+2024-10-08 19:09:34 | INFO | 11. MMseqs RBH Search 'URI48H_contig000003' vs 'UWI283P_MC149_lp28-2'
+2024-10-08 19:09:34 | INFO | $ mmseqs easy-rbh '/tmp/tmpi85tfndv/URI48H_contig000003.faa' '/tmp/tmpi85tfndv/UWI283P_MC149_lp28-2.faa' '/tmp/tmpi85tfndv/11_URI48H_contig000003_vs_UWI283P_MC149_lp28-2.tsv' /tmp/tmpi85tfndv --threads 14 -e 0.001 -v 0
+2024-10-08 19:09:35 | INFO | 12. MMseqs RBH Search 'UWI283P_MC149_lp28-2' vs 'UCT50H_contig000002'
+2024-10-08 19:09:35 | INFO | $ mmseqs easy-rbh '/tmp/tmpi85tfndv/UWI283P_MC149_lp28-2.faa' '/tmp/tmpi85tfndv/UCT50H_contig000002.faa' '/tmp/tmpi85tfndv/12_UWI283P_MC149_lp28-2_vs_UCT50H_contig000002.tsv' /tmp/tmpi85tfndv --threads 14 -e 0.001 -v 0
+2024-10-08 19:09:36 | INFO | 13. MMseqs RBH Search 'UCT50H_contig000002' vs 'UNY169P_B348_lp28-2'
+2024-10-08 19:09:36 | INFO | $ mmseqs easy-rbh '/tmp/tmpi85tfndv/UCT50H_contig000002.faa' '/tmp/tmpi85tfndv/UNY169P_B348_lp28-2.faa' '/tmp/tmpi85tfndv/13_UCT50H_contig000002_vs_UNY169P_B348_lp28-2.tsv' /tmp/tmpi85tfndv --threads 14 -e 0.001 -v 0
+2024-10-08 19:09:37 | INFO | 14. MMseqs RBH Search 'UNY169P_B348_lp28-2' vs 'URI36H_contig000010'
+2024-10-08 19:09:37 | INFO | $ mmseqs easy-rbh '/tmp/tmpi85tfndv/UNY169P_B348_lp28-2.faa' '/tmp/tmpi85tfndv/URI36H_contig000010.faa' '/tmp/tmpi85tfndv/14_UNY169P_B348_lp28-2_vs_URI36H_contig000010.tsv' /tmp/tmpi85tfndv --threads 14 -e 0.001 -v 0
+2024-10-08 19:09:39 | INFO | 15. MMseqs RBH Search 'URI36H_contig000010' vs 'URI56H_contig000004'
+2024-10-08 19:09:39 | INFO | $ mmseqs easy-rbh '/tmp/tmpi85tfndv/URI36H_contig000010.faa' '/tmp/tmpi85tfndv/URI56H_contig000004.faa' '/tmp/tmpi85tfndv/15_URI36H_contig000010_vs_URI56H_contig000004.tsv' /tmp/tmpi85tfndv --threads 14 -e 0.001 -v 0
+2024-10-08 19:09:40 | INFO | 16. MMseqs RBH Search 'URI56H_contig000004' vs 'UNY193P_B477_lp28-3'
+2024-10-08 19:09:40 | INFO | $ mmseqs easy-rbh '/tmp/tmpi85tfndv/URI56H_contig000004.faa' '/tmp/tmpi85tfndv/UNY193P_B477_lp28-3.faa' '/tmp/tmpi85tfndv/16_URI56H_contig000004_vs_UNY193P_B477_lp28-3.tsv' /tmp/tmpi85tfndv --threads 14 -e 0.001 -v 0
+2024-10-08 19:09:41 | INFO | 17. MMseqs RBH Search 'UNY193P_B477_lp28-3' vs 'URI34H_contig000003'
+2024-10-08 19:09:41 | INFO | $ mmseqs easy-rbh '/tmp/tmpi85tfndv/UNY193P_B477_lp28-3.faa' '/tmp/tmpi85tfndv/URI34H_contig000003.faa' '/tmp/tmpi85tfndv/17_UNY193P_B477_lp28-3_vs_URI34H_contig000003.tsv' /tmp/tmpi85tfndv --threads 14 -e 0.001 -v 0
+2024-10-08 19:09:42 | INFO | 18. MMseqs RBH Search 'URI34H_contig000003' vs 'UCT35H_contig000002'
+2024-10-08 19:09:42 | INFO | $ mmseqs easy-rbh '/tmp/tmpi85tfndv/URI34H_contig000003.faa' '/tmp/tmpi85tfndv/UCT35H_contig000002.faa' '/tmp/tmpi85tfndv/18_URI34H_contig000003_vs_UCT35H_contig000002.tsv' /tmp/tmpi85tfndv --threads 14 -e 0.001 -v 0
+2024-10-08 19:09:43 | INFO | 19. MMseqs RBH Search 'UCT35H_contig000002' vs 'UNY203P_MR616_lp28-3'
+2024-10-08 19:09:43 | INFO | $ mmseqs easy-rbh '/tmp/tmpi85tfndv/UCT35H_contig000002.faa' '/tmp/tmpi85tfndv/UNY203P_MR616_lp28-3.faa' '/tmp/tmpi85tfndv/19_UCT35H_contig000002_vs_UNY203P_MR616_lp28-3.tsv' /tmp/tmpi85tfndv --threads 14 -e 0.001 -v 0
+2024-10-08 19:09:44 | INFO | 20. MMseqs RBH Search 'UNY203P_MR616_lp28-3' vs 'UWI247P_MC104_lp28-1'
+2024-10-08 19:09:44 | INFO | $ mmseqs easy-rbh '/tmp/tmpi85tfndv/UNY203P_MR616_lp28-3.faa' '/tmp/tmpi85tfndv/UWI247P_MC104_lp28-1.faa' '/tmp/tmpi85tfndv/20_UNY203P_MR616_lp28-3_vs_UWI247P_MC104_lp28-1.tsv' /tmp/tmpi85tfndv --threads 14 -e 0.001 -v 0
+2024-10-08 19:09:45 | INFO | 21. MMseqs RBH Search 'UWI247P_MC104_lp28-1' vs 'UWI248P_MC105_lp28-1'
+2024-10-08 19:09:45 | INFO | $ mmseqs easy-rbh '/tmp/tmpi85tfndv/UWI247P_MC104_lp28-1.faa' '/tmp/tmpi85tfndv/UWI248P_MC105_lp28-1.faa' '/tmp/tmpi85tfndv/21_UWI247P_MC104_lp28-1_vs_UWI248P_MC105_lp28-1.tsv' /tmp/tmpi85tfndv --threads 14 -e 0.001 -v 0
+2024-10-08 19:09:46 | INFO | 22. MMseqs RBH Search 'UWI248P_MC105_lp28-1' vs 'UCT113H_contig000005'
+2024-10-08 19:09:46 | INFO | $ mmseqs easy-rbh '/tmp/tmpi85tfndv/UWI248P_MC105_lp28-1.faa' '/tmp/tmpi85tfndv/UCT113H_contig000005.faa' '/tmp/tmpi85tfndv/22_UWI248P_MC105_lp28-1_vs_UCT113H_contig000005.tsv' /tmp/tmpi85tfndv --threads 14 -e 0.001 -v 0
+2024-10-08 19:09:48 | INFO | 23. MMseqs RBH Search 'UCT113H_contig000005' vs 'UNY208P_MR641_lp28-1'
+2024-10-08 19:09:48 | INFO | $ mmseqs easy-rbh '/tmp/tmpi85tfndv/UCT113H_contig000005.faa' '/tmp/tmpi85tfndv/UNY208P_MR641_lp28-1.faa' '/tmp/tmpi85tfndv/23_UCT113H_contig000005_vs_UNY208P_MR641_lp28-1.tsv' /tmp/tmpi85tfndv --threads 14 -e 0.001 -v 0
+2024-10-08 19:09:49 | INFO | 24. MMseqs RBH Search 'UNY208P_MR641_lp28-1' vs 'URI88H_contig000002'
+2024-10-08 19:09:49 | INFO | $ mmseqs easy-rbh '/tmp/tmpi85tfndv/UNY208P_MR641_lp28-1.faa' '/tmp/tmpi85tfndv/URI88H_contig000002.faa' '/tmp/tmpi85tfndv/24_UNY208P_MR641_lp28-1_vs_URI88H_contig000002.tsv' /tmp/tmpi85tfndv --threads 14 -e 0.001 -v 0
+2024-10-08 19:09:50 | INFO | 25. MMseqs RBH Search 'URI88H_contig000002' vs 'UWI263P_MC123_lp28-1'
+2024-10-08 19:09:50 | INFO | $ mmseqs easy-rbh '/tmp/tmpi85tfndv/URI88H_contig000002.faa' '/tmp/tmpi85tfndv/UWI263P_MC123_lp28-1.faa' '/tmp/tmpi85tfndv/25_URI88H_contig000002_vs_UWI263P_MC123_lp28-1.tsv' /tmp/tmpi85tfndv --threads 14 -e 0.001 -v 0
+2024-10-08 19:09:51 | INFO | 26. MMseqs RBH Search 'UWI263P_MC123_lp28-1' vs 'URI103H_contig000002'
+2024-10-08 19:09:51 | INFO | $ mmseqs easy-rbh '/tmp/tmpi85tfndv/UWI263P_MC123_lp28-1.faa' '/tmp/tmpi85tfndv/URI103H_contig000002.faa' '/tmp/tmpi85tfndv/26_UWI263P_MC123_lp28-1_vs_URI103H_contig000002.tsv' /tmp/tmpi85tfndv --threads 14 -e 0.001 -v 0
+2024-10-08 19:09:52 | INFO | 27. MMseqs RBH Search 'URI103H_contig000002' vs 'URI86H_contig000002'
+2024-10-08 19:09:52 | INFO | $ mmseqs easy-rbh '/tmp/tmpi85tfndv/URI103H_contig000002.faa' '/tmp/tmpi85tfndv/URI86H_contig000002.faa' '/tmp/tmpi85tfndv/27_URI103H_contig000002_vs_URI86H_contig000002.tsv' /tmp/tmpi85tfndv --threads 14 -e 0.001 -v 0
+2024-10-08 19:09:53 | INFO | 28. MMseqs RBH Search 'URI86H_contig000002' vs 'URI118H_contig000007'
+2024-10-08 19:09:53 | INFO | $ mmseqs easy-rbh '/tmp/tmpi85tfndv/URI86H_contig000002.faa' '/tmp/tmpi85tfndv/URI118H_contig000007.faa' '/tmp/tmpi85tfndv/28_URI86H_contig000002_vs_URI118H_contig000007.tsv' /tmp/tmpi85tfndv --threads 14 -e 0.001 -v 0
+2024-10-08 19:09:54 | INFO | 29. MMseqs RBH Search 'URI118H_contig000007' vs 'URI44H_contig000007'
+2024-10-08 19:09:54 | INFO | $ mmseqs easy-rbh '/tmp/tmpi85tfndv/URI118H_contig000007.faa' '/tmp/tmpi85tfndv/URI44H_contig000007.faa' '/tmp/tmpi85tfndv/29_URI118H_contig000007_vs_URI44H_contig000007.tsv' /tmp/tmpi85tfndv --threads 14 -e 0.001 -v 0
+2024-10-08 19:09:56 | INFO | 30. MMseqs RBH Search 'URI44H_contig000007' vs 'URI112H_contig000008'
+2024-10-08 19:09:56 | INFO | $ mmseqs easy-rbh '/tmp/tmpi85tfndv/URI44H_contig000007.faa' '/tmp/tmpi85tfndv/URI112H_contig000008.faa' '/tmp/tmpi85tfndv/30_URI44H_contig000007_vs_URI112H_contig000008.tsv' /tmp/tmpi85tfndv --threads 14 -e 0.001 -v 0
+2024-10-08 19:09:57 | INFO | 31. MMseqs RBH Search 'URI112H_contig000008' vs 'URI117H_contig000007'
+2024-10-08 19:09:57 | INFO | $ mmseqs easy-rbh '/tmp/tmpi85tfndv/URI112H_contig000008.faa' '/tmp/tmpi85tfndv/URI117H_contig000007.faa' '/tmp/tmpi85tfndv/31_URI112H_contig000008_vs_URI117H_contig000007.tsv' /tmp/tmpi85tfndv --threads 14 -e 0.001 -v 0
+2024-10-08 19:09:58 | INFO | 32. MMseqs RBH Search 'URI117H_contig000007' vs 'UCT30H_contig000002'
+2024-10-08 19:09:58 | INFO | $ mmseqs easy-rbh '/tmp/tmpi85tfndv/URI117H_contig000007.faa' '/tmp/tmpi85tfndv/UCT30H_contig000002.faa' '/tmp/tmpi85tfndv/32_URI117H_contig000007_vs_UCT30H_contig000002.tsv' /tmp/tmpi85tfndv --threads 14 -e 0.001 -v 0
+2024-10-08 19:09:59 | INFO | 33. MMseqs RBH Search 'UCT30H_contig000002' vs 'UCT110H_contig000003'
+2024-10-08 19:09:59 | INFO | $ mmseqs easy-rbh '/tmp/tmpi85tfndv/UCT30H_contig000002.faa' '/tmp/tmpi85tfndv/UCT110H_contig000003.faa' '/tmp/tmpi85tfndv/33_UCT30H_contig000002_vs_UCT110H_contig000003.tsv' /tmp/tmpi85tfndv --threads 14 -e 0.001 -v 0
+2024-10-08 19:10:00 | INFO | 34. MMseqs RBH Search 'UCT110H_contig000003' vs 'UNY149P_B247_lp28-1'
+2024-10-08 19:10:00 | INFO | $ mmseqs easy-rbh '/tmp/tmpi85tfndv/UCT110H_contig000003.faa' '/tmp/tmpi85tfndv/UNY149P_B247_lp28-1.faa' '/tmp/tmpi85tfndv/34_UCT110H_contig000003_vs_UNY149P_B247_lp28-1.tsv' /tmp/tmpi85tfndv --threads 14 -e 0.001 -v 0
+2024-10-08 19:10:01 | INFO | 35. MMseqs RBH Search 'UNY149P_B247_lp28-1' vs 'UCT92H_contig000004'
+2024-10-08 19:10:01 | INFO | $ mmseqs easy-rbh '/tmp/tmpi85tfndv/UNY149P_B247_lp28-1.faa' '/tmp/tmpi85tfndv/UCT92H_contig000004.faa' '/tmp/tmpi85tfndv/35_UNY149P_B247_lp28-1_vs_UCT92H_contig000004.tsv' /tmp/tmpi85tfndv --threads 14 -e 0.001 -v 0
+2024-10-08 19:10:02 | INFO | 36. MMseqs RBH Search 'UCT92H_contig000004' vs 'UCT32H_contig000003'
+2024-10-08 19:10:02 | INFO | $ mmseqs easy-rbh '/tmp/tmpi85tfndv/UCT92H_contig000004.faa' '/tmp/tmpi85tfndv/UCT32H_contig000003.faa' '/tmp/tmpi85tfndv/36_UCT92H_contig000004_vs_UCT32H_contig000003.tsv' /tmp/tmpi85tfndv --threads 14 -e 0.001 -v 0
+2024-10-08 19:10:03 | INFO | 37. MMseqs RBH Search 'UCT32H_contig000003' vs 'URI47H_contig000002'
+2024-10-08 19:10:03 | INFO | $ mmseqs easy-rbh '/tmp/tmpi85tfndv/UCT32H_contig000003.faa' '/tmp/tmpi85tfndv/URI47H_contig000002.faa' '/tmp/tmpi85tfndv/37_UCT32H_contig000003_vs_URI47H_contig000002.tsv' /tmp/tmpi85tfndv --threads 14 -e 0.001 -v 0
+2024-10-08 19:10:05 | INFO | 38. MMseqs RBH Search 'URI47H_contig000002' vs 'URI93H_contig000003'
+2024-10-08 19:10:05 | INFO | $ mmseqs easy-rbh '/tmp/tmpi85tfndv/URI47H_contig000002.faa' '/tmp/tmpi85tfndv/URI93H_contig000003.faa' '/tmp/tmpi85tfndv/38_URI47H_contig000002_vs_URI93H_contig000003.tsv' /tmp/tmpi85tfndv --threads 14 -e 0.001 -v 0
+2024-10-08 19:10:06 | INFO | 39. MMseqs RBH Search 'URI93H_contig000003' vs 'URI107H_contig000013'
+2024-10-08 19:10:06 | INFO | $ mmseqs easy-rbh '/tmp/tmpi85tfndv/URI93H_contig000003.faa' '/tmp/tmpi85tfndv/URI107H_contig000013.faa' '/tmp/tmpi85tfndv/39_URI93H_contig000003_vs_URI107H_contig000013.tsv' /tmp/tmpi85tfndv --threads 14 -e 0.001 -v 0
+2024-10-08 19:10:07 | INFO | 40. MMseqs RBH Search 'URI107H_contig000013' vs 'URI87H_contig000014'
+2024-10-08 19:10:07 | INFO | $ mmseqs easy-rbh '/tmp/tmpi85tfndv/URI107H_contig000013.faa' '/tmp/tmpi85tfndv/URI87H_contig000014.faa' '/tmp/tmpi85tfndv/40_URI107H_contig000013_vs_URI87H_contig000014.tsv' /tmp/tmpi85tfndv --threads 14 -e 0.001 -v 0
+2024-10-08 19:10:08 | INFO | 41. MMseqs RBH Search 'URI87H_contig000014' vs 'UCT29H_contig000005'
+2024-10-08 19:10:08 | INFO | $ mmseqs easy-rbh '/tmp/tmpi85tfndv/URI87H_contig000014.faa' '/tmp/tmpi85tfndv/UCT29H_contig000005.faa' '/tmp/tmpi85tfndv/41_URI87H_contig000014_vs_UCT29H_contig000005.tsv' /tmp/tmpi85tfndv --threads 14 -e 0.001 -v 0
+2024-10-08 19:10:09 | INFO | 42. MMseqs RBH Search 'UCT29H_contig000005' vs 'URI101H_contig000006'
+2024-10-08 19:10:09 | INFO | $ mmseqs easy-rbh '/tmp/tmpi85tfndv/UCT29H_contig000005.faa' '/tmp/tmpi85tfndv/URI101H_contig000006.faa' '/tmp/tmpi85tfndv/42_UCT29H_contig000005_vs_URI101H_contig000006.tsv' /tmp/tmpi85tfndv --threads 14 -e 0.001 -v 0
+2024-10-08 19:10:10 | INFO | 43. MMseqs RBH Search 'URI101H_contig000006' vs 'URI111H_contig000006'
+2024-10-08 19:10:10 | INFO | $ mmseqs easy-rbh '/tmp/tmpi85tfndv/URI101H_contig000006.faa' '/tmp/tmpi85tfndv/URI111H_contig000006.faa' '/tmp/tmpi85tfndv/43_URI101H_contig000006_vs_URI111H_contig000006.tsv' /tmp/tmpi85tfndv --threads 14 -e 0.001 -v 0
+2024-10-08 19:10:11 | INFO | 44. MMseqs RBH Search 'URI111H_contig000006' vs 'URI40H_contig000005'
+2024-10-08 19:10:11 | INFO | $ mmseqs easy-rbh '/tmp/tmpi85tfndv/URI111H_contig000006.faa' '/tmp/tmpi85tfndv/URI40H_contig000005.faa' '/tmp/tmpi85tfndv/44_URI111H_contig000006_vs_URI40H_contig000005.tsv' /tmp/tmpi85tfndv --threads 14 -e 0.001 -v 0
+2024-10-08 19:10:13 | INFO | 45. MMseqs RBH Search 'URI40H_contig000005' vs 'URI46H_contig000004'
+2024-10-08 19:10:13 | INFO | $ mmseqs easy-rbh '/tmp/tmpi85tfndv/URI40H_contig000005.faa' '/tmp/tmpi85tfndv/URI46H_contig000004.faa' '/tmp/tmpi85tfndv/45_URI40H_contig000005_vs_URI46H_contig000004.tsv' /tmp/tmpi85tfndv --threads 14 -e 0.001 -v 0
+2024-10-08 19:10:14 | INFO | 46. MMseqs RBH Search 'URI46H_contig000004' vs 'URI102H_contig000002'
+2024-10-08 19:10:14 | INFO | $ mmseqs easy-rbh '/tmp/tmpi85tfndv/URI46H_contig000004.faa' '/tmp/tmpi85tfndv/URI102H_contig000002.faa' '/tmp/tmpi85tfndv/46_URI46H_contig000004_vs_URI102H_contig000002.tsv' /tmp/tmpi85tfndv --threads 14 -e 0.001 -v 0
+2024-10-08 19:10:15 | INFO | 47. MMseqs RBH Search 'URI102H_contig000002' vs 'UCT109H_contig000002'
+2024-10-08 19:10:15 | INFO | $ mmseqs easy-rbh '/tmp/tmpi85tfndv/URI102H_contig000002.faa' '/tmp/tmpi85tfndv/UCT109H_contig000002.faa' '/tmp/tmpi85tfndv/47_URI102H_contig000002_vs_UCT109H_contig000002.tsv' /tmp/tmpi85tfndv --threads 14 -e 0.001 -v 0
+2024-10-08 19:10:16 | INFO | 48. MMseqs RBH Search 'UCT109H_contig000002' vs 'URI42H_contig000005'
+2024-10-08 19:10:16 | INFO | $ mmseqs easy-rbh '/tmp/tmpi85tfndv/UCT109H_contig000002.faa' '/tmp/tmpi85tfndv/URI42H_contig000005.faa' '/tmp/tmpi85tfndv/48_UCT109H_contig000002_vs_URI42H_contig000005.tsv' /tmp/tmpi85tfndv --threads 14 -e 0.001 -v 0
+2024-10-08 19:10:17 | INFO | ========== Finish MMseqs RBH Search ==========
+2024-10-08 19:10:17 | INFO | Write alignment result to 'pgv-interesting-mosaicism/lp28/align_coords.tsv'
+2024-10-08 19:10:17 | INFO | Filter alignment result by length_thr=250, identity_thr=75.0 evalue_thr=0.001
+2024-10-08 19:10:18 | INFO | Plotting PNG format result...
+2024-10-08 19:10:32 | INFO | Output result image file 'pgv-interesting-mosaicism/lp28/result.png'
+2024-10-08 19:10:32 | INFO | Plotting HTML format result...
+2024-10-08 19:10:41 | INFO | Output result image file 'pgv-interesting-mosaicism/lp28/result.html'
+2024-10-08 19:10:41 | INFO | Done (elapsed time: 78.85[s])

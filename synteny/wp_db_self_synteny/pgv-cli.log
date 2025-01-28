@@ -1,0 +1,51 @@
+2024-07-30 18:08:26 | INFO | Run pyGenomeViz v1.2.1 CLI workflow (pgv-mummer)
+2024-07-30 18:08:26 | INFO | $ pgv-mummer /home/mf019/borrelia_plasmid_classifier_v3/dbs/all_plasmids_bbss/Bbss.gbff /home/mf019/borrelia_plasmid_classifier_v3/dbs/all_plasmids_bbss/Bbss.gbff -o longread_pangenome/synteny/wp_db_self_synteny --show_scale_bar --curve
+2024-07-30 18:08:26 | INFO | Operating System: linux
+2024-07-30 18:08:26 | INFO | Python Version: v3.12.4
+2024-07-30 18:08:26 | INFO | Check Dependencies: matplotlib v3.9.1
+2024-07-30 18:08:26 | INFO | Check Dependencies: biopython v1.84
+2024-07-30 18:08:26 | INFO | Parameters: seqs=['/home/mf019/borrelia_plasmid_classifier_v3/dbs/all_plasmids_bbss/Bbss.gbff', '/home/mf019/borrelia_plasmid_classifier_v3/dbs/all_plasmids_bbss/Bbss.gbff']
+2024-07-30 18:08:26 | INFO | Parameters: outdir='longread_pangenome/synteny/wp_db_self_synteny'
+2024-07-30 18:08:26 | INFO | Parameters: formats=('png', 'html')
+2024-07-30 18:08:26 | INFO | Parameters: reuse=False
+2024-07-30 18:08:26 | INFO | Parameters: quiet=False
+2024-07-30 18:08:26 | INFO | Parameters: debug=False
+2024-07-30 18:08:26 | INFO | Parameters: seqtype='nucleotide'
+2024-07-30 18:08:26 | INFO | Parameters: threads=89
+2024-07-30 18:08:26 | INFO | Parameters: length_thr=0
+2024-07-30 18:08:26 | INFO | Parameters: identity_thr=0
+2024-07-30 18:08:26 | INFO | Parameters: fig_width=15
+2024-07-30 18:08:26 | INFO | Parameters: fig_track_height=1.0
+2024-07-30 18:08:26 | INFO | Parameters: track_align_type='center'
+2024-07-30 18:08:26 | INFO | Parameters: feature_track_ratio=0.25
+2024-07-30 18:08:26 | INFO | Parameters: show_scale_bar=True
+2024-07-30 18:08:26 | INFO | Parameters: show_scale_xticks=False
+2024-07-30 18:08:26 | INFO | Parameters: curve=True
+2024-07-30 18:08:26 | INFO | Parameters: dpi=300
+2024-07-30 18:08:26 | INFO | Parameters: track_labelsize=20
+2024-07-30 18:08:26 | INFO | Parameters: scale_labelsize=15
+2024-07-30 18:08:26 | INFO | Parameters: normal_link_color='grey'
+2024-07-30 18:08:26 | INFO | Parameters: inverted_link_color='red'
+2024-07-30 18:08:26 | INFO | Parameters: segment_space=0.02
+2024-07-30 18:08:26 | INFO | Parameters: feature_type2color={'CDS': 'orange'}
+2024-07-30 18:08:26 | INFO | Parameters: pseudo_color='lightgrey'
+2024-07-30 18:08:26 | INFO | Parameters: feature_plotstyle='arrow'
+2024-07-30 18:08:26 | INFO | Parameters: feature_linewidth=0.0
+2024-07-30 18:08:26 | INFO | Parameters: feature_labeltrack='top'
+2024-07-30 18:08:26 | INFO | Parameters: feature_labeltype=None
+2024-07-30 18:08:26 | INFO | Parameters: feature_labelsize=8
+2024-07-30 18:08:26 | INFO | Parameters: cbar_width=0.01
+2024-07-30 18:08:26 | INFO | Parameters: cbar_height=0.2
+2024-07-30 18:08:31 | INFO | Convert Genbank object to genome fasta file '/tmp/tmp6wkchfxb/Bbss.fna'
+2024-07-30 18:08:31 | INFO | Convert Genbank object to genome fasta file '/tmp/tmp6wkchfxb/Bbss.fna'
+2024-07-30 18:08:31 | INFO | ========== Start MUMmer Alignment ==========
+2024-07-30 18:08:31 | INFO | 01. MUMmer Alignment 'Bbss' vs 'Bbss'
+2024-07-30 18:08:31 | INFO | $ nucmer --mum '/tmp/tmp6wkchfxb/Bbss.fna' '/tmp/tmp6wkchfxb/Bbss.fna' --prefix=/tmp/tmp6wkchfxb/01_Bbss_vs_Bbss
+2024-07-30 18:09:06 | INFO | $ delta-filter -1 '/tmp/tmp6wkchfxb/01_Bbss_vs_Bbss.delta'
+2024-07-30 18:09:06 | INFO | > Save cmd stdout results to '/tmp/tmp6wkchfxb/01_Bbss_vs_Bbss_filter.delta'
+2024-07-30 18:09:06 | INFO | $ show-coords -H -T -r -k '/tmp/tmp6wkchfxb/01_Bbss_vs_Bbss_filter.delta'
+2024-07-30 18:09:06 | INFO | > Save cmd stdout results to '/tmp/tmp6wkchfxb/01_Bbss_vs_Bbss_coords.tsv'
+2024-07-30 18:09:06 | INFO | ========== Finish MUMmer Alignment ==========
+2024-07-30 18:09:06 | INFO | Write alignment result to 'longread_pangenome/synteny/wp_db_self_synteny/align_coords.tsv'
+2024-07-30 18:09:06 | INFO | Filter alignment result by length_thr=0, identity_thr=0
+2024-07-30 18:09:08 | ERROR | name='Bbss' track is already exists!!
