@@ -1,0 +1,114 @@
+Bakta v1.9.3
+Options and arguments:
+	input: /home/mf019/longread_GWAS/longread_analysis/pangenome/v3/roary_shortread_v3/roary_shortread_pan_genome_reference_v3.fa
+	db: /home/mf019/db/bakta, version 5.1, full
+	output: /home/mf019/longread_GWAS/longread_analysis/pangenome/v3/bakta_shortread_v3
+	force: True
+	tmp directory: /tmp/tmp0484x0k2
+	prefix: roary_shortread_v3
+	threads: 16
+	translation table: 11
+	taxon: Borrelia burgdorferi roary_pangenome_v3
+	gram: -
+	keep contig headers: True
+	skip tRNA: True
+
+parse genome sequences...
+	imported: 4182
+	filtered & revised: 4182
+	chromosomes: 1
+	plasmids: 5
+	contigs: 4176
+
+start annotation...
+skip tRNA prediction...
+predict tmRNAs...
+	found: 0
+predict rRNAs...
+	found: 0
+predict ncRNAs...
+	found: 0
+predict ncRNA regions...
+	found: 0
+predict CRISPR arrays...
+	found: 0
+predict & annotate CDSs...
+	predicted: 3402 
+	discarded spurious: 0
+	revised translational exceptions: 0
+	detected IPSs: 2201
+	found PSCs: 686
+	found PSCCs: 339
+	lookup annotations...
+	conduct expert systems...
+		amrfinder: 0
+		protein sequences: 84
+	signal peptides: 507
+	combine annotations and mark hypotheticals...
+	detect pseudogenes...
+		pseudogene candidates: 133
+		found pseudogenes: 7
+analyze hypothetical proteins: 399
+	detected Pfam hits: 28 
+	calculated proteins statistics
+	revise special cases...
+extract sORF...
+	potential: 33117
+	discarded due to overlaps: 31642
+	discarded spurious: 0
+	detected IPSs: 0
+	found PSCs: 0
+	lookup annotations...
+	filter and combine annotations...
+	filtered sORFs: 0
+detect gaps...
+	found: 0
+detect oriCs/oriVs...
+	found: 0
+detect oriTs...
+	found: 0
+apply feature overlap filters...
+select features and create locus tags...
+selected: 3402
+improve annotations...
+	revised gene symbols: 11
+
+genome statistics:
+	Genome size: 2,829,729 bp
+	Contigs/replicons: 4182
+	GC: 29.0 %
+	N50: 891
+	N ratio: 0.0 %
+	coding density: 94.3 %
+
+annotation summary:
+	tRNAs: 0
+	tmRNAs: 0
+	rRNAs: 0
+	ncRNAs: 0
+	ncRNA regions: 0
+	CRISPR arrays: 0
+	CDSs: 3402
+		hypotheticals: 399
+		pseudogenes: 7
+		signal peptides: 391
+	sORFs: 0
+	gaps: 0
+	oriCs/oriVs: 0
+	oriTs: 0
+
+export annotation results to: /home/mf019/longread_GWAS/longread_analysis/pangenome/v3/bakta_shortread_v3
+	human readable TSV...
+	GFF3...
+	INSDC GenBank & EMBL...
+	genome sequences...
+	feature nucleotide sequences...
+	translated CDS sequences...
+	circular genome plot...
+	hypothetical TSV...
+	translated hypothetical CDS sequences...
+	machine readable JSON...
+	genome and annotation summary...
+
+If you use these results please cite Bakta: https://doi.org/10.1099/mgen.0.000685
+Annotation successfully finished in 26:33 [mm:ss].

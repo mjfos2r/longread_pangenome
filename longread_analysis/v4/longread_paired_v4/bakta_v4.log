@@ -1,0 +1,114 @@
+Bakta v1.9.3
+Options and arguments:
+	input: /home/mf019/longread_pangenome/longread_analysis/v4/longread_paired_v4/pan_genome_reference.fa
+	db: /mnt/disks/databases/db/bakta, version 5.1, full
+	output: /home/mf019/longread_pangenome/longread_analysis/v4/annotation
+	force: True
+	tmp directory: /tmp/tmp5e12clzg
+	prefix: pan_genome_reference
+	threads: 28
+	translation table: 11
+	taxon: Borrelia burgdorferi roary_pangenome_v4
+	gram: -
+	keep contig headers: True
+	skip tRNA: True
+
+parse genome sequences...
+	imported: 3921
+	filtered & revised: 3921
+	chromosomes: 1
+	plasmids: 5
+	contigs: 3915
+
+start annotation...
+skip tRNA prediction...
+predict tmRNAs...
+	found: 0
+predict rRNAs...
+	found: 0
+predict ncRNAs...
+	found: 0
+predict ncRNA regions...
+	found: 0
+predict CRISPR arrays...
+	found: 0
+predict & annotate CDSs...
+	predicted: 3517 
+	discarded spurious: 0
+	revised translational exceptions: 0
+	detected IPSs: 2674
+	found PSCs: 551
+	found PSCCs: 220
+	lookup annotations...
+	conduct expert systems...
+		amrfinder: 0
+		protein sequences: 52
+	signal peptides: 465
+	combine annotations and mark hypotheticals...
+	detect pseudogenes...
+		pseudogene candidates: 77
+		found pseudogenes: 14
+analyze hypothetical proteins: 216
+	detected Pfam hits: 14 
+	calculated proteins statistics
+	revise special cases...
+extract sORF...
+	potential: 34775
+	discarded due to overlaps: 33977
+	discarded spurious: 0
+	detected IPSs: 0
+	found PSCs: 0
+	lookup annotations...
+	filter and combine annotations...
+	filtered sORFs: 0
+detect gaps...
+	found: 0
+detect oriCs/oriVs...
+	found: 0
+detect oriTs...
+	found: 0
+apply feature overlap filters...
+select features and create locus tags...
+selected: 3517
+improve annotations...
+	revised gene symbols: 6
+
+genome statistics:
+	Genome size: 2,829,246 bp
+	Contigs/replicons: 3921
+	GC: 29.9 %
+	N50: 879
+	N ratio: 0.0 %
+	coding density: 96.8 %
+
+annotation summary:
+	tRNAs: 0
+	tmRNAs: 0
+	rRNAs: 0
+	ncRNAs: 0
+	ncRNA regions: 0
+	CRISPR arrays: 0
+	CDSs: 3517
+		hypotheticals: 216
+		pseudogenes: 14
+		signal peptides: 392
+	sORFs: 0
+	gaps: 0
+	oriCs/oriVs: 0
+	oriTs: 0
+
+export annotation results to: /home/mf019/longread_pangenome/longread_analysis/v4/annotation
+	human readable TSV...
+	GFF3...
+	INSDC GenBank & EMBL...
+	genome sequences...
+	feature nucleotide sequences...
+	translated CDS sequences...
+	circular genome plot...
+	hypothetical TSV...
+	translated hypothetical CDS sequences...
+	machine readable JSON...
+	genome and annotation summary...
+
+If you use these results please cite Bakta: https://doi.org/10.1099/mgen.0.000685
+Annotation successfully finished in 13:56 [mm:ss].
