@@ -1,8 +1,8 @@
-results/**
-resources/**
+results
+resources
 .snakemake
-.snakemake/**
 .DS_Store
+.ipynb_checkpoints
 *.fa
 *.gb
 *.fasta
@@ -78,6 +78,7 @@ RAxML_*
 longread_analysis/v4/longread_paired_v4/clustered_proteins
 longread_analysis/v4/shortread_paired_v4/clustered_proteins
 plasmid_id/output copy/assembly_dict_v2.pkl
+<<<<<<< HEAD
 *.json
 *.tsv
 *.csv
@@ -90,3 +91,10 @@ plasmid_id/output copy/assembly_dict_v2.pkl
 */.venv/*
 .venv/*
 .venv
+=======
+
+# this is a gigantic directory with redundant information
+all_split_contigs_v5
+# do not push singularity images please. 
+*.sif
+>>>>>>> ce4e92d (this will break everything)
