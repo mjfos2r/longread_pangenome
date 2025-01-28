@@ -1,0 +1,14 @@
+# Configuration for MultiQC AGAT module
+sp:
+    agat:
+        fn: '*.long_stats.txt'
+        contents: 'Number of gene'
+
+module_order:
+    - agat
+    - quast
+    - bakta
+
+extra_fn_clean_exts:
+    - '.long_stats'
+    - '.txt'

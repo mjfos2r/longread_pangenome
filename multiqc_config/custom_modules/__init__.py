@@ -1,0 +1,1 @@
+from .agat import MultiqcModule
