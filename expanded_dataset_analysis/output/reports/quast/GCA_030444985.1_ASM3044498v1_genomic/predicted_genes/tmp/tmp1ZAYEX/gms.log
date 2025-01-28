@@ -1,0 +1,76 @@
+
+
+
+-------------------------------------------------
+start time            : Thu Nov 21 23:10:07 2024
+GMS version           : 4.30 October 2014
+working directory     : /home/mf019/longread_pangenome/expanded_dataset_analysis/reports/quast/GCA_030444985.1_ASM3044498v1_genomic/predicted_genes/tmp/tmp1ZAYEX
+command line          : --name GCA_030444985-1_ASM3044498v1_genomic --clean --out /home/mf019/longread_pangenome/expanded_dataset_analysis/reports/quast/GCA_030444985.1_ASM3044498v1_genomic/predicted_genes/tmp/tmp1ZAYEX /home/mf019/longread_pangenome/expanded_dataset_analysis/reports/quast/GCA_030444985.1_ASM3044498v1_genomic/quast_corrected_input/GCA_030444985-1_ASM3044498v1_genomic.fna
+output file with predictions : GCA_030444985-1_ASM3044498v1_genomic.fna.lst
+input sequence        : /home/mf019/longread_pangenome/expanded_dataset_analysis/reports/quast/GCA_030444985.1_ASM3044498v1_genomic/quast_corrected_input/GCA_030444985-1_ASM3044498v1_genomic.fna
+output name for model : GCA_030444985-1_ASM3044498v1_genomic
+combine model         : 
+GeneMark model        : 
+species name          : 
+delete temp files     : 1
+markov chain order    : 2
+non-coding order      : 2
+genetic code          : 11
+sequence organization : partial
+search for motif      : 1
+motif width           : 6
+prestart length       : 40
+identity threshold    : 0.99
+maximum iteration     : 10
+fixed motif position  : 
+gene overlap off      : 
+strand to predict on  : both
+mode prokaryotic      : 
+mode eukaryotic       : 
+mode virus            : 
+mode phage            : 
+mode est              : 
+GeneMarkS parameters  : /quast-5.2.0/quast_libs/genemark/linux_64/par_11.default
+initial hmm model     : 
+output format         : LST
+output PostScript     : 
+output PDF            : 
+output nucleotides    : 
+output proteins       : 
+gibbs version         : 3
+heuristic version     : 2
+evidense data file    : 
+combine native with   : 
+use input defline     : 
+
+      run starts here:
+prepare sequence
+/quast-5.2.0/quast_libs/genemark/linux_64/probuild --par /quast-5.2.0/quast_libs/genemark/linux_64/par_11.default  --clean_join sequence --seq /home/mf019/longread_pangenome/expanded_dataset_analysis/reports/quast/GCA_030444985.1_ASM3044498v1_genomic/quast_corrected_input/GCA_030444985-1_ASM3044498v1_genomic.fna --log gms.log
+Clean-Join      IN   OUT
+Contigs - 4 4
+All letters - 1007632   1007782
+Unambiguous letters - 1007632 1007632
+A - 360054 360054
+C - 143184 143184
+G - 143148 143148
+T - 361246 361246
+N - 0 0
+Parameters:
+  Minimum of unambiguous letters per record: 1000
+  Trim down substrings "N...N" to maximum length: 50
+  Connect records using gap filler: NNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNN
+  Minimum of unambiguous letters in output: 50000
+system call done
+do_iterations = 1
+set initial <gmhmmp> model
+get GC
+/quast-5.2.0/quast_libs/genemark/linux_64/probuild --par /quast-5.2.0/quast_libs/genemark/linux_64/par_11.default  --gc --seq sequence
+GC of sequence = 28
+initial <gmhmm> model: /quast-5.2.0/quast_libs/genemark/linux_64/heuristic_mod/heu_11_30.mod
+copy initial model to working directory
+cp /quast-5.2.0/quast_libs/genemark/linux_64/heuristic_mod/heu_11_30.mod  itr_0.mod
+system call done
+run initial prediction
+/quast-5.2.0/quast_libs/genemark/linux_64/gmhmmp -g 11   sequence  -m itr_0.mod  -o itr_0.lst
+Error on last system call, error code 256
+Abort program!!!

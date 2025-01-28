@@ -1,0 +1,55 @@
+[2024-11-21 23:29:45,089] root                                               [DEBUG  ]  Logging to file: /tmp/tmp4j9azufm/multiqc.log
+[2024-11-21 23:29:45,089] multiqc.core.update_config                         [DEBUG  ]  This is MultiQC v1.25
+[2024-11-21 23:29:45,089] multiqc.core.update_config                         [DEBUG  ]  Running Python 3.10.12 (main, Sep 11 2024, 15:47:36) [GCC 11.4.0]
+[2024-11-21 23:29:45,089] multiqc.core.update_config                         [DEBUG  ]  Ignoring files, directories and paths that match: *.conf, */tmp/*, ncbi_dataset/*
+[2024-11-21 23:29:45,094] urllib3.connectionpool                             [DEBUG  ]  Starting new HTTPS connection (1): api.multiqc.info:443
+[2024-11-21 23:29:46,154] urllib3.connectionpool                             [DEBUG  ]  https://api.multiqc.info:443 "GET /version?version_multiqc=1.25&version_python=3.10.12&operating_system=Linux&is_docker=False&is_singularity=True&is_conda=False&is_ci=False&is_notebook=False HTTP/11" 200 182
+[2024-11-21 23:29:46,155] multiqc.core.version_check                         [WARNING]  MultiQC Version v1.25.2 now available!
+[2024-11-21 23:29:46,155] multiqc.core.version_check                         [DEBUG  ]  Latest MultiQC version is v1.25.2, released 2024-11-20
+[2024-11-21 23:29:46,155] multiqc.multiqc                                    [DEBUG  ]  Working dir : /home/mf019/longread_pangenome
+[2024-11-21 23:29:46,155] multiqc.multiqc                                    [DEBUG  ]  Template    : default
+[2024-11-21 23:29:46,155] multiqc.multiqc                                    [DEBUG  ]  Command used: /usr/local/bin/multiqc --interactive --outdir /home/mf019/longread_pangenome/expanded_dataset_analysis/reports/multiQC /home/mf019/longread_pangenome/expanded_dataset_analysis --ignore *.conf --ignore */tmp/* --ignore ncbi_dataset/* -v
+[2024-11-21 23:29:46,155] multiqc.core.file_search                           [INFO   ]  Search path: /home/mf019/longread_pangenome/expanded_dataset_analysis
+[2024-11-21 23:29:46,156] multiqc.core.file_search                           [DEBUG  ]  Analysing modules: custom_content, ccs, ngsderive, purple, conpair, isoseq, lima, peddy, somalier, methylqa, mosdepth, phantompeakqualtools, qualimap, bamdst, preseq, hifiasm, quast, qorts, rna_seqc, rockhopper, rsem, rseqc, busco, bustools, goleft_indexcov, gffcompare, disambiguate, supernova, deeptools, sargasso, verifybamid, mirtrace, happy, mirtop, glimpse, gopeaks, homer, hops, macs2, theta2, snpeff, gatk, htseq, bcftools, featurecounts, fgbio, dragen, dragen_fastqc, dedup, pbmarkdup, damageprofiler, mapdamage, biobambam2, jcvi, mtnucratio, picard, vep, bakta, prokka, qc3C, nanoq, nanostat, samblaster, samtools, bamtools, sambamba, ngsbits, pairtools, sexdeterrmine, seqera_cli, eigenstratdatabasetools, jellyfish, vcftools, longranger, stacks, varscan2, snippy, umicollapse, umitools, truvari, megahit, ganon, bbmap, bismark, biscuit, diamond, hicexplorer, hicup, hicpro, salmon, kallisto, slamdunk, star, hisat2, tophat, bowtie2, bowtie1, hostile, cellranger, snpsplit, odgi, vg, pangolin, nextclade, freyja, humid, kat, leehom, librarian, nonpareil, adapterremoval, bbduk, clipandmerge, cutadapt, flexbar, sourmash, kaiju, bracken, kraken, malt, motus, trimmomatic, sickle, skewer, sortmerna, biobloomtools, fastq_screen, afterqc, fastp, fastqc, sequali, filtlong, prinseqplusplus, pychopper, porechop, pycoqc, minionqc, anglerfish, multivcfanalyzer, clusterflow, checkqc, bcl2fastq, bclconvert, interop, ivar, flash, seqyclean, optitype, whatshap, spaceranger, xenome, xengsort, metaphlan, seqwho, software_versions
+[2024-11-21 23:30:23,466] multiqc.report                                     [DEBUG  ]  Summary of files that were skipped by the search: |skipped_module_specific_max_filesize: 6829|, |skipped_no_match: 8030|, |skipped_ignore_pattern: 2120|, |skipped_filesize_limit: 2|, |skipped_directory_fn_ignore_dirs: 396|
+[2024-11-21 23:30:23,468] multiqc.core.exec_modules                          [DEBUG  ]  Running module: custom_content
+[2024-11-21 23:30:23,485] multiqc.core.exec_modules                          [DEBUG  ]  No samples found: custom_content
+[2024-11-21 23:30:23,485] multiqc.core.exec_modules                          [DEBUG  ]  Running module: methylqa
+[2024-11-21 23:30:23,512] multiqc.core.exec_modules                          [DEBUG  ]  No samples found: methylqa
+[2024-11-21 23:30:23,512] multiqc.core.exec_modules                          [DEBUG  ]  Running module: quast
+[2024-11-21 23:30:23,558] multiqc.modules.quast.quast                        [INFO   ]  Found 132 reports
+[2024-11-21 23:30:23,560] multiqc.report                                     [DEBUG  ]  Wrote data file multiqc_quast.txt
+[2024-11-21 23:30:23,569] multiqc.plots.table_object                         [DEBUG  ]  Table key 'N75' not found in data for 'quast_table'. Skipping. Check for possible typos between data keys and header keys
+[2024-11-21 23:30:23,569] multiqc.plots.table_object                         [DEBUG  ]  Table key 'L75' not found in data for 'quast_table'. Skipping. Check for possible typos between data keys and header keys
+[2024-11-21 23:30:23,570] multiqc.plots.table_object                         [DEBUG  ]  Table key '# genes' not found in data for 'quast_table'. Skipping. Check for possible typos between data keys and header keys
+[2024-11-21 23:30:23,570] multiqc.plots.table_object                         [DEBUG  ]  Table key '# genes_partial' not found in data for 'quast_table'. Skipping. Check for possible typos between data keys and header keys
+[2024-11-21 23:30:23,570] multiqc.plots.table_object                         [DEBUG  ]  Table key '# predicted genes (unique)' not found in data for 'quast_table'. Skipping. Check for possible typos between data keys and header keys
+[2024-11-21 23:30:23,684] multiqc.base_module                                [DEBUG  ]  quast: deleting attribute self.sample_names
+[2024-11-21 23:30:23,685] multiqc.base_module                                [DEBUG  ]  quast: deleting attribute self.quast_data
+[2024-11-21 23:30:23,685] multiqc.core.exec_modules                          [DEBUG  ]  Running module: htseq
+[2024-11-21 23:30:25,476] multiqc.core.exec_modules                          [DEBUG  ]  No samples found: htseq
+[2024-11-21 23:30:25,476] multiqc.core.exec_modules                          [DEBUG  ]  Running module: bakta
+[2024-11-21 23:30:25,498] multiqc.modules.bakta.bakta                        [INFO   ]  Found 137 logs
+[2024-11-21 23:30:25,499] multiqc.report                                     [DEBUG  ]  Wrote data file multiqc_bakta.txt
+[2024-11-21 23:30:25,509] multiqc.base_module                                [DEBUG  ]  bakta: deleting attribute self.sample_names
+[2024-11-21 23:30:25,510] multiqc.base_module                                [DEBUG  ]  bakta: deleting attribute self.bakta
+[2024-11-21 23:30:25,510] multiqc.core.exec_modules                          [DEBUG  ]  Running module: kraken
+[2024-11-21 23:30:25,517] multiqc.modules.kraken.kraken                      [INFO   ]  Found 40 reports
+[2024-11-21 23:30:25,518] multiqc.report                                     [DEBUG  ]  Wrote data file multiqc_kraken.txt
+[2024-11-21 23:30:25,530] multiqc.base_module                                [DEBUG  ]  kraken: deleting attribute self.sample_names
+[2024-11-21 23:30:25,530] multiqc.core.software_versions                     [DEBUG  ]  Reading software versions from config.software_versions
+[2024-11-21 23:30:25,532] multiqc.report                                     [DEBUG  ]  Wrote data file multiqc_software_versions.txt
+[2024-11-21 23:30:25,532] multiqc.core.write_results                         [DEBUG  ]  Rendering plots
+[2024-11-21 23:30:25,654] multiqc.report                                     [DEBUG  ]  Wrote data file multiqc_general_stats.txt
+[2024-11-21 23:30:25,657] multiqc.core.write_results                         [DEBUG  ]  Exporting plot data to files
+[2024-11-21 23:30:25,658] multiqc.report                                     [DEBUG  ]  Wrote data file quast_table.txt
+[2024-11-21 23:30:25,658] multiqc.report                                     [DEBUG  ]  Wrote data file quast_num_contigs.txt
+[2024-11-21 23:30:25,659] multiqc.report                                     [DEBUG  ]  Wrote data file bakta_feature_types.txt
+[2024-11-21 23:30:25,659] multiqc.report                                     [DEBUG  ]  Wrote data file kraken-top-n-plot_Species.txt
+[2024-11-21 23:30:25,660] multiqc.report                                     [DEBUG  ]  Wrote data file kraken-top-n-plot_Genus.txt
+[2024-11-21 23:30:25,660] multiqc.report                                     [DEBUG  ]  Wrote data file kraken-top-n-plot_Family.txt
+[2024-11-21 23:30:25,660] multiqc.report                                     [DEBUG  ]  Wrote data file kraken-top-n-plot_Order.txt
+[2024-11-21 23:30:25,661] multiqc.report                                     [DEBUG  ]  Wrote data file kraken-top-n-plot_Class.txt
+[2024-11-21 23:30:25,661] multiqc.report                                     [DEBUG  ]  Wrote data file kraken-top-n-plot_Phylum.txt
+[2024-11-21 23:30:25,661] multiqc.report                                     [DEBUG  ]  Wrote data file kraken-top-n-plot_Kingdom.txt
+[2024-11-21 23:30:25,661] multiqc.core.write_results                         [DEBUG  ]  Moving data file from '/tmp/tmp4j9azufm/multiqc_data' to '/home/mf019/longread_pangenome/expanded_dataset_analysis/reports/multiQC/multiqc_data'
