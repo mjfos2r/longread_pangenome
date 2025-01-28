@@ -1,0 +1,61 @@
+Analysis started at 2024-07-02 13:39:16.001623.
+Reading local taxonomy database...
+Done. Read 63697 taxa.
+Reading homology search results...
+Analysis started at 2024-07-02 13:39:32.948051.
+Reading local taxonomy database...
+Done. Read 63697 taxa.
+Reading homology search results...
+  Bbss49-min3-GCs: 71214 proteins.
+Done. Read search results of 1 samples.
+Auto-inferring plausible taxIds for input genomes based on taxonomy of search results...
+  Bbss49-min3-GCs: 64895 (Borreliella) (covering 97.346% best hits).
+Refining taxonomy database...
+Done. Retained 42718 taxa.
+All input genomes belong to 64895 (genus Borreliella).
+Auto-inferred self group:
+  64895 (genus Borreliella)
+Self group has 26 taxa.
+Auto-inferred close group:
+  1643685 (family Borreliaceae)
+Close group has 36 taxa.
+Calculating protein scores by group...
+  Bbss49-min3-GCs
+Done.
+Summarizing scores of all proteins... done.
+Protein scores written to scores.tsv.
+Removed 5320 ORFans.
+Removed 68 outliers.
+Predicting HGTs...
+Calculating thresholds for clustering...
+Close group:
+  1.000: n/a
+  0.886: n/a
+  0.785: n/a
+  0.695: n/a
+  0.616: n/a
+  0.546: n/a
+  0.483: 5.22947 - 24.46%
+  Auto-determined bandwidth: 0.483293.
+  Threshold: 5.22947.
+Distal group:
+  1.000: n/a
+  0.886: n/a
+  0.785: n/a
+  0.695: n/a
+  0.616: n/a
+  0.546: n/a
+  0.483: n/a
+  0.428: 50.4916 - 59.89%
+  Auto-determined bandwidth: 0.428133.
+  Threshold: 50.4916.
+Done.
+Labeling cluster... done.
+  Total predicted HGTs: 836.
+Calculating cluster properties... done.
+Refining cluster... done.
+  Total predicted HGTs after refinement: 738.
+Predicted HGTs by sample:
+  Bbss49-min3-GCs: 738.
+Prediction results saved to hgts/.
+Analysis finished at 2024-07-02 13:52:42.511230.
