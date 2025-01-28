@@ -3,36 +3,36 @@ resources
 .snakemake
 .DS_Store
 .ipynb_checkpoints
-*.fa
-*.gb
-*.fasta
-*.fasta*
-*.gff3
-*.gff
-*.fna
-*.ffn
+#*.fa
+#*.gb
+#*.fasta
+#*.fasta*
+#*.gff3
+#*.gff
+#*.fna
+#*.ffn
 
 assemblies/*
-*.ndb
-*.nhr
-*.nin
-*.njs
-*.not
-*.nsq
-*.ntf
-*.nto
-*.xml
-*.zip
-*.paf
-*.tab
-*.txt
-*.backbone
-*.xmfa
-*.gtree
+#*.ndb
+#*.nhr
+#*.nin
+#*.njs
+#*.not
+#*.nsq
+#*.ntf
+#*.nto
+#*.xml
+#*.zip
+#*.paf
+#*.tab
+#*.txt
+#*.backbone
+#*.xmfa
+#*.gtree
 *.sslist
 *.bbcols
-*.log
-*.html
+#*.log
+#*.html
 *.guide_tree
 
 #.nexus
@@ -45,46 +45,46 @@ assemblies/*
 #.map
 
 # Why will it not just ignore these blastdb files?
-*.pdb
-*.phr
-*.pin
-*.pjs
-*.pog
-*.pos
-*.pot
-*.psq
-*.ptf
-*.pto
+#*.pdb
+#*.phr
+#*.pin
+#*.pjs
+#*.pog
+#*.pos
+#*.pot
+#*.psq
+#*.ptf
+#*.pto
 
 # Fine ignore it explicitly then.
-plasmid_id/pf32_db/pf32.pdb
-plasmid_id/pf32_db/pf32.phr
-plasmid_id/pf32_db/pf32.pin
+#plasmid_id/pf32_db/pf32.pdb
+#plasmid_id/pf32_db/pf32.phr
+#plasmid_id/pf32_db/pf32.pin
 
-*.sto
-*.afa
-*.faa
-
-*.nhd
-*.nhi
-*.nog
-*.nwk
-*.dot
+#*.sto
+#*.afa
+#*.faa
+#
+#*.nhd
+#*.nhi
+#*.nog
+#*.nwk
+#*.dot
 RAxML_*
-*.Rtab
-*.aln
-*.embl
-*.newick
-longread_analysis/v4/longread_paired_v4/clustered_proteins
-longread_analysis/v4/shortread_paired_v4/clustered_proteins
-plasmid_id/output copy/assembly_dict_v2.pkl
-*.json
-*.tsv
-*.csv
-*.pkl
-*.png
-*.db
-*.tar.gz
+#*.Rtab
+#*.aln
+#*.embl
+#*.newick
+#longread_analysis/v4/longread_paired_v4/clustered_proteins
+#longread_analysis/v4/shortread_paired_v4/clustered_proteins
+#plasmid_id/output copy/assembly_dict_v2.pkl
+#*.json
+#*.tsv
+#*.csv
+#*.pkl
+#*.png
+#*.db
+#*.tar.gz
 
 *.snakemake*
 */.venv/*
@@ -93,16 +93,16 @@ plasmid_id/output copy/assembly_dict_v2.pkl
 =======
 
 # this is a gigantic directory with redundant information
-all_split_contigs_v5
+#all_split_contigs_v5
 
 # do not push singularity images please. 
-*.sif
+#*.sif
 
 # very big files and folders with lots of directories go here.
-new_ava_v1
-old_nucl
-new_ava_v2
-new_ava_v3
+#new_ava_v1
+#old_nucl
+#new_ava_v2
+#new_ava_v3
 # 
 
 
