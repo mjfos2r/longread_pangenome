@@ -1,0 +1,87 @@
+nohup: ignoring input
+Assuming unrestricted shared filesystem usage.
+host: longread-vm
+Building DAG of jobs...
+Using shell: /usr/bin/bash
+Provided cores: 32
+Rules claiming more threads will be scaled down.
+Job stats:
+job         count
+--------  -------
+FastTree        1
+RAxML           1
+Roary           1
+all             1
+bakta           1
+total           5
+
+Select jobs to execute...
+Execute 1 jobs...
+
+[Tue Dec 10 02:12:31 2024]
+Job 1: running roary on all of our annotations! : 
+ roary -p 31 -f /home/mf019/longread_pangenome/expanded_dataset_analysis/results/v8_filtered_nsp/roary_v8_filtered_nsp /home/mf019/longread_pangenome/expanded_dataset_analysis/gffs/URI91H.gff3 /home/mf019/longread_pangenome/expanded_dataset_analysis/gffs/URI102H.gff3 /home/mf019/longread_pangenome/expanded_dataset_analysis/gffs/URI89H.gff3 /home/mf019/longread_pangenome/expanded_dataset_analysis/gffs/ESI403H.gff3 /home/mf019/longread_pangenome/expanded_dataset_analysis/gffs/GCF_002151485.1_ASM215148v1_genomic.gff3 /home/mf019/longread_pangenome/expanded_dataset_analysis/gffs/URI44H.gff3 /home/mf019/longread_pangenome/expanded_dataset_analysis/gffs/UNY203P.gff3 /home/mf019/longread_pangenome/expanded_dataset_analysis/gffs/GCF_003367295.1_ASM336729v1_genomic.gff3 /home/mf019/longread_pangenome/expanded_dataset_analysis/gffs/GCF_040790735.1_ASM4079073v1_genomic.gff3 /home/mf019/longread_pangenome/expanded_dataset_analysis/gffs/URI47H.gff3 /home/mf019/longread_pangenome/expanded_dataset_analysis/gffs/UNY1128P.gff3 /home/mf019/longread_pangenome/expanded_dataset_analysis/gffs/URI118H.gff3 /home/mf019/longread_pangenome/expanded_dataset_analysis/gffs/UCT30H.gff3 /home/mf019/longread_pangenome/expanded_dataset_analysis/gffs/UCT35H.gff3 /home/mf019/longread_pangenome/expanded_dataset_analysis/gffs/GCF_040790795.1_ASM4079079v1_genomic.gff3 /home/mf019/longread_pangenome/expanded_dataset_analysis/gffs/URI88H.gff3 /home/mf019/longread_pangenome/expanded_dataset_analysis/gffs/UNY172P.gff3 /home/mf019/longread_pangenome/expanded_dataset_analysis/gffs/URI41H.gff3 /home/mf019/longread_pangenome/expanded_dataset_analysis/gffs/UWI248P.gff3 /home/mf019/longread_pangenome/expanded_dataset_analysis/gffs/ESI425H.gff3 /home/mf019/longread_pangenome/expanded_dataset_analysis/gffs/URI120H.gff3 /home/mf019/longread_pangenome/expanded_dataset_analysis/gffs/UCT110H.gff3 /home/mf019/longread_pangenome/expanded_dataset_analysis/gffs/UNY1032P.gff3 /home/mf019/longread_pangenome/expanded_dataset_analysis/gffs/URI112H.gff3 /home/mf019/longread_pangenome/expanded_dataset_analysis/gffs/UCT32H.gff3 /home/mf019/longread_pangenome/expanded_dataset_analysis/gffs/URI39H.gff3 /home/mf019/longread_pangenome/expanded_dataset_analysis/gffs/URI48H.gff3 /home/mf019/longread_pangenome/expanded_dataset_analysis/gffs/URI111H.gff3 /home/mf019/longread_pangenome/expanded_dataset_analysis/gffs/GCF_040819585.1_PFhe_I_PB_Ill_cons_genomic.gff3 /home/mf019/longread_pangenome/expanded_dataset_analysis/gffs/UCT96H.gff3 /home/mf019/longread_pangenome/expanded_dataset_analysis/gffs/GCF_024662175.1_ASM2466217v1_genomic.gff3 /home/mf019/longread_pangenome/expanded_dataset_analysis/gffs/URI93H.gff3 /home/mf019/longread_pangenome/expanded_dataset_analysis/gffs/URI117H.gff3 /home/mf019/longread_pangenome/expanded_dataset_analysis/gffs/UNY990P.gff3 /home/mf019/longread_pangenome/expanded_dataset_analysis/gffs/URI34H.gff3 /home/mf019/longread_pangenome/expanded_dataset_analysis/gffs/ESI26H.gff3 /home/mf019/longread_pangenome/expanded_dataset_analysis/gffs/GCF_002151505.1_ASM215150v1_genomic.gff3 /home/mf019/longread_pangenome/expanded_dataset_analysis/gffs/URI42H.gff3 /home/mf019/longread_pangenome/expanded_dataset_analysis/gffs/GCF_040790715.1_ASM4079071v1_genomic.gff3 /home/mf019/longread_pangenome/expanded_dataset_analysis/gffs/UCT124H.gff3 /home/mf019/longread_pangenome/expanded_dataset_analysis/gffs/UNY208P.gff3 /home/mf019/longread_pangenome/expanded_dataset_analysis/gffs/UWI263P.gff3 /home/mf019/longread_pangenome/expanded_dataset_analysis/gffs/GCF_040790765.1_ASM4079076v1_genomic.gff3 /home/mf019/longread_pangenome/expanded_dataset_analysis/gffs/ESI36H.gff3 /home/mf019/longread_pangenome/expanded_dataset_analysis/gffs/GCF_024662195.1_ASM2466219v1_genomic.gff3 /home/mf019/longread_pangenome/expanded_dataset_analysis/gffs/UNY149P.gff3 /home/mf019/longread_pangenome/expanded_dataset_analysis/gffs/GCF_040790745.1_ASM4079074v1_genomic.gff3 /home/mf019/longread_pangenome/expanded_dataset_analysis/gffs/GCF_019134655.1_ASM1913465v1_genomic.gff3 /home/mf019/longread_pangenome/expanded_dataset_analysis/gffs/URI33H.gff3 /home/mf019/longread_pangenome/expanded_dataset_analysis/gffs/URI56H.gff3 /home/mf019/longread_pangenome/expanded_dataset_analysis/gffs/URI107H.gff3 /home/mf019/longread_pangenome/expanded_dataset_analysis/gffs/URI103H.gff3 /home/mf019/longread_pangenome/expanded_dataset_analysis/gffs/UNY1085P.gff3 /home/mf019/longread_pangenome/expanded_dataset_analysis/gffs/B500PP.gff3 /home/mf019/longread_pangenome/expanded_dataset_analysis/gffs/UCT50H.gff3 /home/mf019/longread_pangenome/expanded_dataset_analysis/gffs/UCT92H.gff3 /home/mf019/longread_pangenome/expanded_dataset_analysis/gffs/XYZ459H.gff3 /home/mf019/longread_pangenome/expanded_dataset_analysis/gffs/URI40H.gff3 /home/mf019/longread_pangenome/expanded_dataset_analysis/gffs/URI87H.gff3 /home/mf019/longread_pangenome/expanded_dataset_analysis/gffs/UWI283P.gff3 /home/mf019/longread_pangenome/expanded_dataset_analysis/gffs/URI36H.gff3 /home/mf019/longread_pangenome/expanded_dataset_analysis/gffs/GCF_040790755.1_ASM4079075v1_genomic.gff3 /home/mf019/longread_pangenome/expanded_dataset_analysis/gffs/UWI247P.gff3 /home/mf019/longread_pangenome/expanded_dataset_analysis/gffs/B418PP.gff3 /home/mf019/longread_pangenome/expanded_dataset_analysis/gffs/UNY193P.gff3 /home/mf019/longread_pangenome/expanded_dataset_analysis/gffs/GCF_040790805.1_ASM4079080v1_genomic.gff3 /home/mf019/longread_pangenome/expanded_dataset_analysis/gffs/URI86H.gff3 /home/mf019/longread_pangenome/expanded_dataset_analysis/gffs/UNY1083P.gff3 /home/mf019/longread_pangenome/expanded_dataset_analysis/gffs/UNY169P.gff3 /home/mf019/longread_pangenome/expanded_dataset_analysis/gffs/GCF_040790785.1_ASM4079078v1_genomic.gff3 /home/mf019/longread_pangenome/expanded_dataset_analysis/gffs/GCF_002151465.1_ASM215146v1_genomic.gff3 /home/mf019/longread_pangenome/expanded_dataset_analysis/gffs/UNY1090P.gff3 /home/mf019/longread_pangenome/expanded_dataset_analysis/gffs/UNY1038P.gff3 /home/mf019/longread_pangenome/expanded_dataset_analysis/gffs/URI46H.gff3 /home/mf019/longread_pangenome/expanded_dataset_analysis/gffs/UCT29H.gff3 /home/mf019/longread_pangenome/expanded_dataset_analysis/gffs/B331PP.gff3 /home/mf019/longread_pangenome/expanded_dataset_analysis/gffs/UCT109H.gff3 /home/mf019/longread_pangenome/expanded_dataset_analysis/gffs/GCF_040790775.1_ASM4079077v1_genomic.gff3 /home/mf019/longread_pangenome/expanded_dataset_analysis/gffs/UCT113H.gff3 /home/mf019/longread_pangenome/expanded_dataset_analysis/gffs/URI101H.gff3 /home/mf019/longread_pangenome/expanded_dataset_analysis/gffs/GCF_024662155.1_ASM2466215v1_genomic.gff3 /home/mf019/longread_pangenome/expanded_dataset_analysis/gffs/UCT31H.gff3 2>&1 >/home/mf019/longread_pangenome/expanded_dataset_analysis/results/v8_filtered_nsp/logs/roary_log.txt
+Reason: Missing output files: /home/mf019/longread_pangenome/expanded_dataset_analysis/results/v8_filtered_nsp/roary_v8_filtered_nsp/pan_genome_reference.fa, /home/mf019/longread_pangenome/expanded_dataset_analysis/results/v8_filtered_nsp/roary_v8_filtered_nsp/core_gene_alignment.aln
+
+Activating singularity image singularity/images/roary_latest.sif
+logs
+roary_v8_filtered_nsp
+roary_v8_filtered_nsp_temp
+[Tue Dec 10 02:23:16 2024]
+Finished job 1.
+1 of 5 steps (20%) done
+Select jobs to execute...
+Execute 1 jobs...
+
+[Tue Dec 10 02:23:16 2024]
+Job 2: running fasttree on the roary output ==>> /home/mf019/longread_pangenome/expanded_dataset_analysis/results/v8_filtered_nsp/roary_v8_filtered_nsp/core_gene_alignment.aln
+Reason: Missing output files: /home/mf019/longread_pangenome/expanded_dataset_analysis/results/v8_filtered_nsp/fasttree/fasttree_roary_pangenome_v8_filtered_nsp.newick; Input files updated by another job: /home/mf019/longread_pangenome/expanded_dataset_analysis/results/v8_filtered_nsp/roary_v8_filtered_nsp/core_gene_alignment.aln
+
+Activating singularity image singularity/images/fasttree2.sif
+[Tue Dec 10 02:51:34 2024]
+Finished job 2.
+2 of 5 steps (40%) done
+Select jobs to execute...
+Execute 1 jobs...
+
+[Tue Dec 10 02:51:34 2024]
+Job 3: running RAxML on the roary output ==>> /home/mf019/longread_pangenome/expanded_dataset_analysis/results/v8_filtered_nsp/roary_v8_filtered_nsp/core_gene_alignment.aln
+Reason: Missing output files: /home/mf019/longread_pangenome/expanded_dataset_analysis/results/v8_filtered_nsp/tree/RAxML_bestTree.roary_v8_filtered_nsp_gtrgam; Input files updated by another job: /home/mf019/longread_pangenome/expanded_dataset_analysis/results/v8_filtered_nsp/roary_v8_filtered_nsp/core_gene_alignment.aln
+
+Activating singularity image singularity/images/raxml_latest.sif
+[Tue Dec 10 02:56:41 2024]
+Finished job 3.
+3 of 5 steps (60%) done
+Select jobs to execute...
+Execute 1 jobs...
+
+[Tue Dec 10 02:56:41 2024]
+Job 4: Running bakta for pangenome!
+Reason: Missing output files: /home/mf019/longread_pangenome/expanded_dataset_analysis/results/v8_filtered_nsp/bakta_v8_filtered_nsp/roary_pangenome_v8_filtered_nsp.gff3; Input files updated by another job: /home/mf019/longread_pangenome/expanded_dataset_analysis/results/v8_filtered_nsp/roary_v8_filtered_nsp/pan_genome_reference.fa
+
+Activating singularity image singularity/images/bakta_latest.sif
+/opt/conda/lib/python3.11/site-packages/numpy/_core/getlimits.py:555: UserWarning: The value of the smallest subnormal for <class 'numpy.float32'> type is zero.
+  setattr(self, word, getattr(machar, word).flat[0])
+/opt/conda/lib/python3.11/site-packages/numpy/_core/getlimits.py:89: UserWarning: The value of the smallest subnormal for <class 'numpy.float32'> type is zero.
+  return self._float_to_str(self.smallest_subnormal)
+/opt/conda/lib/python3.11/site-packages/numpy/_core/getlimits.py:555: UserWarning: The value of the smallest subnormal for <class 'numpy.float64'> type is zero.
+  setattr(self, word, getattr(machar, word).flat[0])
+/opt/conda/lib/python3.11/site-packages/numpy/_core/getlimits.py:89: UserWarning: The value of the smallest subnormal for <class 'numpy.float64'> type is zero.
+  return self._float_to_str(self.smallest_subnormal)
+[Tue Dec 10 03:23:58 2024]
+Finished job 4.
+4 of 5 steps (80%) done
+Select jobs to execute...
+Execute 1 jobs...
+
+[Tue Dec 10 03:23:58 2024]
+localrule all:
+    input: /home/mf019/longread_pangenome/expanded_dataset_analysis/results/v8_filtered_nsp/roary_v8_filtered_nsp/core_gene_alignment.aln, /home/mf019/longread_pangenome/expanded_dataset_analysis/results/v8_filtered_nsp/fasttree/fasttree_roary_pangenome_v8_filtered_nsp.newick, /home/mf019/longread_pangenome/expanded_dataset_analysis/results/v8_filtered_nsp/tree/RAxML_bestTree.roary_v8_filtered_nsp_gtrgam, /home/mf019/longread_pangenome/expanded_dataset_analysis/results/v8_filtered_nsp/bakta_v8_filtered_nsp/roary_pangenome_v8_filtered_nsp.gff3
+    jobid: 0
+    reason: Input files updated by another job: /home/mf019/longread_pangenome/expanded_dataset_analysis/results/v8_filtered_nsp/fasttree/fasttree_roary_pangenome_v8_filtered_nsp.newick, /home/mf019/longread_pangenome/expanded_dataset_analysis/results/v8_filtered_nsp/bakta_v8_filtered_nsp/roary_pangenome_v8_filtered_nsp.gff3, /home/mf019/longread_pangenome/expanded_dataset_analysis/results/v8_filtered_nsp/tree/RAxML_bestTree.roary_v8_filtered_nsp_gtrgam, /home/mf019/longread_pangenome/expanded_dataset_analysis/results/v8_filtered_nsp/roary_v8_filtered_nsp/core_gene_alignment.aln
+    resources: tmpdir=/tmp
+
+[Tue Dec 10 03:23:58 2024]
+Finished job 0.
+5 of 5 steps (100%) done
+Complete log: .snakemake/log/2024-12-10T021231.337715.snakemake.log

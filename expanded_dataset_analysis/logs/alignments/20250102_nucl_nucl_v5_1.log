@@ -1,0 +1,62 @@
+2025-01-02 21:01:34,424 - DEBUG - initialized logger: main_logger
+2025-01-02 21:01:34,424 - DEBUG - max buffer length: 16
+2025-01-02 21:01:34,424 - DEBUG - setting up log formatter for pane view
+2025-01-02 21:01:34,424 - DEBUG - setting up custom rolling buffering handler for pane view
+2025-01-02 21:01:34,425 - DEBUG - adding custom rolling buffering handler to main_logger
+2025-01-02 21:01:34,425 - DEBUG - parsing args to dict and creating string for pane view
+2025-01-02 21:01:34,427 - DEBUG - creating path for subdirectory:nucl_v5_1 in output:/data/output/alignments/ava
+2025-01-02 21:01:34,428 - DEBUG - new output path: /data/output/alignments/ava/nucl_v5_1
+2025-01-02 21:01:34,428 - DEBUG - Starting live view
+2025-01-02 21:01:34,434 - INFO - Using the following arguments for this run
+[bold green]annotations_dir[/bold green]: /data/assemblies/all_split_contigs_v5
+[bold green]alignments_dir[/bold green]: /alignments/nucl_v5
+[bold green]all_alns_file[/bold green]: None
+[bold green]output_dir[/bold green]: /data/output/alignments/ava
+[bold green]logfile[/bold green]: /data/20250102_nucl_nucl_v5_1
+[bold green]dale[/bold green]: True
+[bold green]analysis_type[/bold green]: nucl
+[bold green]cores[/bold green]: 222
+[bold green]version[/bold green]: nucl_v5_1
+[bold green]min_identity[/bold green]: 50.0
+[bold green]identity_step[/bold green]: 10.0
+
+2025-01-02 21:01:34,434 - INFO - Creating output directory: /data/output/alignments/ava/nucl_v5_1
+2025-01-02 21:01:34,435 - INFO - [green]Output directory successfully created[/green]
+2025-01-02 21:01:34,436 - INFO - [bold cyan]Starting Homology Analysis[/bold cyan]
+2025-01-02 21:01:34,436 - INFO - [bold blue]Indexing all GenBank files...[/bold blue]
+2025-01-02 21:01:34,471 - INFO - [green]Successfully indexed[/green] [green]4016[/green] [green]GenBank files.[/green]
+2025-01-02 21:01:34,471 - INFO - [yellow]Expected number of alignment files:[/yellow] 8062120
+2025-01-02 21:01:34,481 - INFO - [bold blue]Finding and processing alignment files...[/bold blue]
+2025-01-02 21:01:34,481 - DEBUG - [bold blue]Beginning alignment processing[/bold blue]
+2025-01-02 21:01:34,481 - DEBUG - [yellow]Beginning file discovery, initializing file Queue() and discovery Thread()[/yellow]
+2025-01-02 21:01:34,481 - DEBUG - Starting discovery thread!
+2025-01-02 21:01:34,482 - DEBUG - discover_files: Beginning walk through /alignments/nucl_v5
+2025-01-02 21:12:06,745 - DEBUG - discover_files: inserting None into queue
+2025-01-02 21:12:06,751 - INFO - [bold green]Discovery complete. Found[/bold green] 8061467 [bold green]files[/bold green]
+2025-01-02 21:12:06,751 - DEBUG - `None` path reached! Discovery is finished. Waiting for discovery thread to complete. Merging thread with main!
+2025-01-02 21:12:06,752 - DEBUG - Discovery thread successfully merged!
+2025-01-02 21:12:15,512 - INFO - [bold green]Processing complete![/bold green]
+Total Runtime: 641.03 seconds. [bold green]Alignments processed:[/bold green] 8061467
+2025-01-02 21:12:15,513 - INFO - Total rows in simple_rows: 0
+2025-01-02 21:12:15,516 - INFO - Total rows in DataFrame: 0
+2025-01-02 21:12:15,516 - DEBUG - aggregating alignments by contig
+2025-01-02 21:12:15,516 - INFO - Total contigs in grouped_data: 0
+2025-01-02 21:12:15,517 - DEBUG - creating summary dataframe of aggregated alignments
+2025-01-02 21:12:15,517 - DEBUG - beginning summary df construction!
+2025-01-02 21:12:15,517 - DEBUG - finished summary df construction!
+2025-01-02 21:12:15,518 - INFO - Total rows in summary DataFrame: 0
+2025-01-02 21:12:15,518 - DEBUG - creating matrices from aggregated alignments!
+2025-01-02 21:12:15,519 - INFO - [green]Processed[/green] 8061467 [green]alignment files in[/green] 641.03 [green]seconds.[/green]
+2025-01-02 21:12:15,520 - WARNING - [bold red]Warning: Processed fewer alignment files than expected.[/bold red] [bold yellow]Expected:[/bold yellow] 8062120, [bold yellow]Processed:[/bold yellow] 8061467
+2025-01-02 21:12:15,520 - INFO - Writing output files...
+2025-01-02 21:12:15,521 - INFO - [bold_blue]Writing rows to files. Please stand by.[/bold_blue]
+2025-01-02 21:12:15,522 - INFO - [bold_green]simple_rows file has been written![/bold_green]
+2025-01-02 21:12:15,522 - INFO - [bold_green]detailed_rows file has been written![/bold_green]
+2025-01-02 21:12:15,524 - INFO - [bold_green]summary DataFrame has been written![/bold_green]
+2025-01-02 21:12:15,524 - INFO - [bold_green]numpy matrix has been written![/bold_green]
+2025-01-02 21:12:15,525 - INFO - [bold_green]pandas DataFrame matrix has been written![/bold_green]
+2025-01-02 21:12:18,612 - INFO - [bold_green]Empty alignment files list has been written![/bold_green]
+2025-01-02 21:12:18,613 - INFO - [bold_green]contig labels have been written![/bold_green]
+2025-01-02 21:12:18,613 - INFO - [bold_green]All output files have been written![/bold_green]
+2025-01-02 21:12:18,615 - INFO - [bold green]Homology Analysis Completed Successfully![/bold green]
+2025-01-02 21:12:18,630 - INFO - FINALLY: Moving temp logfile to final logfile: /data/20250102_nucl_nucl_v5_1.log

@@ -1,0 +1,127 @@
+/quast-5.2.0/quast.py -t 32 expanded_dataset_analysis/assemblies/GCF_000172335.2_ASM17233v2_genomic/GCF_000172335.2_ASM17233v2_genomic.fna -r ref/GCF_000008685.2_ASM868v2_genomic.fna -g ref/GCF_000008685.2_ASM868v2_genomic.gff --gene-finding --circos -o expanded_dataset_analysis/quast/GCF_000172335.2_ASM17233v2_genomic
+
+Version: 5.2.0
+
+System information:
+  OS: Linux-6.1.0-27-cloud-amd64-x86_64-with-Ubuntu-20.04-focal (linux_64)
+  Python version: 2.7.18
+  CPUs number: 128
+
+Started: 2024-11-15 19:54:55
+
+Logging to /home/mf019/longread_pangenome/expanded_dataset_analysis/quast/GCF_000172335.2_ASM17233v2_genomic/quast.log
+
+CWD: /home/mf019/longread_pangenome
+Main parameters: 
+  MODE: default, threads: 32, min contig length: 500, min alignment length: 65, min alignment IDY: 95.0, \
+  ambiguity: one, min local misassembly length: 200, min extensive misassembly length: 1000
+
+Reference:
+  /home/mf019/longread_pangenome/ref/GCF_000008685.2_ASM868v2_genomic.fna ==> GCF_000008685.2_ASM868v2_genomic
+
+Contigs:
+  Pre-processing...
+  expanded_dataset_analysis/assemblies/GCF_000172335.2_ASM17233v2_genomic/GCF_000172335.2_ASM17233v2_genomic.fna ==> GCF_000172335.2_ASM17233v2_genomic
+
+2024-11-15 19:54:55
+Running Basic statistics processor...
+  Reference genome:
+    GCF_000008685.2_ASM868v2_genomic.fna, length = 1521208, num fragments = 22, GC % = 28.18
+  Contig files: 
+    GCF_000172335.2_ASM17233v2_genomic
+  Calculating N50 and L50...
+    GCF_000172335.2_ASM17233v2_genomic, N50 = 169176, L50 = 3, auN = 174006.7, Total length = 1485884, GC % = 28.43, # N's per 100 kbp =  0.13
+  Drawing Nx plot...
+    saved to /home/mf019/longread_pangenome/expanded_dataset_analysis/quast/GCF_000172335.2_ASM17233v2_genomic/basic_stats/Nx_plot.pdf
+  Drawing NGx plot...
+    saved to /home/mf019/longread_pangenome/expanded_dataset_analysis/quast/GCF_000172335.2_ASM17233v2_genomic/basic_stats/NGx_plot.pdf
+  Drawing cumulative plot...
+    saved to /home/mf019/longread_pangenome/expanded_dataset_analysis/quast/GCF_000172335.2_ASM17233v2_genomic/basic_stats/cumulative_plot.pdf
+  Drawing GC content plot...
+    saved to /home/mf019/longread_pangenome/expanded_dataset_analysis/quast/GCF_000172335.2_ASM17233v2_genomic/basic_stats/GC_content_plot.pdf
+  Drawing GCF_000172335.2_ASM17233v2_genomic GC content plot...
+    saved to /home/mf019/longread_pangenome/expanded_dataset_analysis/quast/GCF_000172335.2_ASM17233v2_genomic/basic_stats/GCF_000172335.2_ASM17233v2_genomic_GC_content_plot.pdf
+Done.
+
+2024-11-15 19:54:56
+Running Contig analyzer...
+  GCF_000172335.2_ASM17233v2_genomic
+  Logging to files /home/mf019/longread_pangenome/expanded_dataset_analysis/quast/GCF_000172335.2_ASM17233v2_genomic/contigs_reports/contigs_report_GCF_000172335-2_ASM17233v2_genomic.stdout and contigs_report_GCF_000172335-2_ASM17233v2_genomic.stderr...
+  Aligning contigs to the reference
+  Analysis is finished.
+  Creating total report...
+    saved to /home/mf019/longread_pangenome/expanded_dataset_analysis/quast/GCF_000172335.2_ASM17233v2_genomic/contigs_reports/misassemblies_report.txt, misassemblies_report.tsv, and misassemblies_report.tex
+  Transposed version of total report...
+    saved to /home/mf019/longread_pangenome/expanded_dataset_analysis/quast/GCF_000172335.2_ASM17233v2_genomic/contigs_reports/transposed_report_misassemblies.txt, transposed_report_misassemblies.tsv, and transposed_report_misassemblies.tex
+  Creating total report...
+    saved to /home/mf019/longread_pangenome/expanded_dataset_analysis/quast/GCF_000172335.2_ASM17233v2_genomic/contigs_reports/unaligned_report.txt, unaligned_report.tsv, and unaligned_report.tex
+  Drawing misassemblies by types plot...
+    saved to /home/mf019/longread_pangenome/expanded_dataset_analysis/quast/GCF_000172335.2_ASM17233v2_genomic/contigs_reports/misassemblies_plot.pdf
+  Drawing misassemblies FRCurve plot...
+    saved to /home/mf019/longread_pangenome/expanded_dataset_analysis/quast/GCF_000172335.2_ASM17233v2_genomic/contigs_reports/misassemblies_frcurve_plot.pdf
+Done.
+
+2024-11-15 19:54:57
+Running NA-NGA calculation...
+  GCF_000172335.2_ASM17233v2_genomic, Largest alignment = 218302, NA50 = 169176, NGA50 = 87194, LA50 = 4, LGA50 = 5
+  Drawing cumulative plot...
+    saved to /home/mf019/longread_pangenome/expanded_dataset_analysis/quast/GCF_000172335.2_ASM17233v2_genomic/aligned_stats/cumulative_plot.pdf
+  Drawing NAx plot...
+    saved to /home/mf019/longread_pangenome/expanded_dataset_analysis/quast/GCF_000172335.2_ASM17233v2_genomic/aligned_stats/NAx_plot.pdf
+  Drawing NGAx plot...
+    saved to /home/mf019/longread_pangenome/expanded_dataset_analysis/quast/GCF_000172335.2_ASM17233v2_genomic/aligned_stats/NGAx_plot.pdf
+Done.
+
+2024-11-15 19:54:57
+Running Genome analyzer...
+  NOTICE: No file with operons were provided. Use the -O option if you want to specify it.
+  Loaded 1693 genomic features of type "ANY"
+  GCF_000172335.2_ASM17233v2_genomic
+  Analysis is finished.
+  Drawing genomic features cumulative plot...
+    saved to /home/mf019/longread_pangenome/expanded_dataset_analysis/quast/GCF_000172335.2_ASM17233v2_genomic/genome_stats/features_cumulative_plot.pdf
+  Drawing genomic features FRCurve plot...
+    saved to /home/mf019/longread_pangenome/expanded_dataset_analysis/quast/GCF_000172335.2_ASM17233v2_genomic/genome_stats/features_frcurve_plot.pdf
+  Skipping drawing # complete genomic features histogram... (less than 2 columns histogram makes no sense)
+  Skipping drawing Genome fraction, % histogram... (less than 2 columns histogram makes no sense)
+Done.
+
+2024-11-15 19:54:57
+Running GeneMarkS...
+  GCF_000172335.2_ASM17233v2_genomic
+
+WARNING: License period for GeneMark has ended! 
+To update license, please visit http://exon.gatech.edu/GeneMark/license_download.cgi page and fill in the form.
+You should choose GeneMarkS tool and your operating system (note that GeneMark is free for non-commercial use).
+Download the license key and replace your ~/.gm_key with the updated version. After that you can restart QUAST.
+
+
+NOTICE: Genes are not predicted by default. Use --gene-finding or --glimmer option to enable it.
+
+2024-11-15 19:54:57
+Creating large visual summaries...
+This may take a while: press Ctrl-C to skip this step..
+  1 of 3: Creating PDF with all tables and plots...
+  2 of 3: Creating Icarus viewers...
+  3 of 3: Creating Circos plot...
+WARNING: Circos is not installed!
+If you want to create Circos plots, install Circos as described at http://circos.ca/tutorials/lessons/configuration/distribution_and_installation and run the following command:
+	circos -conf /home/mf019/longread_pangenome/expanded_dataset_analysis/quast/GCF_000172335.2_ASM17233v2_genomic/circos/circos.conf
+The plot legend is saved to /home/mf019/longread_pangenome/expanded_dataset_analysis/quast/GCF_000172335.2_ASM17233v2_genomic/circos/legend.txt
+
+Done
+
+2024-11-15 19:54:58
+RESULTS:
+  Text versions of total report are saved to /home/mf019/longread_pangenome/expanded_dataset_analysis/quast/GCF_000172335.2_ASM17233v2_genomic/report.txt, report.tsv, and report.tex
+  Text versions of transposed total report are saved to /home/mf019/longread_pangenome/expanded_dataset_analysis/quast/GCF_000172335.2_ASM17233v2_genomic/transposed_report.txt, transposed_report.tsv, and transposed_report.tex
+  HTML version (interactive tables and plots) is saved to /home/mf019/longread_pangenome/expanded_dataset_analysis/quast/GCF_000172335.2_ASM17233v2_genomic/report.html
+  PDF version (tables and plots) is saved to /home/mf019/longread_pangenome/expanded_dataset_analysis/quast/GCF_000172335.2_ASM17233v2_genomic/report.pdf
+  Icarus (contig browser) is saved to /home/mf019/longread_pangenome/expanded_dataset_analysis/quast/GCF_000172335.2_ASM17233v2_genomic/icarus.html
+  Log is saved to /home/mf019/longread_pangenome/expanded_dataset_analysis/quast/GCF_000172335.2_ASM17233v2_genomic/quast.log
+
+Finished: 2024-11-15 19:54:58
+Elapsed time: 0:00:03.631621
+NOTICEs: 2; WARNINGs: 2; non-fatal ERRORs: 0
+
+Thank you for using QUAST!

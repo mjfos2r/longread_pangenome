@@ -1,0 +1,32 @@
+2025-01-03 17:39:38,002 - DEBUG - initialized logger: main_logger
+2025-01-03 17:39:38,002 - DEBUG - max buffer length: 16
+2025-01-03 17:39:38,002 - DEBUG - setting up log formatter for pane view
+2025-01-03 17:39:38,003 - DEBUG - setting up custom rolling buffering handler for pane view
+2025-01-03 17:39:38,003 - DEBUG - adding custom rolling buffering handler to main_logger
+2025-01-03 17:39:38,004 - DEBUG - parsing args to dict and creating string for pane view
+2025-01-03 17:39:38,007 - DEBUG - creating path for subdirectory:nucl_v5 in output:/data/output/alignments/ava
+2025-01-03 17:39:38,007 - DEBUG - new output path: /data/output/alignments/ava/nucl_v5
+2025-01-03 17:39:38,007 - DEBUG - Starting live view
+2025-01-03 17:39:38,014 - INFO - Using the following arguments for this run
+[bold green]annotations_dir[/bold green]: /data/assemblies/all_split_contigs_v5
+[bold green]alignments_dir[/bold green]: None
+[bold green]all_alns_file[/bold green]: /alignments/nucl_v5_all_alignments.tsv
+[bold green]output_dir[/bold green]: /data/output/alignments/ava
+[bold green]logfile[/bold green]: /data/20250103_nucl_nucl_v5
+[bold green]dale[/bold green]: True
+[bold green]analysis_type[/bold green]: nucl
+[bold green]cores[/bold green]: 30
+[bold green]version[/bold green]: nucl_v5
+[bold green]min_identity[/bold green]: 50.0
+[bold green]identity_step[/bold green]: 10.0
+
+2025-01-03 17:39:38,015 - INFO - Creating output directory: /data/output/alignments/ava/nucl_v5
+2025-01-03 17:39:38,016 - INFO - [green]Output directory successfully created[/green]
+2025-01-03 17:39:38,017 - INFO - [bold cyan]Starting Homology Analysis[/bold cyan]
+2025-01-03 17:39:38,018 - INFO - [bold blue]Indexing all GenBank files...[/bold blue]
+2025-01-03 17:39:38,058 - INFO - [green]Successfully indexed[/green] [green]4016[/green] [green]GenBank files.[/green]
+2025-01-03 17:39:38,059 - INFO - [yellow]Expected number of alignment files:[/yellow] 8062120
+2025-01-03 17:39:38,068 - INFO - [bold blue]Finding and processing alignment files...[/bold blue]
+2025-01-03 17:39:38,068 - DEBUG - [bold blue]Beginning alignment processing[/bold blue]
+2025-01-03 17:39:38,069 - INFO - Processing single alignment file: /alignments/nucl_v5_all_alignments.tsv
+2025-01-03 17:39:39,296 - INFO - FINALLY: Moving temp logfile to final logfile: /data/20250103_nucl_nucl_v5.log
