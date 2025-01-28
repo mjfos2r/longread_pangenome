@@ -43,8 +43,13 @@ def get_output_path(results_dir):
 def get_blast_command(prog, input_file, output_path, database, job_threads):
     file_id = Path(input_file).stem
     output_file = f'{output_path}/{file_id}_blast_results.xml'
+<<<<<<< HEAD
     command = [prog, '-query', input_file, '-db', database,
                '-out', output_file, '-evalue', '1e-100', '-num_threads', job_threads,
+=======
+    command = [prog, '-query', input_file, '-db', database, 
+               '-out', output_file, '-evalue', '1e-100', '-num_threads', job_threads, 
+>>>>>>> ce4e92d (this will break everything)
                '-outfmt', '5', '-max_target_seqs', '5', '-max_hsps', '10'] # '-task', f'"{prog}"',
     return command
 
@@ -280,7 +285,12 @@ def get_results(results_dir):
 ## Define main function logic.
 def main():
     # Create the parser
+<<<<<<< HEAD
     parser = argparse.ArgumentParser(prog = "PlasmidCaller_v5", description = "{{TO-DO: POPULATE DESCRIPTION!")
+=======
+    parser = argparse.ArgumentParser(prog = "PlasmidCaller_v5",
+                                     description = "{{TO-DO: POPULATE DESCRIPTION!")
+>>>>>>> ce4e92d (this will break everything)
     # Add the arguments
     parser.add_argument('--input',                  required=True, type=str, help='A directory containing the fasta files for the assemblies to parse')
     #parser.add_argument('annotations_dir',         required=True, type=str, help='The directory containing the annotations (genbanks)') # Not yet!
@@ -295,9 +305,19 @@ def main():
     if not os.path.exists(args.input):
         parser.error("Must specify a directory containing fasta files!")
 
+<<<<<<< HEAD
     num_workers = floor(args.cpus/args.job_threads)
     inputs = get_input_files(args.input, 'fna')
     dbs = get_db_type(args.db)
+=======
+    ## okay now determine how many parallel workers we're gonna spin up
+    num_workers = floor(args.cpus/args.job_threads)
+    # ok now let's get our inputs.
+    inputs = get_input_files(args.input, 'fna')
+    # now lets get our dbs to run against
+    dbs = get_db_type(args.db)
+    # and let's start running against them
+>>>>>>> ce4e92d (this will break everything)
 
     print(f"Input directory: {args.input}")
     print(f"Output directory: {args.output}")
@@ -313,7 +333,11 @@ def main():
     if not os.path.exists(args.output):
         os.mkdir(args.output)
         print('creating output directory!\n')
+<<<<<<< HEAD
 
+=======
+    
+>>>>>>> ce4e92d (this will break everything)
     for db in dbs:
         db_path = db[0]
         prog = db[1]
