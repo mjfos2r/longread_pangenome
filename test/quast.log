@@ -1,0 +1,99 @@
+/quast-5.2.0/quast.py -o test -r ref/GCF_000008685.2_ASM868v2_genomic.fna -g ref/GCF_000008685.2_ASM868v2_genomic.gff --threads 128 --gene-finding assemblies/jel/URI45H/URI45H.fasta
+
+Version: 5.2.0
+
+System information:
+  OS: Linux-6.1.0-27-cloud-amd64-x86_64-with-Ubuntu-20.04-focal (linux_64)
+  Python version: 2.7.18
+  CPUs number: 128
+
+Started: 2024-11-15 16:41:03
+
+Logging to /home/mf019/longread_pangenome/test/quast.log
+
+CWD: /home/mf019/longread_pangenome
+Main parameters: 
+  MODE: default, threads: 128, min contig length: 500, min alignment length: 65, min alignment IDY: 95.0, \
+  ambiguity: one, min local misassembly length: 200, min extensive misassembly length: 1000
+
+Reference:
+  /home/mf019/longread_pangenome/ref/GCF_000008685.2_ASM868v2_genomic.fna ==> GCF_000008685.2_ASM868v2_genomic
+
+Contigs:
+  Pre-processing...
+  assemblies/jel/URI45H/URI45H.fasta ==> URI45H
+
+2024-11-15 16:41:04
+Running Basic statistics processor...
+  Reference genome:
+    GCF_000008685.2_ASM868v2_genomic.fna, length = 1521208, num fragments = 22, GC % = 28.18
+  Contig files: 
+    URI45H
+  Calculating N50 and L50...
+    URI45H, N50 = 42830, L50 = 5, auN = 114914.3, Total length = 1532603, GC % = 28.06, # N's per 100 kbp =  0.00
+  Drawing Nx plot...
+    saved to /home/mf019/longread_pangenome/test/basic_stats/Nx_plot.pdf
+  Drawing NGx plot...
+    saved to /home/mf019/longread_pangenome/test/basic_stats/NGx_plot.pdf
+  Drawing cumulative plot...
+    saved to /home/mf019/longread_pangenome/test/basic_stats/cumulative_plot.pdf
+  Drawing GC content plot...
+    saved to /home/mf019/longread_pangenome/test/basic_stats/GC_content_plot.pdf
+  Drawing URI45H GC content plot...
+    saved to /home/mf019/longread_pangenome/test/basic_stats/URI45H_GC_content_plot.pdf
+Done.
+
+2024-11-15 16:41:05
+Running Contig analyzer...
+  URI45H
+  Logging to files /home/mf019/longread_pangenome/test/contigs_reports/contigs_report_URI45H.stdout and contigs_report_URI45H.stderr...
+  Aligning contigs to the reference
+  /quast-5.2.0/quast_libs/minimap2/minimap2 -c -x asm10 -B5 -O4,16 --no-long-join \
+  -r 200 -N 50 -s 65 -z 200 --mask-level 0.9 --min-occ 200 -g 2500 --score-N 2 --cs \
+  -t 128 test/quast_corrected_input/GCF_000008685.2_ASM868v2_genomic.fna test/quast_corrected_input/URI45H.fasta \
+  > test/contigs_reports/minimap_output/URI45H.coords_tmp 2>> test/contigs_reports/contigs_report_URI45H.stderr
+  Analysis is finished.
+
+  Creating total report...
+    saved to /home/mf019/longread_pangenome/test/contigs_reports/misassemblies_report.txt, misassemblies_report.tsv, and misassemblies_report.tex
+  Transposed version of total report...
+    saved to /home/mf019/longread_pangenome/test/contigs_reports/transposed_report_misassemblies.txt, transposed_report_misassemblies.tsv, and transposed_report_misassemblies.tex
+  Creating total report...
+    saved to /home/mf019/longread_pangenome/test/contigs_reports/unaligned_report.txt, unaligned_report.tsv, and unaligned_report.tex
+  Drawing misassemblies by types plot...
+    saved to /home/mf019/longread_pangenome/test/contigs_reports/misassemblies_plot.pdf
+  Drawing misassemblies FRCurve plot...
+    saved to /home/mf019/longread_pangenome/test/contigs_reports/misassemblies_frcurve_plot.pdf
+Done.
+
+2024-11-15 16:41:05
+Running NA-NGA calculation...
+  URI45H, Largest alignment = 254720, NA50 = 38825, NGA50 = 38825, LA50 = 5, LGA50 = 5
+  Drawing cumulative plot...
+    saved to /home/mf019/longread_pangenome/test/aligned_stats/cumulative_plot.pdf
+  Drawing NAx plot...
+    saved to /home/mf019/longread_pangenome/test/aligned_stats/NAx_plot.pdf
+  Drawing NGAx plot...
+    saved to /home/mf019/longread_pangenome/test/aligned_stats/NGAx_plot.pdf
+Done.
+
+2024-11-15 16:41:06
+Running Genome analyzer...
+  NOTICE: No file with operons were provided. Use the -O option if you want to specify it.
+  Loaded 1693 genomic features of type "ANY"
+  URI45H
+  Analysis is finished.
+  Drawing genomic features cumulative plot...
+    saved to /home/mf019/longread_pangenome/test/genome_stats/features_cumulative_plot.pdf
+  Drawing genomic features FRCurve plot...
+    saved to /home/mf019/longread_pangenome/test/genome_stats/features_frcurve_plot.pdf
+  Skipping drawing # complete genomic features histogram... (less than 2 columns histogram makes no sense)
+  Skipping drawing Genome fraction, % histogram... (less than 2 columns histogram makes no sense)
+Done.
+
+2024-11-15 16:41:06
+Running GeneMarkS...
+  URI45H
+    perl /quast-5.2.0/quast_libs/genemark/linux_64/gmsn.pl --name URI45H --clean --out \
+    test/predicted_genes/tmp/tmpw6LC_O test/quast_corrected_input/URI45H.fasta > test/predicted_genes/URI45H_genemark.stderr \
+    2> test/predicted_genes/URI45H_genemark.stderr

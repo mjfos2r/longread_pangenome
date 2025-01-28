@@ -1,0 +1,199 @@
+
+
+
+-------------------------------------------------
+start time            : Fri Nov 15 16:41:06 2024
+GMS version           : 4.30 October 2014
+working directory     : /home/mf019/longread_pangenome/test/predicted_genes/tmp/tmpw6LC_O
+command line          : --name URI45H --clean --out /home/mf019/longread_pangenome/test/predicted_genes/tmp/tmpw6LC_O /home/mf019/longread_pangenome/test/quast_corrected_input/URI45H.fasta
+output file with predictions : URI45H.fasta.lst
+input sequence        : /home/mf019/longread_pangenome/test/quast_corrected_input/URI45H.fasta
+output name for model : URI45H
+combine model         : 
+GeneMark model        : 
+species name          : 
+delete temp files     : 1
+markov chain order    : 2
+non-coding order      : 2
+genetic code          : 11
+sequence organization : partial
+search for motif      : 1
+motif width           : 6
+prestart length       : 40
+identity threshold    : 0.99
+maximum iteration     : 10
+fixed motif position  : 
+gene overlap off      : 
+strand to predict on  : both
+mode prokaryotic      : 
+mode eukaryotic       : 
+mode virus            : 
+mode phage            : 
+mode est              : 
+GeneMarkS parameters  : /quast-5.2.0/quast_libs/genemark/linux_64/par_11.default
+initial hmm model     : 
+output format         : LST
+output PostScript     : 
+output PDF            : 
+output nucleotides    : 
+output proteins       : 
+gibbs version         : 3
+heuristic version     : 2
+evidense data file    : 
+combine native with   : 
+use input defline     : 
+
+      run starts here:
+prepare sequence
+/quast-5.2.0/quast_libs/genemark/linux_64/probuild --par /quast-5.2.0/quast_libs/genemark/linux_64/par_11.default  --clean_join sequence --seq /home/mf019/longread_pangenome/test/quast_corrected_input/URI45H.fasta --log gms.log
+Clean-Join      IN   OUT
+Contigs - 139 96
+All letters - 1532603   1507038
+Unambiguous letters - 1532603 1502288
+A - 545809 534427
+C - 215678 211417
+G - 214337 210183
+T - 556779 546261
+N - 0 0
+Parameters:
+  Minimum of unambiguous letters per record: 1000
+  Trim down substrings "N...N" to maximum length: 50
+  Connect records using gap filler: NNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNN
+  Minimum of unambiguous letters in output: 50000
+system call done
+do_iterations = 1
+set initial <gmhmmp> model
+get GC
+/quast-5.2.0/quast_libs/genemark/linux_64/probuild --par /quast-5.2.0/quast_libs/genemark/linux_64/par_11.default  --gc --seq sequence
+GC of sequence = 28
+initial <gmhmm> model: /quast-5.2.0/quast_libs/genemark/linux_64/heuristic_mod/heu_11_30.mod
+copy initial model to working directory
+cp /quast-5.2.0/quast_libs/genemark/linux_64/heuristic_mod/heu_11_30.mod  itr_0.mod
+system call done
+run initial prediction
+/quast-5.2.0/quast_libs/genemark/linux_64/gmhmmp -g 11   sequence  -m itr_0.mod  -o itr_0.lst
+system call done
+entering iteration loop
+build model: itr_1.mod for iteration: 1
+/quast-5.2.0/quast_libs/genemark/linux_64/probuild --par /quast-5.2.0/quast_libs/genemark/linux_64/par_11.default  --mkmod itr_1.mod --seq sequence --geneset itr_0.lst --ORDM 2 --order_non 2 --revcomp_non 1 --pre_start startseq.1 --PRE_START_WIDTH 40
+system call done
+run gibbs3 sampler
+/quast-5.2.0/quast_libs/genemark/linux_64/Gibbs3 startseq.1 6 -o gibbs_out.1 -F -Z  -n -r -y -x -m -s 1 -w 0.01
+system call done
+make prestart model
+/quast-5.2.0/quast_libs/genemark/linux_64/probuild --par /quast-5.2.0/quast_libs/genemark/linux_64/par_11.default  --gibbs gibbs_out.1 --mod itr_1.mod --seq startseq.1 --log gms.log
+-34	0.018
+-33	0.020
+-32	0.019
+-31	0.017
+-30	0.016
+-29	0.012
+-28	0.012
+-27	0.010
+-26	0.009
+-25	0.008
+-24	0.008
+-23	0.009
+-22	0.012
+-21	0.014
+-20	0.015
+-19	0.015
+-18	0.014
+-17	0.012
+-16	0.014
+-15	0.018
+-14	0.024
+-13	0.024
+-12	0.021
+-11	0.031
+-10	0.042
+-9	0.048
+-8	0.064
+-7	0.081
+-6	0.099
+-5	0.108
+-4	0.083
+-3	0.046
+-2	0.022
+-1	0.014
+0	0.012
+Pos   A   C   G   T
+1 0.760 0.010 0.015 0.215
+2 0.180 0.001 0.668 0.151
+3 0.009 0.113 0.850 0.028
+4 0.764 0.018 0.110 0.108
+5 0.251 0.052 0.552 0.145
+6 0.436 0.042 0.246 0.276
+
+system call done
+prediction, iteration: 1
+/quast-5.2.0/quast_libs/genemark/linux_64/gmhmmp -g 11   sequence  -m itr_1.mod  -o itr_1.lst -r
+system call done
+compare:
+/quast-5.2.0/quast_libs/genemark/linux_64/probuild --par /quast-5.2.0/quast_libs/genemark/linux_64/par_11.default  --compare --source itr_1.lst --target itr_0.lst
+compare itr_0.lst and itr_1.lst: 0.8344
+build model: itr_2.mod for iteration: 2
+/quast-5.2.0/quast_libs/genemark/linux_64/probuild --par /quast-5.2.0/quast_libs/genemark/linux_64/par_11.default  --mkmod itr_2.mod --seq sequence --geneset itr_1.lst --ORDM 2 --order_non 2 --revcomp_non 1 --pre_start startseq.2 --PRE_START_WIDTH 40
+system call done
+run gibbs3 sampler
+/quast-5.2.0/quast_libs/genemark/linux_64/Gibbs3 startseq.2 6 -o gibbs_out.2 -F -Z  -n -r -y -x -m -s 1 -w 0.01
+system call done
+make prestart model
+/quast-5.2.0/quast_libs/genemark/linux_64/probuild --par /quast-5.2.0/quast_libs/genemark/linux_64/par_11.default  --gibbs gibbs_out.2 --mod itr_2.mod --seq startseq.2 --log gms.log
+-34	0.009
+-33	0.014
+-32	0.015
+-31	0.015
+-30	0.013
+-29	0.008
+-28	0.005
+-27	0.005
+-26	0.006
+-25	0.008
+-24	0.008
+-23	0.010
+-22	0.013
+-21	0.011
+-20	0.009
+-19	0.009
+-18	0.012
+-17	0.012
+-16	0.014
+-15	0.015
+-14	0.019
+-13	0.021
+-12	0.017
+-11	0.033
+-10	0.042
+-9	0.052
+-8	0.072
+-7	0.092
+-6	0.122
+-5	0.137
+-4	0.096
+-3	0.042
+-2	0.023
+-1	0.013
+0	0.007
+Pos   A   C   G   T
+1 0.787 0.009 0.028 0.176
+2 0.198 0.001 0.699 0.101
+3 0.016 0.073 0.888 0.022
+4 0.802 0.016 0.121 0.061
+5 0.168 0.043 0.674 0.115
+6 0.408 0.048 0.282 0.262
+
+system call done
+prediction, iteration: 2
+/quast-5.2.0/quast_libs/genemark/linux_64/gmhmmp -g 11   sequence  -m itr_2.mod  -o itr_2.lst -r
+system call done
+compare:
+/quast-5.2.0/quast_libs/genemark/linux_64/probuild --par /quast-5.2.0/quast_libs/genemark/linux_64/par_11.default  --compare --source itr_2.lst --target itr_1.lst
+compare itr_1.lst and itr_2.lst: 0.9815
+build model: itr_3.mod for iteration: 3
+/quast-5.2.0/quast_libs/genemark/linux_64/probuild --par /quast-5.2.0/quast_libs/genemark/linux_64/par_11.default  --mkmod itr_3.mod --seq sequence --geneset itr_2.lst --ORDM 2 --order_non 2 --revcomp_non 1 --pre_start startseq.3 --PRE_START_WIDTH 40
+system call done
+run gibbs3 sampler
+/quast-5.2.0/quast_libs/genemark/linux_64/Gibbs3 startseq.3 6 -o gibbs_out.3 -F -Z  -n -r -y -x -m -s 1 -w 0.01
+Error on last system call, error code 2
+Abort program!!!
