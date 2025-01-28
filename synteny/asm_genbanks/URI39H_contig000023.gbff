@@ -1,0 +1,95 @@
+LOCUS       contig000023            1244 bp    DNA     linear   UNK 25-APR-2024
+DEFINITION  contig000023, whole genome shotgun sequence.
+ACCESSION   contig000023
+VERSION     contig000023
+KEYWORDS    .
+SOURCE      None
+  ORGANISM  .
+            .
+COMMENT     Annotated with Bakta
+            Software: v1.9.3
+            Database: v5.1, full
+            DOI: 10.1099/mgen.0.000685
+            URL: github.com/oschwengers/bakta
+            ##Genome Annotation Summary:##
+            Annotation Date                :: 04/25/2024, 21:04:48
+            CDSs                           ::     2
+            tRNAs                          ::     0
+            tmRNAs                         ::     0
+            rRNAs                          ::     0
+            ncRNAs                         ::     0
+            regulatory ncRNAs              ::     0
+            CRISPR Arrays                  ::     0
+            oriCs/oriVs                    ::     0
+            oriTs                          ::     0
+            gaps                           ::     0
+            pseudogenes                    ::     1
+FEATURES             Location/Qualifiers
+     source          1..1244
+                     /mol_type="genomic DNA"
+     gene            192..743
+                     /locus_tag="FMHLPC_07900"
+     CDS             192..743
+                     /db_xref="RefSeq:WP_010883904.1"
+                     /db_xref="SO:0001217"
+                     /db_xref="UniParc:UPI000005772D"
+                     /db_xref="UniRef:UniRef100_Q9S013"
+                     /db_xref="UniRef:UniRef50_Q0SKX6"
+                     /db_xref="UniRef:UniRef90_Q45054"
+                     /product="P52 family lipoprotein"
+                     /locus_tag="FMHLPC_07900"
+                     /protein_id="gnl|Bakta|FMHLPC_07900"
+                     /translation="MRILVGVFIIAALALLGCYLPDNQEQAVQTFFENSESIDMGSDEI
+                     VTEGIFSSLKLYASEHRLLVEIKKTLISLKDPNYRDVPPVRDYNEEYFNKFFLDLGSEQ
+                     SKDLIKLFGRVKNEQNNKFKSEVYWLYSCISELYSPDIKYSGEEGSPEYDRFMPRPTAY
+                     QQYLKVKREIERNTINGKIL"
+                     /codon_start=1
+                     /transl_table=11
+                     /inference="ab initio prediction:Prodigal:2.6"
+                     /inference="similar to AA sequence:RefSeq:WP_010883904.1"
+     sig_peptide     192..272
+                     /locus_tag="FMHLPC_07900"
+                     /inference="ab initio prediction:DeepSig:1.2"
+     gene            740..>1150
+                     /locus_tag="FMHLPC_07905"
+                     /pseudogene="unitary"
+     CDS             740..>1150
+                     /note="Frameshift due to insertion around 1148."
+                     /db_xref="SO:0001217"
+                     /db_xref="UniRef:UniRef50_A0A1L6VV37"
+                     /db_xref="UniRef:UniRef50_UPI001E473841"
+                     /db_xref="UniRef:UniRef90_A0A1L8Z9X9"
+                     /product="S2/P23 family protein"
+                     /locus_tag="FMHLPC_07905"
+                     /pseudogene="unitary"
+                     /codon_start=1
+                     /transl_table=11
+                     /inference="ab initio prediction:Prodigal:2.6"
+                     /inference="similar to AA
+                     sequence:UniRef:UniRef50_UPI001E473841"
+     sig_peptide     740..796
+                     /locus_tag="FMHLPC_07905"
+                     /inference="ab initio prediction:DeepSig:1.2"
+ORIGIN
+        1 agataataat aaagctaaaa ttaatatttt agtatttaat aattcttgag aaaaggtaaa
+       61 attggtatat gtttacttgt tatagaaaaa tctatcttgg taggactttt aatgtttaat
+      121 aaaatagtga ttagataaac ttgtatattt acaacagatt atttttgtag taaggtgggt
+      181 aaggagcata tatgaggatt ttggttggcg ttttcataat agcagcattg gctttattgg
+      241 gttgttattt gcctgataat caggaacaag ctgttcaaac tttttttgag aattcggaaa
+      301 gtattgatat gggttccgat gagattgtta ctgaaggcat attttctagt ttaaaattat
+      361 atgcgtctga acatcgttta ttggttgaga taaaaaagac tttaattagt ttaaaagatc
+      421 ctaattatcg tgatgtaccc ccagtgcgtg actataatga ggagtatttt aataaattct
+      481 ttttagattt aggttctgag caatctaaag acttgattaa gttgtttggt agggtaaaaa
+      541 atgagcagaa taataaattt aaaagtgaag tttattggct gtattcatgt ataagcgagt
+      601 tatattctcc agatattaag tattctggcg aagaggggag ccctgagtat gatcgtttta
+      661 tgcctagacc cactgcttat caacaatatt taaaagtgaa gagagaaata gaaagaaata
+      721 caattaatgg aaaaatttta tgaaaaagaa catatgtatt ttgaatatat ttttatatat
+      781 accattattt tattcatgct ttttgactac accaaaatct tcaaaaatca acagtatcaa
+      841 aaccgaggtt ttggatttta agataattga agagggaaat attataaaat atgataaaaa
+      901 gcccattgaa gagagtaata gcaatatttg tcttaccttt aaggaacccg aattaaacga
+      961 aataaaagaa ggagaggcat ttgaaatact tgcaagtggt tatgttacat gggcaaaatc
+     1021 tggtgattta aaagatataa aagataaaaa taacaattta attgaaaatc ttagagagct
+     1081 taagtattct tatatttttt cacccatccg attcaaaact tattcattgc ttacctttag
+     1141 ctatacttaa ttatagcatt aatgacaata actataaaat attcggtcaa gaagtaccta
+     1201 tagctaagat aatagcattt gaatcaactg aagagtttga aaac
+//

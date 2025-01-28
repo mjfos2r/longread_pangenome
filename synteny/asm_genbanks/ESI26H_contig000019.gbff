@@ -1,0 +1,112 @@
+LOCUS       contig000019            1044 bp    DNA     linear   UNK 26-APR-2024
+DEFINITION  contig000019, whole genome shotgun sequence.
+ACCESSION   contig000019
+VERSION     contig000019
+KEYWORDS    .
+SOURCE      None
+  ORGANISM  .
+            .
+COMMENT     Annotated with Bakta
+            Software: v1.9.3
+            Database: v5.1, full
+            DOI: 10.1099/mgen.0.000685
+            URL: github.com/oschwengers/bakta
+            ##Genome Annotation Summary:##
+            Annotation Date                :: 04/26/2024, 01:27:21
+            CDSs                           ::     4
+            tRNAs                          ::     0
+            tmRNAs                         ::     0
+            rRNAs                          ::     0
+            ncRNAs                         ::     0
+            regulatory ncRNAs              ::     0
+            CRISPR Arrays                  ::     0
+            oriCs/oriVs                    ::     0
+            oriTs                          ::     0
+            gaps                           ::     0
+            pseudogenes                    ::     1
+FEATURES             Location/Qualifiers
+     source          1..1044
+                     /mol_type="genomic DNA"
+     gene            complement(131..367)
+                     /locus_tag="DMPBEC_06230"
+     CDS             complement(131..367)
+                     /db_xref="RefSeq:WP_010256315.1"
+                     /db_xref="SO:0001217"
+                     /db_xref="UniParc:UPI00016B26A9"
+                     /db_xref="UniRef:UniRef100_A0A0H3C441"
+                     /db_xref="UniRef:UniRef50_A0A386PRG9"
+                     /db_xref="UniRef:UniRef90_Q0SLB7"
+                     /product="DUF1322 domain-containing protein"
+                     /locus_tag="DMPBEC_06230"
+                     /protein_id="gnl|Bakta|DMPBEC_06230"
+                     /translation="MSKRNRDIDKAIASLDETRKKYFNLLDEIKNDKYYFPVIMNICSY
+                     YSVKKLPYDELLEVNRLAEIKLEKELYELILSK"
+                     /codon_start=1
+                     /transl_table=11
+                     /inference="ab initio prediction:Prodigal:2.6"
+                     /inference="similar to AA sequence:RefSeq:WP_010256315.1"
+     gene            complement(364..729)
+                     /locus_tag="DMPBEC_06235"
+     CDS             complement(364..729)
+                     /db_xref="SO:0001217"
+                     /db_xref="UniRef:UniRef50_W6TF96"
+                     /db_xref="UniRef:UniRef90_UPI001AEF62B5"
+                     /product="DUF1473 domain-containing protein"
+                     /locus_tag="DMPBEC_06235"
+                     /protein_id="gnl|Bakta|DMPBEC_06235"
+                     /translation="MLGFNQSDAVLKLNEVKYLREITSLMISPKFLDELYVILDQNREF
+                     ISYYKDYLVAIIYTAQFNTFHLDNDLKKPALVYLSEYENNVGDFVAFDYINENFDYEKV
+                     ATSLSSIISNSNELVAK"
+                     /codon_start=1
+                     /transl_table=11
+                     /inference="ab initio prediction:Prodigal:2.6"
+                     /inference="similar to AA
+                     sequence:UniRef:UniRef90_UPI001AEF62B5"
+     gene            complement(716..>820)
+                     /locus_tag="DMPBEC_06240"
+                     /pseudogene="unitary"
+     CDS             complement(716..>820)
+                     /note="Frameshift due to insertion around 733."
+                     /db_xref="SO:0001217"
+                     /db_xref="UniRef:UniRef50_A0A806C850"
+                     /db_xref="UniRef:UniRef90_A0A806C850"
+                     /product="DUF1473 domain-containing protein"
+                     /locus_tag="DMPBEC_06240"
+                     /pseudogene="unitary"
+                     /codon_start=1
+                     /transl_table=11
+                     /inference="ab initio prediction:Prodigal:2.6"
+     gene            complement(836..1021)
+                     /locus_tag="DMPBEC_06245"
+     CDS             complement(836..1021)
+                     /db_xref="SO:0001217"
+                     /db_xref="UniRef:UniRef50_Q0SLG5"
+                     /product="hypothetical protein"
+                     /locus_tag="DMPBEC_06245"
+                     /protein_id="gnl|Bakta|DMPBEC_06245"
+                     /translation="MDVRKEDKMLDLVFNDRIATKIISNYAIFTEETSRSYSAEAEKVS
+                     FEIRAINCQKTKPNNT"
+                     /codon_start=1
+                     /transl_table=11
+                     /inference="ab initio prediction:Prodigal:2.6"
+                     /inference="similar to AA sequence:UniRef:UniRef50_Q0SLG5"
+ORIGIN
+        1 acccaaacta gattttttag gtttaagata tttgtccatt ttagaaatat cttgttcaat
+       61 ggcctttttt gttgcagcat gatcaagaat acctttaaat ttaatggtga atttgtcgct
+      121 cactaagtcc tcacttgctt aaaattaatt catacaattc tttttctaat ttaatctcag
+      181 caagtctatt gacttctaaa agctcgtcat aaggcaattt tttaaccgag tagtatgagc
+      241 aaatattcat aattactggg aaatagtatt tatcgttctt aatctcgtca agcaagttaa
+      301 aatatttttt tctagtctca tcaagacttg caatagcttt atcaatatct ctatttcttt
+      361 tgctcattta gcaaccagct cattggaatt tgatataatt gatgaaagcg aagtggctac
+      421 tttttcataa tcaaaatttt cattaatata gtcaaaagca acaaaatcac caacattatt
+      481 ttcatactca ctcaaatata ctaaagcggg cttttttaga tcattgtcta aatgaaaagt
+      541 attaaattgt gcagtgtaaa ttattgcaac aagatagtcc ttataataag aaataaattc
+      601 tctattttga tccaaaatca catataattc gtctaaaaat tttggactta tcattaagct
+      661 tgtgatttct cttaagtatt taacctcatt aagctttaaa acagcgtcac tttgattaaa
+      721 tcctagcacc tttatcccat tcatagactg gtaatacttt tagtggatat tcataagttt
+      781 tatttttagt taaaattttc attttatatc tcattatcat aataagactc tccttttaag
+      841 tgttgtttgg tttagttttt tggcaattaa tagccctaat ttcaaaagat actttttcgg
+      901 cctcagcaga ataacttctt gaagtctctt cagtaaaaat tgcatagtta gaaataattt
+      961 tggtagcaat tctatcattg aatactaaat caagcatttt atcctctttt ctcacatcca
+     1021 tgttgtaaaa ctgttcatca gaaa
+//
