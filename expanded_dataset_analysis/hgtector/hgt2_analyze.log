@@ -1,0 +1,66 @@
+Analysis started at 2025-01-23 16:46:24.300726.
+Reading local taxonomy database...
+Done. Read 10448 taxa.
+Reading homology search results...
+  LD83_GCs_min1: 116245 proteins.
+Done. Read search results of 1 samples.
+Auto-inferring plausible taxIds for input genomes based on taxonomy of search results...
+  LD83_GCs_min1: 445987 (Borreliella valaisiana VS116) (covering 95.7687% best hits).
+Refining taxonomy database...
+Done. Retained 10438 taxa.
+All input genomes belong to 445987 (strain Borreliella valaisiana VS116).
+Auto-inferred self group:
+  445987 (strain Borreliella valaisiana VS116)
+Self group has 1 taxa.
+Auto-inferred close group:
+  136 (order Spirochaetales)
+Close group has 58 taxa.
+Calculating protein scores by group...
+  LD83_GCs_min1
+Done.
+Summarizing scores of all proteins... done.
+Protein scores written to scores.tsv.
+Removed 22270 ORFans.
+Removed 1070 outliers.
+Predicting HGTs...
+Calculating thresholds for clustering...
+Close group:
+  1.000: n/a
+  0.886: n/a
+  0.785: n/a
+  0.695: n/a
+  0.616: n/a
+  0.546: n/a
+  0.483: n/a
+  0.428: n/a
+  0.379: n/a
+  0.336: n/a
+  0.298: n/a
+  0.264: 4.78489 - 76.21%
+  0.234: 4.67495 - 76.08%
+  0.207: 2.76602 - 66.25%
+  Auto-determined bandwidth: 0.206914.
+  Threshold: 2.76602.
+Distal group:
+  1.000: n/a
+  0.886: n/a
+  0.785: n/a
+  0.695: n/a
+  0.616: n/a
+  0.546: n/a
+  0.483: n/a
+  0.428: n/a
+  0.379: n/a
+  0.336: 46.2269 - 58.17%
+  Auto-determined bandwidth: 0.335982.
+  Threshold: 46.2269.
+Done.
+Labeling cluster... done.
+  Total predicted HGTs: 12190.
+Calculating cluster properties... done.
+Refining cluster... done.
+  Total predicted HGTs after refinement: 7473.
+Predicted HGTs by sample:
+  LD83_GCs_min1: 7473.
+Prediction results saved to hgts/.
+Analysis finished at 2025-01-23 17:16:57.331035.
