@@ -1,0 +1,9 @@
+2024-11-06 19:17:55,103 - DEBUG - creating output directory
+2024-11-06 19:17:55,103 - DEBUG - output directory created!
+2024-11-06 19:17:55,103 - DEBUG - Using Query: 
+            txid139[Organism:exp] AND
+            (("PacBio SMRT"[Properties] OR "Oxford Nanopore"[Properties])) AND
+            (latest[filter] AND ("chromosome level"[filter] OR "complete genome"[filter]))
+        
+2024-11-06 19:17:55,103 - INFO - Searching for matching assemblies...
+2024-11-06 19:18:25,484 - ERROR - Error searching assemblies: <urlopen error [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: self-signed certificate in certificate chain (_ssl.c:1000)>
