@@ -1,0 +1,123 @@
+LOCUS       contig_22               2042 bp    DNA     linear   UNK 15-NOV-2024
+DEFINITION  contig_22, whole genome shotgun sequence.
+ACCESSION   contig_22
+VERSION     contig_22
+KEYWORDS    .
+SOURCE      None
+  ORGANISM  .
+            .
+COMMENT     Annotated with Bakta
+            Software: v1.10.0
+            Database: v5.1, full
+            DOI: 10.1099/mgen.0.000685
+            URL: github.com/oschwengers/bakta
+            ##Genome Annotation Summary:##
+            Annotation Date                :: 11/15/2024, 00:39:49
+            CDSs                           ::     3
+            tRNAs                          ::     0
+            tmRNAs                         ::     0
+            rRNAs                          ::     0
+            ncRNAs                         ::     0
+            regulatory ncRNAs              ::     0
+            CRISPR Arrays                  ::     0
+            oriCs/oriVs                    ::     0
+            oriTs                          ::     0
+            gaps                           ::     0
+            pseudogenes                    ::     0
+FEATURES             Location/Qualifiers
+     source          1..2042
+                     /mol_type="genomic DNA"
+     gene            11..202
+                     /locus_tag="LNEFEP_01364"
+     CDS             11..202
+                     /db_xref="SO:0001217"
+                     /db_xref="UniRef:UniRef50_A0A806CKW4"
+                     /product="hypothetical protein"
+                     /locus_tag="LNEFEP_01364"
+                     /protein_id="gnl|Bakta|LNEFEP_01364"
+                     /translation="MRYESLNYLGAANEFEISEVKIDKVNGYHFIATKNKEILYDSLDL
+                     KPRGKIFKVTSKRIFRLK"
+                     /codon_start=1
+                     /transl_table=11
+                     /inference="ab initio prediction:Prodigal:2.6"
+                     /inference="similar to AA
+                     sequence:UniRef:UniRef50_A0A806CKW4"
+     gene            complement(208..978)
+                     /locus_tag="LNEFEP_01365"
+                     /gene="bppC"
+     CDS             complement(208..978)
+                     /db_xref="SO:0001217"
+                     /db_xref="UniRef:UniRef50_C0R8V3"
+                     /db_xref="UniRef:UniRef90_Q9S0A8"
+                     /product="BppC"
+                     /locus_tag="LNEFEP_01365"
+                     /protein_id="gnl|Bakta|LNEFEP_01365"
+                     /translation="MNNYFNLNNFNMDFMLKLFQDYQNVVNENKILKNSLKISSKPTKK
+                     ALKPTPKFYLTSKSSKIIEKCVKTLKQTDPISGWFLHLLAISGCRGAEIQKVKMQDIAP
+                     LLSKTGETFYNIKVNVAKKRNITCIREIVIKSEEFEAIQKAHENYFNDKNLDSRRTYFF
+                     QKTKHKFKDNQISIINISKKFKILLKKSGFRANKSLHLFRNLFISNLKSNGYNSFQIKE
+                     LMKYHSTNEIDNIYGLSAANKIHAYKCMKNNLKL"
+                     /codon_start=1
+                     /transl_table=11
+                     /inference="ab initio prediction:Prodigal:2.6"
+                     /inference="similar to AA sequence:UniRef:UniRef90_Q9S0A8"
+                     /gene="bppC"
+     gene            1415..1936
+                     /locus_tag="LNEFEP_01366"
+                     /gene="erpA"
+     CDS             1415..1936
+                     /db_xref="BlastRules:WP_010883723"
+                     /db_xref="SO:0001217"
+                     /db_xref="UniParc:UPI000005765A"
+                     /db_xref="UniRef:UniRef100_G8JZS0"
+                     /db_xref="UniRef:UniRef50_A0A7W9SK28"
+                     /db_xref="UniRef:UniRef90_G8JZS0"
+                     /product="plasminogen-binding protein ErpA"
+                     /locus_tag="LNEFEP_01366"
+                     /protein_id="gnl|Bakta|LNEFEP_01366"
+                     /translation="MNKKMKMFIICAVFILIGACKIHTSYDEQSNGEVKVKKIEFSEFT
+                     VKIKNKNNSNNWADLGDLVVRKEKDGIETGLNAGGHSATFFSLEEEEINNFIKAMTEGG
+                     SFKTSLYYGYNDEESDKNVIKNKEIKTKIEKINDTEYITFLGDKINNSAGGDKIAEYAI
+                     SLEELKRNLK"
+                     /codon_start=1
+                     /transl_table=11
+                     /inference="ab initio prediction:Prodigal:2.6"
+                     /inference="similar to AA sequence:UniRef:UniRef100_G8JZS0"
+                     /gene="erpA"
+ORIGIN
+        1 tagaagtagc gtgagatatg aatctttaaa ttatttaggt gcagccaatg aatttgaaat
+       61 aagtgaagtt aaaatcgata aggttaatgg atatcacttt atagcaacaa aaaataaaga
+      121 aatattatat gattcacttg acttgaaacc tcgtggaaaa atatttaaag taacttcaaa
+      181 gcgtatattt agactaaagt agttttttta aagtttaagg ttatttttca tgcatttata
+      241 agcgtgaatt ttgttagcag cagagagtcc ataaatatta tcaatttcat tggttgaatg
+      301 atatttcata agttctttaa tctggaaaga gttatagcca ttagatttta aatttgaaat
+      361 aaataaattt ctaaataaat gaagagattt attagcacga aagcctgatt ttttaagaag
+      421 aattttaaat tttttagaaa tattgataat gctaatttga ttatctttaa atttatgttt
+      481 ggttttttgg aaaaagtagg tacgccttga gtcgagattt ttgtcattaa agtaattttc
+      541 gtgagctttt tgaatagcct caaattcttc agatttgatg acaatttctc taatgcaagt
+      601 gatatttctt tttttagcta catttacttt tatattgtag aaagtttctc cagttttgct
+      661 tagtagcggg gcaatatctt gcattttaac tttttgaatt tctgcacccc tgcacccact
+      721 tattgcgagt agatgtagaa accaaccaga aattgggtca gtttgtttta atgttttgac
+      781 gcatttttca attattttgc tactttttga ggttaaataa aacttaggag ttggttttaa
+      841 agctttttta gtaggcttag aagaaatttt tagtgaattt ttaagaattt tattttcatt
+      901 taccacattt tgataatctt gaaatagttt gagcataaaa tccatattga aattatttaa
+      961 attaaaataa ttattcatat ctataaaatc ctctccttag aagtgttact tttaaattaa
+     1021 gtaaaagtaa taaaaattta ataaaaatgc aatttatatt ttatcaaaaa cctaaaattt
+     1081 tagtcaaatt ttgggtgttc tcattgcatg cgaaatttgg gttgtggagt ggctgtgata
+     1141 aacagaatag gcattttttg agggtgtcgg ataagaaaga cagtatactt tatctaatat
+     1201 atagcaaaga ctttgaaatt taagttgtat ggattttgta gtcttttgta atgagtggtg
+     1261 catttgcaat ggagagattt tggggagttg gttaaaatta tatttgcgtt ttgttaaaat
+     1321 gtaacagctg aatgtaacaa aattatatat ttaaatcttt gaaatattgc atttattatg
+     1381 tattgtggta tgattaggac ttatggagaa atttatgaat aagaaaatga aaatgtttat
+     1441 tatttgtgct gtttttatac ttataggtgc ttgcaagatt catacttcat atgatgagca
+     1501 aagcaatgga gaggtaaagg tcaaaaaaat agaattctct gaatttactg taaaaattaa
+     1561 aaataagaat aatagtaata actgggcaga cttaggagat ttagttgtaa gaaaagaaaa
+     1621 agatggtatt gaaacgggtt taaacgctgg gggacattcg gctacattct tttcattaga
+     1681 agaggaagaa attaataact ttataaaagc aatgactgaa ggtggatcat ttaaaactag
+     1741 tttgtattat ggatataatg acgaagaaag tgataaaaat gtcattaaga ataaagagat
+     1801 aaaaacaaag atagaaaaaa ttaatgatac tgaatatatt acatttttag gagataaaat
+     1861 taataacagt gcggggggag acaaaatagc tgaatatgca atatcactag aagagcttaa
+     1921 aagaaattta aaatagaagt tagaaatata ggagagagcg tatatgaata aaaaaacaat
+     1981 tattatttgt gcagtttttg cgctgatact ttcttgtaag aattatgcaa ttaaagattt
+     2041 ag
+//

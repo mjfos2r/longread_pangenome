@@ -1,0 +1,1 @@
+cat ospC_v4_100.fna | grep ">" | sed 's/.*-\(.*\)/\1/' | sort | uniq

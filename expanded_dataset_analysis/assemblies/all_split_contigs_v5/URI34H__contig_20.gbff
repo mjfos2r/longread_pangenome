@@ -1,0 +1,142 @@
+LOCUS       contig_20               2671 bp    DNA     linear   UNK 15-NOV-2024
+DEFINITION  contig_20, whole genome shotgun sequence.
+ACCESSION   contig_20
+VERSION     contig_20
+KEYWORDS    .
+SOURCE      None
+  ORGANISM  .
+            .
+COMMENT     Annotated with Bakta
+            Software: v1.10.0
+            Database: v5.1, full
+            DOI: 10.1099/mgen.0.000685
+            URL: github.com/oschwengers/bakta
+            ##Genome Annotation Summary:##
+            Annotation Date                :: 11/15/2024, 01:21:18
+            CDSs                           ::     3
+            tRNAs                          ::     0
+            tmRNAs                         ::     0
+            rRNAs                          ::     0
+            ncRNAs                         ::     0
+            regulatory ncRNAs              ::     0
+            CRISPR Arrays                  ::     0
+            oriCs/oriVs                    ::     0
+            oriTs                          ::     0
+            gaps                           ::     0
+            pseudogenes                    ::     0
+FEATURES             Location/Qualifiers
+     source          1..2671
+                     /mol_type="genomic DNA"
+     gene            5..691
+                     /locus_tag="IGONDL_01305"
+     CDS             5..691
+                     /db_xref="SO:0001217"
+                     /db_xref="UniRef:UniRef50_A0A1L8Z9Q5"
+                     /product="Borrelia PFam57/62 partition protein"
+                     /locus_tag="IGONDL_01305"
+                     /protein_id="gnl|Bakta|IGONDL_01305"
+                     /translation="MGECNNNNNNIKEERKINEIEKYQVIKYFNKCDFSCKEILPVLLT
+                     LNIDKENIIKIIKILKITEINSKNKNIRPTKSCIKKKQEKLKGILCNTQKELEENGYNP
+                     KQLEINFQKIYENYKYKPHFIIENHKYSDLNNIKRKLEKSIERKKENSQQDYENLKINV
+                     FNILIEQLKKETNIEILKPIIKEYLNNQKKIKYNKIFGIYYLELLEIIKNRKHDLNLEK
+                     FSKKVV"
+                     /codon_start=1
+                     /transl_table=11
+                     /inference="ab initio prediction:Prodigal:2.6"
+                     /inference="similar to AA
+                     sequence:UniRef:UniRef50_A0A1L8Z9Q5"
+     gene            777..1769
+                     /locus_tag="IGONDL_01306"
+                     /gene="tsaC"
+     CDS             777..1769
+                     /db_xref="COG:COG0009"
+                     /db_xref="COG:J"
+                     /db_xref="EC:2.7.7.87"
+                     /db_xref="GO:0006400"
+                     /db_xref="GO:0061710"
+                     /db_xref="RefSeq:WP_002657157.1"
+                     /db_xref="SO:0001217"
+                     /db_xref="UniParc:UPI0000057725"
+                     /db_xref="UniRef:UniRef100_H7C636"
+                     /db_xref="UniRef:UniRef50_H7C636"
+                     /db_xref="UniRef:UniRef90_H7C636"
+                     /product="L-threonylcarbamoyladenylate synthase"
+                     /locus_tag="IGONDL_01306"
+                     /protein_id="gnl|Bakta|IGONDL_01306"
+                     /translation="MIKTPIISEDQFKIALKLIKMGEIIVFPTDTVYAIGANIYDEYAV
+                     RMINLVKKKSINEPLMLYVDTIEKIKELSSHVPKSAKILMEKFSPGPLTYVLKKSIKIP
+                     KFINNNLDTVAIRIPKNKTALNLIRKLKNPLVVSSANLSKRPSSTSFSMALKELNGLVG
+                     GIIMPKKNKDSNIGIESTIIEFDSKDNVIILRPGAITKKMIEKVLGSRYKVNYAKETKI
+                     DLKKMFSYRLRIPVHTFKRGDNIRKYLKTNTKVLITRDTFKFYFFSFLWDKKNIILFDS
+                     LIEYAENLYKELVNAEEKYDQVIVEIVENEELGYAINNRIVKASSNNFM"
+                     /codon_start=1
+                     /transl_table=11
+                     /inference="ab initio prediction:Prodigal:2.6"
+                     /inference="similar to AA sequence:RefSeq:WP_002657157.1"
+                     /gene="tsaC"
+     gene            1825..2256
+                     /locus_tag="IGONDL_01307"
+     CDS             1825..2256
+                     /db_xref="RefSeq:WP_002657151.1"
+                     /db_xref="SO:0001217"
+                     /db_xref="UniParc:UPI00016B2DCE"
+                     /db_xref="UniRef:UniRef100_UPI00016B2DCE"
+                     /db_xref="UniRef:UniRef50_G0ANY0"
+                     /db_xref="UniRef:UniRef90_Q9S016"
+                     /product="P52 family lipoprotein"
+                     /locus_tag="IGONDL_01307"
+                     /protein_id="gnl|Bakta|IGONDL_01307"
+                     /translation="MENIFEYLKLNAVEICVLKDIKKVIYKFYESILDIENDAETINIL
+                     SPHKSQNILNEFFFNLGPKKSKELINLFRKIKVKLGDNVFENKVFIFYLCLDDVDFFKL
+                     LYVLDKSNFDDYLILIYEKFLAIRKDLKLILNNYGSNNL"
+                     /codon_start=1
+                     /transl_table=11
+                     /inference="ab initio prediction:Prodigal:2.6"
+                     /inference="similar to AA sequence:RefSeq:WP_002657151.1"
+ORIGIN
+        1 gcaattgggg gagtgtaata ataataataa taatataaaa gaagaaagaa aaattaacga
+       61 aatagaaaag tatcaagtaa taaaatactt caacaagtgt gacttttcat gtaaagaaat
+      121 tcttccagtt ttattaacat taaatattga taaagaaaac ataattaaaa taataaaaat
+      181 cctaaaaata accgaaatta actcaaaaaa taaaaatata cgccctacta aatcttgtat
+      241 taaaaaaaaa caagaaaaat taaagggaat tctatgtaac actcaaaaag aattagaaga
+      301 aaacgggtac aatcccaaac aattagaaat aaattttcaa aaaatatacg aaaattacaa
+      361 atataaaccc cattttatta ttgaaaatca taaatatagc gatttaaaca acataaaacg
+      421 taaattggaa aagtcaattg aaagaaaaaa agaaaattct caacaagatt atgaaaattt
+      481 aaagataaac gttttcaata tccttattga acaactaaaa aaagaaacaa atattgaaat
+      541 tctaaagcct attataaaag aatatttgaa taaccaaaaa aaaataaaat acaacaaaat
+      601 atttggcata tattatcttg aattactaga aataataaaa aatagaaaac atgatctaaa
+      661 tttagaaaaa tttagtaaaa aagttgttta ggtgctaaaa tatgaaaagt ttatttagat
+      721 tagtgcagaa aattgagttc aaaaatacga attattccat agaggctaaa gaataaatga
+      781 taaaaacacc aataattagt gaagatcaat ttaaaatagc tttaaaatta atcaaaatgg
+      841 gtgaaattat tgtatttcca acagatacgg tttacgctat aggggccaat atttatgatg
+      901 aatatgcagt gagaatgata aatttagtaa aaaaaaaatc cattaatgag cccttaatgc
+      961 tttatgttga tacaatagag aaaataaaag aattatccag ccatgttcct aaaagtgcta
+     1021 agattttaat ggaaaagttt agtccgggcc ctttaactta tgttcttaaa aaatcaataa
+     1081 aaatacctaa attcattaat aataacttag atacagtggc aataagaata cccaaaaata
+     1141 aaaccgcatt aaatttaatt agaaaattga aaaaccctct tgtagtatca tcagcaaatt
+     1201 tatccaaaag gcctagttca acaagtttta gcatggcttt aaaagaatta aatgggcttg
+     1261 taggagggat aataatgcca aaaaaaaata aagactctaa tattggcata gagtcaacta
+     1321 ttattgaatt tgactcgaaa gataatgtaa taatattaag gcccggtgca ataacaaaaa
+     1381 aaatgataga aaaagtgcta ggcagtagat ataaagtaaa ttatgcaaag gaaacaaaaa
+     1441 tagacttaaa aaaaatgttt tcttataggc taagaatacc tgtccataca tttaaacgcg
+     1501 gggataacat aagaaaatat ttaaaaacga atacaaaagt acttatcaca agagacactt
+     1561 ttaaatttta tttttttagt tttttatggg ataaaaaaaa tattatatta ttcgattctt
+     1621 taatagaata tgcagaaaat ctttataaag agctagtaaa tgccgaagaa aaatatgatc
+     1681 aagttattgt tgaaatagta gaaaatgaag aactagggta tgctataaat aatagaattg
+     1741 taaaggctag ctcaaataat ttcatgtaaa ttcattaata aatttttact attctaataa
+     1801 attgttatat gtttcccata tataatggaa aacatattcg agtacttaaa attaaatgcc
+     1861 gtcgaaattt gtgttttaaa agatataaaa aaagttattt ataagttcta tgagtcgatt
+     1921 ttagatatag aaaatgatgc ggagacaata aatatattgt ctccgcataa aagtcaaaac
+     1981 attttaaatg aatttttttt taatttgggg ccaaaaaagt ctaaagaatt aatcaacctt
+     2041 tttcgtaaaa ttaaagtaaa gctgggtgat aatgtgtttg aaaataaggt tttcatattc
+     2101 tatttatgtc ttgatgatgt agattttttt aaacttttgt atgtgcttga taaaagcaat
+     2161 tttgatgatt atctaatatt gatttatgaa aaatttcttg ctataagaaa agatttgaaa
+     2221 ttaatattga acaattatgg ttcgaataac ttgtaattta aagtaaatgt attagcccct
+     2281 ttttggggct aataacatat tctgtatttg taatttagga ttgttgcaat aatattatct
+     2341 attattgtaa tatacaagat tcacgttttg tatgttgcag taaaggggca gtttttgtat
+     2401 agattcttgt gtagaaaaat tttcattaat ttttggttgc tcttctacta ctctagaaga
+     2461 gttttcctcc tttttattga atttatgact ttatttttgc acttatgata taaagaactg
+     2521 tcctttgtat atgatttaga atacaatata gcattatgcc ttttaattta aagagcgtta
+     2581 tttgttccta aaaaagaaaa gaatttcaag tgcagctagt aaaataggag ccaataatgg
+     2641 ctctacagct ttatactaaa aaaaactaaa t
+//
