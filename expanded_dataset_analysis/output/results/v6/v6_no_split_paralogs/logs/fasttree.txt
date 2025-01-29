@@ -1,0 +1,101 @@
+FastTree Version 2.1.11 Double precision (No SSE3), OpenMP (64 threads)
+Alignment: /home/mf019/longread_pangenome/expanded_dataset_analysis/results/v6_filtered_nsp/roary_v6_filtered_nsp/core_gene_alignment.aln
+Nucleotide distances: Jukes-Cantor Joins: balanced Support: SH-like 1000
+Search: Normal +NNI +SPR (2 rounds range 10) +ML-NNI opt-each=1
+TopHits: 1.00*sqrtN close=default refresh=0.80
+ML Model: Generalized Time-Reversible, CAT approximation with 20 rate categories
+Ignored unknown character X (seen 4 times)
+      2.26 seconds: Checking top hits for      1 of     84 seqs
+Initial topology in 20.28 seconds
+Refining topology: 26 rounds ME-NNIs, 2 rounds ME-SPRs, 13 rounds ML-NNIs
+     20.27 seconds: ME NNI round 1 of 26, 1 of 82 splits
+     22.64 seconds: ME NNI round 2 of 26, 1 of 82 splits
+     24.84 seconds: SPR round   1 of   2, 1 of 166 nodes
+     67.95 seconds: SPR round   1 of   2, 101 of 166 nodes
+     97.54 seconds: ME NNI round 9 of 26, 1 of 82 splits
+     99.77 seconds: SPR round   2 of   2, 1 of 166 nodes
+    142.75 seconds: SPR round   2 of   2, 101 of 166 nodes
+    172.22 seconds: ME NNI round 17 of 26, 1 of 82 splits
+Total branch-length 0.034 after 177.00 sec
+
+WARNING! This alignment consists of closely-related and very-long sequences.
+WARNING! FastTree (or other standard maximum-likelihood tools)
+may not be appropriate for aligments of very closely-related sequences
+like this one, as FastTree does not account for recombination or gene conversion
+
+    177.48 seconds: ML Lengths 1 of 82 splits
+    193.87 seconds: ML NNI round 1 of 13, 1 of 82 splits
+ML-NNI round 1: LogLk = -1445456.668 NNIs 17 max delta 12.57 Time 222.09
+    222.14 seconds: Optimizing GTR model, step 1 of 12
+    278.02 seconds: Optimizing GTR model, step 2 of 12
+    320.32 seconds: Optimizing GTR model, step 3 of 12
+    385.48 seconds: Optimizing GTR model, step 4 of 12
+    450.43 seconds: Optimizing GTR model, step 5 of 12
+    515.46 seconds: Optimizing GTR model, step 6 of 12
+    567.69 seconds: Optimizing GTR model, step 7 of 12
+    597.12 seconds: Optimizing GTR model, step 8 of 12
+    626.49 seconds: Optimizing GTR model, step 9 of 12
+    662.29 seconds: Optimizing GTR model, step 10 of 12
+    707.82 seconds: Optimizing GTR model, step 11 of 12
+    740.44 seconds: Optimizing GTR model, step 12 of 12
+GTR Frequencies: 0.3773 0.1201 0.1693 0.3332
+GTR rates(ac ag at cg ct gt) 1.1504 7.3738 0.2920 0.5858 11.0583 1.0000
+    769.29 seconds: ML Lengths 1 of 82 splits
+    826.08 seconds: Site likelihoods with rate category 1 of 20
+    829.42 seconds: Site likelihoods with rate category 2 of 20
+    832.73 seconds: Site likelihoods with rate category 3 of 20
+    836.04 seconds: Site likelihoods with rate category 4 of 20
+    839.38 seconds: Site likelihoods with rate category 5 of 20
+    842.71 seconds: Site likelihoods with rate category 6 of 20
+    846.01 seconds: Site likelihoods with rate category 7 of 20
+    849.30 seconds: Site likelihoods with rate category 8 of 20
+    852.64 seconds: Site likelihoods with rate category 9 of 20
+    855.96 seconds: Site likelihoods with rate category 10 of 20
+    859.29 seconds: Site likelihoods with rate category 11 of 20
+    862.60 seconds: Site likelihoods with rate category 12 of 20
+    865.94 seconds: Site likelihoods with rate category 13 of 20
+    869.24 seconds: Site likelihoods with rate category 14 of 20
+    872.57 seconds: Site likelihoods with rate category 15 of 20
+    875.91 seconds: Site likelihoods with rate category 16 of 20
+    879.23 seconds: Site likelihoods with rate category 17 of 20
+    882.55 seconds: Site likelihoods with rate category 18 of 20
+    885.82 seconds: Site likelihoods with rate category 19 of 20
+    889.15 seconds: Site likelihoods with rate category 20 of 20
+Switched to using 20 rate categories (CAT approximation)
+Rate categories were divided by 0.635 so that average rate = 1.0
+CAT-based log-likelihoods may not be comparable across runs
+    894.67 seconds: ML NNI round 2 of 13, 1 of 82 splits
+ML-NNI round 2: LogLk = -1312943.109 NNIs 8 max delta 6.76 Time 972.12
+    972.12 seconds: ML NNI round 3 of 13, 1 of 82 splits
+ML-NNI round 3: LogLk = -1312943.109 NNIs 0 max delta 0.00 Time 1013.39
+Turning off heuristics for final round of ML NNIs (converged)
+   1013.38 seconds: ML NNI round 4 of 13, 1 of 82 splits
+ML-NNI round 4: LogLk = -1312943.109 NNIs 0 max delta 0.00 Time 1086.99 (final)
+   1086.99 seconds: ML Lengths 1 of 82 splits
+Optimize all lengths: LogLk = -1312943.109 Time 1135.49
+   1774.73 seconds: Site likelihoods with rate category 1 of 20
+   1778.07 seconds: Site likelihoods with rate category 2 of 20
+   1781.38 seconds: Site likelihoods with rate category 3 of 20
+   1784.72 seconds: Site likelihoods with rate category 4 of 20
+   1788.00 seconds: Site likelihoods with rate category 5 of 20
+   1791.31 seconds: Site likelihoods with rate category 6 of 20
+   1794.64 seconds: Site likelihoods with rate category 7 of 20
+   1797.94 seconds: Site likelihoods with rate category 8 of 20
+   1801.22 seconds: Site likelihoods with rate category 9 of 20
+   1804.54 seconds: Site likelihoods with rate category 10 of 20
+   1807.87 seconds: Site likelihoods with rate category 11 of 20
+   1811.18 seconds: Site likelihoods with rate category 12 of 20
+   1814.48 seconds: Site likelihoods with rate category 13 of 20
+   1817.77 seconds: Site likelihoods with rate category 14 of 20
+   1821.04 seconds: Site likelihoods with rate category 15 of 20
+   1824.36 seconds: Site likelihoods with rate category 16 of 20
+   1827.65 seconds: Site likelihoods with rate category 17 of 20
+   1831.00 seconds: Site likelihoods with rate category 18 of 20
+   1834.29 seconds: Site likelihoods with rate category 19 of 20
+   1837.59 seconds: Site likelihoods with rate category 20 of 20
+   1840.43 seconds: Optimizing alpha round 1
+   1845.40 seconds: Optimizing alpha round 2
+   1848.00 seconds: Optimizing alpha round 3
+   1850.48 seconds: Optimizing alpha round 4
+Gamma(20) LogLk = -1293465.238 alpha = 0.010 rescaling lengths by 4.018
+Total time: 1854.66 seconds Unique: 84/107 Bad splits: 0/81
